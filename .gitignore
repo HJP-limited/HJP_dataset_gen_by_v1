@@ -1,0 +1,4 @@
+REBUILD_PLAN.md
+output/
+src/__pycache__/
+*.pyc
