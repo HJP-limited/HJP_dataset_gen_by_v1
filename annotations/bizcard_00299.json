@@ -1,0 +1,271 @@
+{
+  "image_id": "00299",
+  "image_path": "images/bizcard_00299.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        59,
+        59,
+        177,
+        177
+      ],
+      "size_px": 118,
+      "initial": "M"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "olive",
+  "theme_colors": {
+    "bg": "#6B7C32",
+    "text": "#FAF7F0",
+    "muted": "#D0D2BC",
+    "accent": "#FAF7F0"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00299_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "문라이트",
+      "canonical_text": "문라이트",
+      "bbox_xyxy": [
+        59,
+        236,
+        173,
+        266
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00299_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          236,
+          173,
+          266
+        ]
+      ],
+      "block_id": "00299_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00299_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "장민지",
+      "canonical_text": "장민지",
+      "bbox_xyxy": [
+        59,
+        313,
+        244,
+        376
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 63
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00299_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          313,
+          244,
+          376
+        ]
+      ],
+      "block_id": "00299_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00299_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "전략기획팀",
+      "canonical_text": "전략기획팀",
+      "bbox_xyxy": [
+        59,
+        400,
+        202,
+        430
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00299_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          400,
+          202,
+          430
+        ]
+      ],
+      "block_id": "00299_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00299_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0357-8209",
+      "canonical_text": "010-0357-8209",
+      "bbox_xyxy": [
+        59,
+        477,
+        292,
+        498
+      ],
+      "bbox_size": {
+        "width": 233,
+        "height": 21
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00299_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          477,
+          292,
+          498
+        ]
+      ],
+      "block_id": "00299_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00299_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1140@moonlight.example.com",
+      "canonical_text": "user1140@moonlight.example.com",
+      "bbox_xyxy": [
+        59,
+        508,
+        534,
+        567
+      ],
+      "bbox_size": {
+        "width": 475,
+        "height": 59
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00299_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          508,
+          534,
+          567
+        ]
+      ],
+      "block_id": "00299_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00299_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 강남대로 287 17층",
+      "canonical_text": "제주특별자치도 제주시 강남대로 287 17층",
+      "bbox_xyxy": [
+        59,
+        577,
+        445,
+        637
+      ],
+      "bbox_size": {
+        "width": 386,
+        "height": 60
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00299_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          577,
+          445,
+          637
+        ]
+      ],
+      "block_id": "00299_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00299_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web moonlight.example.com",
+      "canonical_text": "moonlight.example.com",
+      "bbox_xyxy": [
+        59,
+        647,
+        451,
+        678
+      ],
+      "bbox_size": {
+        "width": 392,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00299_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          647,
+          451,
+          678
+        ]
+      ],
+      "block_id": "00299_007_b01",
+      "language": "ko"
+    }
+  ]
+}

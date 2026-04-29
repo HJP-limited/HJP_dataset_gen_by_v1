@@ -1,0 +1,300 @@
+{
+  "image_id": "00316",
+  "image_path": "images/bizcard_00316.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V7",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00316"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "blush",
+  "theme_colors": {
+    "bg": "#F8E1E4",
+    "text": "#5D4954",
+    "muted": "#9A8590",
+    "accent": "#A8767E"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00316_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "써밋컨설팅",
+      "canonical_text": "써밋컨설팅",
+      "bbox_xyxy": [
+        59,
+        118,
+        211,
+        151
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 33
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00316_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          118,
+          211,
+          151
+        ]
+      ],
+      "block_id": "00316_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "노우진",
+      "canonical_text": "노우진",
+      "bbox_xyxy": [
+        59,
+        198,
+        244,
+        263
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 65
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00316_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          198,
+          244,
+          263
+        ]
+      ],
+      "block_id": "00316_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "인프라팀",
+      "canonical_text": "인프라팀",
+      "bbox_xyxy": [
+        59,
+        287,
+        180,
+        320
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00316_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          287,
+          180,
+          320
+        ]
+      ],
+      "block_id": "00316_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "차장",
+      "canonical_text": "차장",
+      "bbox_xyxy": [
+        59,
+        332,
+        120,
+        365
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00316_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          332,
+          120,
+          365
+        ]
+      ],
+      "block_id": "00316_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0197-2244",
+      "canonical_text": "010-0197-2244",
+      "bbox_xyxy": [
+        59,
+        412,
+        327,
+        436
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00316_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          412,
+          327,
+          436
+        ]
+      ],
+      "block_id": "00316_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user268@summit.example.org",
+      "canonical_text": "user268@summit.example.org",
+      "bbox_xyxy": [
+        59,
+        447,
+        530,
+        513
+      ],
+      "bbox_size": {
+        "width": 471,
+        "height": 66
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00316_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          447,
+          530,
+          513
+        ]
+      ],
+      "block_id": "00316_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 송파구 을지로 542 20층",
+      "canonical_text": "서울특별시 송파구 을지로 542 20층",
+      "bbox_xyxy": [
+        59,
+        524,
+        439,
+        592
+      ],
+      "bbox_size": {
+        "width": 380,
+        "height": 68
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00316_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          524,
+          439,
+          592
+        ]
+      ],
+      "block_id": "00316_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00316_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web summit.example.org",
+      "canonical_text": "summit.example.org",
+      "bbox_xyxy": [
+        59,
+        603,
+        453,
+        638
+      ],
+      "bbox_size": {
+        "width": 394,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00316_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          603,
+          453,
+          638
+        ]
+      ],
+      "block_id": "00316_008_b01",
+      "language": "ko"
+    }
+  ]
+}

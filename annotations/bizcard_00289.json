@@ -1,0 +1,333 @@
+{
+  "image_id": "00289",
+  "image_path": "images/bizcard_00289.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        59,
+        59,
+        177,
+        177
+      ],
+      "size_px": 118,
+      "initial": "G"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "butter",
+  "theme_colors": {
+    "bg": "#FFF8E1",
+    "text": "#5D4E2C",
+    "muted": "#9A8E70",
+    "accent": "#C9A961"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00289_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "그린피크",
+      "canonical_text": "그린피크",
+      "bbox_xyxy": [
+        59,
+        236,
+        173,
+        266
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00289_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          236,
+          173,
+          266
+        ]
+      ],
+      "block_id": "00289_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "최수민",
+      "canonical_text": "최수민",
+      "bbox_xyxy": [
+        59,
+        313,
+        253,
+        379
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 66
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00289_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          313,
+          253,
+          379
+        ]
+      ],
+      "block_id": "00289_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        59,
+        403,
+        116,
+        433
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00289_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          403,
+          116,
+          433
+        ]
+      ],
+      "block_id": "00289_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0781-8079",
+      "canonical_text": "070-0781-8079",
+      "bbox_xyxy": [
+        59,
+        480,
+        310,
+        504
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00289_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          480,
+          310,
+          504
+        ]
+      ],
+      "block_id": "00289_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0578-6507",
+      "canonical_text": "010-0578-6507",
+      "bbox_xyxy": [
+        59,
+        514,
+        294,
+        535
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00289_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          514,
+          294,
+          535
+        ]
+      ],
+      "block_id": "00289_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 070-0966-7867",
+      "canonical_text": "070-0966-7867",
+      "bbox_xyxy": [
+        59,
+        545,
+        284,
+        566
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00289_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          545,
+          284,
+          566
+        ]
+      ],
+      "block_id": "00289_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7795@greenpeak.example.com",
+      "canonical_text": "user7795@greenpeak.example.com",
+      "bbox_xyxy": [
+        59,
+        576,
+        542,
+        635
+      ],
+      "bbox_size": {
+        "width": 483,
+        "height": 59
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00289_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          576,
+          542,
+          635
+        ]
+      ],
+      "block_id": "00289_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 서초구 을지로 557",
+      "canonical_text": "서울특별시 서초구 을지로 557",
+      "bbox_xyxy": [
+        59,
+        645,
+        480,
+        698
+      ],
+      "bbox_size": {
+        "width": 421,
+        "height": 53
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00289_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          645,
+          480,
+          698
+        ]
+      ],
+      "block_id": "00289_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00289_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web greenpeak.example.com",
+      "canonical_text": "greenpeak.example.com",
+      "bbox_xyxy": [
+        59,
+        708,
+        458,
+        739
+      ],
+      "bbox_size": {
+        "width": 399,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00289_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          708,
+          458,
+          739
+        ]
+      ],
+      "block_id": "00289_009_b01",
+      "language": "ko"
+    }
+  ]
+}

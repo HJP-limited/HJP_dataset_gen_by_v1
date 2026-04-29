@@ -1,0 +1,302 @@
+{
+  "image_id": "00250",
+  "image_path": "images/bizcard_00250.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "Q"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "blush",
+  "theme_colors": {
+    "bg": "#F8E1E4",
+    "text": "#5D4954",
+    "muted": "#9A8590",
+    "accent": "#A8767E"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00250_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        238,
+        177,
+        352,
+        208
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00250_001_l01"
+      ],
+      "line_boxes": [
+        [
+          238,
+          177,
+          352,
+          208
+        ]
+      ],
+      "block_id": "00250_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "조수빈",
+      "canonical_text": "조수빈",
+      "bbox_xyxy": [
+        203,
+        265,
+        388,
+        329
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 64
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00250_002_l01"
+      ],
+      "line_boxes": [
+        [
+          203,
+          265,
+          388,
+          329
+        ]
+      ],
+      "block_id": "00250_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "팀장",
+      "canonical_text": "팀장",
+      "bbox_xyxy": [
+        267,
+        353,
+        324,
+        384
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00250_003_l01"
+      ],
+      "line_boxes": [
+        [
+          267,
+          353,
+          324,
+          384
+        ]
+      ],
+      "block_id": "00250_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0853-1283",
+      "canonical_text": "051-0853-1283",
+      "bbox_xyxy": [
+        59,
+        584,
+        345,
+        611
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00250_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          345,
+          611
+        ]
+      ],
+      "block_id": "00250_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0431-5824",
+      "canonical_text": "010-0431-5824",
+      "bbox_xyxy": [
+        59,
+        622,
+        327,
+        646
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00250_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          622,
+          327,
+          646
+        ]
+      ],
+      "block_id": "00250_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9492@qworks.example.com",
+      "canonical_text": "user9492@qworks.example.com",
+      "bbox_xyxy": [
+        59,
+        657,
+        559,
+        723
+      ],
+      "bbox_size": {
+        "width": 500,
+        "height": 66
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00250_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          657,
+          559,
+          723
+        ]
+      ],
+      "block_id": "00250_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 북구 디지털로 232 D동 648호",
+      "canonical_text": "광주광역시 북구 디지털로 232 D동 648호",
+      "bbox_xyxy": [
+        59,
+        734,
+        409,
+        802
+      ],
+      "bbox_size": {
+        "width": 350,
+        "height": 68
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00250_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          734,
+          409,
+          802
+        ]
+      ],
+      "block_id": "00250_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00250_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web qworks.example.com",
+      "canonical_text": "qworks.example.com",
+      "bbox_xyxy": [
+        59,
+        813,
+        463,
+        848
+      ],
+      "bbox_size": {
+        "width": 404,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00250_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          813,
+          463,
+          848
+        ]
+      ],
+      "block_id": "00250_008_b01",
+      "language": "ko"
+    }
+  ]
+}

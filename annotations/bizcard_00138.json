@@ -1,0 +1,302 @@
+{
+  "image_id": "00138",
+  "image_path": "images/bizcard_00138.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "P"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "soft_beige",
+  "theme_colors": {
+    "bg": "#F0EAE0",
+    "text": "#2C2C2C",
+    "muted": "#6B5E50",
+    "accent": "#1E3A5F"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00138_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "푸른소프트",
+      "canonical_text": "푸른소프트",
+      "bbox_xyxy": [
+        47,
+        71,
+        208,
+        104
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 33
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00138_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          208,
+          104
+        ]
+      ],
+      "block_id": "00138_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "유채원",
+      "canonical_text": "유채원",
+      "bbox_xyxy": [
+        356,
+        82,
+        494,
+        130
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 48
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00138_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          494,
+          130
+        ]
+      ],
+      "block_id": "00138_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "영업팀",
+      "canonical_text": "영업팀",
+      "bbox_xyxy": [
+        356,
+        142,
+        453,
+        175
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00138_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          142,
+          453,
+          175
+        ]
+      ],
+      "block_id": "00138_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "차장",
+      "canonical_text": "차장",
+      "bbox_xyxy": [
+        356,
+        181,
+        420,
+        215
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00138_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          181,
+          420,
+          215
+        ]
+      ],
+      "block_id": "00138_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0352-1602",
+      "canonical_text": "010-0352-1602",
+      "bbox_xyxy": [
+        356,
+        245,
+        607,
+        268
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00138_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          245,
+          607,
+          268
+        ]
+      ],
+      "block_id": "00138_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7367@pureun.example.org",
+      "canonical_text": "user7367@pureun.example.org",
+      "bbox_xyxy": [
+        356,
+        278,
+        909,
+        311
+      ],
+      "bbox_size": {
+        "width": 553,
+        "height": 33
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00138_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          278,
+          909,
+          311
+        ]
+      ],
+      "block_id": "00138_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 송파구 을지로 537 4동 652호",
+      "canonical_text": "서울특별시 송파구 을지로 537 4동 652호",
+      "bbox_xyxy": [
+        356,
+        321,
+        1004,
+        351
+      ],
+      "bbox_size": {
+        "width": 648,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00138_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          321,
+          1004,
+          351
+        ]
+      ],
+      "block_id": "00138_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00138_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web pureun.example.org",
+      "canonical_text": "pureun.example.org",
+      "bbox_xyxy": [
+        356,
+        361,
+        719,
+        394
+      ],
+      "bbox_size": {
+        "width": 363,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00138_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          361,
+          719,
+          394
+        ]
+      ],
+      "block_id": "00138_008_b01",
+      "language": "ko"
+    }
+  ]
+}

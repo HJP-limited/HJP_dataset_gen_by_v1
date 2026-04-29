@@ -1,0 +1,333 @@
+{
+  "image_id": "00125",
+  "image_path": "images/bizcard_00125.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "Q"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "midnight",
+  "theme_colors": {
+    "bg": "#0F1419",
+    "text": "#E8E8E8",
+    "muted": "#9CA3AF",
+    "accent": "#A78BFA"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00125_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        47,
+        71,
+        175,
+        105
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00125_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          175,
+          105
+        ]
+      ],
+      "block_id": "00125_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허혜원",
+      "canonical_text": "허혜원",
+      "bbox_xyxy": [
+        356,
+        82,
+        494,
+        131
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 49
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00125_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          494,
+          131
+        ]
+      ],
+      "block_id": "00125_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        356,
+        143,
+        420,
+        177
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00125_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          143,
+          420,
+          177
+        ]
+      ],
+      "block_id": "00125_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0873-9091",
+      "canonical_text": "053-0873-9091",
+      "bbox_xyxy": [
+        356,
+        207,
+        628,
+        233
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00125_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          207,
+          628,
+          233
+        ]
+      ],
+      "block_id": "00125_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0932-9504",
+      "canonical_text": "010-0932-9504",
+      "bbox_xyxy": [
+        356,
+        243,
+        613,
+        267
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00125_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          243,
+          613,
+          267
+        ]
+      ],
+      "block_id": "00125_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 070-0351-1936",
+      "canonical_text": "070-0351-1936",
+      "bbox_xyxy": [
+        356,
+        277,
+        599,
+        301
+      ],
+      "bbox_size": {
+        "width": 243,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00125_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          277,
+          599,
+          301
+        ]
+      ],
+      "block_id": "00125_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1361@qworks.example.com",
+      "canonical_text": "user1361@qworks.example.com",
+      "bbox_xyxy": [
+        356,
+        311,
+        945,
+        344
+      ],
+      "bbox_size": {
+        "width": 589,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00125_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          311,
+          945,
+          344
+        ]
+      ],
+      "block_id": "00125_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 종로구 올림픽로 153 17동 1497호",
+      "canonical_text": "서울특별시 종로구 올림픽로 153 17동 1497호",
+      "bbox_xyxy": [
+        356,
+        354,
+        987,
+        417
+      ],
+      "bbox_size": {
+        "width": 631,
+        "height": 63
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00125_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          354,
+          987,
+          417
+        ]
+      ],
+      "block_id": "00125_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00125_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web qworks.example.com",
+      "canonical_text": "qworks.example.com",
+      "bbox_xyxy": [
+        356,
+        427,
+        750,
+        461
+      ],
+      "bbox_size": {
+        "width": 394,
+        "height": 34
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00125_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          427,
+          750,
+          461
+        ]
+      ],
+      "block_id": "00125_009_b01",
+      "language": "ko"
+    }
+  ]
+}

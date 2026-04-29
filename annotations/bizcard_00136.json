@@ -1,0 +1,364 @@
+{
+  "image_id": "00136",
+  "image_path": "images/bizcard_00136.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "O"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "light_gray",
+  "theme_colors": {
+    "bg": "#EFEFEF",
+    "text": "#1F2937",
+    "muted": "#5B6470",
+    "accent": "#DC2626"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00136_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오션블루",
+      "canonical_text": "오션블루",
+      "bbox_xyxy": [
+        47,
+        71,
+        182,
+        107
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00136_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          182,
+          107
+        ]
+      ],
+      "block_id": "00136_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한다현",
+      "canonical_text": "한다현",
+      "bbox_xyxy": [
+        356,
+        82,
+        536,
+        144
+      ],
+      "bbox_size": {
+        "width": 180,
+        "height": 62
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00136_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          536,
+          144
+        ]
+      ],
+      "block_id": "00136_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "총무팀",
+      "canonical_text": "총무팀",
+      "bbox_xyxy": [
+        356,
+        156,
+        457,
+        191
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00136_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          156,
+          457,
+          191
+        ]
+      ],
+      "block_id": "00136_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "대리",
+      "canonical_text": "대리",
+      "bbox_xyxy": [
+        356,
+        197,
+        424,
+        233
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00136_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          197,
+          424,
+          233
+        ]
+      ],
+      "block_id": "00136_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0897-4932",
+      "canonical_text": "070-0897-4932",
+      "bbox_xyxy": [
+        356,
+        263,
+        611,
+        288
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00136_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          263,
+          611,
+          288
+        ]
+      ],
+      "block_id": "00136_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0390-4033",
+      "canonical_text": "010-0390-4033",
+      "bbox_xyxy": [
+        356,
+        298,
+        597,
+        320
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00136_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          298,
+          597,
+          320
+        ]
+      ],
+      "block_id": "00136_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0327-5516",
+      "canonical_text": "053-0327-5516",
+      "bbox_xyxy": [
+        356,
+        330,
+        584,
+        351
+      ],
+      "bbox_size": {
+        "width": 228,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00136_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          330,
+          584,
+          351
+        ]
+      ],
+      "block_id": "00136_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7932@oceanblue.example.com",
+      "canonical_text": "user7932@oceanblue.example.com",
+      "bbox_xyxy": [
+        356,
+        361,
+        950,
+        392
+      ],
+      "bbox_size": {
+        "width": 594,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00136_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          361,
+          950,
+          392
+        ]
+      ],
+      "block_id": "00136_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 북구 성남대로 944",
+      "canonical_text": "광주광역시 북구 성남대로 944",
+      "bbox_xyxy": [
+        356,
+        402,
+        855,
+        432
+      ],
+      "bbox_size": {
+        "width": 499,
+        "height": 30
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00136_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          402,
+          855,
+          432
+        ]
+      ],
+      "block_id": "00136_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00136_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web oceanblue.example.com",
+      "canonical_text": "oceanblue.example.com",
+      "bbox_xyxy": [
+        356,
+        442,
+        768,
+        473
+      ],
+      "bbox_size": {
+        "width": 412,
+        "height": 31
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00136_010_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          442,
+          768,
+          473
+        ]
+      ],
+      "block_id": "00136_010_b01",
+      "language": "ko"
+    }
+  ]
+}

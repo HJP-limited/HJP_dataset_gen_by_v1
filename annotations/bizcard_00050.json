@@ -1,0 +1,302 @@
+{
+  "image_id": "00050",
+  "image_path": "images/bizcard_00050.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "royal_blue",
+  "theme_colors": {
+    "bg": "#1E3A8A",
+    "text": "#F8FAFC",
+    "muted": "#BFCAE0",
+    "accent": "#FBBF24"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00050_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        83,
+        161,
+        119
+      ],
+      "bbox_size": {
+        "width": 102,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00050_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          161,
+          119
+        ]
+      ],
+      "block_id": "00050_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "안윤서",
+      "canonical_text": "안윤서",
+      "bbox_xyxy": [
+        836,
+        83,
+        1004,
+        141
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00050_002_l01"
+      ],
+      "line_boxes": [
+        [
+          836,
+          83,
+          1004,
+          141
+        ]
+      ],
+      "block_id": "00050_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "인프라팀",
+      "canonical_text": "인프라팀",
+      "bbox_xyxy": [
+        869,
+        153,
+        1004,
+        189
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00050_003_l01"
+      ],
+      "line_boxes": [
+        [
+          869,
+          153,
+          1004,
+          189
+        ]
+      ],
+      "block_id": "00050_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        936,
+        195,
+        1004,
+        230
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 35
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00050_004_l01"
+      ],
+      "line_boxes": [
+        [
+          936,
+          195,
+          1004,
+          230
+        ]
+      ],
+      "block_id": "00050_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0958-2278",
+      "canonical_text": "010-0958-2278",
+      "bbox_xyxy": [
+        59,
+        344,
+        300,
+        366
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00050_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          344,
+          300,
+          366
+        ]
+      ],
+      "block_id": "00050_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2604@prism.example.org",
+      "canonical_text": "user2604@prism.example.org",
+      "bbox_xyxy": [
+        59,
+        376,
+        577,
+        408
+      ],
+      "bbox_size": {
+        "width": 518,
+        "height": 32
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00050_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          376,
+          577,
+          408
+        ]
+      ],
+      "block_id": "00050_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 송파구 디지털로 621 B동 844호",
+      "canonical_text": "서울특별시 송파구 디지털로 621 B동 844호",
+      "bbox_xyxy": [
+        59,
+        418,
+        723,
+        448
+      ],
+      "bbox_size": {
+        "width": 664,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00050_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          418,
+          723,
+          448
+        ]
+      ],
+      "block_id": "00050_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00050_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web prism.example.org",
+      "canonical_text": "prism.example.org",
+      "bbox_xyxy": [
+        59,
+        458,
+        395,
+        490
+      ],
+      "bbox_size": {
+        "width": 336,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00050_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          458,
+          395,
+          490
+        ]
+      ],
+      "block_id": "00050_008_b01",
+      "language": "ko"
+    }
+  ]
+}

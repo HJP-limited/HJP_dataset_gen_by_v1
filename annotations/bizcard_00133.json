@@ -1,0 +1,271 @@
+{
+  "image_id": "00133",
+  "image_path": "images/bizcard_00133.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "E"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "tech_blue",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1E40AF",
+    "muted": "#647596",
+    "accent": "#06B6D4"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00133_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        47,
+        71,
+        208,
+        106
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 35
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00133_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          208,
+          106
+        ]
+      ],
+      "block_id": "00133_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00133_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "배보영",
+      "canonical_text": "배보영",
+      "bbox_xyxy": [
+        356,
+        82,
+        494,
+        131
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 49
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00133_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          494,
+          131
+        ]
+      ],
+      "block_id": "00133_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00133_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "마케팅팀",
+      "canonical_text": "마케팅팀",
+      "bbox_xyxy": [
+        356,
+        143,
+        485,
+        177
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00133_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          143,
+          485,
+          177
+        ]
+      ],
+      "block_id": "00133_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00133_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0299-5217",
+      "canonical_text": "010-0299-5217",
+      "bbox_xyxy": [
+        356,
+        207,
+        624,
+        231
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00133_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          207,
+          624,
+          231
+        ]
+      ],
+      "block_id": "00133_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00133_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8239@eclipse.example.com",
+      "canonical_text": "user8239@eclipse.example.com",
+      "bbox_xyxy": [
+        356,
+        242,
+        956,
+        277
+      ],
+      "bbox_size": {
+        "width": 600,
+        "height": 35
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00133_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          242,
+          956,
+          277
+        ]
+      ],
+      "block_id": "00133_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00133_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 수원시 영통구 디지털로 890",
+      "canonical_text": "경기도 수원시 영통구 디지털로 890",
+      "bbox_xyxy": [
+        356,
+        288,
+        965,
+        320
+      ],
+      "bbox_size": {
+        "width": 609,
+        "height": 32
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00133_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          288,
+          965,
+          320
+        ]
+      ],
+      "block_id": "00133_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00133_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web eclipse.example.com",
+      "canonical_text": "eclipse.example.com",
+      "bbox_xyxy": [
+        356,
+        331,
+        754,
+        366
+      ],
+      "bbox_size": {
+        "width": 398,
+        "height": 35
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00133_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          331,
+          754,
+          366
+        ]
+      ],
+      "block_id": "00133_007_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "image_id": "00234",
+  "image_path": "images/bizcard_00234.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "A"
+    },
+    "qr_code": null,
+    "background_pattern": "diagonal"
+  },
+  "theme_name": "navy_on_white",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#0F2A4F",
+    "muted": "#5B6E85",
+    "accent": "#0F2A4F"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00234_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오로라파트너스",
+      "canonical_text": "오로라파트너스",
+      "bbox_xyxy": [
+        59,
+        94,
+        272,
+        126
+      ],
+      "bbox_size": {
+        "width": 213,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00234_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          272,
+          126
+        ]
+      ],
+      "block_id": "00234_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "김혜원",
+      "canonical_text": "김혜원",
+      "bbox_xyxy": [
+        59,
+        161,
+        208,
+        213
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 52
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00234_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          161,
+          208,
+          213
+        ]
+      ],
+      "block_id": "00234_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "이사",
+      "canonical_text": "이사",
+      "bbox_xyxy": [
+        59,
+        225,
+        120,
+        257
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00234_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          225,
+          120,
+          257
+        ]
+      ],
+      "block_id": "00234_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0471-7334",
+      "canonical_text": "032-0471-7334",
+      "bbox_xyxy": [
+        488,
+        236,
+        757,
+        262
+      ],
+      "bbox_size": {
+        "width": 269,
+        "height": 26
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00234_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          757,
+          262
+        ]
+      ],
+      "block_id": "00234_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0247-8960",
+      "canonical_text": "010-0247-8960",
+      "bbox_xyxy": [
+        488,
+        272,
+        739,
+        295
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00234_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          272,
+          739,
+          295
+        ]
+      ],
+      "block_id": "00234_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6243@aurora.example.com",
+      "canonical_text": "user6243@aurora.example.com",
+      "bbox_xyxy": [
+        488,
+        305,
+        946,
+        368
+      ],
+      "bbox_size": {
+        "width": 458,
+        "height": 63
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00234_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          305,
+          946,
+          368
+        ]
+      ],
+      "block_id": "00234_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 성동구 테헤란로 444",
+      "canonical_text": "서울특별시 성동구 테헤란로 444",
+      "bbox_xyxy": [
+        488,
+        378,
+        966,
+        435
+      ],
+      "bbox_size": {
+        "width": 478,
+        "height": 57
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00234_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          378,
+          966,
+          435
+        ]
+      ],
+      "block_id": "00234_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00234_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web aurora.example.com",
+      "canonical_text": "aurora.example.com",
+      "bbox_xyxy": [
+        488,
+        445,
+        856,
+        478
+      ],
+      "bbox_size": {
+        "width": 368,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00234_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          445,
+          856,
+          478
+        ]
+      ],
+      "block_id": "00234_008_b01",
+      "language": "ko"
+    }
+  ]
+}

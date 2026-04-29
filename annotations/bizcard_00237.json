@@ -1,0 +1,302 @@
+{
+  "image_id": "00237",
+  "image_path": "images/bizcard_00237.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "N"
+    },
+    "qr_code": null,
+    "background_pattern": "triangles"
+  },
+  "theme_name": "royal_blue",
+  "theme_colors": {
+    "bg": "#1E3A8A",
+    "text": "#F8FAFC",
+    "muted": "#BFCAE0",
+    "accent": "#FBBF24"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00237_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "네오랩스",
+      "canonical_text": "네오랩스",
+      "bbox_xyxy": [
+        59,
+        94,
+        180,
+        126
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00237_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          180,
+          126
+        ]
+      ],
+      "block_id": "00237_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한지후",
+      "canonical_text": "한지후",
+      "bbox_xyxy": [
+        59,
+        161,
+        197,
+        208
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 47
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00237_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          161,
+          197,
+          208
+        ]
+      ],
+      "block_id": "00237_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "팀장",
+      "canonical_text": "팀장",
+      "bbox_xyxy": [
+        59,
+        220,
+        120,
+        251
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00237_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          220,
+          120,
+          251
+        ]
+      ],
+      "block_id": "00237_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0196-3581",
+      "canonical_text": "070-0196-3581",
+      "bbox_xyxy": [
+        488,
+        236,
+        736,
+        260
+      ],
+      "bbox_size": {
+        "width": 248,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00237_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          736,
+          260
+        ]
+      ],
+      "block_id": "00237_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0686-3458",
+      "canonical_text": "010-0686-3458",
+      "bbox_xyxy": [
+        488,
+        270,
+        721,
+        291
+      ],
+      "bbox_size": {
+        "width": 233,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00237_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          270,
+          721,
+          291
+        ]
+      ],
+      "block_id": "00237_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4948@neolabs.example.com",
+      "canonical_text": "user4948@neolabs.example.com",
+      "bbox_xyxy": [
+        488,
+        301,
+        930,
+        360
+      ],
+      "bbox_size": {
+        "width": 442,
+        "height": 59
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00237_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          301,
+          930,
+          360
+        ]
+      ],
+      "block_id": "00237_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 송파구 한강대로 266 F동 780호",
+      "canonical_text": "서울특별시 송파구 한강대로 266 F동 780호",
+      "bbox_xyxy": [
+        488,
+        370,
+        988,
+        429
+      ],
+      "bbox_size": {
+        "width": 500,
+        "height": 59
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00237_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          370,
+          988,
+          429
+        ]
+      ],
+      "block_id": "00237_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00237_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web neolabs.example.com",
+      "canonical_text": "neolabs.example.com",
+      "bbox_xyxy": [
+        488,
+        439,
+        847,
+        470
+      ],
+      "bbox_size": {
+        "width": 359,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00237_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          439,
+          847,
+          470
+        ]
+      ],
+      "block_id": "00237_008_b01",
+      "language": "ko"
+    }
+  ]
+}

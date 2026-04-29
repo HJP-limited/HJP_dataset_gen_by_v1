@@ -1,0 +1,325 @@
+{
+  "image_id": "00186",
+  "image_path": "images/bizcard_00186.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "green_dark",
+  "theme_colors": {
+    "bg": "#0A2818",
+    "text": "#FFFFFF",
+    "muted": "#B5C6BC",
+    "accent": "#06C755"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00186_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "메이플스튜디오",
+      "canonical_text": "메이플스튜디오",
+      "bbox_xyxy": [
+        413,
+        71,
+        650,
+        107
+      ],
+      "bbox_size": {
+        "width": 237,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00186_001_l01"
+      ],
+      "line_boxes": [
+        [
+          413,
+          71,
+          650,
+          107
+        ]
+      ],
+      "block_id": "00186_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "권다은",
+      "canonical_text": "권다은",
+      "bbox_xyxy": [
+        451,
+        142,
+        611,
+        199
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00186_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          142,
+          611,
+          199
+        ]
+      ],
+      "block_id": "00186_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "마케팅팀",
+      "canonical_text": "마케팅팀",
+      "bbox_xyxy": [
+        464,
+        211,
+        599,
+        247
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00186_003_l01"
+      ],
+      "line_boxes": [
+        [
+          464,
+          211,
+          599,
+          247
+        ]
+      ],
+      "block_id": "00186_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "차장",
+      "canonical_text": "차장",
+      "bbox_xyxy": [
+        497,
+        253,
+        565,
+        289
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00186_004_l01"
+      ],
+      "line_boxes": [
+        [
+          497,
+          253,
+          565,
+          289
+        ]
+      ],
+      "block_id": "00186_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0698-3129",
+      "canonical_text": "070-0698-3129",
+      "bbox_xyxy": [
+        404,
+        319,
+        659,
+        344
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00186_005_l01"
+      ],
+      "line_boxes": [
+        [
+          404,
+          319,
+          659,
+          344
+        ]
+      ],
+      "block_id": "00186_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0813-8467",
+      "canonical_text": "010-0813-8467",
+      "bbox_xyxy": [
+        411,
+        354,
+        652,
+        376
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00186_006_l01"
+      ],
+      "line_boxes": [
+        [
+          411,
+          354,
+          652,
+          376
+        ]
+      ],
+      "block_id": "00186_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9887@maple.example.com",
+      "canonical_text": "user9887@maple.example.com",
+      "bbox_xyxy": [
+        263,
+        386,
+        799,
+        417
+      ],
+      "bbox_size": {
+        "width": 536,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00186_007_l01"
+      ],
+      "line_boxes": [
+        [
+          263,
+          386,
+          799,
+          417
+        ]
+      ],
+      "block_id": "00186_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 여의대로 614 27층",
+      "canonical_text": "경기도 고양시 일산서구 여의대로 614 27층",
+      "bbox_xyxy": [
+        203,
+        427,
+        859,
+        457
+      ],
+      "bbox_size": {
+        "width": 656,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00186_008_l01"
+      ],
+      "line_boxes": [
+        [
+          203,
+          427,
+          859,
+          457
+        ]
+      ],
+      "block_id": "00186_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00186_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web maple.example.com",
+      "canonical_text": "maple.example.com",
+      "bbox_xyxy": [
+        354,
+        467,
+        708,
+        498
+      ],
+      "bbox_size": {
+        "width": 354,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00186_009_l01"
+      ],
+      "line_boxes": [
+        [
+          354,
+          467,
+          708,
+          498
+        ]
+      ],
+      "block_id": "00186_009_b01",
+      "language": "ko"
+    }
+  ]
+}

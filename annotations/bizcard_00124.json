@@ -1,0 +1,364 @@
+{
+  "image_id": "00124",
+  "image_path": "images/bizcard_00124.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "Q"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "pure_black",
+  "theme_colors": {
+    "bg": "#0A0A0A",
+    "text": "#FFFFFF",
+    "muted": "#B0B0B0",
+    "accent": "#D4AF37"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00124_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        47,
+        71,
+        168,
+        103
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00124_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          168,
+          103
+        ]
+      ],
+      "block_id": "00124_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허하준",
+      "canonical_text": "허하준",
+      "bbox_xyxy": [
+        356,
+        82,
+        536,
+        144
+      ],
+      "bbox_size": {
+        "width": 180,
+        "height": 62
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00124_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          536,
+          144
+        ]
+      ],
+      "block_id": "00124_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "인프라팀",
+      "canonical_text": "인프라팀",
+      "bbox_xyxy": [
+        356,
+        156,
+        477,
+        188
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00124_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          156,
+          477,
+          188
+        ]
+      ],
+      "block_id": "00124_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "상무",
+      "canonical_text": "상무",
+      "bbox_xyxy": [
+        356,
+        194,
+        417,
+        226
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00124_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          194,
+          417,
+          226
+        ]
+      ],
+      "block_id": "00124_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0304-3799",
+      "canonical_text": "070-0304-3799",
+      "bbox_xyxy": [
+        356,
+        256,
+        607,
+        280
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00124_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          256,
+          607,
+          280
+        ]
+      ],
+      "block_id": "00124_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0861-7035",
+      "canonical_text": "010-0861-7035",
+      "bbox_xyxy": [
+        356,
+        290,
+        591,
+        311
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00124_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          290,
+          591,
+          311
+        ]
+      ],
+      "block_id": "00124_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 062-0110-9178",
+      "canonical_text": "062-0110-9178",
+      "bbox_xyxy": [
+        356,
+        321,
+        581,
+        342
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00124_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          321,
+          581,
+          342
+        ]
+      ],
+      "block_id": "00124_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7985@qworks.example.com",
+      "canonical_text": "user7985@qworks.example.com",
+      "bbox_xyxy": [
+        356,
+        352,
+        888,
+        383
+      ],
+      "bbox_size": {
+        "width": 532,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00124_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          352,
+          888,
+          383
+        ]
+      ],
+      "block_id": "00124_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 종로구 판교역로 833 1동 434호",
+      "canonical_text": "서울특별시 종로구 판교역로 833 1동 434호",
+      "bbox_xyxy": [
+        356,
+        393,
+        989,
+        421
+      ],
+      "bbox_size": {
+        "width": 633,
+        "height": 28
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00124_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          393,
+          989,
+          421
+        ]
+      ],
+      "block_id": "00124_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00124_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web qworks.example.com",
+      "canonical_text": "qworks.example.com",
+      "bbox_xyxy": [
+        356,
+        431,
+        711,
+        462
+      ],
+      "bbox_size": {
+        "width": 355,
+        "height": 31
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00124_010_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          431,
+          711,
+          462
+        ]
+      ],
+      "block_id": "00124_010_b01",
+      "language": "ko"
+    }
+  ]
+}

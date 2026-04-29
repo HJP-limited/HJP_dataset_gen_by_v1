@@ -1,0 +1,310 @@
+{
+  "image_id": "00208",
+  "image_path": "images/bizcard_00208.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "H"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00208"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "steel_blue",
+  "theme_colors": {
+    "bg": "#34495E",
+    "text": "#ECF0F1",
+    "muted": "#B0BEC5",
+    "accent": "#3498DB"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00208_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "한솔디지털",
+      "canonical_text": "한솔디지털",
+      "bbox_xyxy": [
+        59,
+        94,
+        228,
+        130
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00208_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          228,
+          130
+        ]
+      ],
+      "block_id": "00208_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "문하준",
+      "canonical_text": "문하준",
+      "bbox_xyxy": [
+        59,
+        165,
+        215,
+        219
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 54
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00208_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          165,
+          215,
+          219
+        ]
+      ],
+      "block_id": "00208_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "법무팀",
+      "canonical_text": "법무팀",
+      "bbox_xyxy": [
+        59,
+        231,
+        160,
+        266
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00208_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          231,
+          160,
+          266
+        ]
+      ],
+      "block_id": "00208_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부사장",
+      "canonical_text": "부사장",
+      "bbox_xyxy": [
+        59,
+        272,
+        161,
+        308
+      ],
+      "bbox_size": {
+        "width": 102,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00208_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          272,
+          161,
+          308
+        ]
+      ],
+      "block_id": "00208_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0346-3723",
+      "canonical_text": "010-0346-3723",
+      "bbox_xyxy": [
+        488,
+        236,
+        762,
+        261
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00208_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          762,
+          261
+        ]
+      ],
+      "block_id": "00208_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9163@hansol.example.co.kr",
+      "canonical_text": "user9163@hansol.example.co.kr",
+      "bbox_xyxy": [
+        488,
+        272,
+        1007,
+        339
+      ],
+      "bbox_size": {
+        "width": 519,
+        "height": 67
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00208_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          272,
+          1007,
+          339
+        ]
+      ],
+      "block_id": "00208_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 세종특별자치시 디지털로 694 7동 1062호",
+      "canonical_text": "세종특별자치시 디지털로 694 7동 1062호",
+      "bbox_xyxy": [
+        488,
+        350,
+        984,
+        420
+      ],
+      "bbox_size": {
+        "width": 496,
+        "height": 70
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00208_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          350,
+          984,
+          420
+        ]
+      ],
+      "block_id": "00208_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00208_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hansol.example.co.kr",
+      "canonical_text": "hansol.example.co.kr",
+      "bbox_xyxy": [
+        488,
+        431,
+        913,
+        467
+      ],
+      "bbox_size": {
+        "width": 425,
+        "height": 36
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00208_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          431,
+          913,
+          467
+        ]
+      ],
+      "block_id": "00208_008_b01",
+      "language": "ko"
+    }
+  ]
+}

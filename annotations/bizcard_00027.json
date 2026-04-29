@@ -1,0 +1,333 @@
+{
+  "image_id": "00027",
+  "image_path": "images/bizcard_00027.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "H"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mustard_black",
+  "theme_colors": {
+    "bg": "#F4C842",
+    "text": "#0A0A0A",
+    "muted": "#444444",
+    "accent": "#0A0A0A"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00027_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "하이퍼노드",
+      "canonical_text": "하이퍼노드",
+      "bbox_xyxy": [
+        59,
+        83,
+        202,
+        114
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00027_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          202,
+          114
+        ]
+      ],
+      "block_id": "00027_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "오서연",
+      "canonical_text": "오서연",
+      "bbox_xyxy": [
+        59,
+        138,
+        197,
+        186
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 48
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00027_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          138,
+          197,
+          186
+        ]
+      ],
+      "block_id": "00027_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "리서치팀",
+      "canonical_text": "리서치팀",
+      "bbox_xyxy": [
+        59,
+        198,
+        173,
+        228
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00027_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          198,
+          173,
+          228
+        ]
+      ],
+      "block_id": "00027_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임연구원",
+      "canonical_text": "선임연구원",
+      "bbox_xyxy": [
+        59,
+        234,
+        202,
+        265
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00027_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          234,
+          202,
+          265
+        ]
+      ],
+      "block_id": "00027_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0950-9510",
+      "canonical_text": "051-0950-9510",
+      "bbox_xyxy": [
+        59,
+        295,
+        310,
+        319
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00027_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          310,
+          319
+        ]
+      ],
+      "block_id": "00027_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0524-8615",
+      "canonical_text": "010-0524-8615",
+      "bbox_xyxy": [
+        59,
+        329,
+        294,
+        350
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00027_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          329,
+          294,
+          350
+        ]
+      ],
+      "block_id": "00027_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8999@hypernode.example.com",
+      "canonical_text": "user8999@hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        360,
+        639,
+        391
+      ],
+      "bbox_size": {
+        "width": 580,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00027_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          360,
+          639,
+          391
+        ]
+      ],
+      "block_id": "00027_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대구광역시 수성구 센트럴로 423 A동 524호",
+      "canonical_text": "대구광역시 수성구 센트럴로 423 A동 524호",
+      "bbox_xyxy": [
+        59,
+        401,
+        694,
+        430
+      ],
+      "bbox_size": {
+        "width": 635,
+        "height": 29
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00027_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          401,
+          694,
+          430
+        ]
+      ],
+      "block_id": "00027_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00027_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hypernode.example.com",
+      "canonical_text": "hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        440,
+        462,
+        471
+      ],
+      "bbox_size": {
+        "width": 403,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00027_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          440,
+          462,
+          471
+        ]
+      ],
+      "block_id": "00027_009_b01",
+      "language": "ko"
+    }
+  ]
+}

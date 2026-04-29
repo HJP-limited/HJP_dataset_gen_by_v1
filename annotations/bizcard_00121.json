@@ -1,0 +1,333 @@
+{
+  "image_id": "00121",
+  "image_path": "images/bizcard_00121.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "V"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mint",
+  "theme_colors": {
+    "bg": "#E8F5E9",
+    "text": "#1B5E20",
+    "muted": "#5A7A60",
+    "accent": "#388E3C"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00121_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "베리타스",
+      "canonical_text": "베리타스",
+      "bbox_xyxy": [
+        47,
+        71,
+        182,
+        107
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00121_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          182,
+          107
+        ]
+      ],
+      "block_id": "00121_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허시우",
+      "canonical_text": "허시우",
+      "bbox_xyxy": [
+        356,
+        82,
+        536,
+        144
+      ],
+      "bbox_size": {
+        "width": 180,
+        "height": 62
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00121_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          536,
+          144
+        ]
+      ],
+      "block_id": "00121_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "디자인팀",
+      "canonical_text": "디자인팀",
+      "bbox_xyxy": [
+        356,
+        156,
+        491,
+        192
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00121_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          156,
+          491,
+          192
+        ]
+      ],
+      "block_id": "00121_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부사장",
+      "canonical_text": "부사장",
+      "bbox_xyxy": [
+        356,
+        198,
+        458,
+        234
+      ],
+      "bbox_size": {
+        "width": 102,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00121_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          198,
+          458,
+          234
+        ]
+      ],
+      "block_id": "00121_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0281-1948",
+      "canonical_text": "031-0281-1948",
+      "bbox_xyxy": [
+        356,
+        264,
+        611,
+        289
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00121_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          264,
+          611,
+          289
+        ]
+      ],
+      "block_id": "00121_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0460-4366",
+      "canonical_text": "010-0460-4366",
+      "bbox_xyxy": [
+        356,
+        299,
+        597,
+        321
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00121_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          299,
+          597,
+          321
+        ]
+      ],
+      "block_id": "00121_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3552@veritas.example.org",
+      "canonical_text": "user3552@veritas.example.org",
+      "bbox_xyxy": [
+        356,
+        331,
+        885,
+        363
+      ],
+      "bbox_size": {
+        "width": 529,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00121_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          331,
+          885,
+          363
+        ]
+      ],
+      "block_id": "00121_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 강남대로 986 30층",
+      "canonical_text": "서울특별시 영등포구 강남대로 986 30층",
+      "bbox_xyxy": [
+        356,
+        373,
+        979,
+        403
+      ],
+      "bbox_size": {
+        "width": 623,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00121_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          373,
+          979,
+          403
+        ]
+      ],
+      "block_id": "00121_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00121_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web veritas.example.org",
+      "canonical_text": "veritas.example.org",
+      "bbox_xyxy": [
+        356,
+        413,
+        702,
+        445
+      ],
+      "bbox_size": {
+        "width": 346,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00121_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          413,
+          702,
+          445
+        ]
+      ],
+      "block_id": "00121_009_b01",
+      "language": "ko"
+    }
+  ]
+}

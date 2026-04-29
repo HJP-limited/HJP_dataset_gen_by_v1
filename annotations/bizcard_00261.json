@@ -1,0 +1,310 @@
+{
+  "image_id": "00261",
+  "image_path": "images/bizcard_00261.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "H"
+    },
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00261"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "off_white",
+  "theme_colors": {
+    "bg": "#F8F7F4",
+    "text": "#222222",
+    "muted": "#5A5A5A",
+    "accent": "#8B6F47"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00261_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "하이퍼노드",
+      "canonical_text": "하이퍼노드",
+      "bbox_xyxy": [
+        224,
+        177,
+        367,
+        208
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00261_001_l01"
+      ],
+      "line_boxes": [
+        [
+          224,
+          177,
+          367,
+          208
+        ]
+      ],
+      "block_id": "00261_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "장다은",
+      "canonical_text": "장다은",
+      "bbox_xyxy": [
+        203,
+        265,
+        388,
+        330
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 65
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00261_002_l01"
+      ],
+      "line_boxes": [
+        [
+          203,
+          265,
+          388,
+          330
+        ]
+      ],
+      "block_id": "00261_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임연구원",
+      "canonical_text": "선임연구원",
+      "bbox_xyxy": [
+        224,
+        354,
+        367,
+        385
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00261_003_l01"
+      ],
+      "line_boxes": [
+        [
+          224,
+          354,
+          367,
+          385
+        ]
+      ],
+      "block_id": "00261_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0696-2446",
+      "canonical_text": "070-0696-2446",
+      "bbox_xyxy": [
+        59,
+        584,
+        345,
+        611
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00261_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          345,
+          611
+        ]
+      ],
+      "block_id": "00261_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0507-3583",
+      "canonical_text": "010-0507-3583",
+      "bbox_xyxy": [
+        59,
+        622,
+        327,
+        646
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00261_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          622,
+          327,
+          646
+        ]
+      ],
+      "block_id": "00261_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8459@hypernode.example.com",
+      "canonical_text": "user8459@hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        657,
+        613,
+        723
+      ],
+      "bbox_size": {
+        "width": 554,
+        "height": 66
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00261_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          657,
+          613,
+          723
+        ]
+      ],
+      "block_id": "00261_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 서초구 양재대로 712",
+      "canonical_text": "서울특별시 서초구 양재대로 712",
+      "bbox_xyxy": [
+        59,
+        734,
+        439,
+        802
+      ],
+      "bbox_size": {
+        "width": 380,
+        "height": 68
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00261_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          734,
+          439,
+          802
+        ]
+      ],
+      "block_id": "00261_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00261_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hypernode.example.com",
+      "canonical_text": "hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        813,
+        517,
+        848
+      ],
+      "bbox_size": {
+        "width": 458,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00261_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          813,
+          517,
+          848
+        ]
+      ],
+      "block_id": "00261_008_b01",
+      "language": "ko"
+    }
+  ]
+}

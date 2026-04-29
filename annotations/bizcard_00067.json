@@ -1,0 +1,310 @@
+{
+  "image_id": "00067",
+  "image_path": "images/bizcard_00067.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "N"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00067"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "deep_forest",
+  "theme_colors": {
+    "bg": "#0F2818",
+    "text": "#E8E1D5",
+    "muted": "#A8B0A4",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00067_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "누리테크",
+      "canonical_text": "누리테크",
+      "bbox_xyxy": [
+        59,
+        83,
+        180,
+        116
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 33
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00067_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          180,
+          116
+        ]
+      ],
+      "block_id": "00067_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "최유준",
+      "canonical_text": "최유준",
+      "bbox_xyxy": [
+        833,
+        83,
+        1004,
+        144
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 61
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00067_002_l01"
+      ],
+      "line_boxes": [
+        [
+          833,
+          83,
+          1004,
+          144
+        ]
+      ],
+      "block_id": "00067_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "콘텐츠팀",
+      "canonical_text": "콘텐츠팀",
+      "bbox_xyxy": [
+        883,
+        156,
+        1004,
+        187
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00067_003_l01"
+      ],
+      "line_boxes": [
+        [
+          883,
+          156,
+          1004,
+          187
+        ]
+      ],
+      "block_id": "00067_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        943,
+        193,
+        1004,
+        225
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00067_004_l01"
+      ],
+      "line_boxes": [
+        [
+          943,
+          193,
+          1004,
+          225
+        ]
+      ],
+      "block_id": "00067_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0609-5895",
+      "canonical_text": "010-0609-5895",
+      "bbox_xyxy": [
+        59,
+        328,
+        327,
+        352
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00067_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          328,
+          327,
+          352
+        ]
+      ],
+      "block_id": "00067_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8229@nuritech.example.co.kr",
+      "canonical_text": "user8229@nuritech.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        363,
+        690,
+        398
+      ],
+      "bbox_size": {
+        "width": 631,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00067_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          363,
+          690,
+          398
+        ]
+      ],
+      "block_id": "00067_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대전광역시 유성구 디지털로 935 18동 1157호",
+      "canonical_text": "대전광역시 유성구 디지털로 935 18동 1157호",
+      "bbox_xyxy": [
+        59,
+        409,
+        816,
+        441
+      ],
+      "bbox_size": {
+        "width": 757,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00067_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          409,
+          816,
+          441
+        ]
+      ],
+      "block_id": "00067_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00067_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web nuritech.example.co.kr",
+      "canonical_text": "nuritech.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        452,
+        488,
+        487
+      ],
+      "bbox_size": {
+        "width": 429,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00067_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          452,
+          488,
+          487
+        ]
+      ],
+      "block_id": "00067_008_b01",
+      "language": "ko"
+    }
+  ]
+}

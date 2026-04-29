@@ -1,0 +1,331 @@
+{
+  "image_id": "00311",
+  "image_path": "images/bizcard_00311.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V7",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00311"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "light_gray",
+  "theme_colors": {
+    "bg": "#EFEFEF",
+    "text": "#1F2937",
+    "muted": "#5B6470",
+    "accent": "#DC2626"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00311_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "하이퍼노드",
+      "canonical_text": "하이퍼노드",
+      "bbox_xyxy": [
+        59,
+        118,
+        220,
+        152
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00311_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          118,
+          220,
+          152
+        ]
+      ],
+      "block_id": "00311_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "황지유",
+      "canonical_text": "황지유",
+      "bbox_xyxy": [
+        59,
+        199,
+        244,
+        264
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 65
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00311_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          199,
+          244,
+          264
+        ]
+      ],
+      "block_id": "00311_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "글로벌팀",
+      "canonical_text": "글로벌팀",
+      "bbox_xyxy": [
+        59,
+        288,
+        188,
+        321
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00311_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          288,
+          188,
+          321
+        ]
+      ],
+      "block_id": "00311_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사장",
+      "canonical_text": "사장",
+      "bbox_xyxy": [
+        59,
+        333,
+        123,
+        367
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00311_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          333,
+          123,
+          367
+        ]
+      ],
+      "block_id": "00311_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0465-4411",
+      "canonical_text": "062-0465-4411",
+      "bbox_xyxy": [
+        59,
+        414,
+        310,
+        438
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00311_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          414,
+          310,
+          438
+        ]
+      ],
+      "block_id": "00311_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0207-8822",
+      "canonical_text": "010-0207-8822",
+      "bbox_xyxy": [
+        59,
+        448,
+        294,
+        469
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00311_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          448,
+          294,
+          469
+        ]
+      ],
+      "block_id": "00311_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9006@hypernode.example.com",
+      "canonical_text": "user9006@hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        479,
+        546,
+        538
+      ],
+      "bbox_size": {
+        "width": 487,
+        "height": 59
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00311_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          479,
+          546,
+          538
+        ]
+      ],
+      "block_id": "00311_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 테헤란로 353",
+      "canonical_text": "경기도 고양시 일산서구 테헤란로 353",
+      "bbox_xyxy": [
+        59,
+        548,
+        453,
+        608
+      ],
+      "bbox_size": {
+        "width": 394,
+        "height": 60
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00311_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          548,
+          453,
+          608
+        ]
+      ],
+      "block_id": "00311_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00311_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hypernode.example.com",
+      "canonical_text": "hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        618,
+        462,
+        649
+      ],
+      "bbox_size": {
+        "width": 403,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00311_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          618,
+          462,
+          649
+        ]
+      ],
+      "block_id": "00311_009_b01",
+      "language": "ko"
+    }
+  ]
+}

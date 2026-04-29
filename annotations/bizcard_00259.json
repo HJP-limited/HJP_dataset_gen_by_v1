@@ -1,0 +1,240 @@
+{
+  "image_id": "00259",
+  "image_path": "images/bizcard_00259.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "G"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "steel_blue",
+  "theme_colors": {
+    "bg": "#34495E",
+    "text": "#ECF0F1",
+    "muted": "#B0BEC5",
+    "accent": "#3498DB"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00259_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "그린피크",
+      "canonical_text": "그린피크",
+      "bbox_xyxy": [
+        231,
+        177,
+        360,
+        211
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00259_001_l01"
+      ],
+      "line_boxes": [
+        [
+          231,
+          177,
+          360,
+          211
+        ]
+      ],
+      "block_id": "00259_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00259_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "윤현지",
+      "canonical_text": "윤현지",
+      "bbox_xyxy": [
+        198,
+        265,
+        392,
+        331
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 66
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00259_002_l01"
+      ],
+      "line_boxes": [
+        [
+          198,
+          265,
+          392,
+          331
+        ]
+      ],
+      "block_id": "00259_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00259_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석",
+      "canonical_text": "수석",
+      "bbox_xyxy": [
+        263,
+        355,
+        327,
+        389
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00259_003_l01"
+      ],
+      "line_boxes": [
+        [
+          263,
+          355,
+          327,
+          389
+        ]
+      ],
+      "block_id": "00259_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00259_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0221-4985",
+      "canonical_text": "010-0221-4985",
+      "bbox_xyxy": [
+        59,
+        584,
+        310,
+        607
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00259_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          310,
+          607
+        ]
+      ],
+      "block_id": "00259_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00259_005",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0827-6079",
+      "canonical_text": "053-0827-6079",
+      "bbox_xyxy": [
+        59,
+        617,
+        300,
+        640
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00259_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          617,
+          300,
+          640
+        ]
+      ],
+      "block_id": "00259_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00259_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4176@greenpeak.example.com",
+      "canonical_text": "user4176@greenpeak.example.com",
+      "bbox_xyxy": [
+        59,
+        650,
+        575,
+        713
+      ],
+      "bbox_size": {
+        "width": 516,
+        "height": 63
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00259_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          650,
+          575,
+          713
+        ]
+      ],
+      "block_id": "00259_006_b01",
+      "language": "ko"
+    }
+  ]
+}

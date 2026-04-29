@@ -1,0 +1,333 @@
+{
+  "image_id": "00287",
+  "image_path": "images/bizcard_00287.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        59,
+        59,
+        177,
+        177
+      ],
+      "size_px": 118,
+      "initial": "M"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "butter",
+  "theme_colors": {
+    "bg": "#FFF8E1",
+    "text": "#5D4E2C",
+    "muted": "#9A8E70",
+    "accent": "#C9A961"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00287_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "메이플스튜디오",
+      "canonical_text": "메이플스튜디오",
+      "bbox_xyxy": [
+        59,
+        236,
+        296,
+        272
+      ],
+      "bbox_size": {
+        "width": 237,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00287_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          236,
+          296,
+          272
+        ]
+      ],
+      "block_id": "00287_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "서예준",
+      "canonical_text": "서예준",
+      "bbox_xyxy": [
+        59,
+        319,
+        253,
+        386
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00287_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          319,
+          253,
+          386
+        ]
+      ],
+      "block_id": "00287_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "개발팀",
+      "canonical_text": "개발팀",
+      "bbox_xyxy": [
+        59,
+        410,
+        160,
+        446
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00287_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          410,
+          160,
+          446
+        ]
+      ],
+      "block_id": "00287_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석연구원",
+      "canonical_text": "수석연구원",
+      "bbox_xyxy": [
+        59,
+        458,
+        228,
+        494
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00287_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          458,
+          228,
+          494
+        ]
+      ],
+      "block_id": "00287_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0636-8779",
+      "canonical_text": "070-0636-8779",
+      "bbox_xyxy": [
+        59,
+        541,
+        331,
+        567
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00287_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          541,
+          331,
+          567
+        ]
+      ],
+      "block_id": "00287_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0907-2144",
+      "canonical_text": "010-0907-2144",
+      "bbox_xyxy": [
+        59,
+        577,
+        316,
+        601
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00287_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          577,
+          316,
+          601
+        ]
+      ],
+      "block_id": "00287_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3336@maple.example.com",
+      "canonical_text": "user3336@maple.example.com",
+      "bbox_xyxy": [
+        59,
+        611,
+        525,
+        673
+      ],
+      "bbox_size": {
+        "width": 466,
+        "height": 62
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00287_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          611,
+          525,
+          673
+        ]
+      ],
+      "block_id": "00287_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 인천광역시 연수구 판교역로 515 15층",
+      "canonical_text": "인천광역시 연수구 판교역로 515 15층",
+      "bbox_xyxy": [
+        59,
+        683,
+        435,
+        751
+      ],
+      "bbox_size": {
+        "width": 376,
+        "height": 68
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00287_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          683,
+          435,
+          751
+        ]
+      ],
+      "block_id": "00287_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00287_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web maple.example.com",
+      "canonical_text": "maple.example.com",
+      "bbox_xyxy": [
+        59,
+        761,
+        437,
+        795
+      ],
+      "bbox_size": {
+        "width": 378,
+        "height": 34
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00287_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          761,
+          437,
+          795
+        ]
+      ],
+      "block_id": "00287_009_b01",
+      "language": "ko"
+    }
+  ]
+}

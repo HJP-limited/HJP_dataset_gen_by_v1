@@ -1,0 +1,323 @@
+{
+  "image_id": "00005",
+  "image_path": "images/bizcard_00005.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "navy_on_white",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#0F2A4F",
+    "muted": "#5B6E85",
+    "accent": "#0F2A4F"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00005_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        83,
+        156,
+        117
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00005_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          156,
+          117
+        ]
+      ],
+      "block_id": "00005_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한민준",
+      "canonical_text": "한민준",
+      "bbox_xyxy": [
+        59,
+        141,
+        230,
+        199
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00005_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          230,
+          199
+        ]
+      ],
+      "block_id": "00005_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "기획팀",
+      "canonical_text": "기획팀",
+      "bbox_xyxy": [
+        59,
+        211,
+        156,
+        245
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00005_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          211,
+          156,
+          245
+        ]
+      ],
+      "block_id": "00005_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "매니저",
+      "canonical_text": "매니저",
+      "bbox_xyxy": [
+        59,
+        251,
+        156,
+        285
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00005_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          251,
+          156,
+          285
+        ]
+      ],
+      "block_id": "00005_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0495-7429",
+      "canonical_text": "010-0495-7429",
+      "bbox_xyxy": [
+        59,
+        315,
+        310,
+        338
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00005_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          315,
+          310,
+          338
+        ]
+      ],
+      "block_id": "00005_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 02-0100-5322",
+      "canonical_text": "02-0100-5322",
+      "bbox_xyxy": [
+        59,
+        348,
+        283,
+        371
+      ],
+      "bbox_size": {
+        "width": 224,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00005_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          348,
+          283,
+          371
+        ]
+      ],
+      "block_id": "00005_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8396@prism.example.org",
+      "canonical_text": "user8396@prism.example.org",
+      "bbox_xyxy": [
+        59,
+        381,
+        590,
+        414
+      ],
+      "bbox_size": {
+        "width": 531,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00005_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          381,
+          590,
+          414
+        ]
+      ],
+      "block_id": "00005_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 북구 테헤란로 940 C동 681호",
+      "canonical_text": "광주광역시 북구 테헤란로 940 C동 681호",
+      "bbox_xyxy": [
+        59,
+        424,
+        710,
+        454
+      ],
+      "bbox_size": {
+        "width": 651,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00005_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          424,
+          710,
+          454
+        ]
+      ],
+      "block_id": "00005_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00005_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web prism.example.org",
+      "canonical_text": "prism.example.org",
+      "bbox_xyxy": [
+        59,
+        464,
+        401,
+        497
+      ],
+      "bbox_size": {
+        "width": 342,
+        "height": 33
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00005_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          464,
+          401,
+          497
+        ]
+      ],
+      "block_id": "00005_009_b01",
+      "language": "ko"
+    }
+  ]
+}

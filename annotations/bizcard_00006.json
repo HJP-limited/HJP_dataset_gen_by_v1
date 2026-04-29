@@ -1,0 +1,354 @@
+{
+  "image_id": "00006",
+  "image_path": "images/bizcard_00006.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mint",
+  "theme_colors": {
+    "bg": "#E8F5E9",
+    "text": "#1B5E20",
+    "muted": "#5A7A60",
+    "accent": "#388E3C"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00006_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "문라이트",
+      "canonical_text": "문라이트",
+      "bbox_xyxy": [
+        59,
+        83,
+        188,
+        117
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00006_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          188,
+          117
+        ]
+      ],
+      "block_id": "00006_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "임채원",
+      "canonical_text": "임채원",
+      "bbox_xyxy": [
+        59,
+        141,
+        208,
+        192
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 51
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00006_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          208,
+          192
+        ]
+      ],
+      "block_id": "00006_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "디자인팀",
+      "canonical_text": "디자인팀",
+      "bbox_xyxy": [
+        59,
+        204,
+        188,
+        238
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00006_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          204,
+          188,
+          238
+        ]
+      ],
+      "block_id": "00006_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부장",
+      "canonical_text": "부장",
+      "bbox_xyxy": [
+        59,
+        244,
+        123,
+        277
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00006_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          244,
+          123,
+          277
+        ]
+      ],
+      "block_id": "00006_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0994-2761",
+      "canonical_text": "070-0994-2761",
+      "bbox_xyxy": [
+        59,
+        307,
+        342,
+        334
+      ],
+      "bbox_size": {
+        "width": 283,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00006_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          307,
+          342,
+          334
+        ]
+      ],
+      "block_id": "00006_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0831-8141",
+      "canonical_text": "010-0831-8141",
+      "bbox_xyxy": [
+        59,
+        345,
+        324,
+        369
+      ],
+      "bbox_size": {
+        "width": 265,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00006_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          345,
+          324,
+          369
+        ]
+      ],
+      "block_id": "00006_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 051-0764-4611",
+      "canonical_text": "051-0764-4611",
+      "bbox_xyxy": [
+        59,
+        380,
+        313,
+        404
+      ],
+      "bbox_size": {
+        "width": 254,
+        "height": 24
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00006_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          380,
+          313,
+          404
+        ]
+      ],
+      "block_id": "00006_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3158@moonlight.example.com",
+      "canonical_text": "user3158@moonlight.example.com",
+      "bbox_xyxy": [
+        59,
+        415,
+        705,
+        450
+      ],
+      "bbox_size": {
+        "width": 646,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00006_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          415,
+          705,
+          450
+        ]
+      ],
+      "block_id": "00006_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 성동구 한강대로 570 28층",
+      "canonical_text": "서울특별시 성동구 한강대로 570 28층",
+      "bbox_xyxy": [
+        59,
+        461,
+        702,
+        493
+      ],
+      "bbox_size": {
+        "width": 643,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00006_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          461,
+          702,
+          493
+        ]
+      ],
+      "block_id": "00006_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00006_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web moonlight.example.com",
+      "canonical_text": "moonlight.example.com",
+      "bbox_xyxy": [
+        59,
+        504,
+        505,
+        539
+      ],
+      "bbox_size": {
+        "width": 446,
+        "height": 35
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00006_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          504,
+          505,
+          539
+        ]
+      ],
+      "block_id": "00006_010_b01",
+      "language": "ko"
+    }
+  ]
+}

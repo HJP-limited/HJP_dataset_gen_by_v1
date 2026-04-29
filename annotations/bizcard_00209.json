@@ -1,0 +1,279 @@
+{
+  "image_id": "00209",
+  "image_path": "images/bizcard_00209.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00209"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "tech_blue",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1E40AF",
+    "muted": "#647596",
+    "accent": "#06B6D4"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00209_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        94,
+        156,
+        128
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00209_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          156,
+          128
+        ]
+      ],
+      "block_id": "00209_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00209_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "권은우",
+      "canonical_text": "권은우",
+      "bbox_xyxy": [
+        59,
+        163,
+        239,
+        225
+      ],
+      "bbox_size": {
+        "width": 180,
+        "height": 62
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00209_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          163,
+          239,
+          225
+        ]
+      ],
+      "block_id": "00209_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00209_003",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0566-7596",
+      "canonical_text": "031-0566-7596",
+      "bbox_xyxy": [
+        488,
+        236,
+        774,
+        263
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00209_003_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          774,
+          263
+        ]
+      ],
+      "block_id": "00209_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00209_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0827-9013",
+      "canonical_text": "010-0827-9013",
+      "bbox_xyxy": [
+        488,
+        274,
+        756,
+        298
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00209_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          274,
+          756,
+          298
+        ]
+      ],
+      "block_id": "00209_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00209_005",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 031-0624-3639",
+      "canonical_text": "031-0624-3639",
+      "bbox_xyxy": [
+        488,
+        309,
+        744,
+        333
+      ],
+      "bbox_size": {
+        "width": 256,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00209_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          309,
+          744,
+          333
+        ]
+      ],
+      "block_id": "00209_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00209_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6722@prism.example.org",
+      "canonical_text": "user6722@prism.example.org",
+      "bbox_xyxy": [
+        488,
+        344,
+        948,
+        410
+      ],
+      "bbox_size": {
+        "width": 460,
+        "height": 66
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00209_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          344,
+          948,
+          410
+        ]
+      ],
+      "block_id": "00209_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00209_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 양재대로 455",
+      "canonical_text": "경기도 고양시 일산서구 양재대로 455",
+      "bbox_xyxy": [
+        488,
+        421,
+        936,
+        489
+      ],
+      "bbox_size": {
+        "width": 448,
+        "height": 68
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00209_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          421,
+          936,
+          489
+        ]
+      ],
+      "block_id": "00209_007_b01",
+      "language": "ko"
+    }
+  ]
+}

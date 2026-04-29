@@ -1,0 +1,242 @@
+{
+  "image_id": "00141",
+  "image_path": "images/bizcard_00141.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V3",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_strip_bottom"
+    ],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "K"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "light_gray",
+  "theme_colors": {
+    "bg": "#EFEFEF",
+    "text": "#1F2937",
+    "muted": "#5B6470",
+    "accent": "#DC2626"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00141_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "케이엠스튜디오",
+      "canonical_text": "케이엠스튜디오",
+      "bbox_xyxy": [
+        47,
+        71,
+        260,
+        103
+      ],
+      "bbox_size": {
+        "width": 213,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00141_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          260,
+          103
+        ]
+      ],
+      "block_id": "00141_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00141_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "윤지후",
+      "canonical_text": "윤지후",
+      "bbox_xyxy": [
+        356,
+        82,
+        494,
+        130
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 48
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00141_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          494,
+          130
+        ]
+      ],
+      "block_id": "00141_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00141_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        356,
+        142,
+        417,
+        174
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00141_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          142,
+          417,
+          174
+        ]
+      ],
+      "block_id": "00141_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00141_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0982-2509",
+      "canonical_text": "010-0982-2509",
+      "bbox_xyxy": [
+        356,
+        204,
+        607,
+        227
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00141_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          204,
+          607,
+          227
+        ]
+      ],
+      "block_id": "00141_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00141_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8510@kmstudio.example.com",
+      "canonical_text": "user8510@kmstudio.example.com",
+      "bbox_xyxy": [
+        356,
+        237,
+        955,
+        270
+      ],
+      "bbox_size": {
+        "width": 599,
+        "height": 33
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00141_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          237,
+          955,
+          270
+        ]
+      ],
+      "block_id": "00141_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00141_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 울산광역시 남구 테헤란로 461",
+      "canonical_text": "울산광역시 남구 테헤란로 461",
+      "bbox_xyxy": [
+        356,
+        280,
+        864,
+        310
+      ],
+      "bbox_size": {
+        "width": 508,
+        "height": 30
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00141_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          280,
+          864,
+          310
+        ]
+      ],
+      "block_id": "00141_006_b01",
+      "language": "ko"
+    }
+  ]
+}

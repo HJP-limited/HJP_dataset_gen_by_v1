@@ -1,0 +1,209 @@
+{
+  "image_id": "00031",
+  "image_path": "images/bizcard_00031.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "V"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "deep_forest",
+  "theme_colors": {
+    "bg": "#0F2818",
+    "text": "#E8E1D5",
+    "muted": "#A8B0A4",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00031_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "비전플러스",
+      "canonical_text": "비전플러스",
+      "bbox_xyxy": [
+        59,
+        83,
+        220,
+        117
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00031_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          220,
+          117
+        ]
+      ],
+      "block_id": "00031_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00031_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "임예은",
+      "canonical_text": "임예은",
+      "bbox_xyxy": [
+        59,
+        141,
+        230,
+        200
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 59
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00031_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          230,
+          200
+        ]
+      ],
+      "block_id": "00031_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00031_003",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0561-2808",
+      "canonical_text": "031-0561-2808",
+      "bbox_xyxy": [
+        59,
+        236,
+        310,
+        260
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00031_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          236,
+          310,
+          260
+        ]
+      ],
+      "block_id": "00031_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00031_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0598-7623",
+      "canonical_text": "010-0598-7623",
+      "bbox_xyxy": [
+        59,
+        270,
+        294,
+        291
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00031_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          270,
+          294,
+          291
+        ]
+      ],
+      "block_id": "00031_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00031_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1207@visionplus.example.com",
+      "canonical_text": "user1207@visionplus.example.com",
+      "bbox_xyxy": [
+        59,
+        301,
+        629,
+        332
+      ],
+      "bbox_size": {
+        "width": 570,
+        "height": 31
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00031_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          301,
+          629,
+          332
+        ]
+      ],
+      "block_id": "00031_005_b01",
+      "language": "ko"
+    }
+  ]
+}

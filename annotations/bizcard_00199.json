@@ -1,0 +1,295 @@
+{
+  "image_id": "00199",
+  "image_path": "images/bizcard_00199.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "terracotta",
+  "theme_colors": {
+    "bg": "#C66B3D",
+    "text": "#FAF6F0",
+    "muted": "#E8D5C4",
+    "accent": "#2C1810"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00199_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        452,
+        71,
+        611,
+        105
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00199_001_l01"
+      ],
+      "line_boxes": [
+        [
+          452,
+          71,
+          611,
+          105
+        ]
+      ],
+      "block_id": "00199_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "박은우",
+      "canonical_text": "박은우",
+      "bbox_xyxy": [
+        447,
+        140,
+        615,
+        199
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 59
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00199_002_l01"
+      ],
+      "line_boxes": [
+        [
+          447,
+          140,
+          615,
+          199
+        ]
+      ],
+      "block_id": "00199_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "보안팀",
+      "canonical_text": "보안팀",
+      "bbox_xyxy": [
+        483,
+        211,
+        579,
+        244
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00199_003_l01"
+      ],
+      "line_boxes": [
+        [
+          483,
+          211,
+          579,
+          244
+        ]
+      ],
+      "block_id": "00199_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부장",
+      "canonical_text": "부장",
+      "bbox_xyxy": [
+        499,
+        250,
+        563,
+        283
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00199_004_l01"
+      ],
+      "line_boxes": [
+        [
+          499,
+          250,
+          563,
+          283
+        ]
+      ],
+      "block_id": "00199_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0950-5381",
+      "canonical_text": "032-0950-5381",
+      "bbox_xyxy": [
+        386,
+        313,
+        676,
+        341
+      ],
+      "bbox_size": {
+        "width": 290,
+        "height": 28
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00199_005_l01"
+      ],
+      "line_boxes": [
+        [
+          386,
+          313,
+          676,
+          341
+        ]
+      ],
+      "block_id": "00199_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0765-9936",
+      "canonical_text": "010-0765-9936",
+      "bbox_xyxy": [
+        394,
+        352,
+        668,
+        377
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00199_006_l01"
+      ],
+      "line_boxes": [
+        [
+          394,
+          352,
+          668,
+          377
+        ]
+      ],
+      "block_id": "00199_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9771@eclipse.example.com",
+      "canonical_text": "user9771@eclipse.example.com",
+      "bbox_xyxy": [
+        220,
+        388,
+        842,
+        424
+      ],
+      "bbox_size": {
+        "width": 622,
+        "height": 36
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00199_007_l01"
+      ],
+      "line_boxes": [
+        [
+          220,
+          388,
+          842,
+          424
+        ]
+      ],
+      "block_id": "00199_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00199_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 강남구 디지털로 715 B동 623호",
+      "canonical_text": "서울특별시 강남구 디지털로 715 B동 623호",
+      "bbox_xyxy": [
+        154,
+        435,
+        909,
+        469
+      ],
+      "bbox_size": {
+        "width": 755,
+        "height": 34
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00199_008_l01"
+      ],
+      "line_boxes": [
+        [
+          154,
+          435,
+          909,
+          469
+        ]
+      ],
+      "block_id": "00199_008_b01",
+      "language": "ko"
+    }
+  ]
+}

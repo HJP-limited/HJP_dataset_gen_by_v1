@@ -1,0 +1,302 @@
+{
+  "image_id": "00092",
+  "image_path": "images/bizcard_00092.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "R"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "sage",
+  "theme_colors": {
+    "bg": "#A8B5A0",
+    "text": "#2C3E2D",
+    "muted": "#5A6A57",
+    "accent": "#FFFFFF"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00092_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "리바이브",
+      "canonical_text": "리바이브",
+      "bbox_xyxy": [
+        59,
+        59,
+        194,
+        95
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00092_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          194,
+          95
+        ]
+      ],
+      "block_id": "00092_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "양민지",
+      "canonical_text": "양민지",
+      "bbox_xyxy": [
+        59,
+        119,
+        215,
+        174
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 55
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00092_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          119,
+          215,
+          174
+        ]
+      ],
+      "block_id": "00092_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "데이터분석팀",
+      "canonical_text": "데이터분석팀",
+      "bbox_xyxy": [
+        59,
+        295,
+        262,
+        331
+      ],
+      "bbox_size": {
+        "width": 203,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00092_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          262,
+          331
+        ]
+      ],
+      "block_id": "00092_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "과장",
+      "canonical_text": "과장",
+      "bbox_xyxy": [
+        59,
+        337,
+        127,
+        373
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00092_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          337,
+          127,
+          373
+        ]
+      ],
+      "block_id": "00092_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0602-5079",
+      "canonical_text": "031-0602-5079",
+      "bbox_xyxy": [
+        59,
+        391,
+        349,
+        419
+      ],
+      "bbox_size": {
+        "width": 290,
+        "height": 28
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00092_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          391,
+          349,
+          419
+        ]
+      ],
+      "block_id": "00092_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0127-8963",
+      "canonical_text": "010-0127-8963",
+      "bbox_xyxy": [
+        59,
+        430,
+        333,
+        455
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00092_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          430,
+          333,
+          455
+        ]
+      ],
+      "block_id": "00092_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2077@revive.example.co.kr",
+      "canonical_text": "user2077@revive.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        466,
+        680,
+        502
+      ],
+      "bbox_size": {
+        "width": 621,
+        "height": 36
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00092_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          466,
+          680,
+          502
+        ]
+      ],
+      "block_id": "00092_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00092_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web revive.example.co.kr",
+      "canonical_text": "revive.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        513,
+        472,
+        549
+      ],
+      "bbox_size": {
+        "width": 413,
+        "height": 36
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00092_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          513,
+          472,
+          549
+        ]
+      ],
+      "block_id": "00092_008_b01",
+      "language": "ko"
+    }
+  ]
+}

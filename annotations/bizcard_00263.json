@@ -1,0 +1,310 @@
+{
+  "image_id": "00263",
+  "image_path": "images/bizcard_00263.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "S"
+    },
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00263"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "pure_black",
+  "theme_colors": {
+    "bg": "#0A0A0A",
+    "text": "#FFFFFF",
+    "muted": "#B0B0B0",
+    "accent": "#D4AF37"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00263_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "써밋컨설팅",
+      "canonical_text": "써밋컨설팅",
+      "bbox_xyxy": [
+        211,
+        177,
+        380,
+        213
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00263_001_l01"
+      ],
+      "line_boxes": [
+        [
+          211,
+          177,
+          380,
+          213
+        ]
+      ],
+      "block_id": "00263_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "안지훈",
+      "canonical_text": "안지훈",
+      "bbox_xyxy": [
+        198,
+        265,
+        392,
+        332
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00263_002_l01"
+      ],
+      "line_boxes": [
+        [
+          198,
+          265,
+          392,
+          332
+        ]
+      ],
+      "block_id": "00263_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "고객지원팀",
+      "canonical_text": "고객지원팀",
+      "bbox_xyxy": [
+        211,
+        356,
+        380,
+        392
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00263_003_l01"
+      ],
+      "line_boxes": [
+        [
+          211,
+          356,
+          380,
+          392
+        ]
+      ],
+      "block_id": "00263_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0289-8706",
+      "canonical_text": "010-0289-8706",
+      "bbox_xyxy": [
+        59,
+        584,
+        333,
+        609
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00263_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          333,
+          609
+        ]
+      ],
+      "block_id": "00263_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_005",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 070-0160-8506",
+      "canonical_text": "070-0160-8506",
+      "bbox_xyxy": [
+        59,
+        620,
+        318,
+        644
+      ],
+      "bbox_size": {
+        "width": 259,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00263_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          620,
+          318,
+          644
+        ]
+      ],
+      "block_id": "00263_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2759@summit.example.org",
+      "canonical_text": "user2759@summit.example.org",
+      "bbox_xyxy": [
+        59,
+        655,
+        564,
+        722
+      ],
+      "bbox_size": {
+        "width": 505,
+        "height": 67
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00263_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          655,
+          564,
+          722
+        ]
+      ],
+      "block_id": "00263_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 광화문로 225 F동 343호",
+      "canonical_text": "제주특별자치도 제주시 광화문로 225 F동 343호",
+      "bbox_xyxy": [
+        59,
+        733,
+        523,
+        805
+      ],
+      "bbox_size": {
+        "width": 464,
+        "height": 72
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00263_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          733,
+          523,
+          805
+        ]
+      ],
+      "block_id": "00263_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00263_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web summit.example.org",
+      "canonical_text": "summit.example.org",
+      "bbox_xyxy": [
+        59,
+        816,
+        471,
+        852
+      ],
+      "bbox_size": {
+        "width": 412,
+        "height": 36
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00263_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          816,
+          471,
+          852
+        ]
+      ],
+      "block_id": "00263_008_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "image_id": "00143",
+  "image_path": "images/bizcard_00143.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V3",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_strip_bottom"
+    ],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "S"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "green_accent",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1B1B1B",
+    "muted": "#5A5A5A",
+    "accent": "#06C755"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00143_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "써밋컨설팅",
+      "canonical_text": "써밋컨설팅",
+      "bbox_xyxy": [
+        47,
+        71,
+        197,
+        103
+      ],
+      "bbox_size": {
+        "width": 150,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00143_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          197,
+          103
+        ]
+      ],
+      "block_id": "00143_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허예은",
+      "canonical_text": "허예은",
+      "bbox_xyxy": [
+        356,
+        82,
+        494,
+        131
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 49
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00143_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          494,
+          131
+        ]
+      ],
+      "block_id": "00143_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "개발팀",
+      "canonical_text": "개발팀",
+      "bbox_xyxy": [
+        356,
+        143,
+        446,
+        175
+      ],
+      "bbox_size": {
+        "width": 90,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00143_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          143,
+          446,
+          175
+        ]
+      ],
+      "block_id": "00143_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부장",
+      "canonical_text": "부장",
+      "bbox_xyxy": [
+        356,
+        181,
+        416,
+        212
+      ],
+      "bbox_size": {
+        "width": 60,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00143_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          181,
+          416,
+          212
+        ]
+      ],
+      "block_id": "00143_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0894-4957",
+      "canonical_text": "053-0894-4957",
+      "bbox_xyxy": [
+        356,
+        242,
+        611,
+        267
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00143_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          242,
+          611,
+          267
+        ]
+      ],
+      "block_id": "00143_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0587-7577",
+      "canonical_text": "010-0587-7577",
+      "bbox_xyxy": [
+        356,
+        277,
+        597,
+        298
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00143_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          277,
+          597,
+          298
+        ]
+      ],
+      "block_id": "00143_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7953@summit.example.org",
+      "canonical_text": "user7953@summit.example.org",
+      "bbox_xyxy": [
+        356,
+        308,
+        900,
+        340
+      ],
+      "bbox_size": {
+        "width": 544,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00143_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          308,
+          900,
+          340
+        ]
+      ],
+      "block_id": "00143_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대전광역시 유성구 테헤란로 818 13동 632호",
+      "canonical_text": "대전광역시 유성구 테헤란로 818 13동 632호",
+      "bbox_xyxy": [
+        356,
+        350,
+        946,
+        409
+      ],
+      "bbox_size": {
+        "width": 590,
+        "height": 59
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00143_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          350,
+          946,
+          409
+        ]
+      ],
+      "block_id": "00143_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00143_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web summit.example.org",
+      "canonical_text": "summit.example.org",
+      "bbox_xyxy": [
+        356,
+        419,
+        718,
+        451
+      ],
+      "bbox_size": {
+        "width": 362,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00143_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          419,
+          718,
+          451
+        ]
+      ],
+      "block_id": "00143_009_b01",
+      "language": "ko"
+    }
+  ]
+}

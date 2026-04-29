@@ -1,0 +1,333 @@
+{
+  "image_id": "00081",
+  "image_path": "images/bizcard_00081.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "off_white",
+  "theme_colors": {
+    "bg": "#F8F7F4",
+    "text": "#222222",
+    "muted": "#5A5A5A",
+    "accent": "#8B6F47"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00081_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "푸른소프트",
+      "canonical_text": "푸른소프트",
+      "bbox_xyxy": [
+        59,
+        59,
+        211,
+        90
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00081_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          211,
+          90
+        ]
+      ],
+      "block_id": "00081_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "백하준",
+      "canonical_text": "백하준",
+      "bbox_xyxy": [
+        59,
+        114,
+        197,
+        162
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 48
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00081_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          114,
+          197,
+          162
+        ]
+      ],
+      "block_id": "00081_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "전무",
+      "canonical_text": "전무",
+      "bbox_xyxy": [
+        59,
+        295,
+        120,
+        327
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00081_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          120,
+          327
+        ]
+      ],
+      "block_id": "00081_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0238-6524",
+      "canonical_text": "031-0238-6524",
+      "bbox_xyxy": [
+        59,
+        345,
+        325,
+        371
+      ],
+      "bbox_size": {
+        "width": 266,
+        "height": 26
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00081_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          345,
+          325,
+          371
+        ]
+      ],
+      "block_id": "00081_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0649-6442",
+      "canonical_text": "010-0649-6442",
+      "bbox_xyxy": [
+        59,
+        381,
+        308,
+        404
+      ],
+      "bbox_size": {
+        "width": 249,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00081_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          381,
+          308,
+          404
+        ]
+      ],
+      "block_id": "00081_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0441-5016",
+      "canonical_text": "053-0441-5016",
+      "bbox_xyxy": [
+        59,
+        414,
+        297,
+        437
+      ],
+      "bbox_size": {
+        "width": 238,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00081_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          414,
+          297,
+          437
+        ]
+      ],
+      "block_id": "00081_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6212@pureun.example.org",
+      "canonical_text": "user6212@pureun.example.org",
+      "bbox_xyxy": [
+        59,
+        447,
+        605,
+        480
+      ],
+      "bbox_size": {
+        "width": 546,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00081_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          447,
+          605,
+          480
+        ]
+      ],
+      "block_id": "00081_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 송파구 테헤란로 928 14층",
+      "canonical_text": "서울특별시 송파구 테헤란로 928 14층",
+      "bbox_xyxy": [
+        59,
+        490,
+        663,
+        520
+      ],
+      "bbox_size": {
+        "width": 604,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00081_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          490,
+          663,
+          520
+        ]
+      ],
+      "block_id": "00081_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00081_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web pureun.example.org",
+      "canonical_text": "pureun.example.org",
+      "bbox_xyxy": [
+        59,
+        530,
+        418,
+        563
+      ],
+      "bbox_size": {
+        "width": 359,
+        "height": 33
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00081_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          530,
+          418,
+          563
+        ]
+      ],
+      "block_id": "00081_009_b01",
+      "language": "ko"
+    }
+  ]
+}

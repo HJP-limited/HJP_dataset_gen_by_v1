@@ -1,0 +1,294 @@
+{
+  "image_id": "00189",
+  "image_path": "images/bizcard_00189.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "lilac",
+  "theme_colors": {
+    "bg": "#E8DFF2",
+    "text": "#3D3052",
+    "muted": "#7A6E8E",
+    "accent": "#7B5FA8"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00189_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오션블루",
+      "canonical_text": "오션블루",
+      "bbox_xyxy": [
+        471,
+        71,
+        592,
+        103
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00189_001_l01"
+      ],
+      "line_boxes": [
+        [
+          471,
+          71,
+          592,
+          103
+        ]
+      ],
+      "block_id": "00189_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "손다은",
+      "canonical_text": "손다은",
+      "bbox_xyxy": [
+        451,
+        138,
+        611,
+        194
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 56
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00189_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          138,
+          611,
+          194
+        ]
+      ],
+      "block_id": "00189_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "총무팀",
+      "canonical_text": "총무팀",
+      "bbox_xyxy": [
+        486,
+        206,
+        577,
+        238
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00189_003_l01"
+      ],
+      "line_boxes": [
+        [
+          486,
+          206,
+          577,
+          238
+        ]
+      ],
+      "block_id": "00189_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0435-5824",
+      "canonical_text": "070-0435-5824",
+      "bbox_xyxy": [
+        397,
+        268,
+        666,
+        294
+      ],
+      "bbox_size": {
+        "width": 269,
+        "height": 26
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00189_004_l01"
+      ],
+      "line_boxes": [
+        [
+          397,
+          268,
+          666,
+          294
+        ]
+      ],
+      "block_id": "00189_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0310-6056",
+      "canonical_text": "010-0310-6056",
+      "bbox_xyxy": [
+        406,
+        304,
+        657,
+        327
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00189_005_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          304,
+          657,
+          327
+        ]
+      ],
+      "block_id": "00189_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3792@oceanblue.example.com",
+      "canonical_text": "user3792@oceanblue.example.com",
+      "bbox_xyxy": [
+        225,
+        337,
+        838,
+        370
+      ],
+      "bbox_size": {
+        "width": 613,
+        "height": 33
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00189_006_l01"
+      ],
+      "line_boxes": [
+        [
+          225,
+          337,
+          838,
+          370
+        ]
+      ],
+      "block_id": "00189_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 종로구 양재대로 23 12동 645호",
+      "canonical_text": "서울특별시 종로구 양재대로 23 12동 645호",
+      "bbox_xyxy": [
+        193,
+        380,
+        869,
+        410
+      ],
+      "bbox_size": {
+        "width": 676,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00189_007_l01"
+      ],
+      "line_boxes": [
+        [
+          193,
+          380,
+          869,
+          410
+        ]
+      ],
+      "block_id": "00189_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00189_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web oceanblue.example.com",
+      "canonical_text": "oceanblue.example.com",
+      "bbox_xyxy": [
+        319,
+        420,
+        743,
+        453
+      ],
+      "bbox_size": {
+        "width": 424,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00189_008_l01"
+      ],
+      "line_boxes": [
+        [
+          319,
+          420,
+          743,
+          453
+        ]
+      ],
+      "block_id": "00189_008_b01",
+      "language": "ko"
+    }
+  ]
+}

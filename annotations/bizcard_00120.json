@@ -1,0 +1,333 @@
+{
+  "image_id": "00120",
+  "image_path": "images/bizcard_00120.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "E"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "off_white",
+  "theme_colors": {
+    "bg": "#F8F7F4",
+    "text": "#222222",
+    "muted": "#5A5A5A",
+    "accent": "#8B6F47"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00120_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "엘로힘",
+      "canonical_text": "엘로힘",
+      "bbox_xyxy": [
+        47,
+        71,
+        144,
+        104
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 33
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00120_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          144,
+          104
+        ]
+      ],
+      "block_id": "00120_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "황혜원",
+      "canonical_text": "황혜원",
+      "bbox_xyxy": [
+        356,
+        82,
+        512,
+        136
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 54
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00120_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          512,
+          136
+        ]
+      ],
+      "block_id": "00120_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        356,
+        148,
+        453,
+        182
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00120_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          148,
+          453,
+          182
+        ]
+      ],
+      "block_id": "00120_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        356,
+        188,
+        420,
+        222
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00120_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          188,
+          420,
+          222
+        ]
+      ],
+      "block_id": "00120_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 02-0531-6210",
+      "canonical_text": "02-0531-6210",
+      "bbox_xyxy": [
+        356,
+        252,
+        591,
+        276
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00120_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          252,
+          591,
+          276
+        ]
+      ],
+      "block_id": "00120_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0560-8530",
+      "canonical_text": "010-0560-8530",
+      "bbox_xyxy": [
+        356,
+        286,
+        591,
+        307
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00120_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          286,
+          591,
+          307
+        ]
+      ],
+      "block_id": "00120_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4832@elohim.example.org",
+      "canonical_text": "user4832@elohim.example.org",
+      "bbox_xyxy": [
+        356,
+        317,
+        869,
+        348
+      ],
+      "bbox_size": {
+        "width": 513,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00120_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          317,
+          869,
+          348
+        ]
+      ],
+      "block_id": "00120_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대구광역시 수성구 테헤란로 666",
+      "canonical_text": "대구광역시 수성구 테헤란로 666",
+      "bbox_xyxy": [
+        356,
+        358,
+        858,
+        387
+      ],
+      "bbox_size": {
+        "width": 502,
+        "height": 29
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00120_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          358,
+          858,
+          387
+        ]
+      ],
+      "block_id": "00120_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00120_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web elohim.example.org",
+      "canonical_text": "elohim.example.org",
+      "bbox_xyxy": [
+        356,
+        397,
+        692,
+        428
+      ],
+      "bbox_size": {
+        "width": 336,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00120_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          397,
+          692,
+          428
+        ]
+      ],
+      "block_id": "00120_009_b01",
+      "language": "ko"
+    }
+  ]
+}

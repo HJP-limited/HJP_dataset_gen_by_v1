@@ -1,0 +1,294 @@
+{
+  "image_id": "00183",
+  "image_path": "images/bizcard_00183.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "terracotta",
+  "theme_colors": {
+    "bg": "#C66B3D",
+    "text": "#FAF6F0",
+    "muted": "#E8D5C4",
+    "accent": "#2C1810"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00183_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "하이퍼노드",
+      "canonical_text": "하이퍼노드",
+      "bbox_xyxy": [
+        451,
+        71,
+        612,
+        106
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 35
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00183_001_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          71,
+          612,
+          106
+        ]
+      ],
+      "block_id": "00183_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "문도현",
+      "canonical_text": "문도현",
+      "bbox_xyxy": [
+        451,
+        141,
+        611,
+        196
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 55
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00183_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          141,
+          611,
+          196
+        ]
+      ],
+      "block_id": "00183_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "AI연구소",
+      "canonical_text": "AI연구소",
+      "bbox_xyxy": [
+        465,
+        208,
+        597,
+        242
+      ],
+      "bbox_size": {
+        "width": 132,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00183_003_l01"
+      ],
+      "line_boxes": [
+        [
+          465,
+          208,
+          597,
+          242
+        ]
+      ],
+      "block_id": "00183_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0916-1391",
+      "canonical_text": "031-0916-1391",
+      "bbox_xyxy": [
+        388,
+        272,
+        674,
+        299
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00183_004_l01"
+      ],
+      "line_boxes": [
+        [
+          388,
+          272,
+          674,
+          299
+        ]
+      ],
+      "block_id": "00183_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0476-3331",
+      "canonical_text": "010-0476-3331",
+      "bbox_xyxy": [
+        397,
+        310,
+        665,
+        334
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00183_005_l01"
+      ],
+      "line_boxes": [
+        [
+          397,
+          310,
+          665,
+          334
+        ]
+      ],
+      "block_id": "00183_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3106@hypernode.example.com",
+      "canonical_text": "user3106@hypernode.example.com",
+      "bbox_xyxy": [
+        201,
+        345,
+        861,
+        380
+      ],
+      "bbox_size": {
+        "width": 660,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00183_006_l01"
+      ],
+      "line_boxes": [
+        [
+          201,
+          345,
+          861,
+          380
+        ]
+      ],
+      "block_id": "00183_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 서구 성남대로 963 26층",
+      "canonical_text": "광주광역시 서구 성남대로 963 26층",
+      "bbox_xyxy": [
+        224,
+        391,
+        839,
+        423
+      ],
+      "bbox_size": {
+        "width": 615,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00183_007_l01"
+      ],
+      "line_boxes": [
+        [
+          224,
+          391,
+          839,
+          423
+        ]
+      ],
+      "block_id": "00183_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00183_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hypernode.example.com",
+      "canonical_text": "hypernode.example.com",
+      "bbox_xyxy": [
+        302,
+        434,
+        760,
+        469
+      ],
+      "bbox_size": {
+        "width": 458,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00183_008_l01"
+      ],
+      "line_boxes": [
+        [
+          302,
+          434,
+          760,
+          469
+        ]
+      ],
+      "block_id": "00183_008_b01",
+      "language": "ko"
+    }
+  ]
+}

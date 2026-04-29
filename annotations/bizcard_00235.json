@@ -1,0 +1,333 @@
+{
+  "image_id": "00235",
+  "image_path": "images/bizcard_00235.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "N"
+    },
+    "qr_code": null,
+    "background_pattern": "lines_v"
+  },
+  "theme_name": "green_accent",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1B1B1B",
+    "muted": "#5A5A5A",
+    "accent": "#06C755"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00235_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "누리테크",
+      "canonical_text": "누리테크",
+      "bbox_xyxy": [
+        59,
+        94,
+        173,
+        124
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00235_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          173,
+          124
+        ]
+      ],
+      "block_id": "00235_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "강윤서",
+      "canonical_text": "강윤서",
+      "bbox_xyxy": [
+        59,
+        159,
+        208,
+        211
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 52
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00235_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          159,
+          208,
+          211
+        ]
+      ],
+      "block_id": "00235_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "리서치팀",
+      "canonical_text": "리서치팀",
+      "bbox_xyxy": [
+        59,
+        223,
+        173,
+        253
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00235_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          223,
+          173,
+          253
+        ]
+      ],
+      "block_id": "00235_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "상무",
+      "canonical_text": "상무",
+      "bbox_xyxy": [
+        59,
+        259,
+        116,
+        289
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 30
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00235_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          259,
+          116,
+          289
+        ]
+      ],
+      "block_id": "00235_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0689-9223",
+      "canonical_text": "053-0689-9223",
+      "bbox_xyxy": [
+        488,
+        236,
+        774,
+        263
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00235_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          774,
+          263
+        ]
+      ],
+      "block_id": "00235_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0228-8705",
+      "canonical_text": "010-0228-8705",
+      "bbox_xyxy": [
+        488,
+        274,
+        756,
+        298
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00235_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          274,
+          756,
+          298
+        ]
+      ],
+      "block_id": "00235_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9642@nuritech.example.co.kr",
+      "canonical_text": "user9642@nuritech.example.co.kr",
+      "bbox_xyxy": [
+        488,
+        309,
+        1013,
+        375
+      ],
+      "bbox_size": {
+        "width": 525,
+        "height": 66
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00235_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          309,
+          1013,
+          375
+        ]
+      ],
+      "block_id": "00235_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 양재대로 74 B동 566호",
+      "canonical_text": "경기도 고양시 일산서구 양재대로 74 B동 566호",
+      "bbox_xyxy": [
+        488,
+        386,
+        936,
+        454
+      ],
+      "bbox_size": {
+        "width": 448,
+        "height": 68
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00235_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          386,
+          936,
+          454
+        ]
+      ],
+      "block_id": "00235_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00235_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web nuritech.example.co.kr",
+      "canonical_text": "nuritech.example.co.kr",
+      "bbox_xyxy": [
+        488,
+        465,
+        917,
+        500
+      ],
+      "bbox_size": {
+        "width": 429,
+        "height": 35
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00235_009_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          465,
+          917,
+          500
+        ]
+      ],
+      "block_id": "00235_009_b01",
+      "language": "ko"
+    }
+  ]
+}

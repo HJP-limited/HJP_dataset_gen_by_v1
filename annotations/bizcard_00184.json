@@ -1,0 +1,263 @@
+{
+  "image_id": "00184",
+  "image_path": "images/bizcard_00184.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "sage",
+  "theme_colors": {
+    "bg": "#A8B5A0",
+    "text": "#2C3E2D",
+    "muted": "#5A6A57",
+    "accent": "#FFFFFF"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00184_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        474,
+        71,
+        588,
+        102
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00184_001_l01"
+      ],
+      "line_boxes": [
+        [
+          474,
+          71,
+          588,
+          102
+        ]
+      ],
+      "block_id": "00184_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00184_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "서수빈",
+      "canonical_text": "서수빈",
+      "bbox_xyxy": [
+        451,
+        137,
+        611,
+        193
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 56
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00184_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          137,
+          611,
+          193
+        ]
+      ],
+      "block_id": "00184_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00184_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "AI연구소",
+      "canonical_text": "AI연구소",
+      "bbox_xyxy": [
+        474,
+        205,
+        588,
+        235
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00184_003_l01"
+      ],
+      "line_boxes": [
+        [
+          474,
+          205,
+          588,
+          235
+        ]
+      ],
+      "block_id": "00184_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00184_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0940-6679",
+      "canonical_text": "010-0940-6679",
+      "bbox_xyxy": [
+        406,
+        265,
+        657,
+        288
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00184_004_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          265,
+          657,
+          288
+        ]
+      ],
+      "block_id": "00184_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00184_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7476@qworks.example.com",
+      "canonical_text": "user7476@qworks.example.com",
+      "bbox_xyxy": [
+        247,
+        298,
+        816,
+        331
+      ],
+      "bbox_size": {
+        "width": 569,
+        "height": 33
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00184_005_l01"
+      ],
+      "line_boxes": [
+        [
+          247,
+          298,
+          816,
+          331
+        ]
+      ],
+      "block_id": "00184_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00184_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 부산광역시 수영구 마포대로 440",
+      "canonical_text": "부산광역시 수영구 마포대로 440",
+      "bbox_xyxy": [
+        263,
+        341,
+        800,
+        371
+      ],
+      "bbox_size": {
+        "width": 537,
+        "height": 30
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00184_006_l01"
+      ],
+      "line_boxes": [
+        [
+          263,
+          341,
+          800,
+          371
+        ]
+      ],
+      "block_id": "00184_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00184_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web qworks.example.com",
+      "canonical_text": "qworks.example.com",
+      "bbox_xyxy": [
+        342,
+        381,
+        721,
+        414
+      ],
+      "bbox_size": {
+        "width": 379,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00184_007_l01"
+      ],
+      "line_boxes": [
+        [
+          342,
+          381,
+          721,
+          414
+        ]
+      ],
+      "block_id": "00184_007_b01",
+      "language": "ko"
+    }
+  ]
+}

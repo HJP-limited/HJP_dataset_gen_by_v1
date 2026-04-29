@@ -1,0 +1,341 @@
+{
+  "image_id": "00076",
+  "image_path": "images/bizcard_00076.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00076"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "terracotta",
+  "theme_colors": {
+    "bg": "#C66B3D",
+    "text": "#FAF6F0",
+    "muted": "#E8D5C4",
+    "accent": "#2C1810"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00076_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        59,
+        83,
+        211,
+        115
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00076_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          211,
+          115
+        ]
+      ],
+      "block_id": "00076_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "오시우",
+      "canonical_text": "오시우",
+      "bbox_xyxy": [
+        848,
+        83,
+        1004,
+        136
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 53
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00076_002_l01"
+      ],
+      "line_boxes": [
+        [
+          848,
+          83,
+          1004,
+          136
+        ]
+      ],
+      "block_id": "00076_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "AI연구소",
+      "canonical_text": "AI연구소",
+      "bbox_xyxy": [
+        882,
+        148,
+        1004,
+        180
+      ],
+      "bbox_size": {
+        "width": 122,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00076_003_l01"
+      ],
+      "line_boxes": [
+        [
+          882,
+          148,
+          1004,
+          180
+        ]
+      ],
+      "block_id": "00076_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        943,
+        186,
+        1004,
+        218
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00076_004_l01"
+      ],
+      "line_boxes": [
+        [
+          943,
+          186,
+          1004,
+          218
+        ]
+      ],
+      "block_id": "00076_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0411-6438",
+      "canonical_text": "010-0411-6438",
+      "bbox_xyxy": [
+        59,
+        303,
+        294,
+        324
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00076_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          303,
+          294,
+          324
+        ]
+      ],
+      "block_id": "00076_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0919-9468",
+      "canonical_text": "053-0919-9468",
+      "bbox_xyxy": [
+        59,
+        334,
+        284,
+        355
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00076_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          334,
+          284,
+          355
+        ]
+      ],
+      "block_id": "00076_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user295@eclipse.example.com",
+      "canonical_text": "user295@eclipse.example.com",
+      "bbox_xyxy": [
+        59,
+        365,
+        570,
+        396
+      ],
+      "bbox_size": {
+        "width": 511,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00076_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          365,
+          570,
+          396
+        ]
+      ],
+      "block_id": "00076_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 한강대로 864 5동 872호",
+      "canonical_text": "서울특별시 영등포구 한강대로 864 5동 872호",
+      "bbox_xyxy": [
+        59,
+        406,
+        719,
+        435
+      ],
+      "bbox_size": {
+        "width": 660,
+        "height": 29
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00076_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          406,
+          719,
+          435
+        ]
+      ],
+      "block_id": "00076_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00076_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web eclipse.example.com",
+      "canonical_text": "eclipse.example.com",
+      "bbox_xyxy": [
+        59,
+        445,
+        409,
+        476
+      ],
+      "bbox_size": {
+        "width": 350,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00076_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          445,
+          409,
+          476
+        ]
+      ],
+      "block_id": "00076_009_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "image_id": "00048",
+  "image_path": "images/bizcard_00048.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "charcoal",
+  "theme_colors": {
+    "bg": "#1F1F1F",
+    "text": "#F5F5F5",
+    "muted": "#A8A8A8",
+    "accent": "#C9A961"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00048_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        83,
+        150,
+        115
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00048_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          150,
+          115
+        ]
+      ],
+      "block_id": "00048_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "유연우",
+      "canonical_text": "유연우",
+      "bbox_xyxy": [
+        859,
+        83,
+        1004,
+        133
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 50
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00048_002_l01"
+      ],
+      "line_boxes": [
+        [
+          859,
+          83,
+          1004,
+          133
+        ]
+      ],
+      "block_id": "00048_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "고객지원팀",
+      "canonical_text": "고객지원팀",
+      "bbox_xyxy": [
+        852,
+        145,
+        1004,
+        177
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00048_003_l01"
+      ],
+      "line_boxes": [
+        [
+          852,
+          145,
+          1004,
+          177
+        ]
+      ],
+      "block_id": "00048_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        943,
+        183,
+        1004,
+        214
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00048_004_l01"
+      ],
+      "line_boxes": [
+        [
+          943,
+          183,
+          1004,
+          214
+        ]
+      ],
+      "block_id": "00048_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0600-5470",
+      "canonical_text": "032-0600-5470",
+      "bbox_xyxy": [
+        59,
+        255,
+        345,
+        282
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00048_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          255,
+          345,
+          282
+        ]
+      ],
+      "block_id": "00048_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0924-8393",
+      "canonical_text": "010-0924-8393",
+      "bbox_xyxy": [
+        59,
+        293,
+        327,
+        317
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00048_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          293,
+          327,
+          317
+        ]
+      ],
+      "block_id": "00048_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 032-0176-9959",
+      "canonical_text": "032-0176-9959",
+      "bbox_xyxy": [
+        59,
+        328,
+        315,
+        352
+      ],
+      "bbox_size": {
+        "width": 256,
+        "height": 24
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00048_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          328,
+          315,
+          352
+        ]
+      ],
+      "block_id": "00048_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user5814@prism.example.org",
+      "canonical_text": "user5814@prism.example.org",
+      "bbox_xyxy": [
+        59,
+        363,
+        625,
+        398
+      ],
+      "bbox_size": {
+        "width": 566,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00048_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          363,
+          625,
+          398
+        ]
+      ],
+      "block_id": "00048_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 강남대로 696 D동 481호",
+      "canonical_text": "서울특별시 영등포구 강남대로 696 D동 481호",
+      "bbox_xyxy": [
+        59,
+        409,
+        814,
+        441
+      ],
+      "bbox_size": {
+        "width": 755,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00048_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          409,
+          814,
+          441
+        ]
+      ],
+      "block_id": "00048_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00048_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web prism.example.org",
+      "canonical_text": "prism.example.org",
+      "bbox_xyxy": [
+        59,
+        452,
+        423,
+        487
+      ],
+      "bbox_size": {
+        "width": 364,
+        "height": 35
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00048_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          452,
+          423,
+          487
+        ]
+      ],
+      "block_id": "00048_010_b01",
+      "language": "ko"
+    }
+  ]
+}

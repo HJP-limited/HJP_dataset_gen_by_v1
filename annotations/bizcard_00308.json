@@ -1,0 +1,331 @@
+{
+  "image_id": "00308",
+  "image_path": "images/bizcard_00308.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V7",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00308"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "green_accent",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1B1B1B",
+    "muted": "#5A5A5A",
+    "accent": "#06C755"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00308_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        59,
+        118,
+        180,
+        150
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00308_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          118,
+          180,
+          150
+        ]
+      ],
+      "block_id": "00308_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "전지우",
+      "canonical_text": "전지우",
+      "bbox_xyxy": [
+        59,
+        197,
+        244,
+        260
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 63
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00308_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          197,
+          244,
+          260
+        ]
+      ],
+      "block_id": "00308_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "사업개발팀",
+      "canonical_text": "사업개발팀",
+      "bbox_xyxy": [
+        59,
+        284,
+        211,
+        316
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00308_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          284,
+          211,
+          316
+        ]
+      ],
+      "block_id": "00308_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        59,
+        328,
+        120,
+        359
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00308_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          328,
+          120,
+          359
+        ]
+      ],
+      "block_id": "00308_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0805-3487",
+      "canonical_text": "062-0805-3487",
+      "bbox_xyxy": [
+        59,
+        406,
+        342,
+        433
+      ],
+      "bbox_size": {
+        "width": 283,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00308_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          406,
+          342,
+          433
+        ]
+      ],
+      "block_id": "00308_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0871-3875",
+      "canonical_text": "010-0871-3875",
+      "bbox_xyxy": [
+        59,
+        444,
+        324,
+        468
+      ],
+      "bbox_size": {
+        "width": 265,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00308_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          444,
+          324,
+          468
+        ]
+      ],
+      "block_id": "00308_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4218@qworks.example.com",
+      "canonical_text": "user4218@qworks.example.com",
+      "bbox_xyxy": [
+        59,
+        479,
+        553,
+        545
+      ],
+      "bbox_size": {
+        "width": 494,
+        "height": 66
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00308_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          479,
+          553,
+          545
+        ]
+      ],
+      "block_id": "00308_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 성동구 월드컵로 373",
+      "canonical_text": "서울특별시 성동구 월드컵로 373",
+      "bbox_xyxy": [
+        59,
+        556,
+        438,
+        623
+      ],
+      "bbox_size": {
+        "width": 379,
+        "height": 67
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00308_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          556,
+          438,
+          623
+        ]
+      ],
+      "block_id": "00308_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00308_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web qworks.example.com",
+      "canonical_text": "qworks.example.com",
+      "bbox_xyxy": [
+        59,
+        634,
+        458,
+        669
+      ],
+      "bbox_size": {
+        "width": 399,
+        "height": 35
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00308_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          634,
+          458,
+          669
+        ]
+      ],
+      "block_id": "00308_009_b01",
+      "language": "ko"
+    }
+  ]
+}

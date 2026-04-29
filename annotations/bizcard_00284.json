@@ -1,0 +1,271 @@
+{
+  "image_id": "00284",
+  "image_path": "images/bizcard_00284.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        59,
+        59,
+        177,
+        177
+      ],
+      "size_px": 118,
+      "initial": "S"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "light_gray",
+  "theme_colors": {
+    "bg": "#EFEFEF",
+    "text": "#1F2937",
+    "muted": "#5B6470",
+    "accent": "#DC2626"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00284_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "솔라이트",
+      "canonical_text": "솔라이트",
+      "bbox_xyxy": [
+        59,
+        236,
+        179,
+        268
+      ],
+      "bbox_size": {
+        "width": 120,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00284_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          236,
+          179,
+          268
+        ]
+      ],
+      "block_id": "00284_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00284_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "박수민",
+      "canonical_text": "박수민",
+      "bbox_xyxy": [
+        59,
+        315,
+        253,
+        382
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00284_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          315,
+          253,
+          382
+        ]
+      ],
+      "block_id": "00284_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00284_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "전무",
+      "canonical_text": "전무",
+      "bbox_xyxy": [
+        59,
+        406,
+        119,
+        437
+      ],
+      "bbox_size": {
+        "width": 60,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00284_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          406,
+          119,
+          437
+        ]
+      ],
+      "block_id": "00284_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00284_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0789-5300",
+      "canonical_text": "010-0789-5300",
+      "bbox_xyxy": [
+        59,
+        484,
+        316,
+        508
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00284_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          484,
+          316,
+          508
+        ]
+      ],
+      "block_id": "00284_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00284_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1596@solalite.example.com",
+      "canonical_text": "user1596@solalite.example.com",
+      "bbox_xyxy": [
+        59,
+        518,
+        541,
+        580
+      ],
+      "bbox_size": {
+        "width": 482,
+        "height": 62
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00284_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          518,
+          541,
+          580
+        ]
+      ],
+      "block_id": "00284_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00284_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 종로구 테헤란로 318 5층",
+      "canonical_text": "서울특별시 종로구 테헤란로 318 5층",
+      "bbox_xyxy": [
+        59,
+        590,
+        435,
+        658
+      ],
+      "bbox_size": {
+        "width": 376,
+        "height": 68
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00284_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          590,
+          435,
+          658
+        ]
+      ],
+      "block_id": "00284_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00284_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web solalite.example.com",
+      "canonical_text": "solalite.example.com",
+      "bbox_xyxy": [
+        59,
+        668,
+        452,
+        702
+      ],
+      "bbox_size": {
+        "width": 393,
+        "height": 34
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00284_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          668,
+          452,
+          702
+        ]
+      ],
+      "block_id": "00284_007_b01",
+      "language": "ko"
+    }
+  ]
+}

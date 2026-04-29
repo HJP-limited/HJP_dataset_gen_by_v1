@@ -1,0 +1,269 @@
+{
+  "image_id": "00306",
+  "image_path": "images/bizcard_00306.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V7",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00306"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "lilac",
+  "theme_colors": {
+    "bg": "#E8DFF2",
+    "text": "#3D3052",
+    "muted": "#7A6E8E",
+    "accent": "#7B5FA8"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00306_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "비전플러스",
+      "canonical_text": "비전플러스",
+      "bbox_xyxy": [
+        59,
+        118,
+        202,
+        148
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00306_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          118,
+          202,
+          148
+        ]
+      ],
+      "block_id": "00306_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00306_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허서현",
+      "canonical_text": "허서현",
+      "bbox_xyxy": [
+        59,
+        195,
+        244,
+        259
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 64
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00306_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          195,
+          244,
+          259
+        ]
+      ],
+      "block_id": "00306_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00306_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "개발팀",
+      "canonical_text": "개발팀",
+      "bbox_xyxy": [
+        59,
+        283,
+        145,
+        313
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00306_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          283,
+          145,
+          313
+        ]
+      ],
+      "block_id": "00306_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00306_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임연구원",
+      "canonical_text": "선임연구원",
+      "bbox_xyxy": [
+        59,
+        325,
+        202,
+        355
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 30
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00306_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          325,
+          202,
+          355
+        ]
+      ],
+      "block_id": "00306_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00306_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0674-4087",
+      "canonical_text": "010-0674-4087",
+      "bbox_xyxy": [
+        59,
+        402,
+        292,
+        423
+      ],
+      "bbox_size": {
+        "width": 233,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00306_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          402,
+          292,
+          423
+        ]
+      ],
+      "block_id": "00306_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00306_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1460@visionplus.example.com",
+      "canonical_text": "user1460@visionplus.example.com",
+      "bbox_xyxy": [
+        59,
+        433,
+        530,
+        492
+      ],
+      "bbox_size": {
+        "width": 471,
+        "height": 59
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00306_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          433,
+          530,
+          492
+        ]
+      ],
+      "block_id": "00306_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00306_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web visionplus.example.com",
+      "canonical_text": "visionplus.example.com",
+      "bbox_xyxy": [
+        59,
+        502,
+        447,
+        533
+      ],
+      "bbox_size": {
+        "width": 388,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00306_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          502,
+          447,
+          533
+        ]
+      ],
+      "block_id": "00306_007_b01",
+      "language": "ko"
+    }
+  ]
+}

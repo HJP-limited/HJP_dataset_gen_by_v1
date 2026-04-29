@@ -1,0 +1,341 @@
+{
+  "image_id": "00079",
+  "image_path": "images/bizcard_00079.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "H"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00079"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "cream_paper",
+  "theme_colors": {
+    "bg": "#FAF6F0",
+    "text": "#2C2C2C",
+    "muted": "#6B6B6B",
+    "accent": "#A8763E"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00079_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "하이퍼노드",
+      "canonical_text": "하이퍼노드",
+      "bbox_xyxy": [
+        59,
+        83,
+        220,
+        118
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 35
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00079_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          220,
+          118
+        ]
+      ],
+      "block_id": "00079_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "배지윤",
+      "canonical_text": "배지윤",
+      "bbox_xyxy": [
+        833,
+        83,
+        1004,
+        143
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 60
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00079_002_l01"
+      ],
+      "line_boxes": [
+        [
+          833,
+          83,
+          1004,
+          143
+        ]
+      ],
+      "block_id": "00079_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "보안팀",
+      "canonical_text": "보안팀",
+      "bbox_xyxy": [
+        907,
+        155,
+        1004,
+        189
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00079_003_l01"
+      ],
+      "line_boxes": [
+        [
+          907,
+          155,
+          1004,
+          189
+        ]
+      ],
+      "block_id": "00079_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부장",
+      "canonical_text": "부장",
+      "bbox_xyxy": [
+        940,
+        195,
+        1004,
+        229
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00079_004_l01"
+      ],
+      "line_boxes": [
+        [
+          940,
+          195,
+          1004,
+          229
+        ]
+      ],
+      "block_id": "00079_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0159-8076",
+      "canonical_text": "051-0159-8076",
+      "bbox_xyxy": [
+        59,
+        303,
+        310,
+        327
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00079_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          303,
+          310,
+          327
+        ]
+      ],
+      "block_id": "00079_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0438-5680",
+      "canonical_text": "010-0438-5680",
+      "bbox_xyxy": [
+        59,
+        337,
+        294,
+        358
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00079_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          337,
+          294,
+          358
+        ]
+      ],
+      "block_id": "00079_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2905@hypernode.example.com",
+      "canonical_text": "user2905@hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        368,
+        639,
+        399
+      ],
+      "bbox_size": {
+        "width": 580,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00079_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          368,
+          639,
+          399
+        ]
+      ],
+      "block_id": "00079_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 북구 을지로 995 C동 561호",
+      "canonical_text": "광주광역시 북구 을지로 995 C동 561호",
+      "bbox_xyxy": [
+        59,
+        409,
+        641,
+        437
+      ],
+      "bbox_size": {
+        "width": 582,
+        "height": 28
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00079_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          409,
+          641,
+          437
+        ]
+      ],
+      "block_id": "00079_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00079_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hypernode.example.com",
+      "canonical_text": "hypernode.example.com",
+      "bbox_xyxy": [
+        59,
+        447,
+        462,
+        478
+      ],
+      "bbox_size": {
+        "width": 403,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00079_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          447,
+          462,
+          478
+        ]
+      ],
+      "block_id": "00079_009_b01",
+      "language": "ko"
+    }
+  ]
+}

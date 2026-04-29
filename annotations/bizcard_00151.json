@@ -1,0 +1,304 @@
+{
+  "image_id": "00151",
+  "image_path": "images/bizcard_00151.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V3",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_strip_bottom"
+    ],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "A"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mint",
+  "theme_colors": {
+    "bg": "#E8F5E9",
+    "text": "#1B5E20",
+    "muted": "#5A7A60",
+    "accent": "#388E3C"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00151_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오로라파트너스",
+      "canonical_text": "오로라파트너스",
+      "bbox_xyxy": [
+        47,
+        71,
+        270,
+        105
+      ],
+      "bbox_size": {
+        "width": 223,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00151_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          270,
+          105
+        ]
+      ],
+      "block_id": "00151_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "안유준",
+      "canonical_text": "안유준",
+      "bbox_xyxy": [
+        356,
+        82,
+        512,
+        136
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 54
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00151_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          512,
+          136
+        ]
+      ],
+      "block_id": "00151_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "글로벌팀",
+      "canonical_text": "글로벌팀",
+      "bbox_xyxy": [
+        356,
+        148,
+        484,
+        181
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00151_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          148,
+          484,
+          181
+        ]
+      ],
+      "block_id": "00151_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "책임연구원",
+      "canonical_text": "책임연구원",
+      "bbox_xyxy": [
+        356,
+        187,
+        515,
+        221
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00151_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          187,
+          515,
+          221
+        ]
+      ],
+      "block_id": "00151_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0419-3546",
+      "canonical_text": "010-0419-3546",
+      "bbox_xyxy": [
+        356,
+        251,
+        630,
+        276
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00151_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          251,
+          630,
+          276
+        ]
+      ],
+      "block_id": "00151_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user399@aurora.example.com",
+      "canonical_text": "user399@aurora.example.com",
+      "bbox_xyxy": [
+        356,
+        287,
+        957,
+        323
+      ],
+      "bbox_size": {
+        "width": 601,
+        "height": 36
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00151_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          287,
+          957,
+          323
+        ]
+      ],
+      "block_id": "00151_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 서구 광교로 674 E동 453호",
+      "canonical_text": "광주광역시 서구 광교로 674 E동 453호",
+      "bbox_xyxy": [
+        356,
+        334,
+        954,
+        401
+      ],
+      "bbox_size": {
+        "width": 598,
+        "height": 67
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00151_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          334,
+          954,
+          401
+        ]
+      ],
+      "block_id": "00151_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00151_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web aurora.example.com",
+      "canonical_text": "aurora.example.com",
+      "bbox_xyxy": [
+        356,
+        412,
+        767,
+        448
+      ],
+      "bbox_size": {
+        "width": 411,
+        "height": 36
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00151_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          412,
+          767,
+          448
+        ]
+      ],
+      "block_id": "00151_008_b01",
+      "language": "ko"
+    }
+  ]
+}

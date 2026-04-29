@@ -1,0 +1,325 @@
+{
+  "image_id": "00192",
+  "image_path": "images/bizcard_00192.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "navy_classic",
+  "theme_colors": {
+    "bg": "#0F2A4F",
+    "text": "#FFFFFF",
+    "muted": "#B8C7D9",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00192_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "드림웍스코리아",
+      "canonical_text": "드림웍스코리아",
+      "bbox_xyxy": [
+        419,
+        71,
+        644,
+        105
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00192_001_l01"
+      ],
+      "line_boxes": [
+        [
+          419,
+          71,
+          644,
+          105
+        ]
+      ],
+      "block_id": "00192_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "문윤서",
+      "canonical_text": "문윤서",
+      "bbox_xyxy": [
+        451,
+        140,
+        611,
+        195
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 55
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00192_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          140,
+          611,
+          195
+        ]
+      ],
+      "block_id": "00192_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "사업개발팀",
+      "canonical_text": "사업개발팀",
+      "bbox_xyxy": [
+        451,
+        207,
+        612,
+        240
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00192_003_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          207,
+          612,
+          240
+        ]
+      ],
+      "block_id": "00192_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부사장",
+      "canonical_text": "부사장",
+      "bbox_xyxy": [
+        483,
+        246,
+        580,
+        279
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00192_004_l01"
+      ],
+      "line_boxes": [
+        [
+          483,
+          246,
+          580,
+          279
+        ]
+      ],
+      "block_id": "00192_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0999-2272",
+      "canonical_text": "053-0999-2272",
+      "bbox_xyxy": [
+        398,
+        309,
+        664,
+        335
+      ],
+      "bbox_size": {
+        "width": 266,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00192_005_l01"
+      ],
+      "line_boxes": [
+        [
+          398,
+          309,
+          664,
+          335
+        ]
+      ],
+      "block_id": "00192_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0367-6680",
+      "canonical_text": "010-0367-6680",
+      "bbox_xyxy": [
+        407,
+        345,
+        656,
+        368
+      ],
+      "bbox_size": {
+        "width": 249,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00192_006_l01"
+      ],
+      "line_boxes": [
+        [
+          407,
+          345,
+          656,
+          368
+        ]
+      ],
+      "block_id": "00192_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3756@dwk.example.co.kr",
+      "canonical_text": "user3756@dwk.example.co.kr",
+      "bbox_xyxy": [
+        268,
+        378,
+        795,
+        411
+      ],
+      "bbox_size": {
+        "width": 527,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00192_007_l01"
+      ],
+      "line_boxes": [
+        [
+          268,
+          378,
+          795,
+          411
+        ]
+      ],
+      "block_id": "00192_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 테헤란로 399 25층",
+      "canonical_text": "제주특별자치도 제주시 테헤란로 399 25층",
+      "bbox_xyxy": [
+        201,
+        421,
+        862,
+        451
+      ],
+      "bbox_size": {
+        "width": 661,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00192_008_l01"
+      ],
+      "line_boxes": [
+        [
+          201,
+          421,
+          862,
+          451
+        ]
+      ],
+      "block_id": "00192_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00192_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web dwk.example.co.kr",
+      "canonical_text": "dwk.example.co.kr",
+      "bbox_xyxy": [
+        362,
+        461,
+        701,
+        494
+      ],
+      "bbox_size": {
+        "width": 339,
+        "height": 33
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00192_009_l01"
+      ],
+      "line_boxes": [
+        [
+          362,
+          461,
+          701,
+          494
+        ]
+      ],
+      "block_id": "00192_009_b01",
+      "language": "ko"
+    }
+  ]
+}

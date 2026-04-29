@@ -1,0 +1,333 @@
+{
+  "image_id": "00295",
+  "image_path": "images/bizcard_00295.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        59,
+        59,
+        177,
+        177
+      ],
+      "size_px": 118,
+      "initial": "D"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "charcoal",
+  "theme_colors": {
+    "bg": "#1F1F1F",
+    "text": "#F5F5F5",
+    "muted": "#A8A8A8",
+    "accent": "#C9A961"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00295_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "드림웍스코리아",
+      "canonical_text": "드림웍스코리아",
+      "bbox_xyxy": [
+        59,
+        236,
+        296,
+        272
+      ],
+      "bbox_size": {
+        "width": 237,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00295_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          236,
+          296,
+          272
+        ]
+      ],
+      "block_id": "00295_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "안서현",
+      "canonical_text": "안서현",
+      "bbox_xyxy": [
+        59,
+        319,
+        253,
+        386
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00295_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          319,
+          253,
+          386
+        ]
+      ],
+      "block_id": "00295_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "QA팀",
+      "canonical_text": "QA팀",
+      "bbox_xyxy": [
+        59,
+        410,
+        144,
+        449
+      ],
+      "bbox_size": {
+        "width": 85,
+        "height": 39
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00295_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          410,
+          144,
+          449
+        ]
+      ],
+      "block_id": "00295_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        59,
+        461,
+        127,
+        497
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00295_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          461,
+          127,
+          497
+        ]
+      ],
+      "block_id": "00295_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0977-8988",
+      "canonical_text": "062-0977-8988",
+      "bbox_xyxy": [
+        59,
+        544,
+        314,
+        569
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00295_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          544,
+          314,
+          569
+        ]
+      ],
+      "block_id": "00295_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0947-8182",
+      "canonical_text": "010-0947-8182",
+      "bbox_xyxy": [
+        59,
+        579,
+        300,
+        601
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00295_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          579,
+          300,
+          601
+        ]
+      ],
+      "block_id": "00295_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4134@dwk.example.co.kr",
+      "canonical_text": "user4134@dwk.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        611,
+        479,
+        670
+      ],
+      "bbox_size": {
+        "width": 420,
+        "height": 59
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00295_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          611,
+          479,
+          670
+        ]
+      ],
+      "block_id": "00295_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 양재대로 827 A동 259호",
+      "canonical_text": "경기도 고양시 일산서구 양재대로 827 A동 259호",
+      "bbox_xyxy": [
+        59,
+        680,
+        474,
+        744
+      ],
+      "bbox_size": {
+        "width": 415,
+        "height": 64
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00295_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          680,
+          474,
+          744
+        ]
+      ],
+      "block_id": "00295_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00295_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web dwk.example.co.kr",
+      "canonical_text": "dwk.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        754,
+        397,
+        785
+      ],
+      "bbox_size": {
+        "width": 338,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00295_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          754,
+          397,
+          785
+        ]
+      ],
+      "block_id": "00295_009_b01",
+      "language": "ko"
+    }
+  ]
+}

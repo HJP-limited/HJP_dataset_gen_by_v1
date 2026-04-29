@@ -1,0 +1,302 @@
+{
+  "image_id": "00094",
+  "image_path": "images/bizcard_00094.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "O"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "olive",
+  "theme_colors": {
+    "bg": "#6B7C32",
+    "text": "#FAF7F0",
+    "muted": "#D0D2BC",
+    "accent": "#FAF7F0"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00094_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오션블루",
+      "canonical_text": "오션블루",
+      "bbox_xyxy": [
+        59,
+        59,
+        187,
+        93
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00094_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          187,
+          93
+        ]
+      ],
+      "block_id": "00094_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "조지아",
+      "canonical_text": "조지아",
+      "bbox_xyxy": [
+        59,
+        117,
+        205,
+        167
+      ],
+      "bbox_size": {
+        "width": 146,
+        "height": 50
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00094_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          117,
+          205,
+          167
+        ]
+      ],
+      "block_id": "00094_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "주임",
+      "canonical_text": "주임",
+      "bbox_xyxy": [
+        59,
+        295,
+        123,
+        328
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00094_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          123,
+          328
+        ]
+      ],
+      "block_id": "00094_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 02-0822-1857",
+      "canonical_text": "02-0822-1857",
+      "bbox_xyxy": [
+        59,
+        346,
+        314,
+        371
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00094_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          346,
+          314,
+          371
+        ]
+      ],
+      "block_id": "00094_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0270-9164",
+      "canonical_text": "010-0270-9164",
+      "bbox_xyxy": [
+        59,
+        381,
+        316,
+        405
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00094_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          381,
+          316,
+          405
+        ]
+      ],
+      "block_id": "00094_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 031-0299-5580",
+      "canonical_text": "031-0299-5580",
+      "bbox_xyxy": [
+        59,
+        415,
+        302,
+        439
+      ],
+      "bbox_size": {
+        "width": 243,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00094_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          415,
+          302,
+          439
+        ]
+      ],
+      "block_id": "00094_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2292@oceanblue.example.com",
+      "canonical_text": "user2292@oceanblue.example.com",
+      "bbox_xyxy": [
+        59,
+        449,
+        694,
+        483
+      ],
+      "bbox_size": {
+        "width": 635,
+        "height": 34
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00094_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          449,
+          694,
+          483
+        ]
+      ],
+      "block_id": "00094_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00094_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 여의대로 416 1동 247호",
+      "canonical_text": "제주특별자치도 제주시 여의대로 416 1동 247호",
+      "bbox_xyxy": [
+        59,
+        493,
+        822,
+        525
+      ],
+      "bbox_size": {
+        "width": 763,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00094_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          493,
+          822,
+          525
+        ]
+      ],
+      "block_id": "00094_008_b01",
+      "language": "ko"
+    }
+  ]
+}

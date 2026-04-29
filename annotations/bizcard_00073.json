@@ -1,0 +1,310 @@
+{
+  "image_id": "00073",
+  "image_path": "images/bizcard_00073.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00073"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "green_accent",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1B1B1B",
+    "muted": "#5A5A5A",
+    "accent": "#06C755"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00073_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "푸른소프트",
+      "canonical_text": "푸른소프트",
+      "bbox_xyxy": [
+        59,
+        83,
+        202,
+        112
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 29
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00073_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          202,
+          112
+        ]
+      ],
+      "block_id": "00073_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한진영",
+      "canonical_text": "한진영",
+      "bbox_xyxy": [
+        855,
+        83,
+        1004,
+        134
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 51
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00073_002_l01"
+      ],
+      "line_boxes": [
+        [
+          855,
+          83,
+          1004,
+          134
+        ]
+      ],
+      "block_id": "00073_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "운영팀",
+      "canonical_text": "운영팀",
+      "bbox_xyxy": [
+        918,
+        146,
+        1004,
+        176
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00073_003_l01"
+      ],
+      "line_boxes": [
+        [
+          918,
+          146,
+          1004,
+          176
+        ]
+      ],
+      "block_id": "00073_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "디렉터",
+      "canonical_text": "디렉터",
+      "bbox_xyxy": [
+        918,
+        182,
+        1004,
+        212
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00073_004_l01"
+      ],
+      "line_boxes": [
+        [
+          918,
+          182,
+          1004,
+          212
+        ]
+      ],
+      "block_id": "00073_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0163-9961",
+      "canonical_text": "051-0163-9961",
+      "bbox_xyxy": [
+        59,
+        328,
+        342,
+        355
+      ],
+      "bbox_size": {
+        "width": 283,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00073_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          328,
+          342,
+          355
+        ]
+      ],
+      "block_id": "00073_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0399-5656",
+      "canonical_text": "010-0399-5656",
+      "bbox_xyxy": [
+        59,
+        366,
+        324,
+        390
+      ],
+      "bbox_size": {
+        "width": 265,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00073_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          366,
+          324,
+          390
+        ]
+      ],
+      "block_id": "00073_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8994@pureun.example.org",
+      "canonical_text": "user8994@pureun.example.org",
+      "bbox_xyxy": [
+        59,
+        401,
+        640,
+        436
+      ],
+      "bbox_size": {
+        "width": 581,
+        "height": 35
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00073_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          401,
+          640,
+          436
+        ]
+      ],
+      "block_id": "00073_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00073_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 서초구 월드컵로 890 B동 598호",
+      "canonical_text": "서울특별시 서초구 월드컵로 890 B동 598호",
+      "bbox_xyxy": [
+        59,
+        447,
+        780,
+        479
+      ],
+      "bbox_size": {
+        "width": 721,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00073_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          447,
+          780,
+          479
+        ]
+      ],
+      "block_id": "00073_008_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "image_id": "00025",
+  "image_path": "images/bizcard_00025.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "A"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "cream_paper",
+  "theme_colors": {
+    "bg": "#FAF6F0",
+    "text": "#2C2C2C",
+    "muted": "#6B6B6B",
+    "accent": "#A8763E"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00025_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오로라파트너스",
+      "canonical_text": "오로라파트너스",
+      "bbox_xyxy": [
+        59,
+        83,
+        272,
+        115
+      ],
+      "bbox_size": {
+        "width": 213,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00025_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          272,
+          115
+        ]
+      ],
+      "block_id": "00025_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "홍지아",
+      "canonical_text": "홍지아",
+      "bbox_xyxy": [
+        59,
+        139,
+        230,
+        199
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 60
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00025_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          139,
+          230,
+          199
+        ]
+      ],
+      "block_id": "00025_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "보안팀",
+      "canonical_text": "보안팀",
+      "bbox_xyxy": [
+        59,
+        211,
+        150,
+        242
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00025_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          211,
+          150,
+          242
+        ]
+      ],
+      "block_id": "00025_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "팀장",
+      "canonical_text": "팀장",
+      "bbox_xyxy": [
+        59,
+        248,
+        120,
+        279
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00025_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          248,
+          120,
+          279
+        ]
+      ],
+      "block_id": "00025_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 02-0781-3896",
+      "canonical_text": "02-0781-3896",
+      "bbox_xyxy": [
+        59,
+        309,
+        310,
+        335
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00025_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          309,
+          310,
+          335
+        ]
+      ],
+      "block_id": "00025_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0736-5555",
+      "canonical_text": "010-0736-5555",
+      "bbox_xyxy": [
+        59,
+        345,
+        310,
+        368
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00025_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          345,
+          310,
+          368
+        ]
+      ],
+      "block_id": "00025_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7992@aurora.example.com",
+      "canonical_text": "user7992@aurora.example.com",
+      "bbox_xyxy": [
+        59,
+        378,
+        617,
+        411
+      ],
+      "bbox_size": {
+        "width": 558,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00025_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          378,
+          617,
+          411
+        ]
+      ],
+      "block_id": "00025_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00025_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web aurora.example.com",
+      "canonical_text": "aurora.example.com",
+      "bbox_xyxy": [
+        59,
+        421,
+        427,
+        454
+      ],
+      "bbox_size": {
+        "width": 368,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00025_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          421,
+          427,
+          454
+        ]
+      ],
+      "block_id": "00025_008_b01",
+      "language": "ko"
+    }
+  ]
+}

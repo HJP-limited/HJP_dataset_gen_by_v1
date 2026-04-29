@@ -1,0 +1,310 @@
+{
+  "image_id": "00068",
+  "image_path": "images/bizcard_00068.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00068"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "green_dark",
+  "theme_colors": {
+    "bg": "#0A2818",
+    "text": "#FFFFFF",
+    "muted": "#B5C6BC",
+    "accent": "#06C755"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00068_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        59,
+        83,
+        218,
+        117
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00068_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          218,
+          117
+        ]
+      ],
+      "block_id": "00068_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "장민지",
+      "canonical_text": "장민지",
+      "bbox_xyxy": [
+        848,
+        83,
+        1004,
+        137
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 54
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00068_002_l01"
+      ],
+      "line_boxes": [
+        [
+          848,
+          83,
+          1004,
+          137
+        ]
+      ],
+      "block_id": "00068_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "법무팀",
+      "canonical_text": "법무팀",
+      "bbox_xyxy": [
+        908,
+        149,
+        1004,
+        182
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00068_003_l01"
+      ],
+      "line_boxes": [
+        [
+          908,
+          149,
+          1004,
+          182
+        ]
+      ],
+      "block_id": "00068_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "책임",
+      "canonical_text": "책임",
+      "bbox_xyxy": [
+        940,
+        188,
+        1004,
+        222
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00068_004_l01"
+      ],
+      "line_boxes": [
+        [
+          940,
+          188,
+          1004,
+          222
+        ]
+      ],
+      "block_id": "00068_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0423-1656",
+      "canonical_text": "053-0423-1656",
+      "bbox_xyxy": [
+        59,
+        336,
+        331,
+        362
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00068_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          336,
+          331,
+          362
+        ]
+      ],
+      "block_id": "00068_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0805-2228",
+      "canonical_text": "010-0805-2228",
+      "bbox_xyxy": [
+        59,
+        372,
+        316,
+        395
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00068_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          372,
+          316,
+          395
+        ]
+      ],
+      "block_id": "00068_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8881@eclipse.example.com",
+      "canonical_text": "user8881@eclipse.example.com",
+      "bbox_xyxy": [
+        59,
+        405,
+        643,
+        438
+      ],
+      "bbox_size": {
+        "width": 584,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00068_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          405,
+          643,
+          438
+        ]
+      ],
+      "block_id": "00068_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00068_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web eclipse.example.com",
+      "canonical_text": "eclipse.example.com",
+      "bbox_xyxy": [
+        59,
+        448,
+        448,
+        482
+      ],
+      "bbox_size": {
+        "width": 389,
+        "height": 34
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00068_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          448,
+          448,
+          482
+        ]
+      ],
+      "block_id": "00068_008_b01",
+      "language": "ko"
+    }
+  ]
+}

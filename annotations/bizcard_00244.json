@@ -1,0 +1,364 @@
+{
+  "image_id": "00244",
+  "image_path": "images/bizcard_00244.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "H"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "sage",
+  "theme_colors": {
+    "bg": "#A8B5A0",
+    "text": "#2C3E2D",
+    "muted": "#5A6A57",
+    "accent": "#FFFFFF"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00244_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "한솔디지털",
+      "canonical_text": "한솔디지털",
+      "bbox_xyxy": [
+        215,
+        177,
+        376,
+        211
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00244_001_l01"
+      ],
+      "line_boxes": [
+        [
+          215,
+          177,
+          376,
+          211
+        ]
+      ],
+      "block_id": "00244_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "문수아",
+      "canonical_text": "문수아",
+      "bbox_xyxy": [
+        203,
+        265,
+        388,
+        329
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 64
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00244_002_l01"
+      ],
+      "line_boxes": [
+        [
+          203,
+          265,
+          388,
+          329
+        ]
+      ],
+      "block_id": "00244_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "인프라팀",
+      "canonical_text": "인프라팀",
+      "bbox_xyxy": [
+        231,
+        353,
+        360,
+        387
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00244_003_l01"
+      ],
+      "line_boxes": [
+        [
+          231,
+          353,
+          360,
+          387
+        ]
+      ],
+      "block_id": "00244_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "책임",
+      "canonical_text": "책임",
+      "bbox_xyxy": [
+        263,
+        399,
+        327,
+        433
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00244_004_l01"
+      ],
+      "line_boxes": [
+        [
+          263,
+          399,
+          327,
+          433
+        ]
+      ],
+      "block_id": "00244_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0953-3110",
+      "canonical_text": "032-0953-3110",
+      "bbox_xyxy": [
+        59,
+        584,
+        310,
+        608
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00244_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          310,
+          608
+        ]
+      ],
+      "block_id": "00244_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0544-3380",
+      "canonical_text": "010-0544-3380",
+      "bbox_xyxy": [
+        59,
+        618,
+        294,
+        639
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00244_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          618,
+          294,
+          639
+        ]
+      ],
+      "block_id": "00244_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 032-0496-2835",
+      "canonical_text": "032-0496-2835",
+      "bbox_xyxy": [
+        59,
+        649,
+        284,
+        670
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00244_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          649,
+          284,
+          670
+        ]
+      ],
+      "block_id": "00244_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6683@hansol.example.co.kr",
+      "canonical_text": "user6683@hansol.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        680,
+        499,
+        739
+      ],
+      "bbox_size": {
+        "width": 440,
+        "height": 59
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00244_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          680,
+          499,
+          739
+        ]
+      ],
+      "block_id": "00244_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 성남대로 398 19층",
+      "canonical_text": "서울특별시 영등포구 성남대로 398 19층",
+      "bbox_xyxy": [
+        59,
+        749,
+        420,
+        810
+      ],
+      "bbox_size": {
+        "width": 361,
+        "height": 61
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00244_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          749,
+          420,
+          810
+        ]
+      ],
+      "block_id": "00244_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00244_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hansol.example.co.kr",
+      "canonical_text": "hansol.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        820,
+        414,
+        851
+      ],
+      "bbox_size": {
+        "width": 355,
+        "height": 31
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00244_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          820,
+          414,
+          851
+        ]
+      ],
+      "block_id": "00244_010_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "image_id": "00190",
+  "image_path": "images/bizcard_00190.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "deep_forest",
+  "theme_colors": {
+    "bg": "#0F2818",
+    "text": "#E8E1D5",
+    "muted": "#A8B0A4",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00190_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오로라파트너스",
+      "canonical_text": "오로라파트너스",
+      "bbox_xyxy": [
+        431,
+        71,
+        631,
+        101
+      ],
+      "bbox_size": {
+        "width": 200,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00190_001_l01"
+      ],
+      "line_boxes": [
+        [
+          431,
+          71,
+          631,
+          101
+        ]
+      ],
+      "block_id": "00190_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "백예준",
+      "canonical_text": "백예준",
+      "bbox_xyxy": [
+        451,
+        136,
+        611,
+        192
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 56
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00190_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          136,
+          611,
+          192
+        ]
+      ],
+      "block_id": "00190_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "영업팀",
+      "canonical_text": "영업팀",
+      "bbox_xyxy": [
+        488,
+        204,
+        574,
+        233
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 29
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00190_003_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          204,
+          574,
+          233
+        ]
+      ],
+      "block_id": "00190_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석",
+      "canonical_text": "수석",
+      "bbox_xyxy": [
+        503,
+        239,
+        560,
+        269
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 30
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00190_004_l01"
+      ],
+      "line_boxes": [
+        [
+          503,
+          239,
+          560,
+          269
+        ]
+      ],
+      "block_id": "00190_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0376-7123",
+      "canonical_text": "032-0376-7123",
+      "bbox_xyxy": [
+        406,
+        299,
+        657,
+        323
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00190_005_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          299,
+          657,
+          323
+        ]
+      ],
+      "block_id": "00190_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0528-3648",
+      "canonical_text": "010-0528-3648",
+      "bbox_xyxy": [
+        414,
+        333,
+        649,
+        354
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00190_006_l01"
+      ],
+      "line_boxes": [
+        [
+          414,
+          333,
+          649,
+          354
+        ]
+      ],
+      "block_id": "00190_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 032-0744-2198",
+      "canonical_text": "032-0744-2198",
+      "bbox_xyxy": [
+        419,
+        364,
+        644,
+        385
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00190_007_l01"
+      ],
+      "line_boxes": [
+        [
+          419,
+          364,
+          644,
+          385
+        ]
+      ],
+      "block_id": "00190_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2626@aurora.example.com",
+      "canonical_text": "user2626@aurora.example.com",
+      "bbox_xyxy": [
+        270,
+        395,
+        792,
+        426
+      ],
+      "bbox_size": {
+        "width": 522,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00190_008_l01"
+      ],
+      "line_boxes": [
+        [
+          270,
+          395,
+          792,
+          426
+        ]
+      ],
+      "block_id": "00190_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 성남시 분당구 광교로 457",
+      "canonical_text": "경기도 성남시 분당구 광교로 457",
+      "bbox_xyxy": [
+        277,
+        436,
+        786,
+        464
+      ],
+      "bbox_size": {
+        "width": 509,
+        "height": 28
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00190_009_l01"
+      ],
+      "line_boxes": [
+        [
+          277,
+          436,
+          786,
+          464
+        ]
+      ],
+      "block_id": "00190_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00190_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web aurora.example.com",
+      "canonical_text": "aurora.example.com",
+      "bbox_xyxy": [
+        359,
+        474,
+        704,
+        505
+      ],
+      "bbox_size": {
+        "width": 345,
+        "height": 31
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00190_010_l01"
+      ],
+      "line_boxes": [
+        [
+          359,
+          474,
+          704,
+          505
+        ]
+      ],
+      "block_id": "00190_010_b01",
+      "language": "ko"
+    }
+  ]
+}

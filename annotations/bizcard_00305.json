@@ -1,0 +1,300 @@
+{
+  "image_id": "00305",
+  "image_path": "images/bizcard_00305.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V7",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00305"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "navy_on_white",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#0F2A4F",
+    "muted": "#5B6E85",
+    "accent": "#0F2A4F"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00305_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "베리타스",
+      "canonical_text": "베리타스",
+      "bbox_xyxy": [
+        59,
+        118,
+        194,
+        154
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00305_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          118,
+          194,
+          154
+        ]
+      ],
+      "block_id": "00305_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "조유진",
+      "canonical_text": "조유진",
+      "bbox_xyxy": [
+        59,
+        201,
+        253,
+        268
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00305_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          201,
+          253,
+          268
+        ]
+      ],
+      "block_id": "00305_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        59,
+        292,
+        160,
+        328
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00305_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          292,
+          160,
+          328
+        ]
+      ],
+      "block_id": "00305_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "이사",
+      "canonical_text": "이사",
+      "bbox_xyxy": [
+        59,
+        340,
+        127,
+        376
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00305_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          340,
+          127,
+          376
+        ]
+      ],
+      "block_id": "00305_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0989-6390",
+      "canonical_text": "010-0989-6390",
+      "bbox_xyxy": [
+        59,
+        423,
+        316,
+        447
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00305_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          423,
+          316,
+          447
+        ]
+      ],
+      "block_id": "00305_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3924@veritas.example.org",
+      "canonical_text": "user3924@veritas.example.org",
+      "bbox_xyxy": [
+        59,
+        457,
+        517,
+        519
+      ],
+      "bbox_size": {
+        "width": 458,
+        "height": 62
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00305_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          457,
+          517,
+          519
+        ]
+      ],
+      "block_id": "00305_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 부산광역시 해운대구 광화문로 230",
+      "canonical_text": "부산광역시 해운대구 광화문로 230",
+      "bbox_xyxy": [
+        59,
+        529,
+        465,
+        597
+      ],
+      "bbox_size": {
+        "width": 406,
+        "height": 68
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00305_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          529,
+          465,
+          597
+        ]
+      ],
+      "block_id": "00305_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00305_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web veritas.example.org",
+      "canonical_text": "veritas.example.org",
+      "bbox_xyxy": [
+        59,
+        607,
+        429,
+        641
+      ],
+      "bbox_size": {
+        "width": 370,
+        "height": 34
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00305_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          607,
+          429,
+          641
+        ]
+      ],
+      "block_id": "00305_008_b01",
+      "language": "ko"
+    }
+  ]
+}

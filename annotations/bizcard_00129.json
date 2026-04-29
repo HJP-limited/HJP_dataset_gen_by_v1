@@ -1,0 +1,364 @@
+{
+  "image_id": "00129",
+  "image_path": "images/bizcard_00129.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "P"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "powder_blue",
+  "theme_colors": {
+    "bg": "#D8E5EA",
+    "text": "#3A4A55",
+    "muted": "#7A8A95",
+    "accent": "#5D7A8A"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00129_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        47,
+        71,
+        143,
+        105
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00129_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          143,
+          105
+        ]
+      ],
+      "block_id": "00129_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "백하은",
+      "canonical_text": "백하은",
+      "bbox_xyxy": [
+        356,
+        82,
+        527,
+        142
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 60
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00129_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          527,
+          142
+        ]
+      ],
+      "block_id": "00129_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        356,
+        154,
+        452,
+        188
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00129_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          154,
+          452,
+          188
+        ]
+      ],
+      "block_id": "00129_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "전무",
+      "canonical_text": "전무",
+      "bbox_xyxy": [
+        356,
+        194,
+        420,
+        227
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00129_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          194,
+          420,
+          227
+        ]
+      ],
+      "block_id": "00129_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0277-3263",
+      "canonical_text": "031-0277-3263",
+      "bbox_xyxy": [
+        356,
+        257,
+        611,
+        281
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00129_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          257,
+          611,
+          281
+        ]
+      ],
+      "block_id": "00129_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0487-6101",
+      "canonical_text": "010-0487-6101",
+      "bbox_xyxy": [
+        356,
+        291,
+        597,
+        313
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00129_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          291,
+          597,
+          313
+        ]
+      ],
+      "block_id": "00129_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 070-0984-4715",
+      "canonical_text": "070-0984-4715",
+      "bbox_xyxy": [
+        356,
+        323,
+        584,
+        345
+      ],
+      "bbox_size": {
+        "width": 228,
+        "height": 22
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00129_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          323,
+          584,
+          345
+        ]
+      ],
+      "block_id": "00129_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2846@prism.example.org",
+      "canonical_text": "user2846@prism.example.org",
+      "bbox_xyxy": [
+        356,
+        355,
+        874,
+        387
+      ],
+      "bbox_size": {
+        "width": 518,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00129_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          355,
+          874,
+          387
+        ]
+      ],
+      "block_id": "00129_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 성남대로 199 2동 1246호",
+      "canonical_text": "서울특별시 영등포구 성남대로 199 2동 1246호",
+      "bbox_xyxy": [
+        356,
+        397,
+        961,
+        457
+      ],
+      "bbox_size": {
+        "width": 605,
+        "height": 60
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00129_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          397,
+          961,
+          457
+        ]
+      ],
+      "block_id": "00129_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00129_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web prism.example.org",
+      "canonical_text": "prism.example.org",
+      "bbox_xyxy": [
+        356,
+        467,
+        692,
+        499
+      ],
+      "bbox_size": {
+        "width": 336,
+        "height": 32
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00129_010_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          467,
+          692,
+          499
+        ]
+      ],
+      "block_id": "00129_010_b01",
+      "language": "ko"
+    }
+  ]
+}

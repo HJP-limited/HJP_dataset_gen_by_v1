@@ -1,0 +1,341 @@
+{
+  "image_id": "00060",
+  "image_path": "images/bizcard_00060.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00060"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "soft_beige",
+  "theme_colors": {
+    "bg": "#F0EAE0",
+    "text": "#2C2C2C",
+    "muted": "#6B5E50",
+    "accent": "#1E3A5F"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00060_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        59,
+        83,
+        202,
+        114
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00060_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          202,
+          114
+        ]
+      ],
+      "block_id": "00060_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "고소율",
+      "canonical_text": "고소율",
+      "bbox_xyxy": [
+        836,
+        83,
+        1004,
+        137
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 54
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00060_002_l01"
+      ],
+      "line_boxes": [
+        [
+          836,
+          83,
+          1004,
+          137
+        ]
+      ],
+      "block_id": "00060_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "법무팀",
+      "canonical_text": "법무팀",
+      "bbox_xyxy": [
+        918,
+        149,
+        1004,
+        179
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00060_003_l01"
+      ],
+      "line_boxes": [
+        [
+          918,
+          149,
+          1004,
+          179
+        ]
+      ],
+      "block_id": "00060_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "매니저",
+      "canonical_text": "매니저",
+      "bbox_xyxy": [
+        918,
+        185,
+        1004,
+        215
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00060_004_l01"
+      ],
+      "line_boxes": [
+        [
+          918,
+          185,
+          1004,
+          215
+        ]
+      ],
+      "block_id": "00060_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0695-1708",
+      "canonical_text": "053-0695-1708",
+      "bbox_xyxy": [
+        59,
+        283,
+        345,
+        310
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00060_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          283,
+          345,
+          310
+        ]
+      ],
+      "block_id": "00060_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0493-5797",
+      "canonical_text": "010-0493-5797",
+      "bbox_xyxy": [
+        59,
+        321,
+        327,
+        345
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00060_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          321,
+          327,
+          345
+        ]
+      ],
+      "block_id": "00060_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 062-0642-9896",
+      "canonical_text": "062-0642-9896",
+      "bbox_xyxy": [
+        59,
+        356,
+        315,
+        380
+      ],
+      "bbox_size": {
+        "width": 256,
+        "height": 24
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00060_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          356,
+          315,
+          380
+        ]
+      ],
+      "block_id": "00060_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2990@eclipse.example.com",
+      "canonical_text": "user2990@eclipse.example.com",
+      "bbox_xyxy": [
+        59,
+        391,
+        659,
+        426
+      ],
+      "bbox_size": {
+        "width": 600,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00060_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          391,
+          659,
+          426
+        ]
+      ],
+      "block_id": "00060_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00060_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 한강대로 907 B동 852호",
+      "canonical_text": "제주특별자치도 제주시 한강대로 907 B동 852호",
+      "bbox_xyxy": [
+        59,
+        437,
+        843,
+        469
+      ],
+      "bbox_size": {
+        "width": 784,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00060_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          437,
+          843,
+          469
+        ]
+      ],
+      "block_id": "00060_009_b01",
+      "language": "ko"
+    }
+  ]
+}

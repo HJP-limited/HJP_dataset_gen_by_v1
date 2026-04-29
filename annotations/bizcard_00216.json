@@ -1,0 +1,248 @@
+{
+  "image_id": "00216",
+  "image_path": "images/bizcard_00216.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00216"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "coral",
+  "theme_colors": {
+    "bg": "#FF6B6B",
+    "text": "#FFFFFF",
+    "muted": "#FFD8D8",
+    "accent": "#2C3E50"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00216_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "엘로힘",
+      "canonical_text": "엘로힘",
+      "bbox_xyxy": [
+        59,
+        94,
+        149,
+        126
+      ],
+      "bbox_size": {
+        "width": 90,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00216_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          149,
+          126
+        ]
+      ],
+      "block_id": "00216_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00216_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "조도현",
+      "canonical_text": "조도현",
+      "bbox_xyxy": [
+        59,
+        161,
+        197,
+        209
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 48
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00216_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          161,
+          197,
+          209
+        ]
+      ],
+      "block_id": "00216_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00216_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "QA팀",
+      "canonical_text": "QA팀",
+      "bbox_xyxy": [
+        59,
+        221,
+        134,
+        255
+      ],
+      "bbox_size": {
+        "width": 75,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00216_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          221,
+          134,
+          255
+        ]
+      ],
+      "block_id": "00216_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00216_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0995-1009",
+      "canonical_text": "010-0995-1009",
+      "bbox_xyxy": [
+        488,
+        236,
+        762,
+        261
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00216_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          762,
+          261
+        ]
+      ],
+      "block_id": "00216_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00216_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3752@elohim.example.org",
+      "canonical_text": "user3752@elohim.example.org",
+      "bbox_xyxy": [
+        488,
+        272,
+        982,
+        339
+      ],
+      "bbox_size": {
+        "width": 494,
+        "height": 67
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00216_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          272,
+          982,
+          339
+        ]
+      ],
+      "block_id": "00216_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00216_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 울산광역시 남구 판교역로 217",
+      "canonical_text": "울산광역시 남구 판교역로 217",
+      "bbox_xyxy": [
+        488,
+        350,
+        993,
+        412
+      ],
+      "bbox_size": {
+        "width": 505,
+        "height": 62
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00216_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          350,
+          993,
+          412
+        ]
+      ],
+      "block_id": "00216_006_b01",
+      "language": "ko"
+    }
+  ]
+}

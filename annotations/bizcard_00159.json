@@ -1,0 +1,335 @@
+{
+  "image_id": "00159",
+  "image_path": "images/bizcard_00159.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V3",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_strip_bottom"
+    ],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "O"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "cream_paper",
+  "theme_colors": {
+    "bg": "#FAF6F0",
+    "text": "#2C2C2C",
+    "muted": "#6B6B6B",
+    "accent": "#A8763E"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00159_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "오션블루",
+      "canonical_text": "오션블루",
+      "bbox_xyxy": [
+        47,
+        71,
+        168,
+        103
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00159_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          168,
+          103
+        ]
+      ],
+      "block_id": "00159_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "임서연",
+      "canonical_text": "임서연",
+      "bbox_xyxy": [
+        356,
+        82,
+        524,
+        140
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00159_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          524,
+          140
+        ]
+      ],
+      "block_id": "00159_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "사업개발팀",
+      "canonical_text": "사업개발팀",
+      "bbox_xyxy": [
+        356,
+        152,
+        508,
+        184
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00159_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          152,
+          508,
+          184
+        ]
+      ],
+      "block_id": "00159_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "책임연구원",
+      "canonical_text": "책임연구원",
+      "bbox_xyxy": [
+        356,
+        190,
+        508,
+        222
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00159_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          190,
+          508,
+          222
+        ]
+      ],
+      "block_id": "00159_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0672-8768",
+      "canonical_text": "070-0672-8768",
+      "bbox_xyxy": [
+        356,
+        252,
+        607,
+        276
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00159_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          252,
+          607,
+          276
+        ]
+      ],
+      "block_id": "00159_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0735-5435",
+      "canonical_text": "010-0735-5435",
+      "bbox_xyxy": [
+        356,
+        286,
+        591,
+        307
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00159_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          286,
+          591,
+          307
+        ]
+      ],
+      "block_id": "00159_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7699@oceanblue.example.com",
+      "canonical_text": "user7699@oceanblue.example.com",
+      "bbox_xyxy": [
+        356,
+        317,
+        930,
+        348
+      ],
+      "bbox_size": {
+        "width": 574,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00159_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          317,
+          930,
+          348
+        ]
+      ],
+      "block_id": "00159_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 서초구 성남대로 221 29층",
+      "canonical_text": "서울특별시 서초구 성남대로 221 29층",
+      "bbox_xyxy": [
+        356,
+        358,
+        924,
+        387
+      ],
+      "bbox_size": {
+        "width": 568,
+        "height": 29
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00159_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          358,
+          924,
+          387
+        ]
+      ],
+      "block_id": "00159_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00159_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web oceanblue.example.com",
+      "canonical_text": "oceanblue.example.com",
+      "bbox_xyxy": [
+        356,
+        397,
+        752,
+        428
+      ],
+      "bbox_size": {
+        "width": 396,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00159_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          397,
+          752,
+          428
+        ]
+      ],
+      "block_id": "00159_009_b01",
+      "language": "ko"
+    }
+  ]
+}

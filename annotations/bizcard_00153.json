@@ -1,0 +1,273 @@
+{
+  "image_id": "00153",
+  "image_path": "images/bizcard_00153.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V3",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_strip_bottom"
+    ],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "S"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "eucalyptus",
+  "theme_colors": {
+    "bg": "#88A095",
+    "text": "#1F2D26",
+    "muted": "#4A5852",
+    "accent": "#1F2D26"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00153_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "스타라이트",
+      "canonical_text": "스타라이트",
+      "bbox_xyxy": [
+        47,
+        71,
+        216,
+        107
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00153_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          216,
+          107
+        ]
+      ],
+      "block_id": "00153_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00153_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허선우",
+      "canonical_text": "허선우",
+      "bbox_xyxy": [
+        356,
+        82,
+        501,
+        132
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 50
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00153_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          501,
+          132
+        ]
+      ],
+      "block_id": "00153_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00153_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        356,
+        144,
+        424,
+        179
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00153_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          144,
+          424,
+          179
+        ]
+      ],
+      "block_id": "00153_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00153_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0181-5938",
+      "canonical_text": "010-0181-5938",
+      "bbox_xyxy": [
+        356,
+        209,
+        597,
+        231
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00153_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          209,
+          597,
+          231
+        ]
+      ],
+      "block_id": "00153_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00153_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6513@starlight.example.org",
+      "canonical_text": "user6513@starlight.example.org",
+      "bbox_xyxy": [
+        356,
+        241,
+        909,
+        273
+      ],
+      "bbox_size": {
+        "width": 553,
+        "height": 32
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00153_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          241,
+          909,
+          273
+        ]
+      ],
+      "block_id": "00153_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00153_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 마포구 한강대로 953 14층",
+      "canonical_text": "서울특별시 마포구 한강대로 953 14층",
+      "bbox_xyxy": [
+        356,
+        283,
+        949,
+        313
+      ],
+      "bbox_size": {
+        "width": 593,
+        "height": 30
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00153_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          283,
+          949,
+          313
+        ]
+      ],
+      "block_id": "00153_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00153_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web starlight.example.org",
+      "canonical_text": "starlight.example.org",
+      "bbox_xyxy": [
+        356,
+        323,
+        727,
+        355
+      ],
+      "bbox_size": {
+        "width": 371,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00153_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          323,
+          727,
+          355
+        ]
+      ],
+      "block_id": "00153_007_b01",
+      "language": "ko"
+    }
+  ]
+}

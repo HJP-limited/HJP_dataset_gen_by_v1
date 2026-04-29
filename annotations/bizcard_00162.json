@@ -1,0 +1,302 @@
+{
+  "image_id": "00162",
+  "image_path": "images/bizcard_00162.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "C"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "steel_blue",
+  "theme_colors": {
+    "bg": "#34495E",
+    "text": "#ECF0F1",
+    "muted": "#B0BEC5",
+    "accent": "#3498DB"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00162_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "코어시스템즈",
+      "canonical_text": "코어시스템즈",
+      "bbox_xyxy": [
+        430,
+        71,
+        633,
+        107
+      ],
+      "bbox_size": {
+        "width": 203,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00162_001_l01"
+      ],
+      "line_boxes": [
+        [
+          430,
+          71,
+          633,
+          107
+        ]
+      ],
+      "block_id": "00162_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "신윤서",
+      "canonical_text": "신윤서",
+      "bbox_xyxy": [
+        451,
+        142,
+        611,
+        199
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00162_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          142,
+          611,
+          199
+        ]
+      ],
+      "block_id": "00162_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "법무팀",
+      "canonical_text": "법무팀",
+      "bbox_xyxy": [
+        481,
+        211,
+        582,
+        246
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00162_003_l01"
+      ],
+      "line_boxes": [
+        [
+          481,
+          211,
+          582,
+          246
+        ]
+      ],
+      "block_id": "00162_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 02-0549-2111",
+      "canonical_text": "02-0549-2111",
+      "bbox_xyxy": [
+        412,
+        276,
+        651,
+        301
+      ],
+      "bbox_size": {
+        "width": 239,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00162_004_l01"
+      ],
+      "line_boxes": [
+        [
+          412,
+          276,
+          651,
+          301
+        ]
+      ],
+      "block_id": "00162_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0209-3587",
+      "canonical_text": "010-0209-3587",
+      "bbox_xyxy": [
+        411,
+        311,
+        652,
+        333
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00162_005_l01"
+      ],
+      "line_boxes": [
+        [
+          411,
+          311,
+          652,
+          333
+        ]
+      ],
+      "block_id": "00162_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user5443@coresys.example.com",
+      "canonical_text": "user5443@coresys.example.com",
+      "bbox_xyxy": [
+        254,
+        343,
+        808,
+        375
+      ],
+      "bbox_size": {
+        "width": 554,
+        "height": 32
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00162_006_l01"
+      ],
+      "line_boxes": [
+        [
+          254,
+          343,
+          808,
+          375
+        ]
+      ],
+      "block_id": "00162_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 부산광역시 수영구 센트럴로 964 B동 401호",
+      "canonical_text": "부산광역시 수영구 센트럴로 964 B동 401호",
+      "bbox_xyxy": [
+        199,
+        385,
+        863,
+        415
+      ],
+      "bbox_size": {
+        "width": 664,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00162_007_l01"
+      ],
+      "line_boxes": [
+        [
+          199,
+          385,
+          863,
+          415
+        ]
+      ],
+      "block_id": "00162_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00162_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web coresys.example.com",
+      "canonical_text": "coresys.example.com",
+      "bbox_xyxy": [
+        346,
+        425,
+        717,
+        457
+      ],
+      "bbox_size": {
+        "width": 371,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00162_008_l01"
+      ],
+      "line_boxes": [
+        [
+          346,
+          425,
+          717,
+          457
+        ]
+      ],
+      "block_id": "00162_008_b01",
+      "language": "ko"
+    }
+  ]
+}

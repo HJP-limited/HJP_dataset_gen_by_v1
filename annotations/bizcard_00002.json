@@ -1,0 +1,323 @@
+{
+  "image_id": "00002",
+  "image_path": "images/bizcard_00002.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "royal_blue",
+  "theme_colors": {
+    "bg": "#1E3A8A",
+    "text": "#F8FAFC",
+    "muted": "#BFCAE0",
+    "accent": "#FBBF24"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00002_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "메이플스튜디오",
+      "canonical_text": "메이플스튜디오",
+      "bbox_xyxy": [
+        59,
+        83,
+        269,
+        115
+      ],
+      "bbox_size": {
+        "width": 210,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00002_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          269,
+          115
+        ]
+      ],
+      "block_id": "00002_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "임서준",
+      "canonical_text": "임서준",
+      "bbox_xyxy": [
+        59,
+        139,
+        204,
+        190
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 51
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00002_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          139,
+          204,
+          190
+        ]
+      ],
+      "block_id": "00002_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        59,
+        202,
+        149,
+        234
+      ],
+      "bbox_size": {
+        "width": 90,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00002_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          202,
+          149,
+          234
+        ]
+      ],
+      "block_id": "00002_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "과장",
+      "canonical_text": "과장",
+      "bbox_xyxy": [
+        59,
+        240,
+        119,
+        272
+      ],
+      "bbox_size": {
+        "width": 60,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00002_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          240,
+          119,
+          272
+        ]
+      ],
+      "block_id": "00002_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0626-5964",
+      "canonical_text": "070-0626-5964",
+      "bbox_xyxy": [
+        59,
+        302,
+        331,
+        328
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00002_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          302,
+          331,
+          328
+        ]
+      ],
+      "block_id": "00002_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0219-1144",
+      "canonical_text": "010-0219-1144",
+      "bbox_xyxy": [
+        59,
+        338,
+        316,
+        362
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00002_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          338,
+          316,
+          362
+        ]
+      ],
+      "block_id": "00002_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 062-0749-7200",
+      "canonical_text": "062-0749-7200",
+      "bbox_xyxy": [
+        59,
+        372,
+        302,
+        396
+      ],
+      "bbox_size": {
+        "width": 243,
+        "height": 24
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00002_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          372,
+          302,
+          396
+        ]
+      ],
+      "block_id": "00002_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3682@maple.example.com",
+      "canonical_text": "user3682@maple.example.com",
+      "bbox_xyxy": [
+        59,
+        406,
+        632,
+        439
+      ],
+      "bbox_size": {
+        "width": 573,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00002_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          406,
+          632,
+          439
+        ]
+      ],
+      "block_id": "00002_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00002_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 세종특별자치시 충무로 785 12동 250호",
+      "canonical_text": "세종특별자치시 충무로 785 12동 250호",
+      "bbox_xyxy": [
+        59,
+        449,
+        714,
+        481
+      ],
+      "bbox_size": {
+        "width": 655,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00002_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          449,
+          714,
+          481
+        ]
+      ],
+      "block_id": "00002_009_b01",
+      "language": "ko"
+    }
+  ]
+}

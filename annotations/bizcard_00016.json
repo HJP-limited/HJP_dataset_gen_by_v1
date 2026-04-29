@@ -1,0 +1,292 @@
+{
+  "image_id": "00016",
+  "image_path": "images/bizcard_00016.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "olive",
+  "theme_colors": {
+    "bg": "#6B7C32",
+    "text": "#FAF7F0",
+    "muted": "#D0D2BC",
+    "accent": "#FAF7F0"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00016_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "아이리스",
+      "canonical_text": "아이리스",
+      "bbox_xyxy": [
+        59,
+        83,
+        188,
+        118
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 35
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00016_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          188,
+          118
+        ]
+      ],
+      "block_id": "00016_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "이우진",
+      "canonical_text": "이우진",
+      "bbox_xyxy": [
+        59,
+        142,
+        208,
+        195
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 53
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00016_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          142,
+          208,
+          195
+        ]
+      ],
+      "block_id": "00016_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "프로덕트팀",
+      "canonical_text": "프로덕트팀",
+      "bbox_xyxy": [
+        59,
+        207,
+        220,
+        241
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00016_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          207,
+          220,
+          241
+        ]
+      ],
+      "block_id": "00016_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "상무",
+      "canonical_text": "상무",
+      "bbox_xyxy": [
+        59,
+        247,
+        123,
+        281
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00016_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          247,
+          123,
+          281
+        ]
+      ],
+      "block_id": "00016_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0515-6790",
+      "canonical_text": "010-0515-6790",
+      "bbox_xyxy": [
+        59,
+        311,
+        327,
+        335
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00016_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          311,
+          327,
+          335
+        ]
+      ],
+      "block_id": "00016_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7363@iris.example.co.kr",
+      "canonical_text": "user7363@iris.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        346,
+        607,
+        381
+      ],
+      "bbox_size": {
+        "width": 548,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00016_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          346,
+          607,
+          381
+        ]
+      ],
+      "block_id": "00016_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 강남구 광화문로 219",
+      "canonical_text": "서울특별시 강남구 광화문로 219",
+      "bbox_xyxy": [
+        59,
+        392,
+        630,
+        424
+      ],
+      "bbox_size": {
+        "width": 571,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00016_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          392,
+          630,
+          424
+        ]
+      ],
+      "block_id": "00016_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00016_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web iris.example.co.kr",
+      "canonical_text": "iris.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        435,
+        405,
+        470
+      ],
+      "bbox_size": {
+        "width": 346,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00016_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          435,
+          405,
+          470
+        ]
+      ],
+      "block_id": "00016_008_b01",
+      "language": "ko"
+    }
+  ]
+}

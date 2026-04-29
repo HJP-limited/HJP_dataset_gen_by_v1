@@ -1,0 +1,292 @@
+{
+  "image_id": "00012",
+  "image_path": "images/bizcard_00012.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "green_dark",
+  "theme_colors": {
+    "bg": "#0A2818",
+    "text": "#FFFFFF",
+    "muted": "#B5C6BC",
+    "accent": "#06C755"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00012_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "베리타스",
+      "canonical_text": "베리타스",
+      "bbox_xyxy": [
+        59,
+        83,
+        188,
+        117
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00012_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          188,
+          117
+        ]
+      ],
+      "block_id": "00012_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "노지민",
+      "canonical_text": "노지민",
+      "bbox_xyxy": [
+        59,
+        141,
+        230,
+        201
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 60
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00012_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          230,
+          201
+        ]
+      ],
+      "block_id": "00012_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "리서치팀",
+      "canonical_text": "리서치팀",
+      "bbox_xyxy": [
+        59,
+        213,
+        188,
+        248
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00012_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          213,
+          188,
+          248
+        ]
+      ],
+      "block_id": "00012_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "전무",
+      "canonical_text": "전무",
+      "bbox_xyxy": [
+        59,
+        254,
+        123,
+        288
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00012_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          254,
+          123,
+          288
+        ]
+      ],
+      "block_id": "00012_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0324-8315",
+      "canonical_text": "010-0324-8315",
+      "bbox_xyxy": [
+        59,
+        318,
+        310,
+        341
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00012_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          318,
+          310,
+          341
+        ]
+      ],
+      "block_id": "00012_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6233@veritas.example.org",
+      "canonical_text": "user6233@veritas.example.org",
+      "bbox_xyxy": [
+        59,
+        351,
+        604,
+        384
+      ],
+      "bbox_size": {
+        "width": 545,
+        "height": 33
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00012_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          351,
+          604,
+          384
+        ]
+      ],
+      "block_id": "00012_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 북구 종로 613",
+      "canonical_text": "광주광역시 북구 종로 613",
+      "bbox_xyxy": [
+        59,
+        394,
+        510,
+        424
+      ],
+      "bbox_size": {
+        "width": 451,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00012_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          394,
+          510,
+          424
+        ]
+      ],
+      "block_id": "00012_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00012_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web veritas.example.org",
+      "canonical_text": "veritas.example.org",
+      "bbox_xyxy": [
+        59,
+        434,
+        414,
+        467
+      ],
+      "bbox_size": {
+        "width": 355,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00012_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          434,
+          414,
+          467
+        ]
+      ],
+      "block_id": "00012_008_b01",
+      "language": "ko"
+    }
+  ]
+}

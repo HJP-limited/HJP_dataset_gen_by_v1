@@ -1,0 +1,333 @@
+{
+  "image_id": "00161",
+  "image_path": "images/bizcard_00161.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "L"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "cream_paper",
+  "theme_colors": {
+    "bg": "#FAF6F0",
+    "text": "#2C2C2C",
+    "muted": "#6B6B6B",
+    "accent": "#A8763E"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00161_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "라인플러스",
+      "canonical_text": "라인플러스",
+      "bbox_xyxy": [
+        451,
+        71,
+        612,
+        105
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00161_001_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          71,
+          612,
+          105
+        ]
+      ],
+      "block_id": "00161_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "손소율",
+      "canonical_text": "손소율",
+      "bbox_xyxy": [
+        446,
+        140,
+        617,
+        197
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00161_002_l01"
+      ],
+      "line_boxes": [
+        [
+          446,
+          140,
+          617,
+          197
+        ]
+      ],
+      "block_id": "00161_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "전략기획팀",
+      "canonical_text": "전략기획팀",
+      "bbox_xyxy": [
+        451,
+        209,
+        612,
+        243
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00161_003_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          209,
+          612,
+          243
+        ]
+      ],
+      "block_id": "00161_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        499,
+        249,
+        563,
+        283
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00161_004_l01"
+      ],
+      "line_boxes": [
+        [
+          499,
+          249,
+          563,
+          283
+        ]
+      ],
+      "block_id": "00161_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0758-2571",
+      "canonical_text": "032-0758-2571",
+      "bbox_xyxy": [
+        406,
+        313,
+        657,
+        337
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00161_005_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          313,
+          657,
+          337
+        ]
+      ],
+      "block_id": "00161_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0726-4877",
+      "canonical_text": "010-0726-4877",
+      "bbox_xyxy": [
+        414,
+        347,
+        649,
+        368
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00161_006_l01"
+      ],
+      "line_boxes": [
+        [
+          414,
+          347,
+          649,
+          368
+        ]
+      ],
+      "block_id": "00161_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4285@lineplus.example.com",
+      "canonical_text": "user4285@lineplus.example.com",
+      "bbox_xyxy": [
+        261,
+        378,
+        801,
+        409
+      ],
+      "bbox_size": {
+        "width": 540,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00161_007_l01"
+      ],
+      "line_boxes": [
+        [
+          261,
+          378,
+          801,
+          409
+        ]
+      ],
+      "block_id": "00161_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 종로구 여의대로 586",
+      "canonical_text": "서울특별시 종로구 여의대로 586",
+      "bbox_xyxy": [
+        280,
+        419,
+        782,
+        448
+      ],
+      "bbox_size": {
+        "width": 502,
+        "height": 29
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00161_008_l01"
+      ],
+      "line_boxes": [
+        [
+          280,
+          419,
+          782,
+          448
+        ]
+      ],
+      "block_id": "00161_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00161_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web lineplus.example.com",
+      "canonical_text": "lineplus.example.com",
+      "bbox_xyxy": [
+        350,
+        458,
+        713,
+        489
+      ],
+      "bbox_size": {
+        "width": 363,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00161_009_l01"
+      ],
+      "line_boxes": [
+        [
+          350,
+          458,
+          713,
+          489
+        ]
+      ],
+      "block_id": "00161_009_b01",
+      "language": "ko"
+    }
+  ]
+}

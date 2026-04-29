@@ -1,0 +1,364 @@
+{
+  "image_id": "00131",
+  "image_path": "images/bizcard_00131.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "R"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "navy_classic",
+  "theme_colors": {
+    "bg": "#0F2A4F",
+    "text": "#FFFFFF",
+    "muted": "#B8C7D9",
+    "accent": "#C9A961"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00131_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "리바이브",
+      "canonical_text": "리바이브",
+      "bbox_xyxy": [
+        47,
+        71,
+        167,
+        103
+      ],
+      "bbox_size": {
+        "width": 120,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00131_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          167,
+          103
+        ]
+      ],
+      "block_id": "00131_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "문도윤",
+      "canonical_text": "문도윤",
+      "bbox_xyxy": [
+        356,
+        82,
+        524,
+        135
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 53
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00131_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          524,
+          135
+        ]
+      ],
+      "block_id": "00131_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "총무팀",
+      "canonical_text": "총무팀",
+      "bbox_xyxy": [
+        356,
+        147,
+        446,
+        178
+      ],
+      "bbox_size": {
+        "width": 90,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00131_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          147,
+          446,
+          178
+        ]
+      ],
+      "block_id": "00131_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "차장",
+      "canonical_text": "차장",
+      "bbox_xyxy": [
+        356,
+        184,
+        416,
+        216
+      ],
+      "bbox_size": {
+        "width": 60,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00131_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          184,
+          416,
+          216
+        ]
+      ],
+      "block_id": "00131_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0564-4624",
+      "canonical_text": "031-0564-4624",
+      "bbox_xyxy": [
+        356,
+        246,
+        628,
+        272
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00131_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          246,
+          628,
+          272
+        ]
+      ],
+      "block_id": "00131_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0814-1096",
+      "canonical_text": "010-0814-1096",
+      "bbox_xyxy": [
+        356,
+        282,
+        613,
+        306
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00131_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          282,
+          613,
+          306
+        ]
+      ],
+      "block_id": "00131_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 062-0298-2246",
+      "canonical_text": "062-0298-2246",
+      "bbox_xyxy": [
+        356,
+        316,
+        599,
+        340
+      ],
+      "bbox_size": {
+        "width": 243,
+        "height": 24
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00131_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          316,
+          599,
+          340
+        ]
+      ],
+      "block_id": "00131_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user5716@revive.example.co.kr",
+      "canonical_text": "user5716@revive.example.co.kr",
+      "bbox_xyxy": [
+        356,
+        350,
+        939,
+        383
+      ],
+      "bbox_size": {
+        "width": 583,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00131_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          350,
+          939,
+          383
+        ]
+      ],
+      "block_id": "00131_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 세종특별자치시 테헤란로 465 C동 495호",
+      "canonical_text": "세종특별자치시 테헤란로 465 C동 495호",
+      "bbox_xyxy": [
+        356,
+        393,
+        941,
+        456
+      ],
+      "bbox_size": {
+        "width": 585,
+        "height": 63
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00131_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          393,
+          941,
+          456
+        ]
+      ],
+      "block_id": "00131_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00131_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web revive.example.co.kr",
+      "canonical_text": "revive.example.co.kr",
+      "bbox_xyxy": [
+        356,
+        466,
+        744,
+        500
+      ],
+      "bbox_size": {
+        "width": 388,
+        "height": 34
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00131_010_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          466,
+          744,
+          500
+        ]
+      ],
+      "block_id": "00131_010_b01",
+      "language": "ko"
+    }
+  ]
+}

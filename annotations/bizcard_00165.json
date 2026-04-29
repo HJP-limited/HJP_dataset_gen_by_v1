@@ -1,0 +1,333 @@
+{
+  "image_id": "00165",
+  "image_path": "images/bizcard_00165.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "L"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "forest",
+  "theme_colors": {
+    "bg": "#2D5016",
+    "text": "#F5F1E8",
+    "muted": "#B5BAA5",
+    "accent": "#C9A961"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00165_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "라인플러스",
+      "canonical_text": "라인플러스",
+      "bbox_xyxy": [
+        451,
+        71,
+        612,
+        105
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00165_001_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          71,
+          612,
+          105
+        ]
+      ],
+      "block_id": "00165_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "고지우",
+      "canonical_text": "고지우",
+      "bbox_xyxy": [
+        447,
+        140,
+        615,
+        198
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00165_002_l01"
+      ],
+      "line_boxes": [
+        [
+          447,
+          140,
+          615,
+          198
+        ]
+      ],
+      "block_id": "00165_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "기획팀",
+      "canonical_text": "기획팀",
+      "bbox_xyxy": [
+        483,
+        210,
+        580,
+        244
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00165_003_l01"
+      ],
+      "line_boxes": [
+        [
+          483,
+          210,
+          580,
+          244
+        ]
+      ],
+      "block_id": "00165_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "대리",
+      "canonical_text": "대리",
+      "bbox_xyxy": [
+        499,
+        250,
+        563,
+        284
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00165_004_l01"
+      ],
+      "line_boxes": [
+        [
+          499,
+          250,
+          563,
+          284
+        ]
+      ],
+      "block_id": "00165_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0475-3109",
+      "canonical_text": "032-0475-3109",
+      "bbox_xyxy": [
+        406,
+        314,
+        657,
+        338
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00165_005_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          314,
+          657,
+          338
+        ]
+      ],
+      "block_id": "00165_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0811-8950",
+      "canonical_text": "010-0811-8950",
+      "bbox_xyxy": [
+        414,
+        348,
+        649,
+        369
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00165_006_l01"
+      ],
+      "line_boxes": [
+        [
+          414,
+          348,
+          649,
+          369
+        ]
+      ],
+      "block_id": "00165_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 031-0167-6316",
+      "canonical_text": "031-0167-6316",
+      "bbox_xyxy": [
+        419,
+        379,
+        644,
+        400
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00165_007_l01"
+      ],
+      "line_boxes": [
+        [
+          419,
+          379,
+          644,
+          400
+        ]
+      ],
+      "block_id": "00165_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2496@lineplus.example.com",
+      "canonical_text": "user2496@lineplus.example.com",
+      "bbox_xyxy": [
+        261,
+        410,
+        801,
+        441
+      ],
+      "bbox_size": {
+        "width": 540,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00165_008_l01"
+      ],
+      "line_boxes": [
+        [
+          261,
+          410,
+          801,
+          441
+        ]
+      ],
+      "block_id": "00165_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00165_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 세종특별자치시 종로 208 D동 940호",
+      "canonical_text": "세종특별자치시 종로 208 D동 940호",
+      "bbox_xyxy": [
+        256,
+        451,
+        806,
+        479
+      ],
+      "bbox_size": {
+        "width": 550,
+        "height": 28
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00165_009_l01"
+      ],
+      "line_boxes": [
+        [
+          256,
+          451,
+          806,
+          479
+        ]
+      ],
+      "block_id": "00165_009_b01",
+      "language": "ko"
+    }
+  ]
+}

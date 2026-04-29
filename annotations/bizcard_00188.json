@@ -1,0 +1,326 @@
+{
+  "image_id": "00188",
+  "image_path": "images/bizcard_00188.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "terracotta",
+  "theme_colors": {
+    "bg": "#C66B3D",
+    "text": "#FAF6F0",
+    "muted": "#E8D5C4",
+    "accent": "#2C1810"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00188_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "문라이트",
+      "canonical_text": "문라이트",
+      "bbox_xyxy": [
+        467,
+        71,
+        596,
+        106
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 35
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00188_001_l01"
+      ],
+      "line_boxes": [
+        [
+          467,
+          71,
+          596,
+          106
+        ]
+      ],
+      "block_id": "00188_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "김현지",
+      "canonical_text": "김현지",
+      "bbox_xyxy": [
+        451,
+        141,
+        611,
+        198
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00188_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          141,
+          611,
+          198
+        ]
+      ],
+      "block_id": "00188_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "보안팀",
+      "canonical_text": "보안팀",
+      "bbox_xyxy": [
+        483,
+        210,
+        580,
+        244
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00188_003_l01"
+      ],
+      "line_boxes": [
+        [
+          483,
+          210,
+          580,
+          244
+        ]
+      ],
+      "block_id": "00188_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석연구원",
+      "canonical_text": "수석연구원",
+      "bbox_xyxy": [
+        451,
+        250,
+        612,
+        285
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 35
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00188_004_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          250,
+          612,
+          285
+        ]
+      ],
+      "block_id": "00188_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0884-1443",
+      "canonical_text": "010-0884-1443",
+      "bbox_xyxy": [
+        397,
+        315,
+        665,
+        339
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00188_005_l01"
+      ],
+      "line_boxes": [
+        [
+          397,
+          315,
+          665,
+          339
+        ]
+      ],
+      "block_id": "00188_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0614-5184",
+      "canonical_text": "053-0614-5184",
+      "bbox_xyxy": [
+        403,
+        350,
+        659,
+        374
+      ],
+      "bbox_size": {
+        "width": 256,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00188_006_l01"
+      ],
+      "line_boxes": [
+        [
+          403,
+          350,
+          659,
+          374
+        ]
+      ],
+      "block_id": "00188_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7125@moonlight.example.com",
+      "canonical_text": "user7125@moonlight.example.com",
+      "bbox_xyxy": [
+        205,
+        385,
+        858,
+        420
+      ],
+      "bbox_size": {
+        "width": 653,
+        "height": 35
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00188_007_l01"
+      ],
+      "line_boxes": [
+        [
+          205,
+          385,
+          858,
+          420
+        ]
+      ],
+      "block_id": "00188_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 테헤란로 359 7동 148호",
+      "canonical_text": "제주특별자치도 제주시 테헤란로 359 7동 148호",
+      "bbox_xyxy": [
+        141,
+        431,
+        922,
+        463
+      ],
+      "bbox_size": {
+        "width": 781,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00188_008_l01"
+      ],
+      "line_boxes": [
+        [
+          141,
+          431,
+          922,
+          463
+        ]
+      ],
+      "block_id": "00188_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00188_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web moonlight.example.com",
+      "canonical_text": "moonlight.example.com",
+      "bbox_xyxy": [
+        306,
+        474,
+        757,
+        509
+      ],
+      "bbox_size": {
+        "width": 451,
+        "height": 35
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00188_009_l01"
+      ],
+      "line_boxes": [
+        [
+          306,
+          474,
+          757,
+          509
+        ]
+      ],
+      "block_id": "00188_009_b01",
+      "language": "ko"
+    }
+  ]
+}

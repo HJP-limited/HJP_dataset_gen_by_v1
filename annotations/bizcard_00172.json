@@ -1,0 +1,271 @@
+{
+  "image_id": "00172",
+  "image_path": "images/bizcard_00172.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "G"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "forest",
+  "theme_colors": {
+    "bg": "#2D5016",
+    "text": "#F5F1E8",
+    "muted": "#B5BAA5",
+    "accent": "#C9A961"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00172_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "그린피크",
+      "canonical_text": "그린피크",
+      "bbox_xyxy": [
+        471,
+        71,
+        592,
+        103
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00172_001_l01"
+      ],
+      "line_boxes": [
+        [
+          471,
+          71,
+          592,
+          103
+        ]
+      ],
+      "block_id": "00172_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00172_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "송혜원",
+      "canonical_text": "송혜원",
+      "bbox_xyxy": [
+        447,
+        138,
+        615,
+        196
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00172_002_l01"
+      ],
+      "line_boxes": [
+        [
+          447,
+          138,
+          615,
+          196
+        ]
+      ],
+      "block_id": "00172_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00172_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "프로덕트팀",
+      "canonical_text": "프로덕트팀",
+      "bbox_xyxy": [
+        455,
+        208,
+        607,
+        240
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00172_003_l01"
+      ],
+      "line_boxes": [
+        [
+          455,
+          208,
+          607,
+          240
+        ]
+      ],
+      "block_id": "00172_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00172_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "주임",
+      "canonical_text": "주임",
+      "bbox_xyxy": [
+        501,
+        246,
+        562,
+        278
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00172_004_l01"
+      ],
+      "line_boxes": [
+        [
+          501,
+          246,
+          562,
+          278
+        ]
+      ],
+      "block_id": "00172_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00172_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0325-7702",
+      "canonical_text": "010-0325-7702",
+      "bbox_xyxy": [
+        406,
+        308,
+        657,
+        331
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00172_005_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          308,
+          657,
+          331
+        ]
+      ],
+      "block_id": "00172_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00172_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7229@greenpeak.example.com",
+      "canonical_text": "user7229@greenpeak.example.com",
+      "bbox_xyxy": [
+        223,
+        341,
+        839,
+        374
+      ],
+      "bbox_size": {
+        "width": 616,
+        "height": 33
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00172_006_l01"
+      ],
+      "line_boxes": [
+        [
+          223,
+          341,
+          839,
+          374
+        ]
+      ],
+      "block_id": "00172_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00172_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 수원시 영통구 강남대로 772 2동 400호",
+      "canonical_text": "경기도 수원시 영통구 강남대로 772 2동 400호",
+      "bbox_xyxy": [
+        175,
+        384,
+        887,
+        414
+      ],
+      "bbox_size": {
+        "width": 712,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00172_007_l01"
+      ],
+      "line_boxes": [
+        [
+          175,
+          384,
+          887,
+          414
+        ]
+      ],
+      "block_id": "00172_007_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "image_id": "00111",
+  "image_path": "images/bizcard_00111.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V5",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_band_corner",
+      "section_divider"
+    ],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00111"
+    },
+    "background_pattern": "triangles"
+  },
+  "theme_name": "sage",
+  "theme_colors": {
+    "bg": "#A8B5A0",
+    "text": "#2C3E2D",
+    "muted": "#5A6A57",
+    "accent": "#FFFFFF"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00111_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "엘로힘",
+      "canonical_text": "엘로힘",
+      "bbox_xyxy": [
+        59,
+        59,
+        150,
+        91
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00111_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          150,
+          91
+        ]
+      ],
+      "block_id": "00111_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "노예은",
+      "canonical_text": "노예은",
+      "bbox_xyxy": [
+        59,
+        115,
+        197,
+        163
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 48
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00111_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          115,
+          197,
+          163
+        ]
+      ],
+      "block_id": "00111_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임연구원",
+      "canonical_text": "선임연구원",
+      "bbox_xyxy": [
+        59,
+        295,
+        211,
+        327
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00111_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          211,
+          327
+        ]
+      ],
+      "block_id": "00111_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0623-9414",
+      "canonical_text": "070-0623-9414",
+      "bbox_xyxy": [
+        59,
+        345,
+        345,
+        372
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00111_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          345,
+          345,
+          372
+        ]
+      ],
+      "block_id": "00111_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0909-6195",
+      "canonical_text": "010-0909-6195",
+      "bbox_xyxy": [
+        59,
+        383,
+        327,
+        407
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00111_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          383,
+          327,
+          407
+        ]
+      ],
+      "block_id": "00111_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9276@elohim.example.org",
+      "canonical_text": "user9276@elohim.example.org",
+      "bbox_xyxy": [
+        59,
+        418,
+        644,
+        453
+      ],
+      "bbox_size": {
+        "width": 585,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00111_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          418,
+          644,
+          453
+        ]
+      ],
+      "block_id": "00111_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 성남시 분당구 성남대로 432 19동 251호",
+      "canonical_text": "경기도 성남시 분당구 성남대로 432 19동 251호",
+      "bbox_xyxy": [
+        59,
+        464,
+        835,
+        496
+      ],
+      "bbox_size": {
+        "width": 776,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00111_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          464,
+          835,
+          496
+        ]
+      ],
+      "block_id": "00111_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00111_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web elohim.example.org",
+      "canonical_text": "elohim.example.org",
+      "bbox_xyxy": [
+        59,
+        507,
+        442,
+        542
+      ],
+      "bbox_size": {
+        "width": 383,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00111_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          507,
+          442,
+          542
+        ]
+      ],
+      "block_id": "00111_008_b01",
+      "language": "ko"
+    }
+  ]
+}

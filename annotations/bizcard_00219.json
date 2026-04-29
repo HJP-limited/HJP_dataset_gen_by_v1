@@ -1,0 +1,279 @@
+{
+  "image_id": "00219",
+  "image_path": "images/bizcard_00219.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00219"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "royal_blue",
+  "theme_colors": {
+    "bg": "#1E3A8A",
+    "text": "#F8FAFC",
+    "muted": "#BFCAE0",
+    "accent": "#FBBF24"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00219_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        59,
+        94,
+        202,
+        125
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00219_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          202,
+          125
+        ]
+      ],
+      "block_id": "00219_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00219_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "유민준",
+      "canonical_text": "유민준",
+      "bbox_xyxy": [
+        59,
+        160,
+        208,
+        212
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 52
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00219_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          160,
+          208,
+          212
+        ]
+      ],
+      "block_id": "00219_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00219_003",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0344-5094",
+      "canonical_text": "051-0344-5094",
+      "bbox_xyxy": [
+        488,
+        236,
+        774,
+        263
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00219_003_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          774,
+          263
+        ]
+      ],
+      "block_id": "00219_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00219_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0884-5302",
+      "canonical_text": "010-0884-5302",
+      "bbox_xyxy": [
+        488,
+        274,
+        756,
+        298
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00219_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          274,
+          756,
+          298
+        ]
+      ],
+      "block_id": "00219_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00219_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3045@eclipse.example.com",
+      "canonical_text": "user3045@eclipse.example.com",
+      "bbox_xyxy": [
+        488,
+        309,
+        982,
+        375
+      ],
+      "bbox_size": {
+        "width": 494,
+        "height": 66
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00219_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          309,
+          982,
+          375
+        ]
+      ],
+      "block_id": "00219_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00219_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대전광역시 유성구 양재대로 81 10층",
+      "canonical_text": "대전광역시 유성구 양재대로 81 10층",
+      "bbox_xyxy": [
+        488,
+        386,
+        997,
+        453
+      ],
+      "bbox_size": {
+        "width": 509,
+        "height": 67
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00219_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          386,
+          997,
+          453
+        ]
+      ],
+      "block_id": "00219_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00219_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web eclipse.example.com",
+      "canonical_text": "eclipse.example.com",
+      "bbox_xyxy": [
+        488,
+        464,
+        886,
+        499
+      ],
+      "bbox_size": {
+        "width": 398,
+        "height": 35
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00219_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          464,
+          886,
+          499
+        ]
+      ],
+      "block_id": "00219_007_b01",
+      "language": "ko"
+    }
+  ]
+}

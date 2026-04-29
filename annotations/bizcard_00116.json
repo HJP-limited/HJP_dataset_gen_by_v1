@@ -1,0 +1,313 @@
+{
+  "image_id": "00116",
+  "image_path": "images/bizcard_00116.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V5",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_band_corner",
+      "section_divider"
+    ],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00116"
+    },
+    "background_pattern": "lines_h"
+  },
+  "theme_name": "mustard_black",
+  "theme_colors": {
+    "bg": "#F4C842",
+    "text": "#0A0A0A",
+    "muted": "#444444",
+    "accent": "#0A0A0A"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00116_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        59,
+        145,
+        90
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00116_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          145,
+          90
+        ]
+      ],
+      "block_id": "00116_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "손서윤",
+      "canonical_text": "손서윤",
+      "bbox_xyxy": [
+        59,
+        114,
+        197,
+        163
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 49
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00116_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          114,
+          197,
+          163
+        ]
+      ],
+      "block_id": "00116_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "영업팀",
+      "canonical_text": "영업팀",
+      "bbox_xyxy": [
+        59,
+        295,
+        145,
+        326
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00116_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          145,
+          326
+        ]
+      ],
+      "block_id": "00116_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "대리",
+      "canonical_text": "대리",
+      "bbox_xyxy": [
+        59,
+        332,
+        116,
+        363
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00116_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          332,
+          116,
+          363
+        ]
+      ],
+      "block_id": "00116_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0755-1647",
+      "canonical_text": "010-0755-1647",
+      "bbox_xyxy": [
+        59,
+        381,
+        310,
+        404
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00116_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          381,
+          310,
+          404
+        ]
+      ],
+      "block_id": "00116_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 02-0158-2335",
+      "canonical_text": "02-0158-2335",
+      "bbox_xyxy": [
+        59,
+        414,
+        283,
+        437
+      ],
+      "bbox_size": {
+        "width": 224,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00116_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          414,
+          283,
+          437
+        ]
+      ],
+      "block_id": "00116_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7570@prism.example.org",
+      "canonical_text": "user7570@prism.example.org",
+      "bbox_xyxy": [
+        59,
+        447,
+        590,
+        480
+      ],
+      "bbox_size": {
+        "width": 531,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00116_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          447,
+          590,
+          480
+        ]
+      ],
+      "block_id": "00116_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00116_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web prism.example.org",
+      "canonical_text": "prism.example.org",
+      "bbox_xyxy": [
+        59,
+        490,
+        401,
+        523
+      ],
+      "bbox_size": {
+        "width": 342,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00116_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          490,
+          401,
+          523
+        ]
+      ],
+      "block_id": "00116_008_b01",
+      "language": "ko"
+    }
+  ]
+}

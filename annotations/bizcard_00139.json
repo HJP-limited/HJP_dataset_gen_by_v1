@@ -1,0 +1,333 @@
+{
+  "image_id": "00139",
+  "image_path": "images/bizcard_00139.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "Q"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "olive",
+  "theme_colors": {
+    "bg": "#6B7C32",
+    "text": "#FAF7F0",
+    "muted": "#D0D2BC",
+    "accent": "#FAF7F0"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00139_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        47,
+        71,
+        161,
+        102
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00139_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          161,
+          102
+        ]
+      ],
+      "block_id": "00139_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "백우진",
+      "canonical_text": "백우진",
+      "bbox_xyxy": [
+        356,
+        82,
+        501,
+        133
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 51
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00139_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          501,
+          133
+        ]
+      ],
+      "block_id": "00139_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "총무팀",
+      "canonical_text": "총무팀",
+      "bbox_xyxy": [
+        356,
+        145,
+        442,
+        175
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00139_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          145,
+          442,
+          175
+        ]
+      ],
+      "block_id": "00139_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "실장",
+      "canonical_text": "실장",
+      "bbox_xyxy": [
+        356,
+        181,
+        413,
+        210
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 29
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00139_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          181,
+          413,
+          210
+        ]
+      ],
+      "block_id": "00139_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0865-5045",
+      "canonical_text": "051-0865-5045",
+      "bbox_xyxy": [
+        356,
+        240,
+        625,
+        266
+      ],
+      "bbox_size": {
+        "width": 269,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00139_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          240,
+          625,
+          266
+        ]
+      ],
+      "block_id": "00139_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0871-6442",
+      "canonical_text": "010-0871-6442",
+      "bbox_xyxy": [
+        356,
+        276,
+        607,
+        299
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00139_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          276,
+          607,
+          299
+        ]
+      ],
+      "block_id": "00139_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 02-0331-1397",
+      "canonical_text": "02-0331-1397",
+      "bbox_xyxy": [
+        356,
+        309,
+        580,
+        332
+      ],
+      "bbox_size": {
+        "width": 224,
+        "height": 23
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00139_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          309,
+          580,
+          332
+        ]
+      ],
+      "block_id": "00139_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user5094@qworks.example.com",
+      "canonical_text": "user5094@qworks.example.com",
+      "bbox_xyxy": [
+        356,
+        342,
+        925,
+        375
+      ],
+      "bbox_size": {
+        "width": 569,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00139_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          342,
+          925,
+          375
+        ]
+      ],
+      "block_id": "00139_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00139_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 서초구 월드컵로 374 20동 899호",
+      "canonical_text": "서울특별시 서초구 월드컵로 374 20동 899호",
+      "bbox_xyxy": [
+        356,
+        385,
+        963,
+        444
+      ],
+      "bbox_size": {
+        "width": 607,
+        "height": 59
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00139_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          385,
+          963,
+          444
+        ]
+      ],
+      "block_id": "00139_009_b01",
+      "language": "ko"
+    }
+  ]
+}

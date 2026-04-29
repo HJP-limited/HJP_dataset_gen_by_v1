@@ -1,0 +1,341 @@
+{
+  "image_id": "00202",
+  "image_path": "images/bizcard_00202.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "V"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00202"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "blush",
+  "theme_colors": {
+    "bg": "#F8E1E4",
+    "text": "#5D4954",
+    "muted": "#9A8590",
+    "accent": "#A8767E"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00202_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "비전플러스",
+      "canonical_text": "비전플러스",
+      "bbox_xyxy": [
+        59,
+        94,
+        219,
+        128
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00202_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          219,
+          128
+        ]
+      ],
+      "block_id": "00202_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "박지우",
+      "canonical_text": "박지우",
+      "bbox_xyxy": [
+        59,
+        163,
+        230,
+        223
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 60
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00202_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          163,
+          230,
+          223
+        ]
+      ],
+      "block_id": "00202_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "프로덕트팀",
+      "canonical_text": "프로덕트팀",
+      "bbox_xyxy": [
+        59,
+        235,
+        218,
+        269
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00202_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          235,
+          218,
+          269
+        ]
+      ],
+      "block_id": "00202_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "전무",
+      "canonical_text": "전무",
+      "bbox_xyxy": [
+        59,
+        275,
+        123,
+        308
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00202_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          275,
+          123,
+          308
+        ]
+      ],
+      "block_id": "00202_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0382-3166",
+      "canonical_text": "070-0382-3166",
+      "bbox_xyxy": [
+        488,
+        236,
+        778,
+        263
+      ],
+      "bbox_size": {
+        "width": 290,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00202_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          778,
+          263
+        ]
+      ],
+      "block_id": "00202_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0847-3523",
+      "canonical_text": "010-0847-3523",
+      "bbox_xyxy": [
+        488,
+        274,
+        762,
+        299
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00202_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          274,
+          762,
+          299
+        ]
+      ],
+      "block_id": "00202_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1655@visionplus.example.com",
+      "canonical_text": "user1655@visionplus.example.com",
+      "bbox_xyxy": [
+        488,
+        310,
+        1050,
+        377
+      ],
+      "bbox_size": {
+        "width": 562,
+        "height": 67
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00202_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          310,
+          1050,
+          377
+        ]
+      ],
+      "block_id": "00202_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 성남시 분당구 양재대로 357 D동 462호",
+      "canonical_text": "경기도 성남시 분당구 양재대로 357 D동 462호",
+      "bbox_xyxy": [
+        488,
+        388,
+        929,
+        460
+      ],
+      "bbox_size": {
+        "width": 441,
+        "height": 72
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00202_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          388,
+          929,
+          460
+        ]
+      ],
+      "block_id": "00202_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00202_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web visionplus.example.com",
+      "canonical_text": "visionplus.example.com",
+      "bbox_xyxy": [
+        488,
+        471,
+        956,
+        507
+      ],
+      "bbox_size": {
+        "width": 468,
+        "height": 36
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00202_009_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          471,
+          956,
+          507
+        ]
+      ],
+      "block_id": "00202_009_b01",
+      "language": "ko"
+    }
+  ]
+}

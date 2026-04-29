@@ -1,0 +1,295 @@
+{
+  "image_id": "00185",
+  "image_path": "images/bizcard_00185.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "steel_blue",
+  "theme_colors": {
+    "bg": "#34495E",
+    "text": "#ECF0F1",
+    "muted": "#B0BEC5",
+    "accent": "#3498DB"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00185_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "메이플스튜디오",
+      "canonical_text": "메이플스튜디오",
+      "bbox_xyxy": [
+        426,
+        71,
+        636,
+        103
+      ],
+      "bbox_size": {
+        "width": 210,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00185_001_l01"
+      ],
+      "line_boxes": [
+        [
+          426,
+          71,
+          636,
+          103
+        ]
+      ],
+      "block_id": "00185_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "양수아",
+      "canonical_text": "양수아",
+      "bbox_xyxy": [
+        451,
+        138,
+        611,
+        195
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00185_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          138,
+          611,
+          195
+        ]
+      ],
+      "block_id": "00185_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        486,
+        207,
+        576,
+        239
+      ],
+      "bbox_size": {
+        "width": 90,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00185_003_l01"
+      ],
+      "line_boxes": [
+        [
+          486,
+          207,
+          576,
+          239
+        ]
+      ],
+      "block_id": "00185_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "이사",
+      "canonical_text": "이사",
+      "bbox_xyxy": [
+        501,
+        245,
+        561,
+        277
+      ],
+      "bbox_size": {
+        "width": 60,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00185_004_l01"
+      ],
+      "line_boxes": [
+        [
+          501,
+          245,
+          561,
+          277
+        ]
+      ],
+      "block_id": "00185_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0134-2542",
+      "canonical_text": "010-0134-2542",
+      "bbox_xyxy": [
+        403,
+        307,
+        660,
+        331
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00185_005_l01"
+      ],
+      "line_boxes": [
+        [
+          403,
+          307,
+          660,
+          331
+        ]
+      ],
+      "block_id": "00185_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6741@maple.example.com",
+      "canonical_text": "user6741@maple.example.com",
+      "bbox_xyxy": [
+        245,
+        341,
+        818,
+        374
+      ],
+      "bbox_size": {
+        "width": 573,
+        "height": 33
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00185_006_l01"
+      ],
+      "line_boxes": [
+        [
+          245,
+          341,
+          818,
+          374
+        ]
+      ],
+      "block_id": "00185_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 강남구 성남대로 829 C동 971호",
+      "canonical_text": "서울특별시 강남구 성남대로 829 C동 971호",
+      "bbox_xyxy": [
+        176,
+        384,
+        886,
+        416
+      ],
+      "bbox_size": {
+        "width": 710,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00185_007_l01"
+      ],
+      "line_boxes": [
+        [
+          176,
+          384,
+          886,
+          416
+        ]
+      ],
+      "block_id": "00185_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00185_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web maple.example.com",
+      "canonical_text": "maple.example.com",
+      "bbox_xyxy": [
+        342,
+        426,
+        720,
+        460
+      ],
+      "bbox_size": {
+        "width": 378,
+        "height": 34
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00185_008_l01"
+      ],
+      "line_boxes": [
+        [
+          342,
+          426,
+          720,
+          460
+        ]
+      ],
+      "block_id": "00185_008_b01",
+      "language": "ko"
+    }
+  ]
+}

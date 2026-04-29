@@ -1,0 +1,300 @@
+{
+  "image_id": "00317",
+  "image_path": "images/bizcard_00317.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_left_aligned",
+  "layout_composite_id": "L08_V7",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00317"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "cream_paper",
+  "theme_colors": {
+    "bg": "#FAF6F0",
+    "text": "#2C2C2C",
+    "muted": "#6B6B6B",
+    "accent": "#A8763E"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00317_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        118,
+        161,
+        154
+      ],
+      "bbox_size": {
+        "width": 102,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00317_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          118,
+          161,
+          154
+        ]
+      ],
+      "block_id": "00317_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "임진영",
+      "canonical_text": "임진영",
+      "bbox_xyxy": [
+        59,
+        201,
+        253,
+        268
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00317_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          201,
+          253,
+          268
+        ]
+      ],
+      "block_id": "00317_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석",
+      "canonical_text": "수석",
+      "bbox_xyxy": [
+        59,
+        292,
+        127,
+        328
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00317_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          292,
+          127,
+          328
+        ]
+      ],
+      "block_id": "00317_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0930-2635",
+      "canonical_text": "062-0930-2635",
+      "bbox_xyxy": [
+        59,
+        375,
+        331,
+        401
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00317_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          375,
+          331,
+          401
+        ]
+      ],
+      "block_id": "00317_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0917-1375",
+      "canonical_text": "010-0917-1375",
+      "bbox_xyxy": [
+        59,
+        411,
+        316,
+        435
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00317_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          411,
+          316,
+          435
+        ]
+      ],
+      "block_id": "00317_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6839@prism.example.org",
+      "canonical_text": "user6839@prism.example.org",
+      "bbox_xyxy": [
+        59,
+        445,
+        506,
+        507
+      ],
+      "bbox_size": {
+        "width": 447,
+        "height": 62
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00317_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          445,
+          506,
+          507
+        ]
+      ],
+      "block_id": "00317_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대구광역시 수성구 센트럴로 60 F동 650호",
+      "canonical_text": "대구광역시 수성구 센트럴로 60 F동 650호",
+      "bbox_xyxy": [
+        59,
+        517,
+        435,
+        584
+      ],
+      "bbox_size": {
+        "width": 376,
+        "height": 67
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00317_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          517,
+          435,
+          584
+        ]
+      ],
+      "block_id": "00317_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00317_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web prism.example.org",
+      "canonical_text": "prism.example.org",
+      "bbox_xyxy": [
+        59,
+        594,
+        418,
+        628
+      ],
+      "bbox_size": {
+        "width": 359,
+        "height": 34
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00317_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          594,
+          418,
+          628
+        ]
+      ],
+      "block_id": "00317_008_b01",
+      "language": "ko"
+    }
+  ]
+}

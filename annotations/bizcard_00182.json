@@ -1,0 +1,233 @@
+{
+  "image_id": "00182",
+  "image_path": "images/bizcard_00182.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "cream_paper",
+  "theme_colors": {
+    "bg": "#FAF6F0",
+    "text": "#2C2C2C",
+    "muted": "#6B6B6B",
+    "accent": "#A8763E"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00182_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "문라이트",
+      "canonical_text": "문라이트",
+      "bbox_xyxy": [
+        467,
+        71,
+        595,
+        105
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00182_001_l01"
+      ],
+      "line_boxes": [
+        [
+          467,
+          71,
+          595,
+          105
+        ]
+      ],
+      "block_id": "00182_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00182_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "윤준서",
+      "canonical_text": "윤준서",
+      "bbox_xyxy": [
+        451,
+        140,
+        611,
+        197
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00182_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          140,
+          611,
+          197
+        ]
+      ],
+      "block_id": "00182_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00182_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "차장",
+      "canonical_text": "차장",
+      "bbox_xyxy": [
+        499,
+        209,
+        563,
+        243
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00182_003_l01"
+      ],
+      "line_boxes": [
+        [
+          499,
+          209,
+          563,
+          243
+        ]
+      ],
+      "block_id": "00182_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00182_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0779-9656",
+      "canonical_text": "010-0779-9656",
+      "bbox_xyxy": [
+        411,
+        273,
+        652,
+        295
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00182_004_l01"
+      ],
+      "line_boxes": [
+        [
+          411,
+          273,
+          652,
+          295
+        ]
+      ],
+      "block_id": "00182_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00182_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6985@moonlight.example.com",
+      "canonical_text": "user6985@moonlight.example.com",
+      "bbox_xyxy": [
+        233,
+        305,
+        829,
+        337
+      ],
+      "bbox_size": {
+        "width": 596,
+        "height": 32
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00182_005_l01"
+      ],
+      "line_boxes": [
+        [
+          233,
+          305,
+          829,
+          337
+        ]
+      ],
+      "block_id": "00182_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00182_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대전광역시 유성구 여의대로 200 14층",
+      "canonical_text": "대전광역시 유성구 여의대로 200 14층",
+      "bbox_xyxy": [
+        235,
+        347,
+        828,
+        377
+      ],
+      "bbox_size": {
+        "width": 593,
+        "height": 30
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00182_006_l01"
+      ],
+      "line_boxes": [
+        [
+          235,
+          347,
+          828,
+          377
+        ]
+      ],
+      "block_id": "00182_006_b01",
+      "language": "ko"
+    }
+  ]
+}

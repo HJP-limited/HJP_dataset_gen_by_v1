@@ -1,0 +1,240 @@
+{
+  "image_id": "00052",
+  "image_path": "images/bizcard_00052.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "geometric_overlap",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mint",
+  "theme_colors": {
+    "bg": "#E8F5E9",
+    "text": "#1B5E20",
+    "muted": "#5A7A60",
+    "accent": "#388E3C"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00052_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "엘로힘",
+      "canonical_text": "엘로힘",
+      "bbox_xyxy": [
+        59,
+        83,
+        150,
+        115
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00052_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          150,
+          115
+        ]
+      ],
+      "block_id": "00052_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00052_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "허서준",
+      "canonical_text": "허서준",
+      "bbox_xyxy": [
+        866,
+        83,
+        1004,
+        132
+      ],
+      "bbox_size": {
+        "width": 138,
+        "height": 49
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00052_002_l01"
+      ],
+      "line_boxes": [
+        [
+          866,
+          83,
+          1004,
+          132
+        ]
+      ],
+      "block_id": "00052_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00052_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임연구원",
+      "canonical_text": "선임연구원",
+      "bbox_xyxy": [
+        852,
+        144,
+        1004,
+        177
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00052_003_l01"
+      ],
+      "line_boxes": [
+        [
+          852,
+          144,
+          1004,
+          177
+        ]
+      ],
+      "block_id": "00052_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00052_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0479-6002",
+      "canonical_text": "010-0479-6002",
+      "bbox_xyxy": [
+        59,
+        379,
+        310,
+        402
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00052_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          379,
+          310,
+          402
+        ]
+      ],
+      "block_id": "00052_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00052_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8163@elohim.example.org",
+      "canonical_text": "user8163@elohim.example.org",
+      "bbox_xyxy": [
+        59,
+        412,
+        608,
+        445
+      ],
+      "bbox_size": {
+        "width": 549,
+        "height": 33
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00052_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          412,
+          608,
+          445
+        ]
+      ],
+      "block_id": "00052_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00052_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대전광역시 유성구 여의대로 983 30층",
+      "canonical_text": "대전광역시 유성구 여의대로 983 30층",
+      "bbox_xyxy": [
+        59,
+        455,
+        666,
+        485
+      ],
+      "bbox_size": {
+        "width": 607,
+        "height": 30
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00052_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          455,
+          666,
+          485
+        ]
+      ],
+      "block_id": "00052_006_b01",
+      "language": "ko"
+    }
+  ]
+}

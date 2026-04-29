@@ -1,0 +1,294 @@
+{
+  "image_id": "00196",
+  "image_path": "images/bizcard_00196.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_corner_accent"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "powder_blue",
+  "theme_colors": {
+    "bg": "#D8E5EA",
+    "text": "#3A4A55",
+    "muted": "#7A8A95",
+    "accent": "#5D7A8A"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00196_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "그린피크",
+      "canonical_text": "그린피크",
+      "bbox_xyxy": [
+        471,
+        71,
+        592,
+        103
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00196_001_l01"
+      ],
+      "line_boxes": [
+        [
+          471,
+          71,
+          592,
+          103
+        ]
+      ],
+      "block_id": "00196_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "박지후",
+      "canonical_text": "박지후",
+      "bbox_xyxy": [
+        451,
+        138,
+        611,
+        193
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 55
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00196_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          138,
+          611,
+          193
+        ]
+      ],
+      "block_id": "00196_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "글로벌팀",
+      "canonical_text": "글로벌팀",
+      "bbox_xyxy": [
+        471,
+        205,
+        592,
+        236
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00196_003_l01"
+      ],
+      "line_boxes": [
+        [
+          471,
+          205,
+          592,
+          236
+        ]
+      ],
+      "block_id": "00196_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "과장",
+      "canonical_text": "과장",
+      "bbox_xyxy": [
+        501,
+        242,
+        562,
+        274
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00196_004_l01"
+      ],
+      "line_boxes": [
+        [
+          501,
+          242,
+          562,
+          274
+        ]
+      ],
+      "block_id": "00196_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0929-3720",
+      "canonical_text": "010-0929-3720",
+      "bbox_xyxy": [
+        399,
+        304,
+        664,
+        328
+      ],
+      "bbox_size": {
+        "width": 265,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00196_005_l01"
+      ],
+      "line_boxes": [
+        [
+          399,
+          304,
+          664,
+          328
+        ]
+      ],
+      "block_id": "00196_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2388@greenpeak.example.com",
+      "canonical_text": "user2388@greenpeak.example.com",
+      "bbox_xyxy": [
+        207,
+        339,
+        855,
+        374
+      ],
+      "bbox_size": {
+        "width": 648,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00196_006_l01"
+      ],
+      "line_boxes": [
+        [
+          207,
+          339,
+          855,
+          374
+        ]
+      ],
+      "block_id": "00196_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 을지로 20 C동 823호",
+      "canonical_text": "경기도 고양시 일산서구 을지로 20 C동 823호",
+      "bbox_xyxy": [
+        161,
+        385,
+        901,
+        417
+      ],
+      "bbox_size": {
+        "width": 740,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00196_007_l01"
+      ],
+      "line_boxes": [
+        [
+          161,
+          385,
+          901,
+          417
+        ]
+      ],
+      "block_id": "00196_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00196_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web greenpeak.example.com",
+      "canonical_text": "greenpeak.example.com",
+      "bbox_xyxy": [
+        307,
+        428,
+        756,
+        463
+      ],
+      "bbox_size": {
+        "width": 449,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00196_008_l01"
+      ],
+      "line_boxes": [
+        [
+          307,
+          428,
+          756,
+          463
+        ]
+      ],
+      "block_id": "00196_008_b01",
+      "language": "ko"
+    }
+  ]
+}

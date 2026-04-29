@@ -1,0 +1,364 @@
+{
+  "image_id": "00169",
+  "image_path": "images/bizcard_00169.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "G"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "olive",
+  "theme_colors": {
+    "bg": "#6B7C32",
+    "text": "#FAF7F0",
+    "muted": "#D0D2BC",
+    "accent": "#FAF7F0"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00169_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "그린피크",
+      "canonical_text": "그린피크",
+      "bbox_xyxy": [
+        474,
+        71,
+        588,
+        101
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00169_001_l01"
+      ],
+      "line_boxes": [
+        [
+          474,
+          71,
+          588,
+          101
+        ]
+      ],
+      "block_id": "00169_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "송수민",
+      "canonical_text": "송수민",
+      "bbox_xyxy": [
+        451,
+        136,
+        611,
+        191
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 55
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00169_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          136,
+          611,
+          191
+        ]
+      ],
+      "block_id": "00169_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "법무팀",
+      "canonical_text": "법무팀",
+      "bbox_xyxy": [
+        488,
+        203,
+        574,
+        233
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00169_003_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          203,
+          574,
+          233
+        ]
+      ],
+      "block_id": "00169_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임연구원",
+      "canonical_text": "선임연구원",
+      "bbox_xyxy": [
+        460,
+        239,
+        603,
+        269
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 30
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00169_004_l01"
+      ],
+      "line_boxes": [
+        [
+          460,
+          239,
+          603,
+          269
+        ]
+      ],
+      "block_id": "00169_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0938-3918",
+      "canonical_text": "053-0938-3918",
+      "bbox_xyxy": [
+        398,
+        299,
+        664,
+        325
+      ],
+      "bbox_size": {
+        "width": 266,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00169_005_l01"
+      ],
+      "line_boxes": [
+        [
+          398,
+          299,
+          664,
+          325
+        ]
+      ],
+      "block_id": "00169_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0682-3164",
+      "canonical_text": "010-0682-3164",
+      "bbox_xyxy": [
+        407,
+        335,
+        656,
+        358
+      ],
+      "bbox_size": {
+        "width": 249,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00169_006_l01"
+      ],
+      "line_boxes": [
+        [
+          407,
+          335,
+          656,
+          358
+        ]
+      ],
+      "block_id": "00169_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 032-0268-9436",
+      "canonical_text": "032-0268-9436",
+      "bbox_xyxy": [
+        412,
+        368,
+        650,
+        391
+      ],
+      "bbox_size": {
+        "width": 238,
+        "height": 23
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00169_007_l01"
+      ],
+      "line_boxes": [
+        [
+          412,
+          368,
+          650,
+          391
+        ]
+      ],
+      "block_id": "00169_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user5619@greenpeak.example.com",
+      "canonical_text": "user5619@greenpeak.example.com",
+      "bbox_xyxy": [
+        227,
+        401,
+        836,
+        434
+      ],
+      "bbox_size": {
+        "width": 609,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00169_008_l01"
+      ],
+      "line_boxes": [
+        [
+          227,
+          401,
+          836,
+          434
+        ]
+      ],
+      "block_id": "00169_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 성동구 여의대로 553 D동 231호",
+      "canonical_text": "서울특별시 성동구 여의대로 553 D동 231호",
+      "bbox_xyxy": [
+        192,
+        444,
+        870,
+        474
+      ],
+      "bbox_size": {
+        "width": 678,
+        "height": 30
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00169_009_l01"
+      ],
+      "line_boxes": [
+        [
+          192,
+          444,
+          870,
+          474
+        ]
+      ],
+      "block_id": "00169_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00169_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web greenpeak.example.com",
+      "canonical_text": "greenpeak.example.com",
+      "bbox_xyxy": [
+        320,
+        484,
+        742,
+        517
+      ],
+      "bbox_size": {
+        "width": 422,
+        "height": 33
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00169_010_l01"
+      ],
+      "line_boxes": [
+        [
+          320,
+          484,
+          742,
+          517
+        ]
+      ],
+      "block_id": "00169_010_b01",
+      "language": "ko"
+    }
+  ]
+}

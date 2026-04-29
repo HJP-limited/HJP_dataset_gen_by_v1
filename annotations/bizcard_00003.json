@@ -1,0 +1,354 @@
+{
+  "image_id": "00003",
+  "image_path": "images/bizcard_00003.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "deep_forest",
+  "theme_colors": {
+    "bg": "#0F2818",
+    "text": "#E8E1D5",
+    "muted": "#A8B0A4",
+    "accent": "#C9A961"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00003_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "써밋컨설팅",
+      "canonical_text": "써밋컨설팅",
+      "bbox_xyxy": [
+        59,
+        83,
+        218,
+        117
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00003_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          218,
+          117
+        ]
+      ],
+      "block_id": "00003_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한서준",
+      "canonical_text": "한서준",
+      "bbox_xyxy": [
+        59,
+        141,
+        239,
+        203
+      ],
+      "bbox_size": {
+        "width": 180,
+        "height": 62
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00003_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          239,
+          203
+        ]
+      ],
+      "block_id": "00003_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "고객지원팀",
+      "canonical_text": "고객지원팀",
+      "bbox_xyxy": [
+        59,
+        215,
+        218,
+        249
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00003_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          215,
+          218,
+          249
+        ]
+      ],
+      "block_id": "00003_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "과장",
+      "canonical_text": "과장",
+      "bbox_xyxy": [
+        59,
+        255,
+        123,
+        289
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00003_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          255,
+          123,
+          289
+        ]
+      ],
+      "block_id": "00003_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0220-6096",
+      "canonical_text": "070-0220-6096",
+      "bbox_xyxy": [
+        59,
+        319,
+        314,
+        344
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00003_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          319,
+          314,
+          344
+        ]
+      ],
+      "block_id": "00003_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0595-1180",
+      "canonical_text": "010-0595-1180",
+      "bbox_xyxy": [
+        59,
+        354,
+        300,
+        376
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00003_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          354,
+          300,
+          376
+        ]
+      ],
+      "block_id": "00003_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 070-0861-1585",
+      "canonical_text": "070-0861-1585",
+      "bbox_xyxy": [
+        59,
+        386,
+        287,
+        407
+      ],
+      "bbox_size": {
+        "width": 228,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00003_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          386,
+          287,
+          407
+        ]
+      ],
+      "block_id": "00003_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1186@summit.example.org",
+      "canonical_text": "user1186@summit.example.org",
+      "bbox_xyxy": [
+        59,
+        417,
+        603,
+        449
+      ],
+      "bbox_size": {
+        "width": 544,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00003_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          417,
+          603,
+          449
+        ]
+      ],
+      "block_id": "00003_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 올림픽로 139 9층",
+      "canonical_text": "제주특별자치도 제주시 올림픽로 139 9층",
+      "bbox_xyxy": [
+        59,
+        459,
+        692,
+        489
+      ],
+      "bbox_size": {
+        "width": 633,
+        "height": 30
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00003_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          459,
+          692,
+          489
+        ]
+      ],
+      "block_id": "00003_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00003_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web summit.example.org",
+      "canonical_text": "summit.example.org",
+      "bbox_xyxy": [
+        59,
+        499,
+        421,
+        531
+      ],
+      "bbox_size": {
+        "width": 362,
+        "height": 32
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00003_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          499,
+          421,
+          531
+        ]
+      ],
+      "block_id": "00003_010_b01",
+      "language": "ko"
+    }
+  ]
+}

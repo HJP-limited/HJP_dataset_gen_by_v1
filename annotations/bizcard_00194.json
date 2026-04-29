@@ -1,0 +1,326 @@
+{
+  "image_id": "00194",
+  "image_path": "images/bizcard_00194.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mustard_black",
+  "theme_colors": {
+    "bg": "#F4C842",
+    "text": "#0A0A0A",
+    "muted": "#444444",
+    "accent": "#0A0A0A"
+  },
+  "font_profile": "modern_korean_light",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00194_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "한솔디지털",
+      "canonical_text": "한솔디지털",
+      "bbox_xyxy": [
+        451,
+        71,
+        612,
+        105
+      ],
+      "bbox_size": {
+        "width": 161,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00194_001_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          71,
+          612,
+          105
+        ]
+      ],
+      "block_id": "00194_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "서혜진",
+      "canonical_text": "서혜진",
+      "bbox_xyxy": [
+        446,
+        140,
+        617,
+        199
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 59
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00194_002_l01"
+      ],
+      "line_boxes": [
+        [
+          446,
+          140,
+          617,
+          199
+        ]
+      ],
+      "block_id": "00194_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        483,
+        211,
+        580,
+        244
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00194_003_l01"
+      ],
+      "line_boxes": [
+        [
+          483,
+          211,
+          580,
+          244
+        ]
+      ],
+      "block_id": "00194_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "선임",
+      "canonical_text": "선임",
+      "bbox_xyxy": [
+        499,
+        250,
+        563,
+        283
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00194_004_l01"
+      ],
+      "line_boxes": [
+        [
+          499,
+          250,
+          563,
+          283
+        ]
+      ],
+      "block_id": "00194_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0814-5163",
+      "canonical_text": "053-0814-5163",
+      "bbox_xyxy": [
+        398,
+        313,
+        664,
+        339
+      ],
+      "bbox_size": {
+        "width": 266,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00194_005_l01"
+      ],
+      "line_boxes": [
+        [
+          398,
+          313,
+          664,
+          339
+        ]
+      ],
+      "block_id": "00194_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0870-5956",
+      "canonical_text": "010-0870-5956",
+      "bbox_xyxy": [
+        407,
+        349,
+        656,
+        372
+      ],
+      "bbox_size": {
+        "width": 249,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00194_006_l01"
+      ],
+      "line_boxes": [
+        [
+          407,
+          349,
+          656,
+          372
+        ]
+      ],
+      "block_id": "00194_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2512@hansol.example.co.kr",
+      "canonical_text": "user2512@hansol.example.co.kr",
+      "bbox_xyxy": [
+        250,
+        382,
+        812,
+        415
+      ],
+      "bbox_size": {
+        "width": 562,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00194_007_l01"
+      ],
+      "line_boxes": [
+        [
+          250,
+          382,
+          812,
+          415
+        ]
+      ],
+      "block_id": "00194_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대구광역시 수성구 센트럴로 217 7층",
+      "canonical_text": "대구광역시 수성구 센트럴로 217 7층",
+      "bbox_xyxy": [
+        238,
+        425,
+        825,
+        455
+      ],
+      "bbox_size": {
+        "width": 587,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00194_008_l01"
+      ],
+      "line_boxes": [
+        [
+          238,
+          425,
+          825,
+          455
+        ]
+      ],
+      "block_id": "00194_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00194_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hansol.example.co.kr",
+      "canonical_text": "hansol.example.co.kr",
+      "bbox_xyxy": [
+        344,
+        465,
+        719,
+        498
+      ],
+      "bbox_size": {
+        "width": 375,
+        "height": 33
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00194_009_l01"
+      ],
+      "line_boxes": [
+        [
+          344,
+          465,
+          719,
+          498
+        ]
+      ],
+      "block_id": "00194_009_b01",
+      "language": "ko"
+    }
+  ]
+}

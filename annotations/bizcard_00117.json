@@ -1,0 +1,313 @@
+{
+  "image_id": "00117",
+  "image_path": "images/bizcard_00117.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V5",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_band_corner",
+      "section_divider"
+    ],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "I"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00117"
+    },
+    "background_pattern": "lines_h"
+  },
+  "theme_name": "steel_blue",
+  "theme_colors": {
+    "bg": "#34495E",
+    "text": "#ECF0F1",
+    "muted": "#B0BEC5",
+    "accent": "#3498DB"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00117_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "아이리스",
+      "canonical_text": "아이리스",
+      "bbox_xyxy": [
+        59,
+        59,
+        173,
+        90
+      ],
+      "bbox_size": {
+        "width": 114,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00117_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          173,
+          90
+        ]
+      ],
+      "block_id": "00117_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "홍우진",
+      "canonical_text": "홍우진",
+      "bbox_xyxy": [
+        59,
+        114,
+        230,
+        174
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 60
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00117_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          114,
+          230,
+          174
+        ]
+      ],
+      "block_id": "00117_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "기획팀",
+      "canonical_text": "기획팀",
+      "bbox_xyxy": [
+        59,
+        295,
+        145,
+        326
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00117_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          145,
+          326
+        ]
+      ],
+      "block_id": "00117_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사장",
+      "canonical_text": "사장",
+      "bbox_xyxy": [
+        59,
+        332,
+        116,
+        363
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00117_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          332,
+          116,
+          363
+        ]
+      ],
+      "block_id": "00117_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0786-7311",
+      "canonical_text": "032-0786-7311",
+      "bbox_xyxy": [
+        59,
+        381,
+        345,
+        408
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00117_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          381,
+          345,
+          408
+        ]
+      ],
+      "block_id": "00117_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0869-8996",
+      "canonical_text": "010-0869-8996",
+      "bbox_xyxy": [
+        59,
+        419,
+        327,
+        443
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00117_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          419,
+          327,
+          443
+        ]
+      ],
+      "block_id": "00117_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user334@iris.example.co.kr",
+      "canonical_text": "user334@iris.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        454,
+        589,
+        489
+      ],
+      "bbox_size": {
+        "width": 530,
+        "height": 35
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00117_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          454,
+          589,
+          489
+        ]
+      ],
+      "block_id": "00117_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00117_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 마포대로 679 C동 345호",
+      "canonical_text": "경기도 고양시 일산서구 마포대로 679 C동 345호",
+      "bbox_xyxy": [
+        59,
+        500,
+        850,
+        532
+      ],
+      "bbox_size": {
+        "width": 791,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00117_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          500,
+          850,
+          532
+        ]
+      ],
+      "block_id": "00117_008_b01",
+      "language": "ko"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "image_id": "00225",
+  "image_path": "images/bizcard_00225.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "L"
+    },
+    "qr_code": null,
+    "background_pattern": "grid"
+  },
+  "theme_name": "charcoal",
+  "theme_colors": {
+    "bg": "#1F1F1F",
+    "text": "#F5F5F5",
+    "muted": "#A8A8A8",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00225_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "라인플러스",
+      "canonical_text": "라인플러스",
+      "bbox_xyxy": [
+        59,
+        94,
+        211,
+        126
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00225_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          211,
+          126
+        ]
+      ],
+      "block_id": "00225_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00225_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "송윤서",
+      "canonical_text": "송윤서",
+      "bbox_xyxy": [
+        59,
+        161,
+        230,
+        220
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 59
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00225_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          161,
+          230,
+          220
+        ]
+      ],
+      "block_id": "00225_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00225_003",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0681-1620",
+      "canonical_text": "053-0681-1620",
+      "bbox_xyxy": [
+        488,
+        236,
+        739,
+        260
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00225_003_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          739,
+          260
+        ]
+      ],
+      "block_id": "00225_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00225_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0958-4778",
+      "canonical_text": "010-0958-4778",
+      "bbox_xyxy": [
+        488,
+        270,
+        723,
+        291
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00225_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          270,
+          723,
+          291
+        ]
+      ],
+      "block_id": "00225_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00225_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user601@lineplus.example.com",
+      "canonical_text": "user601@lineplus.example.com",
+      "bbox_xyxy": [
+        488,
+        301,
+        919,
+        360
+      ],
+      "bbox_size": {
+        "width": 431,
+        "height": 59
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00225_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          301,
+          919,
+          360
+        ]
+      ],
+      "block_id": "00225_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00225_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 인천광역시 연수구 테헤란로 331 18동 1450호",
+      "canonical_text": "인천광역시 연수구 테헤란로 331 18동 1450호",
+      "bbox_xyxy": [
+        488,
+        370,
+        990,
+        429
+      ],
+      "bbox_size": {
+        "width": 502,
+        "height": 59
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00225_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          370,
+          990,
+          429
+        ]
+      ],
+      "block_id": "00225_006_b01",
+      "language": "ko"
+    }
+  ]
+}

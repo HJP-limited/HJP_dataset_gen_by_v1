@@ -1,0 +1,279 @@
+{
+  "image_id": "00215",
+  "image_path": "images/bizcard_00215.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "M"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00215"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "navy_classic",
+  "theme_colors": {
+    "bg": "#0F2A4F",
+    "text": "#FFFFFF",
+    "muted": "#B8C7D9",
+    "accent": "#C9A961"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00215_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "문라이트",
+      "canonical_text": "문라이트",
+      "bbox_xyxy": [
+        59,
+        94,
+        187,
+        128
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00215_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          187,
+          128
+        ]
+      ],
+      "block_id": "00215_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00215_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "안선우",
+      "canonical_text": "안선우",
+      "bbox_xyxy": [
+        59,
+        163,
+        204,
+        213
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 50
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00215_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          163,
+          204,
+          213
+        ]
+      ],
+      "block_id": "00215_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00215_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "AI연구소",
+      "canonical_text": "AI연구소",
+      "bbox_xyxy": [
+        59,
+        225,
+        192,
+        258
+      ],
+      "bbox_size": {
+        "width": 133,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00215_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          225,
+          192,
+          258
+        ]
+      ],
+      "block_id": "00215_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00215_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "책임연구원",
+      "canonical_text": "책임연구원",
+      "bbox_xyxy": [
+        59,
+        264,
+        218,
+        298
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00215_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          264,
+          218,
+          298
+        ]
+      ],
+      "block_id": "00215_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00215_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0983-4848",
+      "canonical_text": "031-0983-4848",
+      "bbox_xyxy": [
+        488,
+        236,
+        778,
+        264
+      ],
+      "bbox_size": {
+        "width": 290,
+        "height": 28
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00215_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          778,
+          264
+        ]
+      ],
+      "block_id": "00215_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00215_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0730-1075",
+      "canonical_text": "010-0730-1075",
+      "bbox_xyxy": [
+        488,
+        275,
+        762,
+        299
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00215_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          275,
+          762,
+          299
+        ]
+      ],
+      "block_id": "00215_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00215_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user199@moonlight.example.com",
+      "canonical_text": "user199@moonlight.example.com",
+      "bbox_xyxy": [
+        488,
+        310,
+        1035,
+        377
+      ],
+      "bbox_size": {
+        "width": 547,
+        "height": 67
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00215_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          310,
+          1035,
+          377
+        ]
+      ],
+      "block_id": "00215_007_b01",
+      "language": "ko"
+    }
+  ]
+}

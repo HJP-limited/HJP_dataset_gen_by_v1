@@ -1,0 +1,240 @@
+{
+  "image_id": "00231",
+  "image_path": "images/bizcard_00231.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "H"
+    },
+    "qr_code": null,
+    "background_pattern": "grid"
+  },
+  "theme_name": "charcoal",
+  "theme_colors": {
+    "bg": "#1F1F1F",
+    "text": "#F5F5F5",
+    "muted": "#A8A8A8",
+    "accent": "#C9A961"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00231_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "하이퍼노드",
+      "canonical_text": "하이퍼노드",
+      "bbox_xyxy": [
+        59,
+        94,
+        211,
+        126
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00231_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          211,
+          126
+        ]
+      ],
+      "block_id": "00231_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00231_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "유시우",
+      "canonical_text": "유시우",
+      "bbox_xyxy": [
+        59,
+        161,
+        215,
+        214
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 53
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00231_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          161,
+          215,
+          214
+        ]
+      ],
+      "block_id": "00231_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00231_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "인사팀",
+      "canonical_text": "인사팀",
+      "bbox_xyxy": [
+        59,
+        226,
+        150,
+        258
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00231_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          226,
+          150,
+          258
+        ]
+      ],
+      "block_id": "00231_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00231_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0324-2368",
+      "canonical_text": "010-0324-2368",
+      "bbox_xyxy": [
+        488,
+        236,
+        756,
+        260
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00231_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          756,
+          260
+        ]
+      ],
+      "block_id": "00231_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00231_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2056@hypernode.example.com",
+      "canonical_text": "user2056@hypernode.example.com",
+      "bbox_xyxy": [
+        488,
+        271,
+        1042,
+        337
+      ],
+      "bbox_size": {
+        "width": 554,
+        "height": 66
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00231_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          271,
+          1042,
+          337
+        ]
+      ],
+      "block_id": "00231_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00231_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 을지로 370 6동 460호",
+      "canonical_text": "서울특별시 영등포구 을지로 370 6동 460호",
+      "bbox_xyxy": [
+        488,
+        348,
+        997,
+        415
+      ],
+      "bbox_size": {
+        "width": 509,
+        "height": 67
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00231_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          348,
+          997,
+          415
+        ]
+      ],
+      "block_id": "00231_006_b01",
+      "language": "ko"
+    }
+  ]
+}

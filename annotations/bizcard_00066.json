@@ -1,0 +1,341 @@
+{
+  "image_id": "00066",
+  "image_path": "images/bizcard_00066.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "R"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00066"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "soft_beige",
+  "theme_colors": {
+    "bg": "#F0EAE0",
+    "text": "#2C2C2C",
+    "muted": "#6B5E50",
+    "accent": "#1E3A5F"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00066_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "리바이브",
+      "canonical_text": "리바이브",
+      "bbox_xyxy": [
+        59,
+        83,
+        188,
+        117
+      ],
+      "bbox_size": {
+        "width": 129,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00066_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          188,
+          117
+        ]
+      ],
+      "block_id": "00066_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "장민서",
+      "canonical_text": "장민서",
+      "bbox_xyxy": [
+        859,
+        83,
+        1004,
+        133
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 50
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00066_002_l01"
+      ],
+      "line_boxes": [
+        [
+          859,
+          83,
+          1004,
+          133
+        ]
+      ],
+      "block_id": "00066_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "재무팀",
+      "canonical_text": "재무팀",
+      "bbox_xyxy": [
+        907,
+        145,
+        1004,
+        179
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00066_003_l01"
+      ],
+      "line_boxes": [
+        [
+          907,
+          145,
+          1004,
+          179
+        ]
+      ],
+      "block_id": "00066_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "팀장",
+      "canonical_text": "팀장",
+      "bbox_xyxy": [
+        940,
+        185,
+        1004,
+        218
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00066_004_l01"
+      ],
+      "line_boxes": [
+        [
+          940,
+          185,
+          1004,
+          218
+        ]
+      ],
+      "block_id": "00066_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0182-5906",
+      "canonical_text": "010-0182-5906",
+      "bbox_xyxy": [
+        59,
+        293,
+        310,
+        316
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00066_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          293,
+          310,
+          316
+        ]
+      ],
+      "block_id": "00066_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 031-0214-4114",
+      "canonical_text": "031-0214-4114",
+      "bbox_xyxy": [
+        59,
+        326,
+        300,
+        349
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00066_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          326,
+          300,
+          349
+        ]
+      ],
+      "block_id": "00066_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3210@revive.example.co.kr",
+      "canonical_text": "user3210@revive.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        359,
+        618,
+        392
+      ],
+      "bbox_size": {
+        "width": 559,
+        "height": 33
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00066_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          359,
+          618,
+          392
+        ]
+      ],
+      "block_id": "00066_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 마포구 을지로 105 18층",
+      "canonical_text": "서울특별시 마포구 을지로 105 18층",
+      "bbox_xyxy": [
+        59,
+        402,
+        637,
+        432
+      ],
+      "bbox_size": {
+        "width": 578,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00066_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          402,
+          637,
+          432
+        ]
+      ],
+      "block_id": "00066_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00066_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web revive.example.co.kr",
+      "canonical_text": "revive.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        442,
+        428,
+        475
+      ],
+      "bbox_size": {
+        "width": 369,
+        "height": 33
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00066_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          442,
+          428,
+          475
+        ]
+      ],
+      "block_id": "00066_009_b01",
+      "language": "ko"
+    }
+  ]
+}

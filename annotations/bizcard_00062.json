@@ -1,0 +1,341 @@
+{
+  "image_id": "00062",
+  "image_path": "images/bizcard_00062.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "S"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00062"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "pure_white",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1A1A1A",
+    "muted": "#666666",
+    "accent": "#3B82F6"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00062_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "솔라이트",
+      "canonical_text": "솔라이트",
+      "bbox_xyxy": [
+        59,
+        83,
+        194,
+        119
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00062_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          194,
+          119
+        ]
+      ],
+      "block_id": "00062_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한도윤",
+      "canonical_text": "한도윤",
+      "bbox_xyxy": [
+        855,
+        83,
+        1004,
+        134
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 51
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00062_002_l01"
+      ],
+      "line_boxes": [
+        [
+          855,
+          83,
+          1004,
+          134
+        ]
+      ],
+      "block_id": "00062_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "영업팀",
+      "canonical_text": "영업팀",
+      "bbox_xyxy": [
+        903,
+        146,
+        1004,
+        181
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00062_003_l01"
+      ],
+      "line_boxes": [
+        [
+          903,
+          146,
+          1004,
+          181
+        ]
+      ],
+      "block_id": "00062_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부장",
+      "canonical_text": "부장",
+      "bbox_xyxy": [
+        936,
+        187,
+        1004,
+        222
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 35
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00062_004_l01"
+      ],
+      "line_boxes": [
+        [
+          936,
+          187,
+          1004,
+          222
+        ]
+      ],
+      "block_id": "00062_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0220-2250",
+      "canonical_text": "031-0220-2250",
+      "bbox_xyxy": [
+        59,
+        303,
+        314,
+        327
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00062_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          303,
+          314,
+          327
+        ]
+      ],
+      "block_id": "00062_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0926-1273",
+      "canonical_text": "010-0926-1273",
+      "bbox_xyxy": [
+        59,
+        337,
+        300,
+        359
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00062_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          337,
+          300,
+          359
+        ]
+      ],
+      "block_id": "00062_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2050@solalite.example.com",
+      "canonical_text": "user2050@solalite.example.com",
+      "bbox_xyxy": [
+        59,
+        369,
+        610,
+        400
+      ],
+      "bbox_size": {
+        "width": 551,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00062_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          369,
+          610,
+          400
+        ]
+      ],
+      "block_id": "00062_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 부산광역시 수영구 강남대로 883 E동 363호",
+      "canonical_text": "부산광역시 수영구 강남대로 883 E동 363호",
+      "bbox_xyxy": [
+        59,
+        410,
+        725,
+        440
+      ],
+      "bbox_size": {
+        "width": 666,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00062_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          410,
+          725,
+          440
+        ]
+      ],
+      "block_id": "00062_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00062_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web solalite.example.com",
+      "canonical_text": "solalite.example.com",
+      "bbox_xyxy": [
+        59,
+        450,
+        427,
+        481
+      ],
+      "bbox_size": {
+        "width": 368,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00062_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          450,
+          427,
+          481
+        ]
+      ],
+      "block_id": "00062_009_b01",
+      "language": "ko"
+    }
+  ]
+}

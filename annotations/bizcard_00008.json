@@ -1,0 +1,261 @@
+{
+  "image_id": "00008",
+  "image_path": "images/bizcard_00008.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "sage",
+  "theme_colors": {
+    "bg": "#A8B5A0",
+    "text": "#2C3E2D",
+    "muted": "#5A6A57",
+    "accent": "#FFFFFF"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00008_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "메이플스튜디오",
+      "canonical_text": "메이플스튜디오",
+      "bbox_xyxy": [
+        59,
+        83,
+        282,
+        117
+      ],
+      "bbox_size": {
+        "width": 223,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00008_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          282,
+          117
+        ]
+      ],
+      "block_id": "00008_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00008_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "문윤서",
+      "canonical_text": "문윤서",
+      "bbox_xyxy": [
+        59,
+        141,
+        219,
+        198
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00008_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          219,
+          198
+        ]
+      ],
+      "block_id": "00008_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00008_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "전무",
+      "canonical_text": "전무",
+      "bbox_xyxy": [
+        59,
+        210,
+        123,
+        243
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00008_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          210,
+          123,
+          243
+        ]
+      ],
+      "block_id": "00008_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00008_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0187-9822",
+      "canonical_text": "010-0187-9822",
+      "bbox_xyxy": [
+        59,
+        273,
+        333,
+        298
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00008_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          273,
+          333,
+          298
+        ]
+      ],
+      "block_id": "00008_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00008_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user5408@maple.example.com",
+      "canonical_text": "user5408@maple.example.com",
+      "bbox_xyxy": [
+        59,
+        309,
+        669,
+        345
+      ],
+      "bbox_size": {
+        "width": 610,
+        "height": 36
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00008_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          309,
+          669,
+          345
+        ]
+      ],
+      "block_id": "00008_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00008_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 부산광역시 수영구 마포대로 228",
+      "canonical_text": "부산광역시 수영구 마포대로 228",
+      "bbox_xyxy": [
+        59,
+        356,
+        659,
+        390
+      ],
+      "bbox_size": {
+        "width": 600,
+        "height": 34
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00008_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          356,
+          659,
+          390
+        ]
+      ],
+      "block_id": "00008_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00008_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web maple.example.com",
+      "canonical_text": "maple.example.com",
+      "bbox_xyxy": [
+        59,
+        401,
+        461,
+        437
+      ],
+      "bbox_size": {
+        "width": 402,
+        "height": 36
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00008_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          401,
+          461,
+          437
+        ]
+      ],
+      "block_id": "00008_007_b01",
+      "language": "ko"
+    }
+  ]
+}

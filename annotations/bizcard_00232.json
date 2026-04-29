@@ -1,0 +1,302 @@
+{
+  "image_id": "00232",
+  "image_path": "images/bizcard_00232.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "K"
+    },
+    "qr_code": null,
+    "background_pattern": "grid"
+  },
+  "theme_name": "soft_beige",
+  "theme_colors": {
+    "bg": "#F0EAE0",
+    "text": "#2C2C2C",
+    "muted": "#6B5E50",
+    "accent": "#1E3A5F"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00232_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "케이엠스튜디오",
+      "canonical_text": "케이엠스튜디오",
+      "bbox_xyxy": [
+        59,
+        94,
+        282,
+        128
+      ],
+      "bbox_size": {
+        "width": 223,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00232_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          282,
+          128
+        ]
+      ],
+      "block_id": "00232_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "조서준",
+      "canonical_text": "조서준",
+      "bbox_xyxy": [
+        59,
+        163,
+        227,
+        221
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00232_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          163,
+          227,
+          221
+        ]
+      ],
+      "block_id": "00232_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        59,
+        233,
+        123,
+        267
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00232_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          233,
+          123,
+          267
+        ]
+      ],
+      "block_id": "00232_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0508-8758",
+      "canonical_text": "070-0508-8758",
+      "bbox_xyxy": [
+        488,
+        236,
+        743,
+        260
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00232_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          743,
+          260
+        ]
+      ],
+      "block_id": "00232_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0321-4561",
+      "canonical_text": "010-0321-4561",
+      "bbox_xyxy": [
+        488,
+        270,
+        729,
+        292
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00232_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          270,
+          729,
+          292
+        ]
+      ],
+      "block_id": "00232_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4358@kmstudio.example.com",
+      "canonical_text": "user4358@kmstudio.example.com",
+      "bbox_xyxy": [
+        488,
+        302,
+        970,
+        361
+      ],
+      "bbox_size": {
+        "width": 482,
+        "height": 59
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00232_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          302,
+          970,
+          361
+        ]
+      ],
+      "block_id": "00232_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 인천광역시 연수구 여의대로 569 19동 209호",
+      "canonical_text": "인천광역시 연수구 여의대로 569 19동 209호",
+      "bbox_xyxy": [
+        488,
+        371,
+        959,
+        433
+      ],
+      "bbox_size": {
+        "width": 471,
+        "height": 62
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00232_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          371,
+          959,
+          433
+        ]
+      ],
+      "block_id": "00232_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00232_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web kmstudio.example.com",
+      "canonical_text": "kmstudio.example.com",
+      "bbox_xyxy": [
+        488,
+        443,
+        888,
+        474
+      ],
+      "bbox_size": {
+        "width": 400,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00232_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          443,
+          888,
+          474
+        ]
+      ],
+      "block_id": "00232_008_b01",
+      "language": "ko"
+    }
+  ]
+}

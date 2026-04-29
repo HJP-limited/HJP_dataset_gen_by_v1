@@ -1,0 +1,302 @@
+{
+  "image_id": "00163",
+  "image_path": "images/bizcard_00163.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "V"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "royal_blue",
+  "theme_colors": {
+    "bg": "#1E3A8A",
+    "text": "#F8FAFC",
+    "muted": "#BFCAE0",
+    "accent": "#FBBF24"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00163_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "비전플러스",
+      "canonical_text": "비전플러스",
+      "bbox_xyxy": [
+        447,
+        71,
+        616,
+        107
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00163_001_l01"
+      ],
+      "line_boxes": [
+        [
+          447,
+          71,
+          616,
+          107
+        ]
+      ],
+      "block_id": "00163_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "백혜진",
+      "canonical_text": "백혜진",
+      "bbox_xyxy": [
+        447,
+        142,
+        615,
+        201
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 59
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00163_002_l01"
+      ],
+      "line_boxes": [
+        [
+          447,
+          142,
+          615,
+          201
+        ]
+      ],
+      "block_id": "00163_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "영업팀",
+      "canonical_text": "영업팀",
+      "bbox_xyxy": [
+        481,
+        213,
+        582,
+        248
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00163_003_l01"
+      ],
+      "line_boxes": [
+        [
+          481,
+          213,
+          582,
+          248
+        ]
+      ],
+      "block_id": "00163_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0855-4741",
+      "canonical_text": "031-0855-4741",
+      "bbox_xyxy": [
+        395,
+        278,
+        667,
+        304
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00163_004_l01"
+      ],
+      "line_boxes": [
+        [
+          395,
+          278,
+          667,
+          304
+        ]
+      ],
+      "block_id": "00163_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0872-9488",
+      "canonical_text": "010-0872-9488",
+      "bbox_xyxy": [
+        403,
+        314,
+        660,
+        338
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00163_005_l01"
+      ],
+      "line_boxes": [
+        [
+          403,
+          314,
+          660,
+          338
+        ]
+      ],
+      "block_id": "00163_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3687@visionplus.example.com",
+      "canonical_text": "user3687@visionplus.example.com",
+      "bbox_xyxy": [
+        214,
+        348,
+        849,
+        381
+      ],
+      "bbox_size": {
+        "width": 635,
+        "height": 33
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00163_006_l01"
+      ],
+      "line_boxes": [
+        [
+          214,
+          348,
+          849,
+          381
+        ]
+      ],
+      "block_id": "00163_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 세종특별자치시 마포대로 746 10동 762호",
+      "canonical_text": "세종특별자치시 마포대로 746 10동 762호",
+      "bbox_xyxy": [
+        189,
+        391,
+        874,
+        423
+      ],
+      "bbox_size": {
+        "width": 685,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00163_007_l01"
+      ],
+      "line_boxes": [
+        [
+          189,
+          391,
+          874,
+          423
+        ]
+      ],
+      "block_id": "00163_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00163_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web visionplus.example.com",
+      "canonical_text": "visionplus.example.com",
+      "bbox_xyxy": [
+        311,
+        433,
+        751,
+        467
+      ],
+      "bbox_size": {
+        "width": 440,
+        "height": 34
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00163_008_l01"
+      ],
+      "line_boxes": [
+        [
+          311,
+          433,
+          751,
+          467
+        ]
+      ],
+      "block_id": "00163_008_b01",
+      "language": "ko"
+    }
+  ]
+}

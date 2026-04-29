@@ -1,0 +1,354 @@
+{
+  "image_id": "00010",
+  "image_path": "images/bizcard_00010.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "deep_forest",
+  "theme_colors": {
+    "bg": "#0F2818",
+    "text": "#E8E1D5",
+    "muted": "#A8B0A4",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00010_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "누리테크",
+      "canonical_text": "누리테크",
+      "bbox_xyxy": [
+        59,
+        83,
+        180,
+        115
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00010_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          180,
+          115
+        ]
+      ],
+      "block_id": "00010_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "심도현",
+      "canonical_text": "심도현",
+      "bbox_xyxy": [
+        59,
+        139,
+        230,
+        197
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00010_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          139,
+          230,
+          197
+        ]
+      ],
+      "block_id": "00010_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "QA팀",
+      "canonical_text": "QA팀",
+      "bbox_xyxy": [
+        59,
+        209,
+        134,
+        244
+      ],
+      "bbox_size": {
+        "width": 75,
+        "height": 35
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00010_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          209,
+          134,
+          244
+        ]
+      ],
+      "block_id": "00010_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부장",
+      "canonical_text": "부장",
+      "bbox_xyxy": [
+        59,
+        250,
+        120,
+        282
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00010_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          250,
+          120,
+          282
+        ]
+      ],
+      "block_id": "00010_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 051-0745-1018",
+      "canonical_text": "051-0745-1018",
+      "bbox_xyxy": [
+        59,
+        312,
+        328,
+        338
+      ],
+      "bbox_size": {
+        "width": 269,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00010_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          312,
+          328,
+          338
+        ]
+      ],
+      "block_id": "00010_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0917-7766",
+      "canonical_text": "010-0917-7766",
+      "bbox_xyxy": [
+        59,
+        348,
+        310,
+        371
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00010_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          348,
+          310,
+          371
+        ]
+      ],
+      "block_id": "00010_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 02-0657-7343",
+      "canonical_text": "02-0657-7343",
+      "bbox_xyxy": [
+        59,
+        381,
+        283,
+        404
+      ],
+      "bbox_size": {
+        "width": 224,
+        "height": 23
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00010_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          381,
+          283,
+          404
+        ]
+      ],
+      "block_id": "00010_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2608@nuritech.example.co.kr",
+      "canonical_text": "user2608@nuritech.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        414,
+        652,
+        447
+      ],
+      "bbox_size": {
+        "width": 593,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00010_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          414,
+          652,
+          447
+        ]
+      ],
+      "block_id": "00010_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대구광역시 수성구 테헤란로 243 16동 572호",
+      "canonical_text": "대구광역시 수성구 테헤란로 243 16동 572호",
+      "bbox_xyxy": [
+        59,
+        457,
+        753,
+        487
+      ],
+      "bbox_size": {
+        "width": 694,
+        "height": 30
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00010_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          457,
+          753,
+          487
+        ]
+      ],
+      "block_id": "00010_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00010_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web nuritech.example.co.kr",
+      "canonical_text": "nuritech.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        497,
+        463,
+        530
+      ],
+      "bbox_size": {
+        "width": 404,
+        "height": 33
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00010_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          497,
+          463,
+          530
+        ]
+      ],
+      "block_id": "00010_010_b01",
+      "language": "ko"
+    }
+  ]
+}

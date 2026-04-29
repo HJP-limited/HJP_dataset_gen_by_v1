@@ -1,0 +1,335 @@
+{
+  "image_id": "00155",
+  "image_path": "images/bizcard_00155.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "vertical_strip_left",
+  "layout_composite_id": "L04_V3",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "square_strip_bottom"
+    ],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        83,
+        213,
+        201,
+        331
+      ],
+      "size_px": 118,
+      "initial": "E"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "mint",
+  "theme_colors": {
+    "bg": "#E8F5E9",
+    "text": "#1B5E20",
+    "muted": "#5A7A60",
+    "accent": "#388E3C"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00155_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        47,
+        71,
+        190,
+        102
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00155_001_l01"
+      ],
+      "line_boxes": [
+        [
+          47,
+          71,
+          190,
+          102
+        ]
+      ],
+      "block_id": "00155_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "조예은",
+      "canonical_text": "조예은",
+      "bbox_xyxy": [
+        356,
+        82,
+        505,
+        134
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 52
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00155_002_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          82,
+          505,
+          134
+        ]
+      ],
+      "block_id": "00155_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "영업팀",
+      "canonical_text": "영업팀",
+      "bbox_xyxy": [
+        356,
+        146,
+        442,
+        175
+      ],
+      "bbox_size": {
+        "width": 86,
+        "height": 29
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00155_003_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          146,
+          442,
+          175
+        ]
+      ],
+      "block_id": "00155_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "책임연구원",
+      "canonical_text": "책임연구원",
+      "bbox_xyxy": [
+        356,
+        181,
+        499,
+        212
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00155_004_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          181,
+          499,
+          212
+        ]
+      ],
+      "block_id": "00155_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0695-7815",
+      "canonical_text": "031-0695-7815",
+      "bbox_xyxy": [
+        356,
+        242,
+        607,
+        266
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00155_005_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          242,
+          607,
+          266
+        ]
+      ],
+      "block_id": "00155_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0140-8939",
+      "canonical_text": "010-0140-8939",
+      "bbox_xyxy": [
+        356,
+        276,
+        591,
+        297
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00155_006_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          276,
+          591,
+          297
+        ]
+      ],
+      "block_id": "00155_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1922@eclipse.example.com",
+      "canonical_text": "user1922@eclipse.example.com",
+      "bbox_xyxy": [
+        356,
+        307,
+        883,
+        338
+      ],
+      "bbox_size": {
+        "width": 527,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00155_007_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          307,
+          883,
+          338
+        ]
+      ],
+      "block_id": "00155_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 광화문로 424",
+      "canonical_text": "서울특별시 영등포구 광화문로 424",
+      "bbox_xyxy": [
+        356,
+        348,
+        885,
+        376
+      ],
+      "bbox_size": {
+        "width": 529,
+        "height": 28
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00155_008_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          348,
+          885,
+          376
+        ]
+      ],
+      "block_id": "00155_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00155_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web eclipse.example.com",
+      "canonical_text": "eclipse.example.com",
+      "bbox_xyxy": [
+        356,
+        386,
+        706,
+        417
+      ],
+      "bbox_size": {
+        "width": 350,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00155_009_l01"
+      ],
+      "line_boxes": [
+        [
+          356,
+          386,
+          706,
+          417
+        ]
+      ],
+      "block_id": "00155_009_b01",
+      "language": "ko"
+    }
+  ]
+}

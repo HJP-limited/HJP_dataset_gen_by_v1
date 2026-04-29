@@ -1,0 +1,372 @@
+{
+  "image_id": "00070",
+  "image_path": "images/bizcard_00070.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "E"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00070"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "sage",
+  "theme_colors": {
+    "bg": "#A8B5A0",
+    "text": "#2C3E2D",
+    "muted": "#5A6A57",
+    "accent": "#FFFFFF"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00070_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "엘로힘",
+      "canonical_text": "엘로힘",
+      "bbox_xyxy": [
+        59,
+        83,
+        160,
+        119
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00070_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          160,
+          119
+        ]
+      ],
+      "block_id": "00070_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "손현지",
+      "canonical_text": "손현지",
+      "bbox_xyxy": [
+        844,
+        83,
+        1004,
+        140
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00070_002_l01"
+      ],
+      "line_boxes": [
+        [
+          844,
+          83,
+          1004,
+          140
+        ]
+      ],
+      "block_id": "00070_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "총무팀",
+      "canonical_text": "총무팀",
+      "bbox_xyxy": [
+        903,
+        152,
+        1004,
+        188
+      ],
+      "bbox_size": {
+        "width": 101,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00070_003_l01"
+      ],
+      "line_boxes": [
+        [
+          903,
+          152,
+          1004,
+          188
+        ]
+      ],
+      "block_id": "00070_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석",
+      "canonical_text": "수석",
+      "bbox_xyxy": [
+        936,
+        194,
+        1004,
+        230
+      ],
+      "bbox_size": {
+        "width": 68,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00070_004_l01"
+      ],
+      "line_boxes": [
+        [
+          936,
+          194,
+          1004,
+          230
+        ]
+      ],
+      "block_id": "00070_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 02-0499-4870",
+      "canonical_text": "02-0499-4870",
+      "bbox_xyxy": [
+        59,
+        271,
+        314,
+        297
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00070_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          271,
+          314,
+          297
+        ]
+      ],
+      "block_id": "00070_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0471-4619",
+      "canonical_text": "010-0471-4619",
+      "bbox_xyxy": [
+        59,
+        307,
+        316,
+        331
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00070_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          307,
+          316,
+          331
+        ]
+      ],
+      "block_id": "00070_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 062-0566-8673",
+      "canonical_text": "062-0566-8673",
+      "bbox_xyxy": [
+        59,
+        341,
+        302,
+        364
+      ],
+      "bbox_size": {
+        "width": 243,
+        "height": 23
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00070_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          341,
+          302,
+          364
+        ]
+      ],
+      "block_id": "00070_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2664@elohim.example.org",
+      "canonical_text": "user2664@elohim.example.org",
+      "bbox_xyxy": [
+        59,
+        374,
+        630,
+        407
+      ],
+      "bbox_size": {
+        "width": 571,
+        "height": 33
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00070_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          374,
+          630,
+          407
+        ]
+      ],
+      "block_id": "00070_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 수원시 영통구 여의대로 200 6동 1026호",
+      "canonical_text": "경기도 수원시 영통구 여의대로 200 6동 1026호",
+      "bbox_xyxy": [
+        59,
+        417,
+        820,
+        449
+      ],
+      "bbox_size": {
+        "width": 761,
+        "height": 32
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00070_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          417,
+          820,
+          449
+        ]
+      ],
+      "block_id": "00070_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00070_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web elohim.example.org",
+      "canonical_text": "elohim.example.org",
+      "bbox_xyxy": [
+        59,
+        459,
+        435,
+        493
+      ],
+      "bbox_size": {
+        "width": 376,
+        "height": 34
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00070_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          459,
+          435,
+          493
+        ]
+      ],
+      "block_id": "00070_010_b01",
+      "language": "ko"
+    }
+  ]
+}

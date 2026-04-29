@@ -1,0 +1,230 @@
+{
+  "image_id": "00011",
+  "image_path": "images/bizcard_00011.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V0",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "eucalyptus",
+  "theme_colors": {
+    "bg": "#88A095",
+    "text": "#1F2D26",
+    "muted": "#4A5852",
+    "accent": "#1F2D26"
+  },
+  "font_profile": "mixed_sans_name_serif_body",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00011_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "이클립스랩",
+      "canonical_text": "이클립스랩",
+      "bbox_xyxy": [
+        59,
+        83,
+        218,
+        117
+      ],
+      "bbox_size": {
+        "width": 159,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00011_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          218,
+          117
+        ]
+      ],
+      "block_id": "00011_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00011_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "황혜진",
+      "canonical_text": "황혜진",
+      "bbox_xyxy": [
+        59,
+        141,
+        208,
+        194
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 53
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00011_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          208,
+          194
+        ]
+      ],
+      "block_id": "00011_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00011_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        59,
+        206,
+        123,
+        240
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00011_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          206,
+          123,
+          240
+        ]
+      ],
+      "block_id": "00011_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00011_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0469-8448",
+      "canonical_text": "010-0469-8448",
+      "bbox_xyxy": [
+        59,
+        270,
+        333,
+        295
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00011_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          270,
+          333,
+          295
+        ]
+      ],
+      "block_id": "00011_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00011_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user8529@eclipse.example.com",
+      "canonical_text": "user8529@eclipse.example.com",
+      "bbox_xyxy": [
+        59,
+        306,
+        681,
+        342
+      ],
+      "bbox_size": {
+        "width": 622,
+        "height": 36
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00011_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          306,
+          681,
+          342
+        ]
+      ],
+      "block_id": "00011_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00011_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 송파구 강남대로 369 D동 302호",
+      "canonical_text": "서울특별시 송파구 강남대로 369 D동 302호",
+      "bbox_xyxy": [
+        59,
+        353,
+        821,
+        387
+      ],
+      "bbox_size": {
+        "width": 762,
+        "height": 34
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00011_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          353,
+          821,
+          387
+        ]
+      ],
+      "block_id": "00011_006_b01",
+      "language": "ko"
+    }
+  ]
+}

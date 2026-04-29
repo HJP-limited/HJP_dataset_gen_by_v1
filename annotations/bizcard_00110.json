@@ -1,0 +1,313 @@
+{
+  "image_id": "00110",
+  "image_path": "images/bizcard_00110.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "horizontal_band_top",
+  "layout_composite_id": "L03_V5",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": true,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_band_corner",
+      "section_divider"
+    ],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        874,
+        47,
+        1004,
+        177
+      ],
+      "size_px": 130,
+      "initial": "K"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00110"
+    },
+    "background_pattern": "dots"
+  },
+  "theme_name": "blush",
+  "theme_colors": {
+    "bg": "#F8E1E4",
+    "text": "#5D4954",
+    "muted": "#9A8590",
+    "accent": "#A8767E"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00110_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "케이엠스튜디오",
+      "canonical_text": "케이엠스튜디오",
+      "bbox_xyxy": [
+        59,
+        59,
+        282,
+        93
+      ],
+      "bbox_size": {
+        "width": 223,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00110_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          59,
+          282,
+          93
+        ]
+      ],
+      "block_id": "00110_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "박예린",
+      "canonical_text": "박예린",
+      "bbox_xyxy": [
+        59,
+        117,
+        215,
+        172
+      ],
+      "bbox_size": {
+        "width": 156,
+        "height": 55
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00110_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          117,
+          215,
+          172
+        ]
+      ],
+      "block_id": "00110_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        59,
+        295,
+        123,
+        329
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00110_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          295,
+          123,
+          329
+        ]
+      ],
+      "block_id": "00110_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 070-0602-3939",
+      "canonical_text": "070-0602-3939",
+      "bbox_xyxy": [
+        59,
+        347,
+        314,
+        372
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00110_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          347,
+          314,
+          372
+        ]
+      ],
+      "block_id": "00110_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0226-2889",
+      "canonical_text": "010-0226-2889",
+      "bbox_xyxy": [
+        59,
+        382,
+        300,
+        404
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00110_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          382,
+          300,
+          404
+        ]
+      ],
+      "block_id": "00110_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user284@kmstudio.example.com",
+      "canonical_text": "user284@kmstudio.example.com",
+      "bbox_xyxy": [
+        59,
+        414,
+        625,
+        445
+      ],
+      "bbox_size": {
+        "width": 566,
+        "height": 31
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00110_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          414,
+          625,
+          445
+        ]
+      ],
+      "block_id": "00110_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 성남시 분당구 올림픽로 302 2동 1345호",
+      "canonical_text": "경기도 성남시 분당구 올림픽로 302 2동 1345호",
+      "bbox_xyxy": [
+        59,
+        455,
+        771,
+        485
+      ],
+      "bbox_size": {
+        "width": 712,
+        "height": 30
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00110_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          455,
+          771,
+          485
+        ]
+      ],
+      "block_id": "00110_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00110_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web kmstudio.example.com",
+      "canonical_text": "kmstudio.example.com",
+      "bbox_xyxy": [
+        59,
+        495,
+        459,
+        526
+      ],
+      "bbox_size": {
+        "width": 400,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00110_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          495,
+          459,
+          526
+        ]
+      ],
+      "block_id": "00110_008_b01",
+      "language": "ko"
+    }
+  ]
+}

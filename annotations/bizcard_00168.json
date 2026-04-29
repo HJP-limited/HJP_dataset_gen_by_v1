@@ -1,0 +1,302 @@
+{
+  "image_id": "00168",
+  "image_path": "images/bizcard_00168.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "L"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "steel_blue",
+  "theme_colors": {
+    "bg": "#34495E",
+    "text": "#ECF0F1",
+    "muted": "#B0BEC5",
+    "accent": "#3498DB"
+  },
+  "font_profile": "modern_korean",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00168_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "라인플러스",
+      "canonical_text": "라인플러스",
+      "bbox_xyxy": [
+        460,
+        71,
+        603,
+        101
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00168_001_l01"
+      ],
+      "line_boxes": [
+        [
+          460,
+          71,
+          603,
+          101
+        ]
+      ],
+      "block_id": "00168_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "전시우",
+      "canonical_text": "전시우",
+      "bbox_xyxy": [
+        446,
+        136,
+        617,
+        195
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 59
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00168_002_l01"
+      ],
+      "line_boxes": [
+        [
+          446,
+          136,
+          617,
+          195
+        ]
+      ],
+      "block_id": "00168_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "과장",
+      "canonical_text": "과장",
+      "bbox_xyxy": [
+        503,
+        207,
+        560,
+        237
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 30
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00168_003_l01"
+      ],
+      "line_boxes": [
+        [
+          503,
+          207,
+          560,
+          237
+        ]
+      ],
+      "block_id": "00168_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0595-3035",
+      "canonical_text": "062-0595-3035",
+      "bbox_xyxy": [
+        388,
+        267,
+        674,
+        294
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00168_004_l01"
+      ],
+      "line_boxes": [
+        [
+          388,
+          267,
+          674,
+          294
+        ]
+      ],
+      "block_id": "00168_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0140-3223",
+      "canonical_text": "010-0140-3223",
+      "bbox_xyxy": [
+        397,
+        305,
+        665,
+        329
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00168_005_l01"
+      ],
+      "line_boxes": [
+        [
+          397,
+          305,
+          665,
+          329
+        ]
+      ],
+      "block_id": "00168_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3752@lineplus.example.com",
+      "canonical_text": "user3752@lineplus.example.com",
+      "bbox_xyxy": [
+        224,
+        340,
+        838,
+        375
+      ],
+      "bbox_size": {
+        "width": 614,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00168_006_l01"
+      ],
+      "line_boxes": [
+        [
+          224,
+          340,
+          838,
+          375
+        ]
+      ],
+      "block_id": "00168_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 서울특별시 영등포구 을지로 965 5층",
+      "canonical_text": "서울특별시 영등포구 을지로 965 5층",
+      "bbox_xyxy": [
+        218,
+        386,
+        845,
+        418
+      ],
+      "bbox_size": {
+        "width": 627,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00168_007_l01"
+      ],
+      "line_boxes": [
+        [
+          218,
+          386,
+          845,
+          418
+        ]
+      ],
+      "block_id": "00168_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00168_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web lineplus.example.com",
+      "canonical_text": "lineplus.example.com",
+      "bbox_xyxy": [
+        325,
+        429,
+        738,
+        464
+      ],
+      "bbox_size": {
+        "width": 413,
+        "height": 35
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00168_008_l01"
+      ],
+      "line_boxes": [
+        [
+          325,
+          429,
+          738,
+          464
+        ]
+      ],
+      "block_id": "00168_008_b01",
+      "language": "ko"
+    }
+  ]
+}

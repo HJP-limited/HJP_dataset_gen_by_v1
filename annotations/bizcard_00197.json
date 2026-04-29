@@ -1,0 +1,264 @@
+{
+  "image_id": "00197",
+  "image_path": "images/bizcard_00197.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "circle_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "light_gray",
+  "theme_colors": {
+    "bg": "#EFEFEF",
+    "text": "#1F2937",
+    "muted": "#5B6470",
+    "accent": "#DC2626"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00197_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "엘로힘",
+      "canonical_text": "엘로힘",
+      "bbox_xyxy": [
+        486,
+        71,
+        577,
+        103
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00197_001_l01"
+      ],
+      "line_boxes": [
+        [
+          486,
+          71,
+          577,
+          103
+        ]
+      ],
+      "block_id": "00197_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00197_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "이서현",
+      "canonical_text": "이서현",
+      "bbox_xyxy": [
+        451,
+        138,
+        611,
+        195
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00197_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          138,
+          611,
+          195
+        ]
+      ],
+      "block_id": "00197_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00197_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "이사",
+      "canonical_text": "이사",
+      "bbox_xyxy": [
+        501,
+        207,
+        562,
+        240
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00197_003_l01"
+      ],
+      "line_boxes": [
+        [
+          501,
+          207,
+          562,
+          240
+        ]
+      ],
+      "block_id": "00197_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00197_004",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0113-5647",
+      "canonical_text": "010-0113-5647",
+      "bbox_xyxy": [
+        414,
+        270,
+        649,
+        291
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00197_004_l01"
+      ],
+      "line_boxes": [
+        [
+          414,
+          270,
+          649,
+          291
+        ]
+      ],
+      "block_id": "00197_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00197_005",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user6690@elohim.example.org",
+      "canonical_text": "user6690@elohim.example.org",
+      "bbox_xyxy": [
+        275,
+        301,
+        788,
+        332
+      ],
+      "bbox_size": {
+        "width": 513,
+        "height": 31
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00197_005_l01"
+      ],
+      "line_boxes": [
+        [
+          275,
+          301,
+          788,
+          332
+        ]
+      ],
+      "block_id": "00197_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00197_006",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 울산광역시 남구 올림픽로 119 2층",
+      "canonical_text": "울산광역시 남구 올림픽로 119 2층",
+      "bbox_xyxy": [
+        269,
+        342,
+        794,
+        371
+      ],
+      "bbox_size": {
+        "width": 525,
+        "height": 29
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00197_006_l01"
+      ],
+      "line_boxes": [
+        [
+          269,
+          342,
+          794,
+          371
+        ]
+      ],
+      "block_id": "00197_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00197_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web elohim.example.org",
+      "canonical_text": "elohim.example.org",
+      "bbox_xyxy": [
+        363,
+        381,
+        699,
+        412
+      ],
+      "bbox_size": {
+        "width": 336,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00197_007_l01"
+      ],
+      "line_boxes": [
+        [
+          363,
+          381,
+          699,
+          412
+        ]
+      ],
+      "block_id": "00197_007_b01",
+      "language": "ko"
+    }
+  ]
+}

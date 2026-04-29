@@ -1,0 +1,310 @@
+{
+  "image_id": "00078",
+  "image_path": "images/bizcard_00078.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "topleft_company_right_info",
+  "layout_composite_id": "L02_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        59,
+        142,
+        189,
+        272
+      ],
+      "size_px": 130,
+      "initial": "P"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00078"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "forest",
+  "theme_colors": {
+    "bg": "#2D5016",
+    "text": "#F5F1E8",
+    "muted": "#B5BAA5",
+    "accent": "#C9A961"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 13,
+    "title_pt": 8.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00078_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "프리즘",
+      "canonical_text": "프리즘",
+      "bbox_xyxy": [
+        59,
+        83,
+        156,
+        117
+      ],
+      "bbox_size": {
+        "width": 97,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00078_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          156,
+          117
+        ]
+      ],
+      "block_id": "00078_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "고하은",
+      "canonical_text": "고하은",
+      "bbox_xyxy": [
+        855,
+        83,
+        1004,
+        136
+      ],
+      "bbox_size": {
+        "width": 149,
+        "height": 53
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00078_002_l01"
+      ],
+      "line_boxes": [
+        [
+          855,
+          83,
+          1004,
+          136
+        ]
+      ],
+      "block_id": "00078_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "실장",
+      "canonical_text": "실장",
+      "bbox_xyxy": [
+        940,
+        148,
+        1004,
+        182
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00078_003_l01"
+      ],
+      "line_boxes": [
+        [
+          940,
+          148,
+          1004,
+          182
+        ]
+      ],
+      "block_id": "00078_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0428-7137",
+      "canonical_text": "062-0428-7137",
+      "bbox_xyxy": [
+        59,
+        283,
+        345,
+        310
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00078_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          283,
+          345,
+          310
+        ]
+      ],
+      "block_id": "00078_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0422-4504",
+      "canonical_text": "010-0422-4504",
+      "bbox_xyxy": [
+        59,
+        321,
+        327,
+        345
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00078_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          321,
+          327,
+          345
+        ]
+      ],
+      "block_id": "00078_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 062-0264-2784",
+      "canonical_text": "062-0264-2784",
+      "bbox_xyxy": [
+        59,
+        356,
+        315,
+        380
+      ],
+      "bbox_size": {
+        "width": 256,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00078_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          356,
+          315,
+          380
+        ]
+      ],
+      "block_id": "00078_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user1495@prism.example.org",
+      "canonical_text": "user1495@prism.example.org",
+      "bbox_xyxy": [
+        59,
+        391,
+        625,
+        426
+      ],
+      "bbox_size": {
+        "width": 566,
+        "height": 35
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00078_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          391,
+          625,
+          426
+        ]
+      ],
+      "block_id": "00078_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00078_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 부산광역시 해운대구 월드컵로 132 10층",
+      "canonical_text": "부산광역시 해운대구 월드컵로 132 10층",
+      "bbox_xyxy": [
+        59,
+        437,
+        735,
+        469
+      ],
+      "bbox_size": {
+        "width": 676,
+        "height": 32
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00078_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          437,
+          735,
+          469
+        ]
+      ],
+      "block_id": "00078_008_b01",
+      "language": "ko"
+    }
+  ]
+}

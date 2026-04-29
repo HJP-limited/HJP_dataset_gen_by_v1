@@ -1,0 +1,248 @@
+{
+  "image_id": "00278",
+  "image_path": "images/bizcard_00278.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "Q"
+    },
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00278"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "tech_blue",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1E40AF",
+    "muted": "#647596",
+    "accent": "#06B6D4"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00278_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "퀀텀웍스",
+      "canonical_text": "퀀텀웍스",
+      "bbox_xyxy": [
+        231,
+        177,
+        359,
+        211
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00278_001_l01"
+      ],
+      "line_boxes": [
+        [
+          231,
+          177,
+          359,
+          211
+        ]
+      ],
+      "block_id": "00278_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00278_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "최수아",
+      "canonical_text": "최수아",
+      "bbox_xyxy": [
+        198,
+        265,
+        392,
+        332
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 67
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00278_002_l01"
+      ],
+      "line_boxes": [
+        [
+          198,
+          265,
+          392,
+          332
+        ]
+      ],
+      "block_id": "00278_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00278_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "AI연구소",
+      "canonical_text": "AI연구소",
+      "bbox_xyxy": [
+        228,
+        356,
+        362,
+        389
+      ],
+      "bbox_size": {
+        "width": 134,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00278_003_l01"
+      ],
+      "line_boxes": [
+        [
+          228,
+          356,
+          362,
+          389
+        ]
+      ],
+      "block_id": "00278_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00278_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "부사장",
+      "canonical_text": "부사장",
+      "bbox_xyxy": [
+        247,
+        401,
+        343,
+        435
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 34
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00278_004_l01"
+      ],
+      "line_boxes": [
+        [
+          247,
+          401,
+          343,
+          435
+        ]
+      ],
+      "block_id": "00278_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00278_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0192-9392",
+      "canonical_text": "010-0192-9392",
+      "bbox_xyxy": [
+        59,
+        584,
+        333,
+        609
+      ],
+      "bbox_size": {
+        "width": 274,
+        "height": 25
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00278_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          333,
+          609
+        ]
+      ],
+      "block_id": "00278_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00278_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user4453@qworks.example.com",
+      "canonical_text": "user4453@qworks.example.com",
+      "bbox_xyxy": [
+        59,
+        620,
+        573,
+        687
+      ],
+      "bbox_size": {
+        "width": 514,
+        "height": 67
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00278_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          620,
+          573,
+          687
+        ]
+      ],
+      "block_id": "00278_006_b01",
+      "language": "ko"
+    }
+  ]
+}

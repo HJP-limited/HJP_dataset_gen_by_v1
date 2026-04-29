@@ -1,0 +1,271 @@
+{
+  "image_id": "00175",
+  "image_path": "images/bizcard_00175.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "triangle_stack",
+      "position": [
+        59,
+        59,
+        153,
+        153
+      ],
+      "size_px": 94,
+      "initial": "M"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "wine",
+  "theme_colors": {
+    "bg": "#3D1F2A",
+    "text": "#F0E5D8",
+    "muted": "#B5A39A",
+    "accent": "#D4AF37"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00175_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "메이플스튜디오",
+      "canonical_text": "메이플스튜디오",
+      "bbox_xyxy": [
+        425,
+        71,
+        638,
+        104
+      ],
+      "bbox_size": {
+        "width": 213,
+        "height": 33
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00175_001_l01"
+      ],
+      "line_boxes": [
+        [
+          425,
+          71,
+          638,
+          104
+        ]
+      ],
+      "block_id": "00175_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00175_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "최서윤",
+      "canonical_text": "최서윤",
+      "bbox_xyxy": [
+        451,
+        139,
+        611,
+        196
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 57
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00175_002_l01"
+      ],
+      "line_boxes": [
+        [
+          451,
+          139,
+          611,
+          196
+        ]
+      ],
+      "block_id": "00175_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00175_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "디렉터",
+      "canonical_text": "디렉터",
+      "bbox_xyxy": [
+        486,
+        208,
+        577,
+        241
+      ],
+      "bbox_size": {
+        "width": 91,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00175_003_l01"
+      ],
+      "line_boxes": [
+        [
+          486,
+          208,
+          577,
+          241
+        ]
+      ],
+      "block_id": "00175_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00175_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0697-9964",
+      "canonical_text": "053-0697-9964",
+      "bbox_xyxy": [
+        388,
+        271,
+        674,
+        298
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00175_004_l01"
+      ],
+      "line_boxes": [
+        [
+          388,
+          271,
+          674,
+          298
+        ]
+      ],
+      "block_id": "00175_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00175_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0375-6308",
+      "canonical_text": "010-0375-6308",
+      "bbox_xyxy": [
+        397,
+        309,
+        665,
+        333
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00175_005_l01"
+      ],
+      "line_boxes": [
+        [
+          397,
+          309,
+          665,
+          333
+        ]
+      ],
+      "block_id": "00175_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00175_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2453@maple.example.com",
+      "canonical_text": "user2453@maple.example.com",
+      "bbox_xyxy": [
+        236,
+        344,
+        826,
+        379
+      ],
+      "bbox_size": {
+        "width": 590,
+        "height": 35
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00175_006_l01"
+      ],
+      "line_boxes": [
+        [
+          236,
+          344,
+          826,
+          379
+        ]
+      ],
+      "block_id": "00175_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00175_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 고양시 일산서구 올림픽로 49 3동 619호",
+      "canonical_text": "경기도 고양시 일산서구 올림픽로 49 3동 619호",
+      "bbox_xyxy": [
+        146,
+        390,
+        916,
+        422
+      ],
+      "bbox_size": {
+        "width": 770,
+        "height": 32
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00175_007_l01"
+      ],
+      "line_boxes": [
+        [
+          146,
+          390,
+          916,
+          422
+        ]
+      ],
+      "block_id": "00175_007_b01",
+      "language": "ko"
+    }
+  ]
+}

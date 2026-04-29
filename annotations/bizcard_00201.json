@@ -1,0 +1,310 @@
+{
+  "image_id": "00201",
+  "image_path": "images/bizcard_00201.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "ring_with_dot",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "V"
+    },
+    "qr_code": {
+      "bbox": [
+        862,
+        390,
+        1048,
+        576
+      ],
+      "encoded": "https://example.com/00201"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "green_accent",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1B1B1B",
+    "muted": "#5A5A5A",
+    "accent": "#06C755"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00201_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "비전플러스",
+      "canonical_text": "비전플러스",
+      "bbox_xyxy": [
+        59,
+        94,
+        219,
+        128
+      ],
+      "bbox_size": {
+        "width": 160,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00201_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          219,
+          128
+        ]
+      ],
+      "block_id": "00201_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "유연우",
+      "canonical_text": "유연우",
+      "bbox_xyxy": [
+        59,
+        163,
+        227,
+        221
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00201_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          163,
+          227,
+          221
+        ]
+      ],
+      "block_id": "00201_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "사원",
+      "canonical_text": "사원",
+      "bbox_xyxy": [
+        59,
+        233,
+        123,
+        267
+      ],
+      "bbox_size": {
+        "width": 64,
+        "height": 34
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00201_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          233,
+          123,
+          267
+        ]
+      ],
+      "block_id": "00201_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 032-0923-6144",
+      "canonical_text": "032-0923-6144",
+      "bbox_xyxy": [
+        488,
+        236,
+        743,
+        261
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00201_004_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          743,
+          261
+        ]
+      ],
+      "block_id": "00201_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0368-3003",
+      "canonical_text": "010-0368-3003",
+      "bbox_xyxy": [
+        488,
+        271,
+        729,
+        292
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00201_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          271,
+          729,
+          292
+        ]
+      ],
+      "block_id": "00201_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0792-4464",
+      "canonical_text": "053-0792-4464",
+      "bbox_xyxy": [
+        488,
+        302,
+        716,
+        324
+      ],
+      "bbox_size": {
+        "width": 228,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00201_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          302,
+          716,
+          324
+        ]
+      ],
+      "block_id": "00201_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2725@visionplus.example.com",
+      "canonical_text": "user2725@visionplus.example.com",
+      "bbox_xyxy": [
+        488,
+        334,
+        982,
+        393
+      ],
+      "bbox_size": {
+        "width": 494,
+        "height": 59
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00201_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          334,
+          982,
+          393
+        ]
+      ],
+      "block_id": "00201_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00201_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web visionplus.example.com",
+      "canonical_text": "visionplus.example.com",
+      "bbox_xyxy": [
+        488,
+        403,
+        899,
+        434
+      ],
+      "bbox_size": {
+        "width": 411,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00201_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          403,
+          899,
+          434
+        ]
+      ],
+      "block_id": "00201_008_b01",
+      "language": "ko"
+    }
+  ]
+}

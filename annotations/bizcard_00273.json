@@ -1,0 +1,372 @@
+{
+  "image_id": "00273",
+  "image_path": "images/bizcard_00273.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "N"
+    },
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00273"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "royal_blue",
+  "theme_colors": {
+    "bg": "#1E3A8A",
+    "text": "#F8FAFC",
+    "muted": "#BFCAE0",
+    "accent": "#FBBF24"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00273_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "노바미디어",
+      "canonical_text": "노바미디어",
+      "bbox_xyxy": [
+        219,
+        177,
+        371,
+        209
+      ],
+      "bbox_size": {
+        "width": 152,
+        "height": 32
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00273_001_l01"
+      ],
+      "line_boxes": [
+        [
+          219,
+          177,
+          371,
+          209
+        ]
+      ],
+      "block_id": "00273_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "유수민",
+      "canonical_text": "유수민",
+      "bbox_xyxy": [
+        198,
+        265,
+        392,
+        331
+      ],
+      "bbox_size": {
+        "width": 194,
+        "height": 66
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00273_002_l01"
+      ],
+      "line_boxes": [
+        [
+          198,
+          265,
+          392,
+          331
+        ]
+      ],
+      "block_id": "00273_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "디자인팀",
+      "canonical_text": "디자인팀",
+      "bbox_xyxy": [
+        235,
+        355,
+        356,
+        387
+      ],
+      "bbox_size": {
+        "width": 121,
+        "height": 32
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00273_003_l01"
+      ],
+      "line_boxes": [
+        [
+          235,
+          355,
+          356,
+          387
+        ]
+      ],
+      "block_id": "00273_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "이사",
+      "canonical_text": "이사",
+      "bbox_xyxy": [
+        265,
+        399,
+        326,
+        431
+      ],
+      "bbox_size": {
+        "width": 61,
+        "height": 32
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00273_004_l01"
+      ],
+      "line_boxes": [
+        [
+          265,
+          399,
+          326,
+          431
+        ]
+      ],
+      "block_id": "00273_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0364-2552",
+      "canonical_text": "062-0364-2552",
+      "bbox_xyxy": [
+        59,
+        584,
+        310,
+        608
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00273_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          310,
+          608
+        ]
+      ],
+      "block_id": "00273_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0180-3549",
+      "canonical_text": "010-0180-3549",
+      "bbox_xyxy": [
+        59,
+        618,
+        294,
+        639
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00273_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          618,
+          294,
+          639
+        ]
+      ],
+      "block_id": "00273_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 053-0125-2456",
+      "canonical_text": "053-0125-2456",
+      "bbox_xyxy": [
+        59,
+        649,
+        284,
+        670
+      ],
+      "bbox_size": {
+        "width": 225,
+        "height": 21
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00273_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          649,
+          284,
+          670
+        ]
+      ],
+      "block_id": "00273_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user819@novamedia.example.com",
+      "canonical_text": "user819@novamedia.example.com",
+      "bbox_xyxy": [
+        59,
+        680,
+        534,
+        739
+      ],
+      "bbox_size": {
+        "width": 475,
+        "height": 59
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00273_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          680,
+          534,
+          739
+        ]
+      ],
+      "block_id": "00273_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 광주광역시 서구 판교역로 213",
+      "canonical_text": "광주광역시 서구 판교역로 213",
+      "bbox_xyxy": [
+        59,
+        749,
+        480,
+        802
+      ],
+      "bbox_size": {
+        "width": 421,
+        "height": 53
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00273_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          749,
+          480,
+          802
+        ]
+      ],
+      "block_id": "00273_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00273_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web novamedia.example.com",
+      "canonical_text": "novamedia.example.com",
+      "bbox_xyxy": [
+        59,
+        812,
+        465,
+        843
+      ],
+      "bbox_size": {
+        "width": 406,
+        "height": 31
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00273_010_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          812,
+          465,
+          843
+        ]
+      ],
+      "block_id": "00273_010_b01",
+      "language": "ko"
+    }
+  ]
+}

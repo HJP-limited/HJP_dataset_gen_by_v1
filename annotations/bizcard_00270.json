@@ -1,0 +1,341 @@
+{
+  "image_id": "00270",
+  "image_path": "images/bizcard_00270.jpg",
+  "image_size": {
+    "width": 591,
+    "height": 1063
+  },
+  "card_orientation": "vertical",
+  "card_spec_mm": {
+    "width": 50,
+    "height": 90
+  },
+  "dpi": 300,
+  "layout_type": "vertical_center",
+  "layout_composite_id": "L07_V2",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": true
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        236,
+        24,
+        354,
+        142
+      ],
+      "size_px": 118,
+      "initial": "C"
+    },
+    "qr_code": {
+      "bbox": [
+        218,
+        850,
+        404,
+        1036
+      ],
+      "encoded": "https://example.com/00270"
+    },
+    "background_pattern": null
+  },
+  "theme_name": "coral",
+  "theme_colors": {
+    "bg": "#FF6B6B",
+    "text": "#FFFFFF",
+    "muted": "#FFD8D8",
+    "accent": "#2C3E50"
+  },
+  "font_profile": "modern_korean_strong",
+  "font_sizes_pt": {
+    "name_pt": 16,
+    "title_pt": 7.5,
+    "body_pt": 8,
+    "accent_pt": 7.5
+  },
+  "fields": [
+    {
+      "field_id": "00270_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "코어시스템즈",
+      "canonical_text": "코어시스템즈",
+      "bbox_xyxy": [
+        210,
+        177,
+        381,
+        208
+      ],
+      "bbox_size": {
+        "width": 171,
+        "height": 31
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00270_001_l01"
+      ],
+      "line_boxes": [
+        [
+          210,
+          177,
+          381,
+          208
+        ]
+      ],
+      "block_id": "00270_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "한유준",
+      "canonical_text": "한유준",
+      "bbox_xyxy": [
+        203,
+        265,
+        388,
+        330
+      ],
+      "bbox_size": {
+        "width": 185,
+        "height": 65
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00270_002_l01"
+      ],
+      "line_boxes": [
+        [
+          203,
+          265,
+          388,
+          330
+        ]
+      ],
+      "block_id": "00270_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "고객지원팀",
+      "canonical_text": "고객지원팀",
+      "bbox_xyxy": [
+        224,
+        354,
+        367,
+        385
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00270_003_l01"
+      ],
+      "line_boxes": [
+        [
+          224,
+          354,
+          367,
+          385
+        ]
+      ],
+      "block_id": "00270_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "과장",
+      "canonical_text": "과장",
+      "bbox_xyxy": [
+        267,
+        397,
+        324,
+        428
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 31
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00270_004_l01"
+      ],
+      "line_boxes": [
+        [
+          267,
+          397,
+          324,
+          428
+        ]
+      ],
+      "block_id": "00270_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0978-6448",
+      "canonical_text": "062-0978-6448",
+      "bbox_xyxy": [
+        59,
+        584,
+        345,
+        611
+      ],
+      "bbox_size": {
+        "width": 286,
+        "height": 27
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00270_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          584,
+          345,
+          611
+        ]
+      ],
+      "block_id": "00270_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0567-8226",
+      "canonical_text": "010-0567-8226",
+      "bbox_xyxy": [
+        59,
+        622,
+        327,
+        646
+      ],
+      "bbox_size": {
+        "width": 268,
+        "height": 24
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00270_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          622,
+          327,
+          646
+        ]
+      ],
+      "block_id": "00270_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3155@coresys.example.com",
+      "canonical_text": "user3155@coresys.example.com",
+      "bbox_xyxy": [
+        59,
+        657,
+        560,
+        723
+      ],
+      "bbox_size": {
+        "width": 501,
+        "height": 66
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00270_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          657,
+          560,
+          723
+        ]
+      ],
+      "block_id": "00270_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 수원시 영통구 디지털로 864 2동 760호",
+      "canonical_text": "경기도 수원시 영통구 디지털로 864 2동 760호",
+      "bbox_xyxy": [
+        59,
+        734,
+        477,
+        802
+      ],
+      "bbox_size": {
+        "width": 418,
+        "height": 68
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00270_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          734,
+          477,
+          802
+        ]
+      ],
+      "block_id": "00270_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00270_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web coresys.example.com",
+      "canonical_text": "coresys.example.com",
+      "bbox_xyxy": [
+        59,
+        813,
+        464,
+        848
+      ],
+      "bbox_size": {
+        "width": 405,
+        "height": 35
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00270_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          813,
+          464,
+          848
+        ]
+      ],
+      "block_id": "00270_009_b01",
+      "language": "ko"
+    }
+  ]
+}

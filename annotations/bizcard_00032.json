@@ -1,0 +1,271 @@
+{
+  "image_id": "00032",
+  "image_path": "images/bizcard_00032.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "K"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "lilac",
+  "theme_colors": {
+    "bg": "#E8DFF2",
+    "text": "#3D3052",
+    "muted": "#7A6E8E",
+    "accent": "#7B5FA8"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00032_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "케이엠스튜디오",
+      "canonical_text": "케이엠스튜디오",
+      "bbox_xyxy": [
+        59,
+        83,
+        282,
+        117
+      ],
+      "bbox_size": {
+        "width": 223,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00032_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          282,
+          117
+        ]
+      ],
+      "block_id": "00032_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00032_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "임지훈",
+      "canonical_text": "임지훈",
+      "bbox_xyxy": [
+        59,
+        141,
+        204,
+        192
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 51
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00032_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          204,
+          192
+        ]
+      ],
+      "block_id": "00032_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00032_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "총무팀",
+      "canonical_text": "총무팀",
+      "bbox_xyxy": [
+        59,
+        204,
+        155,
+        237
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00032_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          204,
+          155,
+          237
+        ]
+      ],
+      "block_id": "00032_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00032_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 053-0384-8307",
+      "canonical_text": "053-0384-8307",
+      "bbox_xyxy": [
+        59,
+        267,
+        314,
+        292
+      ],
+      "bbox_size": {
+        "width": 255,
+        "height": 25
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00032_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          267,
+          314,
+          292
+        ]
+      ],
+      "block_id": "00032_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00032_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0459-2967",
+      "canonical_text": "010-0459-2967",
+      "bbox_xyxy": [
+        59,
+        302,
+        300,
+        324
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 22
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00032_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          302,
+          300,
+          324
+        ]
+      ],
+      "block_id": "00032_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00032_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user3549@kmstudio.example.com",
+      "canonical_text": "user3549@kmstudio.example.com",
+      "bbox_xyxy": [
+        59,
+        334,
+        641,
+        365
+      ],
+      "bbox_size": {
+        "width": 582,
+        "height": 31
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00032_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          334,
+          641,
+          365
+        ]
+      ],
+      "block_id": "00032_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00032_007",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web kmstudio.example.com",
+      "canonical_text": "kmstudio.example.com",
+      "bbox_xyxy": [
+        59,
+        375,
+        459,
+        406
+      ],
+      "bbox_size": {
+        "width": 400,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00032_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          375,
+          459,
+          406
+        ]
+      ],
+      "block_id": "00032_007_b01",
+      "language": "ko"
+    }
+  ]
+}

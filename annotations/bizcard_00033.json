@@ -1,0 +1,333 @@
+{
+  "image_id": "00033",
+  "image_path": "images/bizcard_00033.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "left_aligned",
+  "layout_composite_id": "L01_V1",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "circle_filled_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "R"
+    },
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "tech_blue",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#1E40AF",
+    "muted": "#647596",
+    "accent": "#06B6D4"
+  },
+  "font_profile": "classic_korean_serif_strong",
+  "font_sizes_pt": {
+    "name_pt": 15,
+    "title_pt": 8,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00033_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "리바이브",
+      "canonical_text": "리바이브",
+      "bbox_xyxy": [
+        59,
+        83,
+        187,
+        117
+      ],
+      "bbox_size": {
+        "width": 128,
+        "height": 34
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00033_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          83,
+          187,
+          117
+        ]
+      ],
+      "block_id": "00033_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "손채원",
+      "canonical_text": "손채원",
+      "bbox_xyxy": [
+        59,
+        141,
+        239,
+        203
+      ],
+      "bbox_size": {
+        "width": 180,
+        "height": 62
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00033_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          141,
+          239,
+          203
+        ]
+      ],
+      "block_id": "00033_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "운영팀",
+      "canonical_text": "운영팀",
+      "bbox_xyxy": [
+        59,
+        215,
+        155,
+        248
+      ],
+      "bbox_size": {
+        "width": 96,
+        "height": 33
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00033_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          215,
+          155,
+          248
+        ]
+      ],
+      "block_id": "00033_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 02-0875-5115",
+      "canonical_text": "02-0875-5115",
+      "bbox_xyxy": [
+        59,
+        278,
+        298,
+        302
+      ],
+      "bbox_size": {
+        "width": 239,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00033_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          278,
+          298,
+          302
+        ]
+      ],
+      "block_id": "00033_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0788-6663",
+      "canonical_text": "010-0788-6663",
+      "bbox_xyxy": [
+        59,
+        312,
+        300,
+        333
+      ],
+      "bbox_size": {
+        "width": 241,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00033_005_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          312,
+          300,
+          333
+        ]
+      ],
+      "block_id": "00033_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_006",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 032-0608-6696",
+      "canonical_text": "032-0608-6696",
+      "bbox_xyxy": [
+        59,
+        343,
+        287,
+        365
+      ],
+      "bbox_size": {
+        "width": 228,
+        "height": 22
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00033_006_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          343,
+          287,
+          365
+        ]
+      ],
+      "block_id": "00033_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_007",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user7745@revive.example.co.kr",
+      "canonical_text": "user7745@revive.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        375,
+        604,
+        406
+      ],
+      "bbox_size": {
+        "width": 545,
+        "height": 31
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00033_007_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          375,
+          604,
+          406
+        ]
+      ],
+      "block_id": "00033_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_008",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 제주특별자치도 제주시 광화문로 275",
+      "canonical_text": "제주특별자치도 제주시 광화문로 275",
+      "bbox_xyxy": [
+        59,
+        416,
+        642,
+        446
+      ],
+      "bbox_size": {
+        "width": 583,
+        "height": 30
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00033_008_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          416,
+          642,
+          446
+        ]
+      ],
+      "block_id": "00033_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00033_009",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web revive.example.co.kr",
+      "canonical_text": "revive.example.co.kr",
+      "bbox_xyxy": [
+        59,
+        456,
+        422,
+        487
+      ],
+      "bbox_size": {
+        "width": 363,
+        "height": 31
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00033_009_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          456,
+          422,
+          487
+        ]
+      ],
+      "block_id": "00033_009_b01",
+      "language": "ko"
+    }
+  ]
+}

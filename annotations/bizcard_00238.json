@@ -1,0 +1,364 @@
+{
+  "image_id": "00238",
+  "image_path": "images/bizcard_00238.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "two_column_split",
+  "layout_composite_id": "L06_V4",
+  "layout_features": {
+    "uses_bg_pattern": true,
+    "uses_shape": false,
+    "uses_logo": true,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [],
+    "logo": {
+      "kind": "rounded_square_initial",
+      "position": [
+        874,
+        59,
+        1004,
+        189
+      ],
+      "size_px": 130,
+      "initial": "V"
+    },
+    "qr_code": null,
+    "background_pattern": "triangles"
+  },
+  "theme_name": "wine",
+  "theme_colors": {
+    "bg": "#3D1F2A",
+    "text": "#F0E5D8",
+    "muted": "#B5A39A",
+    "accent": "#D4AF37"
+  },
+  "font_profile": "classic_korean_serif",
+  "font_sizes_pt": {
+    "name_pt": 12,
+    "title_pt": 8.5,
+    "body_pt": 7.5,
+    "accent_pt": 7.0
+  },
+  "fields": [
+    {
+      "field_id": "00238_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "비전플러스",
+      "canonical_text": "비전플러스",
+      "bbox_xyxy": [
+        59,
+        94,
+        228,
+        130
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00238_001_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          94,
+          228,
+          130
+        ]
+      ],
+      "block_id": "00238_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "송서윤",
+      "canonical_text": "송서윤",
+      "bbox_xyxy": [
+        59,
+        165,
+        204,
+        215
+      ],
+      "bbox_size": {
+        "width": 145,
+        "height": 50
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00238_002_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          165,
+          204,
+          215
+        ]
+      ],
+      "block_id": "00238_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_003",
+      "field_class": "department",
+      "field_class_id": 3,
+      "rendered_text": "인프라팀",
+      "canonical_text": "인프라팀",
+      "bbox_xyxy": [
+        59,
+        227,
+        194,
+        263
+      ],
+      "bbox_size": {
+        "width": 135,
+        "height": 36
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00238_003_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          227,
+          194,
+          263
+        ]
+      ],
+      "block_id": "00238_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_004",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "수석연구원",
+      "canonical_text": "수석연구원",
+      "bbox_xyxy": [
+        59,
+        269,
+        228,
+        305
+      ],
+      "bbox_size": {
+        "width": 169,
+        "height": 36
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00238_004_l01"
+      ],
+      "line_boxes": [
+        [
+          59,
+          269,
+          228,
+          305
+        ]
+      ],
+      "block_id": "00238_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_005",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 062-0146-5030",
+      "canonical_text": "062-0146-5030",
+      "bbox_xyxy": [
+        488,
+        236,
+        760,
+        262
+      ],
+      "bbox_size": {
+        "width": 272,
+        "height": 26
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00238_005_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          236,
+          760,
+          262
+        ]
+      ],
+      "block_id": "00238_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_006",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0876-1301",
+      "canonical_text": "010-0876-1301",
+      "bbox_xyxy": [
+        488,
+        272,
+        745,
+        295
+      ],
+      "bbox_size": {
+        "width": 257,
+        "height": 23
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00238_006_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          272,
+          745,
+          295
+        ]
+      ],
+      "block_id": "00238_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_007",
+      "field_class": "fax",
+      "field_class_id": 6,
+      "rendered_text": "F. 070-0592-8675",
+      "canonical_text": "070-0592-8675",
+      "bbox_xyxy": [
+        488,
+        305,
+        731,
+        329
+      ],
+      "bbox_size": {
+        "width": 243,
+        "height": 24
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00238_007_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          305,
+          731,
+          329
+        ]
+      ],
+      "block_id": "00238_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_008",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user9090@visionplus.example.com",
+      "canonical_text": "user9090@visionplus.example.com",
+      "bbox_xyxy": [
+        488,
+        339,
+        1016,
+        401
+      ],
+      "bbox_size": {
+        "width": 528,
+        "height": 62
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00238_008_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          339,
+          1016,
+          401
+        ]
+      ],
+      "block_id": "00238_008_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_009",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 경기도 성남시 분당구 충무로 891 16동 812호",
+      "canonical_text": "경기도 성남시 분당구 충무로 891 16동 812호",
+      "bbox_xyxy": [
+        488,
+        411,
+        1000,
+        477
+      ],
+      "bbox_size": {
+        "width": 512,
+        "height": 66
+      },
+      "reading_order": 9,
+      "line_ids": [
+        "00238_009_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          411,
+          1000,
+          477
+        ]
+      ],
+      "block_id": "00238_009_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00238_010",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web visionplus.example.com",
+      "canonical_text": "visionplus.example.com",
+      "bbox_xyxy": [
+        488,
+        487,
+        928,
+        521
+      ],
+      "bbox_size": {
+        "width": 440,
+        "height": 34
+      },
+      "reading_order": 10,
+      "line_ids": [
+        "00238_010_l01"
+      ],
+      "line_boxes": [
+        [
+          488,
+          487,
+          928,
+          521
+        ]
+      ],
+      "block_id": "00238_010_b01",
+      "language": "ko"
+    }
+  ]
+}

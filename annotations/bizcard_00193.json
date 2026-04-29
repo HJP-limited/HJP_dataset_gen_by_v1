@@ -1,0 +1,295 @@
+{
+  "image_id": "00193",
+  "image_path": "images/bizcard_00193.jpg",
+  "image_size": {
+    "width": 1063,
+    "height": 591
+  },
+  "card_orientation": "horizontal",
+  "card_spec_mm": {
+    "width": 90,
+    "height": 50
+  },
+  "dpi": 300,
+  "layout_type": "centered",
+  "layout_composite_id": "L05_V6",
+  "layout_features": {
+    "uses_bg_pattern": false,
+    "uses_shape": true,
+    "uses_logo": false,
+    "uses_qr": false
+  },
+  "visual_elements": {
+    "decorative_shapes": [
+      "ring_corner_accent",
+      "top_short_bar"
+    ],
+    "logo": null,
+    "qr_code": null,
+    "background_pattern": null
+  },
+  "theme_name": "navy_on_white",
+  "theme_colors": {
+    "bg": "#FFFFFF",
+    "text": "#0F2A4F",
+    "muted": "#5B6E85",
+    "accent": "#0F2A4F"
+  },
+  "font_profile": "mixed_serif_name_sans_body",
+  "font_sizes_pt": {
+    "name_pt": 14,
+    "title_pt": 7.5,
+    "body_pt": 7,
+    "accent_pt": 6.5
+  },
+  "fields": [
+    {
+      "field_id": "00193_001",
+      "field_class": "company",
+      "field_class_id": 1,
+      "rendered_text": "한솔디지털",
+      "canonical_text": "한솔디지털",
+      "bbox_xyxy": [
+        460,
+        71,
+        603,
+        101
+      ],
+      "bbox_size": {
+        "width": 143,
+        "height": 30
+      },
+      "reading_order": 1,
+      "line_ids": [
+        "00193_001_l01"
+      ],
+      "line_boxes": [
+        [
+          460,
+          71,
+          603,
+          101
+        ]
+      ],
+      "block_id": "00193_001_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_002",
+      "field_class": "name",
+      "field_class_id": 0,
+      "rendered_text": "김민준",
+      "canonical_text": "김민준",
+      "bbox_xyxy": [
+        447,
+        136,
+        615,
+        194
+      ],
+      "bbox_size": {
+        "width": 168,
+        "height": 58
+      },
+      "reading_order": 2,
+      "line_ids": [
+        "00193_002_l01"
+      ],
+      "line_boxes": [
+        [
+          447,
+          136,
+          615,
+          194
+        ]
+      ],
+      "block_id": "00193_002_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_003",
+      "field_class": "position",
+      "field_class_id": 2,
+      "rendered_text": "주임",
+      "canonical_text": "주임",
+      "bbox_xyxy": [
+        503,
+        206,
+        560,
+        237
+      ],
+      "bbox_size": {
+        "width": 57,
+        "height": 31
+      },
+      "reading_order": 3,
+      "line_ids": [
+        "00193_003_l01"
+      ],
+      "line_boxes": [
+        [
+          503,
+          206,
+          560,
+          237
+        ]
+      ],
+      "block_id": "00193_003_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_004",
+      "field_class": "phone",
+      "field_class_id": 4,
+      "rendered_text": "Tel. 031-0279-6140",
+      "canonical_text": "031-0279-6140",
+      "bbox_xyxy": [
+        406,
+        267,
+        657,
+        291
+      ],
+      "bbox_size": {
+        "width": 251,
+        "height": 24
+      },
+      "reading_order": 4,
+      "line_ids": [
+        "00193_004_l01"
+      ],
+      "line_boxes": [
+        [
+          406,
+          267,
+          657,
+          291
+        ]
+      ],
+      "block_id": "00193_004_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_005",
+      "field_class": "mobile",
+      "field_class_id": 5,
+      "rendered_text": "M. 010-0156-2927",
+      "canonical_text": "010-0156-2927",
+      "bbox_xyxy": [
+        414,
+        301,
+        649,
+        322
+      ],
+      "bbox_size": {
+        "width": 235,
+        "height": 21
+      },
+      "reading_order": 5,
+      "line_ids": [
+        "00193_005_l01"
+      ],
+      "line_boxes": [
+        [
+          414,
+          301,
+          649,
+          322
+        ]
+      ],
+      "block_id": "00193_005_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_006",
+      "field_class": "email",
+      "field_class_id": 7,
+      "rendered_text": "E-mail user2592@hansol.example.co.kr",
+      "canonical_text": "user2592@hansol.example.co.kr",
+      "bbox_xyxy": [
+        265,
+        332,
+        798,
+        363
+      ],
+      "bbox_size": {
+        "width": 533,
+        "height": 31
+      },
+      "reading_order": 6,
+      "line_ids": [
+        "00193_006_l01"
+      ],
+      "line_boxes": [
+        [
+          265,
+          332,
+          798,
+          363
+        ]
+      ],
+      "block_id": "00193_006_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_007",
+      "field_class": "address",
+      "field_class_id": 8,
+      "rendered_text": "Address 대구광역시 수성구 센트럴로 784 3동 315호",
+      "canonical_text": "대구광역시 수성구 센트럴로 784 3동 315호",
+      "bbox_xyxy": [
+        215,
+        373,
+        848,
+        402
+      ],
+      "bbox_size": {
+        "width": 633,
+        "height": 29
+      },
+      "reading_order": 7,
+      "line_ids": [
+        "00193_007_l01"
+      ],
+      "line_boxes": [
+        [
+          215,
+          373,
+          848,
+          402
+        ]
+      ],
+      "block_id": "00193_007_b01",
+      "language": "ko"
+    },
+    {
+      "field_id": "00193_008",
+      "field_class": "website",
+      "field_class_id": 9,
+      "rendered_text": "Web hansol.example.co.kr",
+      "canonical_text": "hansol.example.co.kr",
+      "bbox_xyxy": [
+        354,
+        412,
+        709,
+        443
+      ],
+      "bbox_size": {
+        "width": 355,
+        "height": 31
+      },
+      "reading_order": 8,
+      "line_ids": [
+        "00193_008_l01"
+      ],
+      "line_boxes": [
+        [
+          354,
+          412,
+          709,
+          443
+        ]
+      ],
+      "block_id": "00193_008_b01",
+      "language": "ko"
+    }
+  ]
+}
