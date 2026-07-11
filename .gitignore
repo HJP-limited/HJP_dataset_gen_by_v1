@@ -1,4 +1,16 @@
-REBUILD_PLAN.md
-output/
-src/__pycache__/
-*.pyc
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+*.apk
+*.aab
+*.litertlm
+
+# Claude Code 개인 설정
+.claude/settings.local.json
