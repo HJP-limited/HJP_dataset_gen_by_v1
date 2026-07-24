@@ -1,10 +1,8 @@
 package com.example.hjp
 
 import android.content.Context
-import android.os.Build
 import com.example.hjp.data.HjpDatabase
 import com.example.hjp.data.RoomBusinessCardRepository
-import com.hjp.agent.contract.AgentModelGateway
 import com.hjp.agent.core.AgentKernel
 import com.hjp.agent.core.AgentTurnPolicy
 import com.hjp.agent.core.AgentRuntimeEnvironment
@@ -15,8 +13,7 @@ import com.hjp.agent.core.DefaultToolPolicyEngine
 import com.hjp.agent.core.DefaultToolRegistry
 import com.hjp.agent.core.InMemoryAgentSessionStore
 import com.hjp.agent.core.ToolImplementationCandidate
-import com.hjp.agent.litert.LiteRtAgentModelGateway
-import com.hjp.agent.litert.LiteRtBackendPreference
+import com.hjp.agent.routing.AgentSystemInstructions
 import com.hjp.tool.android.AndroidCalendarComposerBackend
 import com.hjp.tool.android.AndroidMessageComposerBackend
 import com.hjp.tool.android.CreateCalendarEventPlugin
@@ -26,17 +23,31 @@ import com.hjp.tool.contact.GetContactPlugin
 import com.hjp.tool.contact.RyeongContactSearchBackend
 import com.hjp.tool.contact.SearchContactsPlugin
 import com.hjp.tool.contract.ConfirmationGateway
+import com.hjp.tool.contract.PermissionGateway
+import com.hjp.tool.contract.ToolEventSink
 import com.hjp.tool.contract.ToolExecutionContext
 import com.hjp.tool.datetime.GetCurrentDateTimePlugin
 import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.security.MessageDigest
 import java.util.Locale
 import java.util.TimeZone
 import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
+val HJP_AGENT_MODEL_FILE_NAME: String get() = BuildConfig.HJP_MODEL_FILE_NAME
+val HJP_AGENT_MODEL_SIZE_BYTES: Long get() = BuildConfig.HJP_MODEL_SIZE_BYTES
+val HJP_AGENT_MODEL_SHA256: String get() = BuildConfig.HJP_MODEL_SHA256
 
 class AppContainer(context: Context) : AutoCloseable {
     private val appContext = context.applicationContext
     private val modelRoot = appContext.getExternalFilesDir("models") ?: File(appContext.filesDir, "models")
-    val modelFile: File = File(modelRoot, "hjp-agent.litertlm")
+    val modelFile: File = File(
+        modelRoot,
+        HJP_AGENT_MODEL_FILE_NAME.ifBlank { "ON_DEVICE_LLM_DISABLED" },
+    )
 
     private val confirmationCoordinator = AgentConfirmationCoordinator()
     private val database = HjpDatabase.getInstance(appContext)
@@ -51,18 +62,12 @@ class AppContainer(context: Context) : AutoCloseable {
         GetCurrentDateTimePlugin(),
     )
     private val registry = DefaultToolRegistry(plugins.map { ToolImplementationCandidate(it) })
-    private val emulatorCompatibilityMode = isAndroidEmulator()
-    private val modelGateway: AgentModelGateway = if (emulatorCompatibilityMode) {
-        LocalToolRoutingModelGateway()
-    } else {
-        LiteRtAgentModelGateway(
-            modelFile,
-            File(appContext.cacheDir, "litertlm"),
-            LiteRtBackendPreference.CPU_ONLY,
-        )
-    }
+    private val modelGateway = VariantModelGatewayFactory.create(
+        modelFile = modelFile,
+        cacheDirectory = File(appContext.cacheDir, "litertlm/${BuildConfig.HJP_MODEL_ID}"),
+    )
     private val sessionManager = AgentSessionManager(
-        InMemoryAgentSessionStore(), modelGateway, SYSTEM_INSTRUCTION,
+        InMemoryAgentSessionStore(), modelGateway, AgentSystemInstructions.HJP,
         Locale.getDefault().toLanguageTag(),
     )
 
@@ -76,7 +81,57 @@ class AppContainer(context: Context) : AutoCloseable {
         turnPolicy = AgentTurnPolicy(maxToolCalls = 5),
     )
 
-    val modelReady: Boolean get() = emulatorCompatibilityMode || (modelFile.isFile && modelFile.canRead())
+    val modelReady: Boolean get() =
+        !BuildConfig.HJP_LITERT_ENABLED || isExpectedModelFile(modelFile)
+
+    /**
+     * A standalone APK carries the model as an uncompressed asset. LiteRT-LM requires a real
+     * filesystem path, so install the asset into the app-specific model directory on first run.
+     * Regular debug APKs do not contain this asset and continue to use the ADB deployment flow.
+     */
+    suspend fun prepareBundledModel(): Boolean = withContext(Dispatchers.IO) {
+        if (!BuildConfig.HJP_LITERT_ENABLED) return@withContext true
+        if (modelReady) return@withContext true
+
+        val temporaryFile = File(modelRoot, "$HJP_AGENT_MODEL_FILE_NAME.part")
+        try {
+            modelRoot.mkdirs()
+            val digest = MessageDigest.getInstance("SHA-256")
+            var copiedBytes = 0L
+            appContext.assets.open(HJP_AGENT_MODEL_FILE_NAME).use { input ->
+                FileOutputStream(temporaryFile).buffered().use { output ->
+                    val buffer = ByteArray(DEFAULT_BUFFER_SIZE * 8)
+                    while (true) {
+                        val count = input.read(buffer)
+                        if (count < 0) break
+                        output.write(buffer, 0, count)
+                        digest.update(buffer, 0, count)
+                        copiedBytes += count
+                    }
+                }
+            }
+
+            val actualHash = digest.digest().joinToString("") { "%02x".format(it) }
+            check(copiedBytes == HJP_AGENT_MODEL_SIZE_BYTES) {
+                "Bundled model size mismatch: expected $HJP_AGENT_MODEL_SIZE_BYTES, found $copiedBytes"
+            }
+            check(actualHash == HJP_AGENT_MODEL_SHA256) {
+                "Bundled model SHA-256 mismatch: $actualHash"
+            }
+
+            if (modelFile.exists() && !modelFile.delete()) {
+                error("Could not replace invalid model file: ${modelFile.absolutePath}")
+            }
+            check(temporaryFile.renameTo(modelFile)) {
+                "Could not install bundled model: ${modelFile.absolutePath}"
+            }
+            isExpectedModelFile(modelFile)
+        } catch (_: FileNotFoundException) {
+            false
+        } finally {
+            if (temporaryFile.exists() && temporaryFile != modelFile) temporaryFile.delete()
+        }
+    }
 
     suspend fun resetSession() = sessionManager.reset()
 
@@ -88,31 +143,24 @@ class AppContainer(context: Context) : AutoCloseable {
     }
 
     private companion object {
-        const val SYSTEM_INSTRUCTION = """
-You are a model that can do function calling with the following functions
-당신은 Android 기기 안에서만 동작하는 HJP 명함 에이전트입니다.
-한국어로 간결하고 정확하게 답하세요. 현재 제공된 native tool 목록에 있는 기능만 사용하세요.
-연락처는 search_contacts로 찾고 필요할 때만 get_contact로 상세정보를 조회하세요.
-명함을 수정하려면 update_business_card를 사용하되 대상 명함을 먼저 특정하세요.
-캘린더와 메시지 도구는 외부 작성 화면만 엽니다. 저장되었다거나 전송되었다고 말하지 마세요.
-상대 날짜 일정은 get_current_datetime으로 현재 날짜·시각을 확인한 뒤 절대 시각으로 변환해서 create_calendar_event에 전달하세요.
-"""
-
-        fun isAndroidEmulator(): Boolean =
-            Build.HARDWARE.equals("ranchu", ignoreCase = true) ||
-                Build.HARDWARE.equals("goldfish", ignoreCase = true) ||
-                Build.MODEL.startsWith("sdk_gphone", ignoreCase = true) ||
-                Build.PRODUCT.contains("sdk_gphone", ignoreCase = true) ||
-                Build.FINGERPRINT.startsWith("generic", ignoreCase = true)
+        fun isExpectedModelFile(file: File): Boolean =
+            file.isFile && file.canRead() && file.length() == HJP_AGENT_MODEL_SIZE_BYTES
     }
 }
 
 private class AndroidAgentRuntimeEnvironment(
     private val confirmationCoordinator: AgentConfirmationCoordinator,
 ) : AgentRuntimeEnvironment {
+    override val localeTag: String get() = Locale.getDefault().toLanguageTag()
+    override val timeZoneId: String get() = TimeZone.getDefault().id
+    override suspend fun grantedPermissions(): Set<String> = emptySet()
+    override suspend fun deviceCapabilities(): Set<String> = setOf("android.external_ui", "contact.local_search", "contact.local_update", "datetime.current")
+
     override suspend fun toolContext(sessionId: String, turnId: String) = ToolExecutionContext(
-        sessionId, turnId, TimeZone.getDefault().id,
+        sessionId, turnId, localeTag, timeZoneId,
+        permissionGateway = PermissionGateway { emptySet() },
         confirmationGateway = ConfirmationGateway { prompt -> confirmationCoordinator.confirm(prompt) },
+        eventSink = ToolEventSink { },
     )
 }
 

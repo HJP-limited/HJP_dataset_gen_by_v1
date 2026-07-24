@@ -21,10 +21,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":agent-contract"))
-    implementation(project(":tool-contract"))
+    implementation(project(":llm-litert-common"))
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.kotlinx.serialization.json)
     implementation(libs.litert.lm.android)
     testImplementation(libs.junit)
 }

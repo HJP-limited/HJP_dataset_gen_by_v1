@@ -82,6 +82,19 @@ private fun AgentScreen(
         ) {
             Text("HJP Agent", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             Text("온디바이스 Single ReAct · 검색/조회/외부 작성 연동", style = MaterialTheme.typography.bodySmall)
+            if (BuildConfig.HJP_EMULATOR_MODE) {
+                Card(
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                    ),
+                ) {
+                    Text(
+                        "에뮬레이터 모드: 온디바이스 LLM 미사용",
+                        modifier = Modifier.padding(12.dp),
+                        fontWeight = FontWeight.SemiBold,
+                    )
+                }
+            }
 
             if (!state.modelReady) {
                 Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer)) {

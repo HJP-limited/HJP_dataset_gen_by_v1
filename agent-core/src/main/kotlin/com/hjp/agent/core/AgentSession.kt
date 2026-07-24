@@ -14,6 +14,8 @@ import kotlinx.coroutines.sync.withLock
 
 data class AgentSession(
     val sessionId: String,
+    val createdAtEpochMillis: Long,
+    var catalogRevision: String? = null,
     val capabilityState: MutableMap<SessionStateKey, StoredSessionState> = mutableMapOf(),
 )
 
@@ -23,16 +25,18 @@ interface AgentSessionStore {
     suspend fun clear()
 }
 
-class InMemoryAgentSessionStore : AgentSessionStore {
+class InMemoryAgentSessionStore(
+    private val clockMillis: () -> Long = System::currentTimeMillis,
+) : AgentSessionStore {
     private val mutex = Mutex()
     private var session: AgentSession? = null
 
     override suspend fun getOrCreate(): AgentSession = mutex.withLock {
-        session ?: AgentSession(UUID.randomUUID().toString()).also { session = it }
+        session ?: AgentSession(UUID.randomUUID().toString(), clockMillis()).also { session = it }
     }
 
     override suspend fun update(transform: (AgentSession) -> Unit) {
-        mutex.withLock { transform(session ?: AgentSession(UUID.randomUUID().toString()).also { session = it }) }
+        mutex.withLock { transform(session ?: AgentSession(UUID.randomUUID().toString(), clockMillis()).also { session = it }) }
     }
 
     override suspend fun clear() {
@@ -57,7 +61,10 @@ class AgentSessionManager(
         if (current != null && current.catalogRevision == snapshot.revision) return@withLock current
         current?.close()
         modelGateway.openSession(ModelSessionConfig(systemInstruction, snapshot, localeTag, samplingProfile))
-            .also { modelSession = it }
+            .also { opened ->
+                modelSession = opened
+                store.update { it.catalogRevision = snapshot.revision }
+            }
     }
 
     suspend fun apply(updates: List<SessionStateUpdate>) {

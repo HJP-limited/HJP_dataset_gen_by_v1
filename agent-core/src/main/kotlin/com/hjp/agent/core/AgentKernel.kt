@@ -1,9 +1,12 @@
 package com.hjp.agent.core
 
 import com.hjp.agent.contract.AgentEvent
+import com.hjp.agent.contract.FinalAnswerInput
 import com.hjp.agent.contract.ModelDecision
 import com.hjp.agent.contract.ModelInput
 import com.hjp.agent.contract.ModelToolCall
+import com.hjp.agent.contract.ModelToolResponse
+import com.hjp.tool.contract.CatalogContext
 import com.hjp.tool.contract.StandardToolErrorCodes
 import com.hjp.tool.contract.ToolContract
 import com.hjp.tool.contract.ToolError
@@ -25,11 +28,16 @@ import kotlinx.serialization.json.putJsonObject
 
 data class AgentTurnPolicy(
     val maxToolCalls: Int = 3,
+    val maxProtocolCorrections: Int = 1,
     val rejectMultipleCallsPerDecision: Boolean = true,
     val rejectRepeatedCall: Boolean = true,
 )
 
 interface AgentRuntimeEnvironment {
+    val localeTag: String
+    val timeZoneId: String
+    suspend fun grantedPermissions(): Set<String>
+    suspend fun deviceCapabilities(): Set<String>
     suspend fun toolContext(sessionId: String, turnId: String): ToolExecutionContext
 }
 
@@ -54,7 +62,13 @@ class AgentKernel(
             val turnId = UUID.randomUUID().toString()
             emit(AgentEvent.TurnStarted(turnId))
             val session = sessionManager.getOrCreate()
-            val snapshot = registry.snapshot()
+            val permissions = environment.grantedPermissions()
+            val snapshot = registry.snapshot(CatalogContext(
+                session.sessionId,
+                environment.localeTag,
+                permissions,
+                environment.deviceCapabilities(),
+            ))
             val model = try {
                 sessionManager.requireModelSession(snapshot)
             } catch (cancelled: CancellationException) {
@@ -64,6 +78,7 @@ class AgentKernel(
                 return@withLock
             }
             val toolContext = environment.toolContext(session.sessionId, turnId)
+            val observations = mutableListOf<ModelToolResponse>()
             val fingerprints = mutableSetOf<String>()
             var callCount = 0
             var decision = model.decide(ModelInput.User(normalized, buildCapabilityContext(session)))
@@ -73,7 +88,7 @@ class AgentKernel(
                 when (val current = decision) {
                     is ModelDecision.FinalCandidate -> {
                         val assembled = StringBuilder()
-                        model.streamFinal(current.draftText).collect { token ->
+                        model.streamFinal(FinalAnswerInput(current.draftText, observations)).collect { token ->
                             assembled.append(token)
                             emit(AgentEvent.Token(token))
                         }
@@ -127,9 +142,16 @@ class AgentKernel(
                         callCount += 1
                         val policy = policyEngine.evaluate(
                             contract,
+                            call,
+                            AgentSessionView(session.sessionId, permissions),
                         )
                         val policyFailure = when (policy) {
                             ToolPolicyDecision.Allow -> null
+                            is ToolPolicyDecision.RequirePermission -> {
+                                emit(AgentEvent.PermissionRequested(policy.permissions))
+                                ToolError(StandardToolErrorCodes.PERMISSION_REQUIRED,
+                                    "필요한 권한이 없습니다.", true)
+                            }
                             is ToolPolicyDecision.RequireConfirmation -> {
                                 emit(AgentEvent.ConfirmationRequested(policy.promptKo))
                                 if (toolContext.confirmationGateway.confirm(policy.promptKo)) null
@@ -148,6 +170,7 @@ class AgentKernel(
                             sessionManager.apply(result.sessionUpdates)
                         }
                         val observation = observationMapper.toModelResponse(result, contract)
+                        observations += observation.modelResponse
                         emit(AgentEvent.ToolFinished(observation.safeUiMessageKo))
                         decision = model.continueWithToolResult(observation.modelResponse)
                     }

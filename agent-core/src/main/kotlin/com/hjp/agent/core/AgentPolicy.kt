@@ -1,27 +1,40 @@
 package com.hjp.agent.core
 
+import com.hjp.agent.contract.ModelToolCall
 import com.hjp.tool.contract.ConfirmationPolicy
 import com.hjp.tool.contract.StandardToolErrorCodes
 import com.hjp.tool.contract.ToolContract
 import com.hjp.tool.contract.ToolEffect
 import com.hjp.tool.contract.ToolError
 
+data class AgentSessionView(
+    val sessionId: String,
+    val grantedPermissions: Set<String>,
+)
+
 sealed interface ToolPolicyDecision {
     data object Allow : ToolPolicyDecision
     data class RequireConfirmation(val promptKo: String) : ToolPolicyDecision
+    data class RequirePermission(val permissions: Set<String>) : ToolPolicyDecision
     data class Deny(val error: ToolError) : ToolPolicyDecision
 }
 
 interface ToolPolicyEngine {
     suspend fun evaluate(
         contract: ToolContract,
+        call: ModelToolCall,
+        session: AgentSessionView,
     ): ToolPolicyDecision
 }
 
 class DefaultToolPolicyEngine : ToolPolicyEngine {
     override suspend fun evaluate(
         contract: ToolContract,
+        call: ModelToolCall,
+        session: AgentSessionView,
     ): ToolPolicyDecision {
+        val missing = contract.requiredPermissions - session.grantedPermissions
+        if (missing.isNotEmpty()) return ToolPolicyDecision.RequirePermission(missing)
         if (contract.effect == ToolEffect.EXTERNAL_MUTATION) {
             return ToolPolicyDecision.Deny(ToolError(
                 StandardToolErrorCodes.CONFIRMATION_REQUIRED,

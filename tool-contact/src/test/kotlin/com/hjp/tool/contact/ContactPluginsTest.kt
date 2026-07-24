@@ -21,7 +21,7 @@ class ContactPluginsTest {
             override suspend fun getById(cardId: String) = card.takeIf { it.id == cardId }
         }
         val backend = RyeongContactSearchBackend(repository)
-        val context = ToolExecutionContext("s", "t", "Asia/Seoul")
+        val context = ToolExecutionContext("s", "t", "ko-KR", "Asia/Seoul")
         val search = SearchContactsPlugin(backend).execute(
             ToolRequest("1", ContactToolContracts.Search.capabilityId, ContactToolContracts.Search.version,
                 buildJsonObject { put("query", "투자 대표") }), context,
@@ -73,7 +73,7 @@ class ContactPluginsTest {
                     })
                 },
             ),
-            ToolExecutionContext("s", "t", "Asia/Seoul"),
+            ToolExecutionContext("s", "t", "ko-KR", "Asia/Seoul"),
         ) as ToolExecutionResult.Success
 
         assertTrue(result.data.toString().contains("\"before\""))

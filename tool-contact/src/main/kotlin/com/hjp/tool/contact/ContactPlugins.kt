@@ -39,8 +39,16 @@ data class UpdateBusinessCardOutput(val before: BusinessCardRecord, val after: B
 private object SearchInputCodec : ToolInputCodec<SearchContactsInput> {
     override val schema = SEARCH_INPUT_SCHEMA
     override fun decode(arguments: JsonObject): DecodeResult<SearchContactsInput> {
-        val query = (arguments["query"] as? JsonPrimitive)?.content?.trim().orEmpty()
-        val limit = (arguments["limit"] as? JsonPrimitive)?.intOrNull ?: 5
+        val queryPrimitive = arguments["query"] as? JsonPrimitive
+        if (queryPrimitive == null || !queryPrimitive.isString) {
+            return DecodeResult.Failure("검색어는 문자열이어야 합니다.", "query")
+        }
+        val query = queryPrimitive.content.trim()
+        val limitPrimitive = arguments["limit"] as? JsonPrimitive
+        if (limitPrimitive != null && limitPrimitive.isString) {
+            return DecodeResult.Failure("검색 개수는 정수여야 합니다.", "limit")
+        }
+        val limit = limitPrimitive?.intOrNull ?: 5
         if (query.isBlank()) return DecodeResult.Failure("검색어를 입력해 주세요.", "query")
         if (limit !in 1..10) return DecodeResult.Failure("검색 개수는 1에서 10 사이여야 합니다.", "limit")
         return DecodeResult.Success(SearchContactsInput(query, limit))
@@ -64,8 +72,12 @@ private object SearchOutputCodec : ToolOutputCodec<SearchContactsOutput> {
 private object GetInputCodec : ToolInputCodec<GetContactInput> {
     override val schema = GET_INPUT_SCHEMA
     override fun decode(arguments: JsonObject): DecodeResult<GetContactInput> {
-        val cardId = (arguments["card_id"] as? JsonPrimitive)?.content?.trim().orEmpty()
-        val purpose = (arguments["purpose"] as? JsonPrimitive)?.content?.trim()?.lowercase() ?: "display"
+        val cardPrimitive = arguments["card_id"] as? JsonPrimitive
+        if (cardPrimitive == null || !cardPrimitive.isString) return DecodeResult.Failure("명함 ID는 문자열이어야 합니다.", "card_id")
+        val cardId = cardPrimitive.content.trim()
+        val purposePrimitive = arguments["purpose"] as? JsonPrimitive
+        if (purposePrimitive != null && !purposePrimitive.isString) return DecodeResult.Failure("조회 목적은 문자열이어야 합니다.", "purpose")
+        val purpose = purposePrimitive?.content?.trim()?.lowercase() ?: "display"
         if (cardId.isBlank()) return DecodeResult.Failure("명함 ID가 필요합니다.", "card_id")
         if (purpose !in setOf("display", "email", "sms", "calendar"))
             return DecodeResult.Failure("올바른 조회 목적이 필요합니다.", "purpose")
@@ -88,7 +100,9 @@ private object UpdateInputCodec : ToolInputCodec<UpdateBusinessCardInput> {
     override val schema = UPDATE_INPUT_SCHEMA
 
     override fun decode(arguments: JsonObject): DecodeResult<UpdateBusinessCardInput> {
-        val cardId = (arguments["card_id"] as? JsonPrimitive)?.content?.trim().orEmpty()
+        val cardPrimitive = arguments["card_id"] as? JsonPrimitive
+        if (cardPrimitive == null || !cardPrimitive.isString) return DecodeResult.Failure("명함 ID는 문자열이어야 합니다.", "card_id")
+        val cardId = cardPrimitive.content.trim()
         if (cardId.isBlank()) return DecodeResult.Failure("명함 ID가 필요합니다.", "card_id")
 
         val updatesObject = arguments["updates"] as? JsonObject ?: JsonObject(emptyMap())
@@ -96,7 +110,8 @@ private object UpdateInputCodec : ToolInputCodec<UpdateBusinessCardInput> {
         for ((field, value) in updatesObject) {
             if (field !in UPDATABLE_FIELDS) return DecodeResult.Failure("지원하지 않는 명함 필드입니다: $field", "updates")
             if (value != JsonNull) {
-                val text = (value as? JsonPrimitive)?.content?.trim()
+                val primitive = value as? JsonPrimitive
+                val text = primitive?.takeIf { it.isString }?.content?.trim()
                     ?: return DecodeResult.Failure("수정 값은 문자열이어야 합니다: $field", "updates")
                 updates[field] = text
             }
@@ -106,7 +121,9 @@ private object UpdateInputCodec : ToolInputCodec<UpdateBusinessCardInput> {
         val clearArray = arguments["clear_fields"] as? JsonArray
         if (clearArray != null) {
             clearArray.forEach { element: JsonElement ->
-                val field = (element as? JsonPrimitive)?.content?.trim().orEmpty()
+                val primitive = element as? JsonPrimitive
+                if (primitive != null && !primitive.isString) return DecodeResult.Failure("clear_fields 값은 문자열이어야 합니다.", "clear_fields")
+                val field = primitive?.content?.trim().orEmpty()
                 if (field.isNotBlank()) {
                     if (field !in UPDATABLE_FIELDS) return DecodeResult.Failure("비울 수 없는 명함 필드입니다: $field", "clear_fields")
                     clearFields += field

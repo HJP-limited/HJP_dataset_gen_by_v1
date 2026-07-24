@@ -3,11 +3,13 @@ package com.hjp.agent.core
 import com.hjp.agent.contract.AgentEvent
 import com.hjp.agent.contract.AgentModelGateway
 import com.hjp.agent.contract.AgentModelSession
+import com.hjp.agent.contract.FinalAnswerInput
 import com.hjp.agent.contract.ModelDecision
 import com.hjp.agent.contract.ModelInput
 import com.hjp.agent.contract.ModelSessionConfig
 import com.hjp.agent.contract.ModelToolCall
 import com.hjp.agent.contract.ModelToolResponse
+import com.hjp.tool.contract.CatalogContext
 import com.hjp.tool.contract.ConfirmationPolicy
 import com.hjp.tool.contract.ContractVersion
 import com.hjp.tool.contract.PiiLevel
@@ -54,9 +56,9 @@ class AgentKernelTest {
     @Test
     fun `implementation swap changes binding revision only`() = runBlocking {
         val first = DefaultToolRegistry(listOf(ToolImplementationCandidate(FakePlugin("fake.v1"))))
-            .snapshot()
+            .snapshot(CatalogContext("s", "ko-KR"))
         val second = DefaultToolRegistry(listOf(ToolImplementationCandidate(FakePlugin("fake.v2"))))
-            .snapshot()
+            .snapshot(CatalogContext("s", "ko-KR"))
 
         assertEquals(first.revision, second.revision)
         assertTrue(first.bindingRevision != second.bindingRevision)
@@ -77,7 +79,7 @@ class AgentKernelTest {
             receivedResult = true
             return ModelDecision.FinalCandidate("완료")
         }
-        override fun streamFinal(draftText: String): Flow<String> = flowOf(draftText)
+        override fun streamFinal(input: FinalAnswerInput): Flow<String> = flowOf(input.draftText)
         override fun close() = Unit
     }
 
@@ -91,8 +93,12 @@ class AgentKernelTest {
     }
 
     private class FakeEnvironment : AgentRuntimeEnvironment {
+        override val localeTag = "ko-KR"
+        override val timeZoneId = "Asia/Seoul"
+        override suspend fun grantedPermissions() = emptySet<String>()
+        override suspend fun deviceCapabilities() = emptySet<String>()
         override suspend fun toolContext(sessionId: String, turnId: String) =
-            ToolExecutionContext(sessionId, turnId, "Asia/Seoul")
+            ToolExecutionContext(sessionId, turnId, localeTag, timeZoneId)
     }
 
     companion object {

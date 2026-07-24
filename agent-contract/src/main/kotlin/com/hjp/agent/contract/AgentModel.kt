@@ -8,6 +8,7 @@ data class SamplingProfile(
     val temperature: Float = 0.2f,
     val topK: Int = 20,
     val topP: Double = 0.95,
+    val maxOutputTokens: Int = 1_024,
 )
 
 data class ModelSessionConfig(
@@ -33,13 +34,18 @@ data class ModelToolCall(
 sealed interface ModelDecision {
     data class ToolCalls(val calls: List<ModelToolCall>) : ModelDecision
     data class FinalCandidate(val draftText: String) : ModelDecision
-    data class Invalid(val safeReason: String) : ModelDecision
+    data class Invalid(val safeReason: String, val retryable: Boolean) : ModelDecision
 }
 
 data class ModelToolResponse(
     val callId: String,
     val modelToolName: String,
     val payload: JsonObject,
+)
+
+data class FinalAnswerInput(
+    val draftText: String,
+    val safeObservations: List<ModelToolResponse> = emptyList(),
 )
 
 interface AgentModelGateway : AutoCloseable {
@@ -51,5 +57,5 @@ interface AgentModelSession : AutoCloseable {
     val catalogRevision: String
     suspend fun decide(input: ModelInput): ModelDecision
     suspend fun continueWithToolResult(result: ModelToolResponse): ModelDecision
-    fun streamFinal(draftText: String): Flow<String>
+    fun streamFinal(input: FinalAnswerInput): Flow<String>
 }

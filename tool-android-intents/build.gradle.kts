@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -21,6 +22,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":tool-external-actions"))
     implementation(project(":tool-contract"))
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.serialization.json)

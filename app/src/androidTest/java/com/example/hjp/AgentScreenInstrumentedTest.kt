@@ -99,7 +99,7 @@ class AgentScreenInstrumentedTest {
     fun businessCardPromptCallsContactSearchWithoutCrashing() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val modelRoot = context.getExternalFilesDir("models") ?: File(context.filesDir, "models")
-        val model = File(modelRoot, "hjp-agent.litertlm")
+        val model = File(modelRoot, HJP_AGENT_MODEL_FILE_NAME)
         val isEmulator = Build.HARDWARE.equals("ranchu", ignoreCase = true) ||
             Build.HARDWARE.equals("goldfish", ignoreCase = true)
         assumeTrue(
@@ -135,7 +135,7 @@ private class ReadableModelFileRule : ExternalResource() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val modelRoot = context.getExternalFilesDir("models") ?: File(context.filesDir, "models")
         check(modelRoot.exists() || modelRoot.mkdirs()) { "Could not create model test directory" }
-        modelFile = File(modelRoot, "hjp-agent.litertlm")
+        modelFile = File(modelRoot, HJP_AGENT_MODEL_FILE_NAME)
         if (!modelFile.exists()) {
             check(modelFile.createNewFile()) { "Could not create model test sentinel" }
             createdByTest = true

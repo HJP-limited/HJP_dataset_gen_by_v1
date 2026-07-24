@@ -15,6 +15,9 @@ import java.util.Set;
 public final class SearchLookupService {
     private static final float SEMANTIC_THRESHOLD = 0.04f;
     private static final double SEMANTIC_WEIGHT = 45.0;
+    // Hash embeddings can produce small accidental cosine overlaps. Results below this floor
+    // are not useful evidence and must not become convincing but nonexistent contacts.
+    private static final double MIN_RESULT_SCORE = 5.0;
     private final List<BusinessCard> cards;
     private final EmbeddingEngine embeddingEngine;
     private final Map<String, BusinessCard> cardsById = new LinkedHashMap<>();
@@ -47,7 +50,7 @@ public final class SearchLookupService {
             // alone for an unknown proper name produces convincing false hits.
             if (koreanNameOnlyQuery && !card.name.toLowerCase(Locale.KOREAN).contains(query)) continue;
             double score = query.isEmpty() ? 10 : score(card, tokens, queryVector);
-            if (score > 0) results.add(new SearchResult(card, score));
+            if (score >= MIN_RESULT_SCORE) results.add(new SearchResult(card, score));
         }
         results.sort(Comparator.comparingDouble((SearchResult r) -> r.score).reversed());
         return new ArrayList<>(results.subList(0, Math.min(Math.max(limit, 1), results.size())));

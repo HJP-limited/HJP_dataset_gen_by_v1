@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-enum class MessageRole { USER, ASSISTANT }
+enum class MessageRole { USER, ASSISTANT, STATUS }
 data class ChatMessage(val role: MessageRole, val text: String)
 
 data class AgentUiState(
@@ -33,6 +33,26 @@ class AgentViewModel(private val container: AppContainer) : ViewModel() {
     ))
     val state: StateFlow<AgentUiState> = _state.asStateFlow()
     private var turnJob: Job? = null
+
+    init {
+        if (!container.modelReady) {
+            _state.update { it.copy(busy = true, status = "내장 모델을 준비하고 있어요. 잠시만 기다려 주세요.") }
+            viewModelScope.launch {
+                val ready = try {
+                    container.prepareBundledModel()
+                } catch (_: Throwable) {
+                    false
+                }
+                _state.update {
+                    it.copy(
+                        busy = false,
+                        modelReady = ready,
+                        status = if (ready) "모델 준비가 완료되었습니다." else null,
+                    )
+                }
+            }
+        }
+    }
 
     fun refreshReadiness() {
         _state.update { it.copy(modelReady = container.modelReady) }
@@ -64,6 +84,7 @@ class AgentViewModel(private val container: AppContainer) : ViewModel() {
                         is AgentEvent.ToolStarted -> _state.update { it.copy(status = event.messageKo, confirmationPrompt = null) }
                         is AgentEvent.ToolFinished -> _state.update { it.copy(status = event.messageKo, confirmationPrompt = null) }
                         is AgentEvent.ConfirmationRequested -> _state.update { it.copy(status = event.promptKo, confirmationPrompt = event.promptKo) }
+                        is AgentEvent.PermissionRequested -> _state.update { it.copy(status = "필요한 권한: ${event.permissions.joinToString()}") }
                         is AgentEvent.Token -> {
                             _state.update { state ->
                                 val next = if (!assistantMessageStarted) {

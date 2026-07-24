@@ -47,8 +47,11 @@ data class ToolContract(
     val confirmationPolicy: ConfirmationPolicy,
     val inputPii: PiiLevel,
     val outputPii: PiiLevel,
+    val requiredPermissions: Set<String> = emptySet(),
+    val requiredDeviceCapabilities: Set<String> = emptySet(),
     val defaultTimeoutMillis: Long,
     val presentation: ToolPresentation,
+    val tags: Set<String> = emptySet(),
 ) {
     init {
         require(modelName.matches(Regex("[a-z][a-z0-9_]{0,63}"))) { "Invalid model tool name: $modelName" }

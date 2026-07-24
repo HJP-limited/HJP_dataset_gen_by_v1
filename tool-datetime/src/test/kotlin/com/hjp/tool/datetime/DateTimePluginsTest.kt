@@ -21,7 +21,7 @@ class DateTimePluginsTest {
                 DateTimeToolContracts.Current.version,
                 buildJsonObject { },
             ),
-            ToolExecutionContext("s", "t", "Asia/Seoul"),
+            ToolExecutionContext("s", "t", "ko-KR", "Asia/Seoul"),
         ) as ToolExecutionResult.Success
 
         assertEquals("1970-01-01", (result.data["date"] as JsonPrimitive).content)
@@ -39,7 +39,7 @@ class DateTimePluginsTest {
                 DateTimeToolContracts.Current.version,
                 buildJsonObject { put("timezone", "Not/AZone") },
             ),
-            ToolExecutionContext("s", "t", "Asia/Seoul"),
+            ToolExecutionContext("s", "t", "ko-KR", "Asia/Seoul"),
         )
 
         assertTrue(result is ToolExecutionResult.Failure)

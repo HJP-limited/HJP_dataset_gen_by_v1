@@ -1,16 +1,24 @@
 *.iml
-.gradle
+.gradle/
 /local.properties
 /.idea/
 .DS_Store
+/build/
 **/build/
+/.kotlin/
 /captures
 .externalNativeBuild
 .cxx
 local.properties
+*.litertlm
 *.apk
 *.aab
-*.litertlm
+*.xnnpack_cache_*
+/models/
+/dist/
+/Gemma_4_E2B_0711/
+*.log
+crash_full_log.txt
 
 # Claude Code 개인 설정
 .claude/settings.local.json

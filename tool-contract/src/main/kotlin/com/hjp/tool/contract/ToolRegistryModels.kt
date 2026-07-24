@@ -1,5 +1,12 @@
 package com.hjp.tool.contract
 
+data class CatalogContext(
+    val sessionId: String,
+    val localeTag: String,
+    val grantedPermissions: Set<String> = emptySet(),
+    val deviceCapabilities: Set<String> = emptySet(),
+)
+
 data class ToolBinding(
     val capabilityId: ToolCapabilityId,
     val modelName: String,
@@ -10,6 +17,7 @@ data class ToolBinding(
 data class ToolCatalogSnapshot(
     val revision: String,
     val bindingRevision: String,
+    val createdAtEpochMillis: Long,
     val bindings: List<ToolBinding>,
     val contractsByModelName: Map<String, ToolContract>,
 ) {
@@ -17,6 +25,6 @@ data class ToolCatalogSnapshot(
 }
 
 interface ToolRegistry {
-    suspend fun snapshot(): ToolCatalogSnapshot
+    suspend fun snapshot(context: CatalogContext): ToolCatalogSnapshot
     fun resolve(binding: ToolBinding): ToolPlugin?
 }

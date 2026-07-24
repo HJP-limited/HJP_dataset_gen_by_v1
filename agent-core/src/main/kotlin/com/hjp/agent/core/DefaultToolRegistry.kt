@@ -1,5 +1,6 @@
 package com.hjp.agent.core
 
+import com.hjp.tool.contract.CatalogContext
 import com.hjp.tool.contract.ToolAvailability
 import com.hjp.tool.contract.ToolBinding
 import com.hjp.tool.contract.ToolCatalogSnapshot
@@ -10,11 +11,13 @@ import kotlinx.coroutines.CancellationException
 data class ToolImplementationCandidate(
     val plugin: ToolPlugin,
     val priority: Int = 0,
+    val requiredCapabilities: Set<String> = emptySet(),
     val enabled: () -> Boolean = { true },
 )
 
 class DefaultToolRegistry(
     candidates: List<ToolImplementationCandidate>,
+    private val clockMillis: () -> Long = System::currentTimeMillis,
 ) : ToolRegistry {
     private val candidates = candidates.toList()
     private val byImplementation = candidates.associateBy { it.plugin.implementationId }
@@ -25,9 +28,12 @@ class DefaultToolRegistry(
         this.candidates.forEach { validateContract(it.plugin) }
     }
 
-    override suspend fun snapshot(): ToolCatalogSnapshot {
+    override suspend fun snapshot(context: CatalogContext): ToolCatalogSnapshot {
         val eligible = candidates.filter { candidate ->
-            candidate.enabled() && isReady(candidate.plugin)
+            candidate.enabled() &&
+                context.deviceCapabilities.containsAll(candidate.requiredCapabilities) &&
+                context.deviceCapabilities.containsAll(candidate.plugin.contract.requiredDeviceCapabilities) &&
+                isReady(candidate.plugin)
         }
         val selected = eligible.groupBy { it.plugin.contract.capabilityId }
             .map { (capability, choices) ->
@@ -63,6 +69,7 @@ class DefaultToolRegistry(
         return ToolCatalogSnapshot(
             revision = JsonCanonicalizer.sha256(contractIdentity),
             bindingRevision = JsonCanonicalizer.sha256(bindingIdentity),
+            createdAtEpochMillis = clockMillis(),
             bindings = bindings,
             contractsByModelName = contracts,
         )

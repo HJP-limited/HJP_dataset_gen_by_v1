@@ -2,6 +2,7 @@ package com.hjp.agent.core
 
 import com.hjp.agent.contract.AgentModelGateway
 import com.hjp.agent.contract.AgentModelSession
+import com.hjp.agent.contract.FinalAnswerInput
 import com.hjp.agent.contract.ModelDecision
 import com.hjp.agent.contract.ModelInput
 import com.hjp.agent.contract.ModelSessionConfig
@@ -51,7 +52,7 @@ class AgentSessionManagerTest {
         override suspend fun continueWithToolResult(result: ModelToolResponse) =
             ModelDecision.FinalCandidate("done")
 
-        override fun streamFinal(draftText: String): Flow<String> = emptyFlow()
+        override fun streamFinal(input: FinalAnswerInput): Flow<String> = emptyFlow()
 
         override fun close() {
             closed = true
@@ -62,6 +63,7 @@ class AgentSessionManagerTest {
         val EMPTY_CATALOG = ToolCatalogSnapshot(
             revision = "empty",
             bindingRevision = "empty",
+            createdAtEpochMillis = 0,
             bindings = emptyList(),
             contractsByModelName = emptyMap(),
         )
