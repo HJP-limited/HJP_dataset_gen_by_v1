@@ -4,7 +4,7 @@
 
 ```bash
 ./scripts/build-emulator-apk.sh
-adb install -r dist/HJP-Agent-Emulator-debug.apk
+adb install -r dist/HJP-Agent-RyeongSearch-Emulator-debug.apk
 adb shell am start -W -n com.example.hjp/.MainActivity
 ```
 
@@ -23,6 +23,8 @@ adb shell am start -W -n com.example.hjp/.MainActivity
 
 ```text
 김지원 명함을 찾아줘.
+비전글로벌 회사 명함 찾아줘.
+판교 AI 개발 담당자 찾아줘.
 김지원 명함 보여줘.
 김지원 회사 정보를 수정해줘.
 현재 시간 알려줘.
@@ -31,6 +33,10 @@ test@example.com에게 내용은 안녕하세요라고 메일 작성해줘.
 김지원에게 안녕하세요라고 문자 작성해줘.
 존재하지 않는 사람 명함을 찾아줘.
 ```
+
+명함 CRUD 전후 같은 query를 반복해 삭제된 카드가 남지 않고 수정한 회사·직책이
+즉시 검색되는지 확인한다. 동명이인 fixture는 두 결과를 표시하고 하나를 자동으로
+선택하지 않아야 한다.
 
 Calendar/Email/SMS는 Android `Intent` 작성 화면만 연다. 저장 또는 전송은 외부
 앱에서 사용자가 최종 확인한다. 해당 앱이 없는 에뮬레이터에서는 명확한 실행 실패가
@@ -42,8 +48,9 @@ Calendar/Email/SMS는 Android `Intent` 작성 화면만 연다. 저장 또는 �
 ./gradlew :app:testEmulatorDebugUnitTest
 ./gradlew :app:assembleEmulatorDebug
 ./gradlew :app:verifyEmulatorMergedAssets
-unzip -l dist/HJP-Agent-Emulator-debug.apk
+unzip -l dist/HJP-Agent-RyeongSearch-Emulator-debug.apk
 ```
 
-APK 목록에 `.litertlm`, `.xnnpack_cache_` 또는 LiteRT-LM native library가 없어야
-한다. `assets/cards/business_cards.json`은 있어야 한다.
+APK 목록에 `.litertlm`, `.onnx`, `.tflite`, `.task`, `.safetensors`,
+`.xnnpack_cache_` 또는 LiteRT-LM native library가 없어야 한다.
+`assets/cards/business_cards.json`은 있어야 한다.

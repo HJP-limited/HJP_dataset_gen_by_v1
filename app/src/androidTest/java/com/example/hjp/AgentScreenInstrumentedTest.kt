@@ -128,22 +128,28 @@ class AgentScreenInstrumentedTest {
  * LiteRT initialization is never reached.
  */
 private class ReadableModelFileRule : ExternalResource() {
-    private lateinit var modelFile: File
+    private var modelFile: File? = null
     private var createdByTest = false
 
     override fun before() {
+        // The emulator flavor intentionally has no model filename or LiteRT
+        // runtime. Its readiness contract is the deterministic compatibility
+        // mode, so creating a fake model sentinel would violate that contract.
+        if (BuildConfig.HJP_EMULATOR_MODE) return
+
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val modelRoot = context.getExternalFilesDir("models") ?: File(context.filesDir, "models")
         check(modelRoot.exists() || modelRoot.mkdirs()) { "Could not create model test directory" }
-        modelFile = File(modelRoot, HJP_AGENT_MODEL_FILE_NAME)
-        if (!modelFile.exists()) {
-            check(modelFile.createNewFile()) { "Could not create model test sentinel" }
+        val file = File(modelRoot, HJP_AGENT_MODEL_FILE_NAME)
+        modelFile = file
+        if (!file.exists()) {
+            check(file.createNewFile()) { "Could not create model test sentinel" }
             createdByTest = true
         }
-        check(modelFile.isFile && modelFile.canRead()) { "Model test sentinel is not readable" }
+        check(file.isFile && file.canRead()) { "Model test sentinel is not readable" }
     }
 
     override fun after() {
-        if (createdByTest) modelFile.delete()
+        if (createdByTest) modelFile?.delete()
     }
 }

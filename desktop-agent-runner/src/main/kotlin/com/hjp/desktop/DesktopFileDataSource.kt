@@ -3,7 +3,7 @@ package com.hjp.desktop
 import com.hjp.tool.contact.BusinessCardJsonCodec
 import com.hjp.tool.contact.BusinessCardRecord
 import com.hjp.tool.contact.BusinessCardUpdateResult
-import com.hjp.tool.contact.MutableBusinessCardRepository
+import com.hjp.tool.contact.MutableBusinessCardStore
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
@@ -14,9 +14,12 @@ import kotlinx.coroutines.withContext
 class DesktopFileDataSource(
     private val file: File,
     private val codec: BusinessCardJsonCodec = BusinessCardJsonCodec(),
-) : MutableBusinessCardRepository {
+) : MutableBusinessCardStore {
     private val mutex = Mutex()
     @Volatile private var cards: LinkedHashMap<String, BusinessCardRecord>? = null
+    @Volatile private var dataRevision = 0L
+
+    override suspend fun revision(): Long = dataRevision
 
     override suspend fun loadAll(): List<BusinessCardRecord> = requireCards().values.toList()
 
@@ -45,7 +48,22 @@ class DesktopFileDataSource(
             memo = value("memo", before.memo), updatedAt = updatedAt,
         )
         active[after.id] = after
+        dataRevision++
         BusinessCardUpdateResult(before, after)
+    }
+
+    override suspend fun upsert(card: BusinessCardRecord): Unit = mutex.withLock {
+        val active = cards ?: loadCards().also { cards = it }
+        active[card.id] = card
+        dataRevision++
+        Unit
+    }
+
+    override suspend fun delete(cardId: String): Boolean = mutex.withLock {
+        val active = cards ?: loadCards().also { cards = it }
+        val deleted = active.remove(cardId.trim()) != null
+        if (deleted) dataRevision++
+        deleted
     }
 
     private suspend fun requireCards(): LinkedHashMap<String, BusinessCardRecord> {

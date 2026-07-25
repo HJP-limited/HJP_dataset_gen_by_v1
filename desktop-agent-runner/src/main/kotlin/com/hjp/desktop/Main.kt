@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
             System.err.println(error.message)
             return@runBlocking
         }
+        if (config.debug) System.setProperty("hjp.search.debug", "true")
 
         if (config.mode == RunnerMode.MODEL_ONLY) {
             runModelOnly(config)

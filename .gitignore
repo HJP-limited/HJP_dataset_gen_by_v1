@@ -11,12 +11,17 @@
 .cxx
 local.properties
 *.litertlm
+*.onnx
+*.tflite
+*.task
+*.safetensors
 *.apk
 *.aab
 *.xnnpack_cache_*
 /models/
 /dist/
 /Gemma_4_E2B_0711/
+/Gemma_4_E2B_0725/
 *.log
 crash_full_log.txt
 

@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-APK_FILE="${1:-${HJP_DEVICE_APK_OUTPUT:-$PROJECT_DIR/dist/HJP-Gemma4-E2B-Device-arm64-debug.apk}}"
+APK_FILE="${1:-${HJP_DEVICE_APK_OUTPUT:-$PROJECT_DIR/dist/HJP-Gemma4-E2B-RyeongSearch-Device-arm64-debug.apk}}"
 SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-}}"
 ADB="${ADB:-${SDK_ROOT:+$SDK_ROOT/platform-tools/adb}}"
 PACKAGE_NAME="com.example.hjp"

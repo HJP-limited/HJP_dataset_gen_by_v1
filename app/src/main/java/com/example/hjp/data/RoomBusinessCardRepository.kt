@@ -3,18 +3,22 @@ package com.example.hjp.data
 import android.content.Context
 import com.hjp.tool.contact.BusinessCardRecord
 import com.hjp.tool.contact.BusinessCardUpdateResult
-import com.hjp.tool.contact.MutableBusinessCardRepository
+import com.hjp.tool.contact.MutableBusinessCardStore
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
+import java.util.concurrent.atomic.AtomicLong
 
 class RoomBusinessCardRepository(
     context: Context,
     private val dao: BusinessCardDao,
     private val json: Json = Json,
-) : MutableBusinessCardRepository {
+) : MutableBusinessCardStore {
     private val seedRepository = AssetBusinessCardRepository(context)
     private val seedMutex = Mutex()
+    private val dataRevision = AtomicLong(0L)
+
+    override suspend fun revision(): Long = dataRevision.get()
 
     override suspend fun loadAll(): List<BusinessCardRecord> {
         seedIfEmpty()
@@ -51,7 +55,21 @@ class RoomBusinessCardRepository(
             updatedAt = updatedAt,
         )
         dao.update(after.toEntity(json))
+        dataRevision.incrementAndGet()
         return BusinessCardUpdateResult(before, after)
+    }
+
+    override suspend fun upsert(card: BusinessCardRecord) {
+        seedIfEmpty()
+        dao.upsert(card.toEntity(json))
+        dataRevision.incrementAndGet()
+    }
+
+    override suspend fun delete(cardId: String): Boolean {
+        seedIfEmpty()
+        val deleted = dao.deleteById(cardId.trim()) > 0
+        if (deleted) dataRevision.incrementAndGet()
+        return deleted
     }
 
     private suspend fun seedIfEmpty() {
@@ -60,6 +78,7 @@ class RoomBusinessCardRepository(
             if (dao.count() > 0) return@withLock
             val seedCards = seedRepository.loadAll().map { it.toEntity(json) }
             dao.insertAll(seedCards)
+            dataRevision.incrementAndGet()
         }
     }
 

@@ -7,6 +7,32 @@ plugins를 `DefaultToolRegistry`에 한 번 등록한다. 모든 model-originate
 deterministic call은 동일한 `AgentKernel`의 schema validation, policy,
 execution, observation 경로를 통과한다.
 
+## Canonical contact retrieval
+
+```text
+search_contacts
+→ RyeongContactSearchBackend (ToolContract adapter)
+→ SearchLookupService / RetrievalService
+→ QueryAnalyzer
+→ LikeFallbackKeywordRetriever
+→ SemanticRetriever(LocalEmbeddingEngine)
+→ ReciprocalRankFusion(k=60)
+→ identity/lexical safety gate
+→ RagContextBuilder
+→ privacy-minimized RetrievalResponse
+```
+
+검색 결과는 card ID, 이름, 회사, 직책, 부서, 업종/태그, 지역과 score
+breakdown만 포함한다. 전화번호·이메일·상세 주소는 `get_contact(card_id,
+purpose)`가 Room 원본을 다시 조회할 때만 반환한다. Store revision이 바뀌면
+검색 snapshot과 local embedding을 재생성하므로 생성·수정·삭제 뒤 stale result를
+유지하지 않는다.
+
+`RoomFtsKeywordRetriever`와 `SqliteFts5KeywordRetriever`는 Ryeong 원본에서도
+placeholder였으므로 가져오지 않았다. 실제 동작하는 LIKE fallback을 production
+keyword binding으로 사용한다. 별도 EmbeddingGemma/TFLite/ONNX 및 neural runtime도
+추가하지 않았으며, semantic backend는 192차원 경량 `LocalEmbeddingEngine` 하나다.
+
 ```text
 RoutingFirstAndroidAgentModelGateway
 ├── LocalToolRoutingModelGateway

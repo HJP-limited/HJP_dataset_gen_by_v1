@@ -19,9 +19,11 @@ data class BusinessCardRecord(
     val updatedAt: String = "",
 )
 
-interface BusinessCardRepository {
+/** Original/detail store. Search indexing has one separate canonical Ryeong repository boundary. */
+interface BusinessCardStore {
     suspend fun loadAll(): List<BusinessCardRecord>
     suspend fun getById(cardId: String): BusinessCardRecord?
+    suspend fun revision(): Long = 0L
 }
 
 data class BusinessCardUpdateResult(
@@ -29,16 +31,44 @@ data class BusinessCardUpdateResult(
     val after: BusinessCardRecord,
 )
 
-interface MutableBusinessCardRepository : BusinessCardRepository {
+interface MutableBusinessCardStore : BusinessCardStore {
     suspend fun update(
         cardId: String,
         updates: Map<String, String>,
         clearFields: Set<String>,
         updatedAt: String,
     ): BusinessCardUpdateResult?
+
+    suspend fun upsert(card: BusinessCardRecord) {
+        error("Business card creation is not supported by this store")
+    }
+
+    suspend fun delete(cardId: String): Boolean {
+        error("Business card deletion is not supported by this store")
+    }
 }
 
-data class ContactSearchHit(val card: BusinessCardRecord, val score: Double)
+data class ContactScoreBreakdown(
+    val keyword: Double,
+    val semantic: Double,
+    val rrf: Double,
+)
+
+/** Privacy-minimized search projection. Contact details are intentionally absent. */
+data class ContactSearchHit(
+    val cardId: String,
+    val name: String,
+    val company: String,
+    val title: String,
+    val department: String,
+    val industry: String,
+    val location: String,
+    val tags: List<String>,
+    val score: Double,
+    val breakdown: ContactScoreBreakdown,
+    val matchedFields: List<String>,
+    val fallbackUsed: Boolean,
+)
 
 interface ContactSearchBackend {
     suspend fun search(query: String, limit: Int): List<ContactSearchHit>

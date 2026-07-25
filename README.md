@@ -4,6 +4,11 @@
 Android Emulator APK를 별도 variant로 제공한다. 모델·APK·평가 산출물은 Git에
 포함하지 않는다.
 
+명함 검색·조회는 Ryeong `llm-integration-work@0bfd236efa40987c8f0a620d256be9c099080274`
+구현을 canonical source로 사용한다. 0711의 lexical/cosine 직접 가산 경로는 제거했고,
+production 경로는 `QueryAnalyzer → keyword → local semantic → RRF(k=60) →
+safety gate → RagContextBuilder` 하나뿐이다.
+
 ## Android 실행 구조
 
 ```text
@@ -77,6 +82,7 @@ JDK 21과 Android SDK 36.1이 필요하다.
 
 ```bash
 ./gradlew test
+./gradlew :search-core:searchEvaluation
 ./gradlew :app:testEmulatorDebugUnitTest
 ./gradlew :app:assembleEmulatorDebug
 ./gradlew :app:lintEmulatorDebug
@@ -105,6 +111,9 @@ Desktop 평가 실행기는 Android APK dependency graph에 포함되지 않는�
 - [모델 없는 에뮬레이터 테스트](docs/EMULATOR_TEST.md)
 - [모델 준비와 SHA-256 검증](docs/MODEL_PREPARATION.md)
 - [운영 아키텍처](docs/ARCHITECTURE.md)
+- [Ryeong 검색 통합 내역](docs/RYEONG_SEARCH_INTEGRATION.md)
+- [검색 아키텍처](docs/SEARCH_ARCHITECTURE.md)
+- [합성 검색 평가](docs/SEARCH_EVALUATION.md)
 
 ## 모듈
 

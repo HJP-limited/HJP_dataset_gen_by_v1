@@ -11,19 +11,43 @@ import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 
 class RyeongContactSearchBackend(
-    private val repository: BusinessCardRepository,
+    private val store: BusinessCardStore,
     private val embeddingEngineFactory: () -> EmbeddingEngine = { LocalEmbeddingEngine() },
 ) : ContactSearchBackend {
     private val initMutex = Mutex()
     @Volatile private var service: SearchLookupService? = null
+    @Volatile private var indexedRevision: Long = Long.MIN_VALUE
     @Volatile private var initializationFailed = false
 
     override suspend fun search(query: String, limit: Int): List<ContactSearchHit> = withContext(Dispatchers.Default) {
-        requireService().search(query, limit).map { ContactSearchHit(it.card.toRecord(), it.score) }
+        val response = requireService().retrieve(query, limit)
+        trace(response)
+        response.results.map { result ->
+            with(result.card) {
+                ContactSearchHit(
+                    cardId = id,
+                    name = name,
+                    company = company,
+                    title = title,
+                    department = department,
+                    industry = industry,
+                    location = location,
+                    tags = tags,
+                    score = result.score,
+                    breakdown = ContactScoreBreakdown(
+                        keyword = result.breakdown.keywordScore,
+                        semantic = result.breakdown.semanticScore,
+                        rrf = result.rankFusionScore,
+                    ),
+                    matchedFields = result.matchedFields,
+                    fallbackUsed = response.fallbackUsed,
+                )
+            }
+        }
     }
 
     override suspend fun get(cardId: String): BusinessCardRecord? = withContext(Dispatchers.Default) {
-        repository.getById(cardId)
+        store.getById(cardId)
     }
 
     override fun engineName(): String = service?.engineName() ?: "ryeong-local"
@@ -31,17 +55,22 @@ class RyeongContactSearchBackend(
 
     fun invalidate() {
         service = null
+        indexedRevision = Long.MIN_VALUE
         initializationFailed = false
     }
 
     private suspend fun requireService(): SearchLookupService {
-        service?.let { return it }
+        val currentRevision = store.revision()
+        service?.takeIf { indexedRevision == currentRevision }?.let { return it }
         return initMutex.withLock {
-            service?.let { return@withLock it }
+            val lockedRevision = store.revision()
+            service?.takeIf { indexedRevision == lockedRevision }?.let { return@withLock it }
             try {
-                val cards = repository.loadAll()
-                require(cards.isNotEmpty()) { "Business card dataset is empty" }
-                SearchLookupService(cards.map { it.toRyeongCard() }, embeddingEngineFactory()).also { service = it }
+                val cards = store.loadAll()
+                SearchLookupService(cards.map { it.toSearchCard() }, embeddingEngineFactory()).also {
+                    service = it
+                    indexedRevision = store.revision()
+                }
             } catch (cancelled: CancellationException) {
                 throw cancelled
             } catch (error: Throwable) {
@@ -51,7 +80,7 @@ class RyeongContactSearchBackend(
         }
     }
 
-    private fun BusinessCardRecord.toRyeongCard() = BusinessCard(
+    private fun BusinessCardRecord.toSearchCard() = BusinessCard(
         id,
         name,
         nameEn,
@@ -60,26 +89,27 @@ class RyeongContactSearchBackend(
         department,
         industry,
         location,
-        listOf(phone, mobile).filter(String::isNotBlank).joinToString(" "),
+        phone,
+        mobile,
         email,
-        listOf(address, website).filter(String::isNotBlank).joinToString(" "),
+        address,
+        website,
         memo,
         tags,
+        0L,
+        runCatching { java.time.Instant.parse(updatedAt).toEpochMilli() }.getOrDefault(0L),
+        "",
+        "room",
+        true,
     )
 
-    private fun BusinessCard.toRecord() = BusinessCardRecord(
-        id = id,
-        name = name,
-        nameEn = nameEn,
-        company = company,
-        title = title,
-        department = department,
-        industry = industry,
-        location = location,
-        phone = phone,
-        email = email,
-        address = address,
-        memo = memo,
-        tags = tags,
-    )
+    private fun trace(response: com.hjp.searchlookup.RetrievalResponse) {
+        if (System.getProperty("hjp.search.debug") != "true") return
+        System.err.println("[SEARCH_BACKEND] ryeong")
+        System.err.println("[QUERY_ANALYSIS] tokens=${response.queryAnalysis.tokens.size} strict_identity=${response.queryAnalysis.strictIdentityQuery}")
+        System.err.println("[KEYWORD_RESULTS] count=${response.keywordResultCount}")
+        System.err.println("[SEMANTIC_RESULTS] count=${response.semanticResultCount} engine=${response.embeddingModelName}")
+        System.err.println("[RRF_RESULTS] count=${response.results.size} reranker=${response.rerankerName}")
+        System.err.println("[RAG_CONTEXT] cards=${response.results.take(5).size} contact_details_included=false")
+    }
 }

@@ -29,7 +29,20 @@ import kotlinx.serialization.json.intOrNull
 import kotlinx.serialization.json.put
 
 data class SearchContactsInput(val query: String, val limit: Int)
-data class SearchContactItem(val cardId: String, val name: String, val company: String, val title: String, val location: String, val score: Double)
+data class SearchContactItem(
+    val cardId: String,
+    val name: String,
+    val company: String,
+    val title: String,
+    val department: String,
+    val industry: String,
+    val location: String,
+    val tags: List<String>,
+    val score: Double,
+    val scoreBreakdown: ContactScoreBreakdown,
+    val matchedFields: List<String>,
+    val fallbackUsed: Boolean,
+)
 data class SearchContactsOutput(val results: List<SearchContactItem>, val engine: String)
 data class GetContactInput(val cardId: String, val purpose: String)
 data class GetContactOutput(val card: BusinessCardRecord)
@@ -61,7 +74,16 @@ private object SearchOutputCodec : ToolOutputCodec<SearchContactsOutput> {
         put("results", buildJsonArray {
             value.results.forEach { item -> add(buildJsonObject {
                 put("card_id", item.cardId); put("name", item.name); put("company", item.company)
-                put("title", item.title); put("location", item.location); put("score", item.score)
+                put("title", item.title); put("department", item.department)
+                put("industry", item.industry); put("location", item.location)
+                put("tags", JsonArray(item.tags.map(::JsonPrimitive))); put("score", item.score)
+                put("score_breakdown", buildJsonObject {
+                    put("keyword", item.scoreBreakdown.keyword)
+                    put("semantic", item.scoreBreakdown.semantic)
+                    put("rrf", item.scoreBreakdown.rrf)
+                })
+                put("matched_fields", JsonArray(item.matchedFields.map(::JsonPrimitive)))
+                put("fallback_used", item.fallbackUsed)
             }) }
         })
         put("count", value.results.size)
@@ -157,9 +179,13 @@ class SearchContactsPlugin(private val backend: ContactSearchBackend) :
 
     override suspend fun executeTyped(input: SearchContactsInput, request: ToolRequest, context: ToolExecutionContext): TypedToolResult<SearchContactsOutput> {
         val hits = backend.search(input.query, input.limit)
-        val output = SearchContactsOutput(hits.map { hit -> with(hit.card) {
-            SearchContactItem(id, name, company, title, location, hit.score)
-        } }, backend.engineName())
+        val output = SearchContactsOutput(hits.map { hit ->
+            SearchContactItem(
+                hit.cardId, hit.name, hit.company, hit.title, hit.department, hit.industry,
+                hit.location, hit.tags, hit.score, hit.breakdown, hit.matchedFields,
+                hit.fallbackUsed,
+            )
+        }, backend.engineName())
         val ids = buildJsonObject { put("card_ids", JsonArray(output.results.map { JsonPrimitive(it.cardId) })) }
         return TypedToolResult.Success(output, sessionUpdates = listOf(
             SessionStateUpdate(SessionStateKey("contact", "last_search_results"), ContractVersion(1, 0), ids)
@@ -187,7 +213,7 @@ class GetContactPlugin(private val backend: ContactSearchBackend) :
 }
 
 class UpdateBusinessCardPlugin(
-    private val repository: MutableBusinessCardRepository,
+    private val repository: MutableBusinessCardStore,
     private val clockMillis: () -> Long = System::currentTimeMillis,
     private val onUpdated: (BusinessCardUpdateResult) -> Unit = { },
 ) : TypedToolPlugin<UpdateBusinessCardInput, UpdateBusinessCardOutput>(
@@ -237,4 +263,4 @@ private fun BusinessCardRecord.toJson(): JsonObject = buildJsonObject {
     put("tags", JsonArray(tags.map(::JsonPrimitive))); put("updated_at", updatedAt)
 }
 
-private fun MutableBusinessCardRepository.configurationAvailable(): Boolean = true
+private fun MutableBusinessCardStore.configurationAvailable(): Boolean = true

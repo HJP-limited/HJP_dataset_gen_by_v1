@@ -16,7 +16,7 @@ class ContactPluginsTest {
     fun `search result omits phone and email while get returns detail`() = runBlocking {
         val card = BusinessCardRecord("C001", "김지원", company = "비전글로벌", title = "대표",
             industry = "finance", location = "서울", phone = "010-0000", email = "test@example.com", tags = listOf("투자"))
-        val repository = object : BusinessCardRepository {
+        val repository = object : BusinessCardStore {
             override suspend fun loadAll() = listOf(card)
             override suspend fun getById(cardId: String) = card.takeIf { it.id == cardId }
         }
@@ -40,7 +40,7 @@ class ContactPluginsTest {
     @Test
     fun `update business card mutates repository and returns before and after`() = runBlocking {
         var card = BusinessCardRecord("C001", "김지원", company = "비전글로벌", memo = "old")
-        val repository = object : MutableBusinessCardRepository {
+        val repository = object : MutableBusinessCardStore {
             override suspend fun loadAll() = listOf(card)
             override suspend fun getById(cardId: String) = card.takeIf { it.id == cardId }
             override suspend fun update(

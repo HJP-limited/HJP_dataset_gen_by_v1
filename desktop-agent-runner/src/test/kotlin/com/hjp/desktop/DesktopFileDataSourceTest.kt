@@ -1,6 +1,7 @@
 package com.hjp.desktop
 
 import com.hjp.tool.contact.RyeongContactSearchBackend
+import com.hjp.tool.contact.BusinessCardRecord
 import java.io.File
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -40,9 +41,9 @@ class DesktopFileDataSourceTest {
             cards.none { it.name == candidate }
         }
 
-        assertEquals(existing.id, backend.search(existing.name, 5).first().card.id)
+        assertEquals(existing.id, backend.search(existing.name, 5).first().cardId)
         assertTrue(backend.search(missing, 5).isEmpty())
-        if (existing.company.isNotBlank()) assertTrue(backend.search(existing.company, 5).any { it.card.id == existing.id })
+        if (existing.company.isNotBlank()) assertTrue(backend.search(existing.company, 5).any { it.cardId == existing.id })
         val semanticQuery = cards.firstOrNull { it.title.contains("엔지니어") }?.let { "AI 개발자" } ?: existing.title
         assertTrue(backend.search(semanticQuery, 5).isNotEmpty())
         assertTrue(backend.search("!@#$%^&*()", 5).isEmpty())
@@ -59,7 +60,7 @@ class DesktopFileDataSourceTest {
         )
         val hits = RyeongContactSearchBackend(DesktopFileDataSource(file)).search("홍길동", 5)
 
-        assertEquals(setOf("A1", "A2"), hits.map { it.card.id }.toSet())
+        assertEquals(setOf("A1", "A2"), hits.map { it.cardId }.toSet())
     }
 
     @Test
@@ -73,6 +74,27 @@ class DesktopFileDataSourceTest {
 
         assertEquals("새회사", result?.after?.company)
         assertEquals(original, file.readText())
+    }
+
+    @Test
+    fun `create update delete automatically refresh the Ryeong search snapshot`() = runBlocking {
+        val file = temporaryFolder.newFile("crud_cards.json")
+        file.writeText("""[{"id":"A1","name":"홍길동","company":"전회사"}]""")
+        val source = DesktopFileDataSource(file)
+        val backend = RyeongContactSearchBackend(source)
+
+        assertEquals("A1", backend.search("전회사", 5).single().cardId)
+
+        source.update("A1", mapOf("company" to "새회사"), emptySet(), "now")
+        assertTrue(backend.search("전회사", 5).isEmpty())
+        assertEquals("A1", backend.search("새회사", 5).single().cardId)
+
+        source.upsert(BusinessCardRecord("A2", "김하늘", company = "신규회사"))
+        assertEquals("A2", backend.search("신규회사", 5).single().cardId)
+
+        assertTrue(source.delete("A1"))
+        assertTrue(backend.search("홍길동", 5).isEmpty())
+        assertEquals("신규회사", backend.get("A2")?.company)
     }
 
     private fun realAsset(): File {

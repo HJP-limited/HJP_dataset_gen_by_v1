@@ -20,6 +20,12 @@ interface BusinessCardDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertAll(cards: List<BusinessCardEntity>)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsert(card: BusinessCardEntity)
+
     @Update
     suspend fun update(card: BusinessCardEntity)
+
+    @Query("DELETE FROM business_cards WHERE id = :id")
+    suspend fun deleteById(id: String): Int
 }

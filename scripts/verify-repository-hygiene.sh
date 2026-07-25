@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_DIR"
 
-FORBIDDEN_FILES="$(git ls-files | grep -E '(^|/)(build|\.gradle|\.kotlin)/|\.litertlm$|\.apk$|\.aab$|\.xnnpack_cache_|(^|/)local\.properties$' || true)"
+FORBIDDEN_FILES="$(git ls-files | grep -E '(^|/)(build|\.gradle|\.kotlin)/|\.(litertlm|onnx|tflite|task|safetensors|apk|aab)$|\.xnnpack_cache_|(^|/)local\.properties$' || true)"
 if [[ -n "$FORBIDDEN_FILES" ]]; then
   echo "Forbidden generated or binary files are tracked:" >&2
   echo "$FORBIDDEN_FILES" >&2

@@ -47,12 +47,26 @@ internal val SEARCH_OUTPUT_SCHEMA = objectSchema(listOf("results", "count", "eng
         putJsonObject("items") {
             put("type", "object")
             putJsonObject("properties") {
-                listOf("card_id", "name", "company", "title", "location").forEach {
+                listOf("card_id", "name", "company", "title", "department", "industry", "location").forEach {
                     put(it, stringProperty(it))
                 }
+                putJsonObject("tags") { put("type", "array"); putJsonObject("items") { put("type", "string") } }
                 putJsonObject("score") { put("type", "number") }
+                putJsonObject("score_breakdown") {
+                    put("type", "object")
+                    putJsonObject("properties") {
+                        listOf("keyword", "semantic", "rrf").forEach {
+                            putJsonObject(it) { put("type", "number") }
+                        }
+                    }
+                }
+                putJsonObject("matched_fields") { put("type", "array"); putJsonObject("items") { put("type", "string") } }
+                putJsonObject("fallback_used") { put("type", "boolean") }
             }
-            put("required", JsonArray(listOf("card_id", "name", "company", "title", "location", "score").map(::JsonPrimitive)))
+            put("required", JsonArray(listOf(
+                "card_id", "name", "company", "title", "department", "industry", "location",
+                "tags", "score", "score_breakdown", "matched_fields", "fallback_used",
+            ).map(::JsonPrimitive)))
         }
     }
     putJsonObject("count") { put("type", "integer") }

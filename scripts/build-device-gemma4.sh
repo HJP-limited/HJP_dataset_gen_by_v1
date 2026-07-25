@@ -7,7 +7,7 @@ MODEL_FILE="${HJP_GEMMA4_MODEL:-}"
 EXPECTED_NAME="gemma-4-E2B-it.litertlm"
 EXPECTED_SIZE="2588147712"
 EXPECTED_SHA256="181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c"
-OUTPUT_APK="${HJP_DEVICE_APK_OUTPUT:-$PROJECT_DIR/dist/HJP-Gemma4-E2B-Device-arm64-debug.apk}"
+OUTPUT_APK="${HJP_DEVICE_APK_OUTPUT:-$PROJECT_DIR/dist/HJP-Gemma4-E2B-RyeongSearch-Device-arm64-debug.apk}"
 GRADLE_APK="$PROJECT_DIR/app/build/outputs/apk/device/standalone/app-device-standalone.apk"
 
 [[ -n "$MODEL_FILE" ]] || {
@@ -46,4 +46,14 @@ cd "$PROJECT_DIR"
 [[ -f "$GRADLE_APK" ]] || { echo "Built APK not found: $GRADLE_APK" >&2; exit 70; }
 mkdir -p "$(dirname "$OUTPUT_APK")"
 cp "$GRADLE_APK" "$OUTPUT_APK"
+
+MODEL_COUNT="$(unzip -Z1 "$OUTPUT_APK" | grep -Ec '\.litertlm$' || true)"
+[[ "$MODEL_COUNT" == "1" ]] || {
+  echo "Device APK must contain exactly one .litertlm; found $MODEL_COUNT" >&2
+  exit 65
+}
+if unzip -Z1 "$OUTPUT_APK" | grep -Eqi 'gemma3|functiongemma|xnnpack_cache_|\.(onnx|tflite|task|safetensors)$'; then
+  echo "Device APK contains a forbidden legacy model, embedding model, or cache." >&2
+  exit 65
+fi
 echo "Device APK: $OUTPUT_APK"

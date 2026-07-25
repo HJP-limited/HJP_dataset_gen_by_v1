@@ -2,7 +2,7 @@ package com.example.hjp.data
 
 import android.content.Context
 import com.hjp.tool.contact.BusinessCardRecord
-import com.hjp.tool.contact.BusinessCardRepository
+import com.hjp.tool.contact.BusinessCardStore
 import com.hjp.tool.contact.BusinessCardJsonCodec
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
@@ -14,7 +14,7 @@ class AssetBusinessCardRepository(
     context: Context,
     private val assetPath: String = "cards/business_cards.json",
     json: Json = Json { ignoreUnknownKeys = true },
-) : BusinessCardRepository {
+) : BusinessCardStore {
     private val appContext = context.applicationContext
     private val mutex = Mutex()
     @Volatile private var cached: List<BusinessCardRecord>? = null
