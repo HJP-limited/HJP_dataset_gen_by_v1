@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "name": "current-hjp-agent",
+      "path": "models/hjp-agent.litertlm",
+      "backend": "cpu"
+    },
+    {
+      "name": "another-local-model",
+      "path": "/absolute/path/to/another-model.litertlm",
+      "backend": "gpu"
+    }
+  ]
+}

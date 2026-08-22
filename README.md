@@ -16,6 +16,8 @@ Android 온디바이스 명함 AI 에이전트의 2026-08-22 스냅샷. **성능
 | 동결 평가 입력 | `app/src/test/resources/ryeong/` — 시나리오 130개, 명함 1,000장 |
 | 시나리오 exporter | `tools/ryeong_multiturn_v4` (upstream `1caec3a2`), `tools/ryeong_multiturn_v5` (upstream `9f359c7`) |
 | 검색 벤치마크 | `tools/ryeong_search_benchmark` |
+| 단일턴 에이전트 평가 | `tools/agent_eval` — 스크립트·데이터셋·fixture (`results/`와 sealed held-out 정답지는 제외) |
+| LiteRT-LM tool-calling 벤치마크 | `tools/litertlm_benchmark` — 스크립트·리포트 (`.venv`와 `results/`는 제외) |
 | 평가 증거·freeze manifest | `integration_evidence/evaluation`, `integration_evidence/upstream`, `integration_evidence/production_eval` |
 
 ## 2. 일부러 뺀 것
@@ -23,6 +25,12 @@ Android 온디바이스 명함 AI 에이전트의 2026-08-22 스냅샷. **성능
 * **모델 파일 전부** — `.litertlm`(최대 2.5GB), `embeddinggemma-300m.tflite`(179MB), `sentencepiece.model`.
   GitHub 파일 크기 한도를 넘고, 저장소가 무거워진다. 받는 방법은 §5에 있다.
 * `build/` 산출물, APK, 스냅샷 디렉터리, 과거 사이클 번들 — 재생성 가능하거나 이력일 뿐이다.
+* 평가 도구의 **과거 실행 산출물** — `tools/agent_eval/results/`(46MB), `tools/litertlm_benchmark/results/`(13MB).
+  도구는 올렸으니 다시 돌리면 나온다.
+* `tools/litertlm_benchmark/.venv/`(91MB) — 커밋할 것이 아니다. 그 README가 직접 만드는 절차를 적어 뒀다.
+* `tools/agent_eval/data/.sealed/held_out_reference.jsonl` — **held-out 정답지**다.
+  그 README가 "final evaluator만 읽는다"고 못박고 있어, 눈에 띄는 곳에 두면 held-out 성질이 깨진다.
+  최종 평가를 돌릴 사람에게 따로 전달한다.
 
 모델 없이도 **아래 1~3번 평가는 그대로 돌아간다.** 4번만 모델이 필요하다.
 

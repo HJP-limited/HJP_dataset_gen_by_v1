@@ -1,0 +1,39 @@
+{
+  "benchmark_version": "agent-eval-v1",
+  "splits": {
+    "development": {
+      "count": 71,
+      "input": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung/tools/agent_eval/data/development.jsonl"
+    },
+    "validation": {
+      "count": 71,
+      "input": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung/tools/agent_eval/data/validation.jsonl"
+    },
+    "held_out": {
+      "count": 71,
+      "input": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung/tools/agent_eval/data/held_out_inputs.jsonl"
+    }
+  },
+  "files": {
+    ".sealed/held_out_reference.jsonl": {
+      "count": 71,
+      "sha256": "6a13b63528c0ef0d7a4d7473a28465a943c253f32a003c32424b43aa154f8c2b"
+    },
+    "all_inputs.jsonl": {
+      "count": 213,
+      "sha256": "b548afc45045e23803b2a20728856fc9c731f69756191b70c54c5be40b9a0f38"
+    },
+    "development.jsonl": {
+      "count": 71,
+      "sha256": "44c7e59673ebbc353f2504b48865960b7afcd55ce67b7af41cb2e7e3771dda0a"
+    },
+    "held_out_inputs.jsonl": {
+      "count": 71,
+      "sha256": "e2eecf32e810a4e7fb146a6c6521c652eaab495bc8e046e4bb8c8fa47df0d00d"
+    },
+    "validation.jsonl": {
+      "count": 71,
+      "sha256": "5e939f4e1791b4418bb3168a0159a8b6743171c46e20327c63e2cd46bb8729e0"
+    }
+  }
+}
