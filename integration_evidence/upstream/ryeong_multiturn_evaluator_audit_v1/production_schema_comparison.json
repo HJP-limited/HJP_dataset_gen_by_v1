@@ -1,0 +1,355 @@
+{
+  "status": "ONE-SIDED - the production side is fully documented; every reference-side cell is UNKNOWN because the reference repository is absent",
+  "production_contract_files": [
+    {
+      "name": "ConversationMemory",
+      "path": "agent-contract/src/main/kotlin/com/hjp/agent/contract/ConversationMemory.kt",
+      "sha256": "07547cee21e8526b7e4c38c19b367ed789e97f4e2d4e012ad2fa456158036e2a",
+      "exists": true
+    },
+    {
+      "name": "DialogueAct",
+      "path": "agent-contract/src/main/kotlin/com/hjp/agent/contract/DialogueAct.kt",
+      "sha256": "92a9a67f70c900bcfa118ade2f1180d083f6088f85732b49f62b20c683e29974",
+      "exists": true
+    },
+    {
+      "name": "AgentSession",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/AgentSession.kt",
+      "sha256": "4fdcf0167520b0daf12a8f448903c99841aec5feb8fb1f62c1b2c9924eec31e5",
+      "exists": true
+    },
+    {
+      "name": "ModelContextSelector",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/ModelContextSelector.kt",
+      "sha256": "89a8b88d46a136eb279283995e97b0c47e9a8d4e7a2f742c52d95b930cfc08bc",
+      "exists": true
+    },
+    {
+      "name": "DeterministicTurnRouter",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/DeterministicTurnRouter.kt",
+      "sha256": "da4476dad41ddde786c08da8b57a50c563dbaf38b827df9d7d08e85ff57d6608",
+      "exists": true
+    },
+    {
+      "name": "AgentKernel",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/AgentKernel.kt",
+      "sha256": "93c2ce3eb7f35b43823b08ccd96efdb4c6a5a475e06e34cc8e8766f7c484773f",
+      "exists": true
+    },
+    {
+      "name": "StructuredAgentKernel",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/StructuredAgentKernel.kt",
+      "sha256": "7757a65e0772c91f1d351ac459182d4701fb69436ce51156379caf14e46b2afc",
+      "exists": true
+    },
+    {
+      "name": "DefaultToolRegistry",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/DefaultToolRegistry.kt",
+      "sha256": "31b5cf25457c9e3430d6b489f68a65a91879f42f715ca323eedfbaa8450bcf7b",
+      "exists": true
+    },
+    {
+      "name": "TurnOutcomeClassifier",
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/TurnOutcomeClassifier.kt",
+      "sha256": "f56fcad4f7b9925d6c085f3e2141b97b48594ed1b054ca9f6c4633374934dd49",
+      "exists": true
+    }
+  ],
+  "production_evaluation_sources": [
+    {
+      "name": "MultiturnSpec / TurnSpec",
+      "path": "app/src/test/java/com/example/hjp/eval/MultiturnSpec.kt",
+      "sha256": "62f614141939756925828fcc87a52deae68bc39d124f297d02612473625ed3c7",
+      "exists": true
+    },
+    {
+      "name": "StrictMultiturnEvaluator",
+      "path": "app/src/test/java/com/example/hjp/eval/StrictMultiturnEvaluator.kt",
+      "sha256": "94223b14f03794fac20bbf9ca8156e113ee2919404eb7adec630e94b1b486c78",
+      "exists": true
+    },
+    {
+      "name": "MultiturnScenarioHarness",
+      "path": "app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt",
+      "sha256": "43cef1130e06d10e1c16f9fa6bc747f7524032d448c090c8269f6435347328e4",
+      "exists": true
+    },
+    {
+      "name": "JsonArgumentComparator",
+      "path": "app/src/test/java/com/example/hjp/eval/args/JsonArgumentComparator.kt",
+      "sha256": "ada4f70434beb615ee1e9a2d461d783506e4815b67bfc3f2e03775c1d36b6579",
+      "exists": true
+    },
+    {
+      "name": "EvaluationClock",
+      "path": "app/src/test/java/com/example/hjp/eval/clock/EvaluationClock.kt",
+      "sha256": "88aba49d5b3781baeefa71c17034a7c4f89e210ac4e918562725b3b0bd717ccd",
+      "exists": true
+    },
+    {
+      "name": "OutcomeContract",
+      "path": "app/src/test/java/com/example/hjp/eval/contract/OutcomeContract.kt",
+      "sha256": "754619edc9608d9a608bf3fc5e4cf4279b5e4f2f24c2c461c626b458bed8304a",
+      "exists": true
+    },
+    {
+      "name": "EvalOutputPolicy",
+      "path": "app/src/test/java/com/example/hjp/eval/EvalOutputPolicy.kt",
+      "sha256": "67176b6a91a8a82951eba7bc07ea2884b7189cee5066fe71c754b7f0f1410ea7",
+      "exists": true
+    }
+  ],
+  "tools": {
+    "registered_in_DefaultToolRegistry_per_CLAUDE_md": [
+      "search_contacts",
+      "get_contact",
+      "create_calendar_event",
+      "open_compose",
+      "update_business_card",
+      "get_current_datetime"
+    ],
+    "count": 6,
+    "name_differences_vs_reference": "UNKNOWN - the reference evaluator is absent",
+    "semantics_that_must_not_be_mistranslated": [
+      "open_compose opens an external compose screen; it never asserts that a message was sent",
+      "create_calendar_event opens the calendar composer; it never asserts that an event was saved",
+      "update_business_card requires a confirmation step",
+      "get_contact must be re-called by card_id immediately before acting, because selectedContact carries no email or phone"
+    ]
+  },
+  "comparison_rows": [
+    {
+      "concept": "case id",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "MultiturnSpec.id: String",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "UNDETERMINED",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "category",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "MultiturnSpec.primaryCategory: String (single-valued) + secondaryTags: List<String>",
+      "conversion_needed": "YES - taxonomies differ (see category_distribution.json); an explicit name mapping is required",
+      "information_loss": "possible - the past ryeong taxonomy overlaps categories (honorific_cases overlaps focus_switch) while primaryCategory is single-valued by design so a case counts once in the denominator",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "initial state / fixture",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "MultiturnSpec.cards: List<BusinessCardRecord> (defaults to MultiturnScenarioHarness.DEFAULT_CARDS)",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "UNDETERMINED",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "turn sequence",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "MultiturnSpec.turns: List<TurnSpec>, TurnSpec.user: String",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "UNDETERMINED",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "expected route / dialogue act",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectedAct: DialogueAct?",
+      "production_enum": [
+        "CONTACT_SEARCH",
+        "CONTACT_DETAIL",
+        "CONTACT_SELECTION",
+        "ACTION_COMPOSE",
+        "ACTION_CALENDAR",
+        "ACTION_UPDATE",
+        "DATETIME_QUERY",
+        "HISTORY_QUESTION",
+        "FAILURE_QUESTION",
+        "QUOTED_RECALL",
+        "GENERAL_INFORMATION",
+        "CORRECTION",
+        "CLARIFICATION_REQUIRED",
+        "UNSUPPORTED",
+        "OTHER"
+      ],
+      "conversion_needed": "YES if the reference uses free-text route labels",
+      "information_loss": "UNDETERMINED",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "expected tool sequence",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectedTools: List<String> - exact ordered trace for the turn",
+      "conversion_needed": "YES if the reference expresses tools as a set rather than an ordered list",
+      "information_loss": "a set-to-list conversion cannot recover order; the adapter must not invent one",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "forbidden tool",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.forbiddenTools: Set<String>",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "none",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "expected tool arguments",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectedArgs: Map<String, Map<String, String>> (tool -> key -> value)",
+      "conversion_needed": "LIKELY - the production map is flat String->String per tool, so nested objects and arrays in a reference case cannot be expressed directly",
+      "information_loss": "YES for nested or array-valued arguments",
+      "adapter_can_compute": "PARTIAL - eval/args/JsonArgumentComparator.kt already compares JSON arguments recursively and is the right place to carry nesting",
+      "production_change_needed": "NO for production code; the evaluation-side TurnSpec may need a typed argument field"
+    },
+    {
+      "concept": "expected card id",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectedSelectedCardId / expectedSelectedNotCardId / expectedCandidateIds",
+      "card_id_type_in_production": "String (stable card ID, e.g. RF001)",
+      "conversion_needed": "YES if the reference uses integer IDs",
+      "information_loss": "none in the String direction",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "expected focus state",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "ConversationMemory.selectedContact: ContactReference? and candidateContacts: List<ContactCandidate>",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "note - selectedContact deliberately carries no email or phone; the kernel re-reads the card by card_id before acting",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "no focus / empty",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectNoSelectedContact: Boolean",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "the adapter must distinguish 'null focus' from 'field not asserted'; a missing reference field must map to 'not asserted', never to expectNoSelectedContact=true",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "ambiguity",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "DialogueAct.CLARIFICATION_REQUIRED + TurnSpec.expectedCandidateIds",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "UNDETERMINED",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "typed outcome",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectedOutcome: TurnOutcomeType?",
+      "production_enum": [
+        "ANSWER_FROM_HISTORY",
+        "GENERAL_INFORMATION",
+        "CONTACT_SELECTED",
+        "CONTACT_DETAIL_SHOWN",
+        "CLARIFICATION_REQUIRED",
+        "UPDATE_COMPLETED",
+        "COMPOSE_OPENED",
+        "CALENDAR_OPENED",
+        "UNSUPPORTED",
+        "FAILED"
+      ],
+      "conversion_needed": "LIKELY - a pass/fail reference has no typed-outcome axis",
+      "information_loss": "the reverse direction loses everything: a boolean cannot reconstruct a typed outcome",
+      "adapter_can_compute": "NO - if the reference has no outcome field the adapter must leave it unasserted rather than guess",
+      "production_change_needed": false
+    },
+    {
+      "concept": "side-effect count",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.expectedSideEffects: Int (compose + calendar screens opened this turn)",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "CRITICAL SEMANTIC DIFFERENCE - production counts SCREENS OPENED, never 'message sent' or 'event saved'. A reference field meaning 'sent' must not be mapped onto it.",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "expected final response",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.answerMustContain / answerMustNotContain: List<String> (substring assertions, not full-text equality)",
+      "conversion_needed": "YES if the reference stores an exact expected response string",
+      "information_loss": "an exact-match reference expectation cannot be enforced as substring containment without weakening it - that would be relaxing the expectation and is forbidden",
+      "adapter_can_compute": "PARTIAL",
+      "production_change_needed": false
+    },
+    {
+      "concept": "session reset / new conversation",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "TurnSpec.resetBefore: Boolean; production side is AgentSession.generation + TurnLease",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "none",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "memory delta",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "ConversationMemory (schemaVersion 2): topic, confirmedFacts, preferences, constraints, corrections, actions, selectedContact, candidateContacts, contactMentions",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "UNDETERMINED",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "contact provenance",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "ContactReference.provenance: MemoryProvenance + selection: ContactSelectionBasis + confirmedAtEpochMillis",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "a reference without provenance cannot exercise fail-closed target generation",
+      "adapter_can_compute": false,
+      "production_change_needed": false
+    },
+    {
+      "concept": "clock / timestamp",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "app/src/test/java/com/example/hjp/eval/clock/EvaluationClock.kt (deterministic, has a reproducibility test)",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "none",
+      "adapter_can_compute": true,
+      "production_change_needed": false
+    },
+    {
+      "concept": "latency",
+      "reference_field": "UNKNOWN - the reference evaluator is absent",
+      "reference_type": "UNKNOWN - the reference evaluator is absent",
+      "production_field": "NOT IMPLEMENTED as a gate in the Kotlin evaluation sources",
+      "conversion_needed": "UNDETERMINED",
+      "information_loss": "n/a",
+      "adapter_can_compute": true,
+      "production_change_needed": "NO - the adapter can time turns without touching production"
+    }
+  ],
+  "rows_with_a_known_reference_side": 0,
+  "conclusion": "the comparison table cannot be completed in either direction until the reference evaluator is supplied; what is fixed here is the production half, which will not need to be re-derived later"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED",
+  "reason": "the reference repository named in the task does not exist on this machine",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searched": "see reference_file_inventory.json for the exact searches and their negative results",
+  "not_substituted": "no local file was treated as a stand-in for the original evaluator",
+  "reference_models_or_fixtures": "NONE FOUND - the reference repository is absent",
+  "locally_present_related_resources": [
+    {
+      "path": "app/src/main/assets/cards/business_cards.json",
+      "role": "current production business card fixture",
+      "exists": true
+    },
+    {
+      "path": "tools/ryeong_search_benchmark/fixtures/cards_test50.json",
+      "role": "50-card search benchmark fixture in this repository",
+      "exists": true
+    }
+  ],
+  "network_required": "UNKNOWN",
+  "no_model_was_downloaded": true
+}

@@ -1,0 +1,152 @@
+{
+  "version": "v1",
+  "supersedes": "integration_evidence/upstream/ryeong_multiturn_evaluator_reacquisition_v2/ADAPTER_TRANSLATION_MATRIX.md (analysis) — this is the implemented contract",
+  "entries": [
+    {
+      "concept": "route: search",
+      "kind": "DERIVED_FROM_PRODUCTION_TRACE",
+      "rationale": "DialogueAct.CONTACT_SEARCH"
+    },
+    {
+      "concept": "route: followup",
+      "kind": "DERIVED_FROM_PRODUCTION_TRACE",
+      "rationale": "CONTACT_DETAIL or CONTACT_SELECTION"
+    },
+    {
+      "concept": "route: empty_result",
+      "kind": "NOT_SCORABLE",
+      "rationale": "upstream puts result-count in the route; production keeps the act and expresses emptiness in the outcome"
+    },
+    {
+      "concept": "route: abstain",
+      "kind": "NOT_SCORABLE",
+      "rationale": "one upstream route spans CLARIFICATION_REQUIRED and UNSUPPORTED"
+    },
+    {
+      "concept": "route: context_answer",
+      "kind": "NOT_SCORABLE",
+      "rationale": "spans ANSWER_FROM_HISTORY and QUOTED_RECALL"
+    },
+    {
+      "concept": "route: filtered_count",
+      "kind": "NOT_SCORABLE",
+      "rationale": "production has no aggregate-count route"
+    },
+    {
+      "concept": "route: total_count",
+      "kind": "NOT_SCORABLE",
+      "rationale": "production has no aggregate-count route"
+    },
+    {
+      "concept": "route: self_reference",
+      "kind": "NOT_SCORABLE",
+      "rationale": "production has no equivalent route"
+    },
+    {
+      "concept": "current DialogueAct",
+      "kind": "DERIVED_FROM_PRODUCTION_TRACE",
+      "rationale": "observed from the production router, not re-derived"
+    },
+    {
+      "concept": "current typed outcome",
+      "kind": "NOT_APPLICABLE",
+      "rationale": "upstream has no outcome axis"
+    },
+    {
+      "concept": "upstream focus",
+      "kind": "DIRECT",
+      "rationale": "ConversationMemory.selectedContact.cardId"
+    },
+    {
+      "concept": "current selected contact / card id",
+      "kind": "DIRECT",
+      "rationale": "same"
+    },
+    {
+      "concept": "field filter: names",
+      "kind": "NOT_SCORABLE",
+      "rationale": "search_contacts takes one free-text query; the plan is package-private in search-core"
+    },
+    {
+      "concept": "field filter: titles",
+      "kind": "NOT_SCORABLE",
+      "rationale": "same seam"
+    },
+    {
+      "concept": "field filter: locations",
+      "kind": "NOT_SCORABLE",
+      "rationale": "same seam"
+    },
+    {
+      "concept": "previous card ids",
+      "kind": "DERIVED_FROM_PRODUCTION_TRACE",
+      "rationale": "previous turn's observed ranking"
+    },
+    {
+      "concept": "context / follow-up",
+      "kind": "DERIVED_FROM_PRODUCTION_TRACE",
+      "rationale": "CONTACT_DETAIL observed after a search established focus"
+    },
+    {
+      "concept": "self reference",
+      "kind": "NOT_SCORABLE",
+      "rationale": "no production route"
+    },
+    {
+      "concept": "abstention",
+      "kind": "NOT_SCORABLE",
+      "rationale": "one-to-many"
+    },
+    {
+      "concept": "filtered count",
+      "kind": "NOT_SCORABLE",
+      "rationale": "no production route"
+    },
+    {
+      "concept": "total count",
+      "kind": "NOT_SCORABLE",
+      "rationale": "no production route"
+    },
+    {
+      "concept": "card candidates",
+      "kind": "DIRECT",
+      "rationale": "observed ranking"
+    },
+    {
+      "concept": "top-5",
+      "kind": "DIRECT",
+      "rationale": "observed ranking truncated at 5 for scoring only; the stored ranking keeps its real length"
+    },
+    {
+      "concept": "generated answer",
+      "kind": "NOT_SCORABLE",
+      "rationale": "ACTUAL_MODEL_NOT_EXECUTED"
+    },
+    {
+      "concept": "no-card suppression",
+      "kind": "NOT_SCORABLE",
+      "rationale": "ACTUAL_MODEL_NOT_EXECUTED"
+    },
+    {
+      "concept": "conversation depth",
+      "kind": "DIRECT",
+      "rationale": "turn count preserved by the export"
+    }
+  ],
+  "counts": {
+    "DIRECT": 5,
+    "DERIVED_FROM_PRODUCTION_TRACE": 5,
+    "LOSSY": 0,
+    "NOT_SCORABLE": 15,
+    "NOT_APPLICABLE": 1
+  },
+  "prohibitions_observed": {
+    "auto_mapped_on_name_similarity": 0,
+    "route_inferred_from_answer_text": 0,
+    "actual_route_generated_from_expected": 0,
+    "gold_injected_as_focus": 0,
+    "expected_slots_injected_into_query_state": 0,
+    "gold_added_to_candidates_on_empty": 0
+  },
+  "excluded_turn_handling": "absent from numerator and denominator; count and reason reported; RyeongRunGate asserts scored+excluded == total turns"
+}

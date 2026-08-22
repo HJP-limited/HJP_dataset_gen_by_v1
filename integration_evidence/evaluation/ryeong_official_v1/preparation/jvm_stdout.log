@@ -1,0 +1,164 @@
+Reusing configuration cache.
+> Task :tool-datetime:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tool-contract:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :tool-contact:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :agent-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :agent-contract:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :llm-litert:preBuild UP-TO-DATE
+> Task :tool-android-intents:preBuild UP-TO-DATE
+> Task :llm-litert:preDebugBuild UP-TO-DATE
+> Task :tool-android-intents:preDebugBuild UP-TO-DATE
+> Task :tool-contract:processResources NO-SOURCE
+> Task :search-core:processResources NO-SOURCE
+> Task :agent-contract:processResources NO-SOURCE
+> Task :tool-contact:processResources NO-SOURCE
+> Task :agent-core:processTestResources NO-SOURCE
+> Task :agent-contract:processTestResources NO-SOURCE
+> Task :agent-core:processResources NO-SOURCE
+> Task :tool-datetime:processResources NO-SOURCE
+> Task :tool-android-intents:processDebugNavigationResources
+> Task :llm-litert:processDebugNavigationResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:generateDebugResources
+> Task :llm-litert:generateDebugResources
+> Task :tool-android-intents:generateDebugResources
+> Task :llm-litert:writeDebugAarMetadata
+> Task :tool-android-intents:writeDebugAarMetadata
+> Task :tool-android-intents:javaPreCompileDebug
+> Task :app:generateDebugBuildConfig
+> Task :llm-litert:javaPreCompileDebug
+> Task :app:extractDeepLinksDebug
+> Task :llm-litert:extractDeepLinksDebug
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :llm-litert:preDebugUnitTestBuild UP-TO-DATE
+> Task :tool-android-intents:extractDeepLinksDebug
+> Task :search-core:processTestResources NO-SOURCE
+> Task :tool-android-intents:preDebugUnitTestBuild UP-TO-DATE
+> Task :llm-litert:mapDebugSourceSetPaths
+> Task :tool-android-intents:mapDebugSourceSetPaths
+> Task :tool-contact:processTestResources NO-SOURCE
+> Task :tool-contract:processTestResources NO-SOURCE
+> Task :tool-datetime:processTestResources NO-SOURCE
+> Task :llm-litert:javaPreCompileDebugUnitTest
+> Task :app:javaPreCompileDebugUnitTest
+> Task :tool-android-intents:javaPreCompileDebugUnitTest
+> Task :llm-litert:packageDebugResources
+> Task :tool-android-intents:packageDebugResources
+> Task :llm-litert:processDebugManifest
+> Task :tool-android-intents:processDebugManifest
+> Task :app:processDebugNavigationResources
+> Task :llm-litert:compileDebugLibraryResources
+> Task :tool-android-intents:compileDebugLibraryResources
+> Task :app:checkDebugAarMetadata
+> Task :app:compileDebugNavigationResources
+> Task :app:javaPreCompileDebug
+> Task :tool-android-intents:parseDebugLocalResources
+> Task :llm-litert:parseDebugLocalResources
+> Task :app:packageDebugResources
+> Task :tool-android-intents:generateDebugRFile
+> Task :llm-litert:generateDebugRFile
+> Task :tool-android-intents:generateDebugUnitTestStubRFile
+> Task :llm-litert:generateDebugUnitTestStubRFile
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :search-core:compileJava
+> Task :search-core:classes
+> Task :search-core:jar
+> Task :tool-contract:compileKotlin
+> Task :tool-contract:compileJava NO-SOURCE
+> Task :tool-contract:classes UP-TO-DATE
+> Task :tool-contract:jar
+> Task :tool-contract:compileTestKotlin NO-SOURCE
+> Task :tool-contract:compileTestJava NO-SOURCE
+> Task :tool-contract:testClasses UP-TO-DATE
+> Task :tool-contract:test NO-SOURCE
+> Task :search-core:compileTestJava
+> Task :search-core:testClasses
+> Task :app:mergeDebugResources
+> Task :app:processDebugResources
+> Task :tool-datetime:compileKotlin
+> Task :tool-datetime:compileJava NO-SOURCE
+> Task :tool-datetime:classes UP-TO-DATE
+> Task :tool-datetime:jar
+> Task :tool-android-intents:compileDebugKotlin
+> Task :tool-android-intents:compileDebugJavaWithJavac NO-SOURCE
+> Task :tool-android-intents:processDebugJavaRes
+> Task :tool-android-intents:bundleLibRuntimeToJarDebug
+> Task :tool-android-intents:bundleLibCompileToJarDebug
+> Task :tool-datetime:compileTestKotlin
+> Task :tool-datetime:compileTestJava NO-SOURCE
+> Task :tool-datetime:testClasses UP-TO-DATE
+> Task :tool-contact:compileKotlin
+> Task :tool-contact:compileJava NO-SOURCE
+> Task :tool-contact:classes UP-TO-DATE
+> Task :tool-android-intents:compileDebugUnitTestKotlin
+> Task :tool-android-intents:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :tool-android-intents:processDebugUnitTestJavaRes
+> Task :tool-contact:jar
+> Task :agent-contract:compileKotlin
+> Task :agent-contract:compileJava NO-SOURCE
+> Task :agent-contract:classes UP-TO-DATE
+> Task :agent-contract:jar
+> Task :tool-datetime:test
+> Task :tool-android-intents:testDebugUnitTest
+> Task :tool-android-intents:test
+> Task :search-core:test
+> Task :tool-contact:compileTestKotlin
+> Task :tool-contact:compileTestJava NO-SOURCE
+> Task :tool-contact:testClasses UP-TO-DATE
+> Task :agent-contract:compileTestKotlin
+> Task :agent-contract:compileTestJava NO-SOURCE
+> Task :agent-contract:testClasses UP-TO-DATE
+> Task :llm-litert:compileDebugKotlin
+> Task :llm-litert:compileDebugJavaWithJavac NO-SOURCE
+> Task :llm-litert:processDebugJavaRes
+> Task :llm-litert:bundleLibCompileToJarDebug
+> Task :llm-litert:bundleLibRuntimeToJarDebug
+> Task :llm-litert:compileDebugUnitTestKotlin NO-SOURCE
+> Task :llm-litert:processDebugUnitTestJavaRes NO-SOURCE
+> Task :llm-litert:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :llm-litert:testDebugUnitTest NO-SOURCE
+> Task :llm-litert:test UP-TO-DATE
+> Task :agent-contract:test
+> Task :tool-contact:test
+> Task :agent-core:compileKotlin
+> Task :agent-core:compileJava NO-SOURCE
+> Task :agent-core:classes UP-TO-DATE
+> Task :agent-core:jar
+
+> Task :agent-core:compileTestKotlin
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/agent-core/src/test/kotlin/com/hjp/agent/core/ContactTurnReferenceResolverTest.kt:16:26 'object ContactTurnReferenceResolver : Any' is deprecated. Use DeterministicTurnRouter, the single runtime reference authority.
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/agent-core/src/test/kotlin/com/hjp/agent/core/ContactTurnReferenceResolverTest.kt:23:26 'object ContactTurnReferenceResolver : Any' is deprecated. Use DeterministicTurnRouter, the single runtime reference authority.
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/agent-core/src/test/kotlin/com/hjp/agent/core/ContactTurnReferenceResolverTest.kt:33:23 'object ContactTurnReferenceResolver : Any' is deprecated. Use DeterministicTurnRouter, the single runtime reference authority.
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/agent-core/src/test/kotlin/com/hjp/agent/core/ContactTurnReferenceResolverTest.kt:36:22 'object ContactTurnReferenceResolver : Any' is deprecated. Use DeterministicTurnRouter, the single runtime reference authority.
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/agent-core/src/test/kotlin/com/hjp/agent/core/ContactTurnReferenceResolverTest.kt:43:25 'object ContactTurnReferenceResolver : Any' is deprecated. Use DeterministicTurnRouter, the single runtime reference authority.
+
+> Task :agent-core:compileTestJava NO-SOURCE
+> Task :agent-core:testClasses UP-TO-DATE
+> Task :app:kspDebugKotlin
+> Task :agent-core:test
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspDebugUnitTestKotlin
+
+> Task :app:compileDebugUnitTestKotlin
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/app/src/test/java/com/example/hjp/eval/ryeong/RyeongOfficialCompatibilityRunTest.kt:191:30 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/app/src/test/java/com/example/hjp/eval/ryeong/RyeongOfficialCompatibilityRunTest.kt:191:78 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:testDebugUnitTest
+> Task :app:test
+
+BUILD SUCCESSFUL in 14s
+87 actionable tasks: 87 executed
+Configuration cache entry reused.

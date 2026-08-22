@@ -1,0 +1,54 @@
+{
+  "reference_dir": "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi",
+  "remote": "https://github.com/HJP-limited/ryeong.git",
+  "branch": "llm-integration-work",
+  "clone_mode": "--single-branch --branch llm-integration-work",
+  "head_sha": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+  "remote_tip_sha": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+  "head_matches_remote_tip": true,
+  "commit_date": "2026-08-17T21:21:17+09:00",
+  "commit_subject": "실기기에서 잡은 카운트/후속 버그 3건 + 인수인계를 문서로 통합",
+  "commit_author": "babie0511",
+  "git_status_short": "",
+  "git_status_clean": true,
+  "submodules": false,
+  "git_lfs": false,
+  "tracked_file_count": 138,
+  "historical_commit": {
+    "sha": "7008304b2c14136cba333840368dae35e925a885",
+    "reachable_in_clone": true,
+    "commits_ahead_to_tip": 1,
+    "changed_files_total": 7,
+    "eval_related_changed": [
+      "scripts/eval_search.py",
+      "scripts/hybrid_server.py",
+      "scripts/install_real_device_debug.ps1"
+    ],
+    "eval_related_UNCHANGED": [
+      "scripts/eval_multiturn.py",
+      "eval/rag_eval_dataset.jsonl",
+      "data/cards_eval1000.json",
+      "data/cards_test50.json",
+      "data/cards_clean_small.json"
+    ],
+    "patch_file": "upstream_eval_diff_from_7008304b.patch"
+  },
+  "historical_sha_verification": {
+    "scripts/eval_multiturn.py": {
+      "expected": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "actual": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "match": true
+    },
+    "eval/rag_eval_dataset.jsonl": {
+      "expected": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+      "actual": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+      "match": true
+    },
+    "data/cards_eval1000.json": {
+      "expected": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "actual": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "match": true
+    }
+  },
+  "all_three_historical_shas_match": true
+}

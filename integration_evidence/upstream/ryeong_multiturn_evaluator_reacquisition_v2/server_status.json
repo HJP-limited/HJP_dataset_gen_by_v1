@@ -1,0 +1,39 @@
+{
+  "attempted": true,
+  "command": "cd <reference> && PYTHONDONTWRITEBYTECODE=1 python3 scripts/hybrid_server.py",
+  "command_source": "the upstream file's own header comment (hybrid_server.py line 5)",
+  "source_modified_to_make_it_run": false,
+  "start_local": "2026-08-22T11:31:12+0900",
+  "end_local": "2026-08-22T11:31:12+0900",
+  "exit_code": 1,
+  "pid_recorded": null,
+  "stdout": "[hybrid] 카드/벡터/모델 로딩 중… (EmbeddingGemma 1.2GB — 30초~1분 걸릴 수 있음)",
+  "stderr_summary": "Traceback ... hybrid_server.py line 705, in <module> / from sentence_transformers import SentenceTransformer / ModuleNotFoundError: No module named 'sentence_transformers'",
+  "listening_address": null,
+  "port_8100_before": "free",
+  "port_8100_after": "free - nothing was left listening",
+  "port_9379_before": "free",
+  "no_process_was_killed": true,
+  "pycache_created_in_upstream": 0,
+  "blockers_in_order": [
+    {
+      "order": 1,
+      "type": "python_dependency",
+      "item": "sentence_transformers",
+      "evidence": "reproduced traceback, exit 1"
+    },
+    {
+      "order": 2,
+      "type": "model_artifact",
+      "item": "<repo>/models/embeddinggemma-300m",
+      "evidence": "path does not exist; .gitignore line 20 excludes models/; ~1.2GB per MODEL_SETUP_STATUS.md",
+      "note": "would fail at line 706 immediately after the import blocker is cleared"
+    },
+    {
+      "order": 3,
+      "type": "server_binary",
+      "item": "litert-lm serve on 127.0.0.1:9379 (model gemma4e2b)",
+      "evidence": "no binary or start script exists in the branch; required only for --generate"
+    }
+  ]
+}

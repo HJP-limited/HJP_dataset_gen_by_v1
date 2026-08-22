@@ -1,0 +1,6 @@
+RYEONG_OFFICIAL_RUN=true \
+RYEONG_OFFICIAL_OUT=integration_evidence/evaluation/ryeong_official_v1/result/jvm_keyword \
+RYEONG_GIT_HEAD=993a5f5613235c2192f6c34b06841319813aefeb \
+JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \
+./gradlew --offline :app:testDebugUnitTest \
+  --tests 'com.example.hjp.eval.ryeong.RyeongOfficialCompatibilityRunTest' --rerun-tasks

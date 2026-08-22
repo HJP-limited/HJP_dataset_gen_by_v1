@@ -1,0 +1,61 @@
+{
+  "verdict": "ALL PROTECTED SCOPES UNCHANGED",
+  "method": "the before map is the prior task's recorded end state (protected_sha256_after.txt, 741 files) plus that task's own 37 artifacts taken from its MANIFEST.json; every operation in this task was read-only on the project except writing into this task's own evidence directory",
+  "protected_evidence": {
+    "before_count": 778,
+    "after_count": 778,
+    "changed": [],
+    "removed": [],
+    "added": [],
+    "changed_count": 0,
+    "removed_count": 0,
+    "added_count": 0
+  },
+  "production_and_test_source": {
+    "before_count": 217,
+    "after_count": 217,
+    "changed": [],
+    "removed": [],
+    "added": [],
+    "changed_count": 0,
+    "removed_count": 0,
+    "added_count": 0
+  },
+  "upstream_clone": {
+    "git_status_lines": 0,
+    "clean": true,
+    "required_file_shas_unchanged_during_task": true,
+    "pycache_created": 0,
+    "files_modified": 0,
+    "note": "the clone is in the session scratchpad, entirely outside the project tree"
+  },
+  "existing_ryeong_checkout": {
+    "path": "../ryeong",
+    "head": "e3dd67f6782dae50e8908190ab6debc0f9992056",
+    "branch": "main",
+    "untouched": true,
+    "branch_switched": false,
+    "status": [
+      "?? .DS_Store",
+      "?? PROJECT_ANALYSIS.md"
+    ],
+    "same_as_before": true
+  },
+  "run_3": {
+    "invocations_this_task": 1,
+    "unchanged": true,
+    "new_official_result_dirs": 0
+  },
+  "apk": {
+    "sha256": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+    "changed": false
+  },
+  "jvm_test_xml": {
+    "file_count": 85,
+    "tests_run_this_task": false
+  },
+  "forbidden_git_operations_on_working_repo": 0,
+  "system_wide_pip_installs": 0,
+  "models_downloaded": 0,
+  "upstream_files_modified": 0
+}

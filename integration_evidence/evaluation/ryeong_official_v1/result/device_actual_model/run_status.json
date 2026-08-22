@@ -1,0 +1,16 @@
+{
+  "status": "NOT_RUN",
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_DEVICE_ACTUAL_MODEL_BASELINE",
+  "invocations": 0,
+  "blocker": {
+    "type": "PRECONDITION_NOT_MET",
+    "rule": "task section 15",
+    "detail": "RUN_D1 proceeds only when RUN_K1 is a VALID BASELINE; RUN_K1 is INVALID RUN"
+  },
+  "device_available": true,
+  "device_serial": "R5CY54CP83R",
+  "device_untouched": true,
+  "actual_model_executed": false,
+  "semantic_axis_executed": false,
+  "no_fabricated_result": true
+}

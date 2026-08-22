@@ -1,0 +1,5 @@
+# BLOCKED - the reference repository is absent, so no original dataset file could be hashed.
+# The hashes below are LOCAL artifacts only. They are NOT the reference dataset.
+1d1b1dca6e4df1f0851360fb08e2233023e397c2bcce1a6e3c41880624f2573d  tools/ryeong_search_benchmark/multiturn-final-20260801.json
+a300e7dfb3a7578b8695c678856b839b566ce5e610bcc7fc72d26aafc14fbd95  tools/agent_eval/run_desktop_gemma_multiturn.py
+212afd62a57a5b9105d6829cf6c46c9d1d0bfba9a76e2b6740def2b633321adf  tools/agent_eval/run_desktop_gemma_multiturn_v3.py

@@ -1,0 +1,205 @@
+{
+  "document": "RUN3_PREPARATION_MANIFEST",
+  "run_id": "ryeong_production_search_run_3",
+  "verdict": "PASS — RUN_3 FROZEN, NOT EXECUTED",
+  "verdict_means": "the evaluator, gate, input and production source are frozen. It is not a run_3 result, not a Ryeong evaluation PASS, not semantic verification, not full JVM, not Android verification, not v4 freeze readiness.",
+  "generated_local": "2026-08-18 KST",
+  "git_head": "993a5f5613235c2192f6c34b06841319813aefeb",
+  "git_branch": "android-app",
+  "freeze": {
+    "PRE_RUN_FREEZE_MANIFEST.json": {
+      "sha256": "3ddd7d635829c53f47a83a690cea08ac55ffd110d68898bd42aa2a9e10628247",
+      "bytes": 12430,
+      "role": "the freeze of record"
+    },
+    "PRE_RUN_STATUS.json": {
+      "sha256": "fa72a32b7ed02ba7fe900167caf3e405e3599d0a19b3c031448b735965a64878",
+      "bytes": 420,
+      "role": "status: FROZEN_NOT_RUN"
+    }
+  },
+  "gate": {
+    "integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json": {
+      "sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+      "bytes": 3379,
+      "role": "the thresholds, fixed before any result existed"
+    },
+    "integration_evidence/production_eval/run_3/gate/GATE_RATIONALE.md": {
+      "sha256": "1c2c4a11b1a9601a7c6d2576b3b6e629619f5b7cefd3491f209d87ffe5b57cd4",
+      "bytes": 6108,
+      "role": "why each number, and what the run will actually test"
+    }
+  },
+  "input": {
+    "integration_evidence/production_eval/run_3/input/cards_eval1000.json": {
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "bytes": 405413,
+      "role": "byte-exact copy of the run_1 frozen input"
+    },
+    "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json": {
+      "sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "bytes": 52441,
+      "role": "byte-exact copy of the run_1 frozen input"
+    }
+  },
+  "evaluator_source": {
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java": {
+      "sha256": "9fda1e716fc6bacdbd51ce2bc6070c8b8c1bbc0cb1bbf5877103c1ce800be02a",
+      "bytes": 34095,
+      "role": "runner"
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Gate.java": {
+      "sha256": "3c0348c96ab6c1c947cbbe84737ea0020420f46458ffdf3c105243fc4ca4006e",
+      "bytes": 6244,
+      "role": "gate"
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/EvalJson.java": {
+      "sha256": "308bb4da4d8626d73105b4209070e4ea59226c38556558db649cb74e7836de21",
+      "bytes": 9112,
+      "role": "JSON"
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java": {
+      "sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "bytes": 21004,
+      "role": "self-test"
+    }
+  },
+  "build_file": {
+    "search-core/build.gradle.kts": {
+      "sha256": "4e20d0de1a81e96abbc6584c893a81d3e75dfc18a0b1c6c308b85a3897b59e48",
+      "bytes": 1659,
+      "role": "registers :search-core:runRyeongSearchEvalV3; not wired into test or check"
+    }
+  },
+  "preparation_evidence": {
+    "integration_evidence/production_eval/run_3/preparation/RUN3_PREPARATION_REPORT.md": {
+      "sha256": "770605efcbd5410a896ff9fe9b25e675630aeb2714576a5d3fae088f287880e9",
+      "bytes": 12422,
+      "role": "the report"
+    },
+    "integration_evidence/production_eval/run_3/preparation/baseline.json": {
+      "sha256": "9bbbc547fab95fd63152e46155bda39ae322cda5f5198c7df1de19c977287594",
+      "bytes": 22207,
+      "role": "start state, protected map, production source SHAs, prior evidence SHAs"
+    },
+    "integration_evidence/production_eval/run_3/preparation/compile.log": {
+      "sha256": "2fd1196169125404be0f76b4025edb0b85f5e70e819196d2aa61a50218d70533",
+      "bytes": 284,
+      "role": "raw console output"
+    },
+    "integration_evidence/production_eval/run_3/preparation/compile_command.txt": {
+      "sha256": "d0caedd03420d2ed82b456c1e7e21d9439c21883ba2d97c49eff39232df8f9f1",
+      "bytes": 138,
+      "role": "exact compile command"
+    },
+    "integration_evidence/production_eval/run_3/preparation/freeze_verification.json": {
+      "sha256": "2c73892c8f215f7c51362cbb3bf75e35551f0e7ead0ecdcbfa5b2059789eb118",
+      "bytes": 8685,
+      "role": "22 files re-hashed after the freeze and compared to the manifest"
+    },
+    "integration_evidence/production_eval/run_3/preparation/gate_validation.json": {
+      "sha256": "59097d8d99dfc1d780d077e7f6edd604be0f30ea21bfeb600ac3a10584f8c459",
+      "bytes": 5948,
+      "role": "the gate, its derivation from run_2 raw values, and the mutations the self-test proved it catches"
+    },
+    "integration_evidence/production_eval/run_3/preparation/input_validation.json": {
+      "sha256": "552ea486476875c0b68ed5e3c4c9e8903d4b0ec1794590afe599a1a65c0898b1",
+      "bytes": 2271,
+      "role": "byte-exactness and the 1000/203/183/20 counts"
+    },
+    "integration_evidence/production_eval/run_3/preparation/metric_definition.json": {
+      "sha256": "273156d8c40a81b2772be2b0d2a41fe89c88c645b994629ecfaea4b9396f6819",
+      "bytes": 2576,
+      "role": "what each metric means and over which denominator"
+    },
+    "integration_evidence/production_eval/run_3/preparation/protected_comparison.json": {
+      "sha256": "8cc167a79f3a52f18486da415da3e055669cc5a4907e1e7ca4b459c9448dcf6f",
+      "bytes": 2916,
+      "role": "typed before/after comparison"
+    },
+    "integration_evidence/production_eval/run_3/preparation/protected_sha256_after.txt": {
+      "sha256": "18cee855e92a3ec82f1c8ccf425d6a5adddc839c2a57cacaef2b4e4786ccb78d",
+      "bytes": 8841,
+      "role": "protected SHA map after"
+    },
+    "integration_evidence/production_eval/run_3/preparation/protected_sha256_before.txt": {
+      "sha256": "18cee855e92a3ec82f1c8ccf425d6a5adddc839c2a57cacaef2b4e4786ccb78d",
+      "bytes": 8841,
+      "role": "protected SHA map before"
+    },
+    "integration_evidence/production_eval/run_3/preparation/runner_self_test.log": {
+      "sha256": "26adbe091678f760fc97bae33d4fce28b30f4dae42a6776e2ce2631979623f6a",
+      "bytes": 394,
+      "role": "raw console output"
+    },
+    "integration_evidence/production_eval/run_3/preparation/runner_self_test_command.txt": {
+      "sha256": "74ed557633197741a65172966b5b96a2207f29da6b7d11bdcffea541719d8c1b",
+      "bytes": 214,
+      "role": "exact self-test command"
+    },
+    "integration_evidence/production_eval/run_3/preparation/runner_self_test_result.xml": {
+      "sha256": "b987b94a2f370b1b05662cfbb393e61b8e7ec2c9a790ef5ee3f01bd608c1e378",
+      "bytes": 3378,
+      "role": "JUnit XML, 19/0/0/0"
+    },
+    "integration_evidence/production_eval/run_3/preparation/source_inventory.json": {
+      "sha256": "0b913626e661e1226bce810fee4f592651913213b81ba3e5d392788f7ca6361a",
+      "bytes": 7602,
+      "role": "every source, gate, input and build file that was frozen"
+    }
+  },
+  "self_note": "This manifest cannot contain its own hash. Hash it directly to pin it.",
+  "counts": {
+    "cards": 1000,
+    "queries_total": 203,
+    "ranking_queries": 183,
+    "abstention_queries": 20,
+    "excluded_queries": 0
+  },
+  "runs": {
+    "compile": {
+      "exit_code": 0,
+      "result": "BUILD SUCCESSFUL"
+    },
+    "self_test": {
+      "exit_code": 0,
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "freeze_verification": {
+    "files_rehashed": 22,
+    "mismatches": 0,
+    "status": "FROZEN_NOT_RUN"
+  },
+  "protected_files": {
+    "count": 59,
+    "changed": 0,
+    "added": 0,
+    "removed": 0
+  },
+  "result_files_present": 0,
+  "evaluations_executed": 0,
+  "next_command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home ./gradlew --offline :search-core:runRyeongSearchEvalV3 --rerun-tasks",
+  "not_performed": [
+    "the production evaluation itself",
+    ":search-core:runRyeongSearchEvalV3",
+    "run_3 result creation",
+    "RyeongDatasetProductionAdapterTest",
+    "full :search-core:test",
+    "full JVM aggregate suite",
+    "APK build",
+    "semantic model installation",
+    "multiturn evaluator work",
+    "memory work",
+    "v4 freeze",
+    "production search code change",
+    "characterization test change",
+    "dataset change",
+    "run_1/run_2 change"
+  ],
+  "forbidden_git_commands_used": [],
+  "next_task_started": false
+}

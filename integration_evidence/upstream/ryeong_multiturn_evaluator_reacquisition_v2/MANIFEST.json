@@ -1,0 +1,287 @@
+{
+  "task": "ryeong_multiturn_evaluator_reacquisition_v2",
+  "supersedes": "integration_evidence/upstream/ryeong_multiturn_evaluator_audit_v1 (its BLOCKED — REFERENCE REPOSITORY NOT PRESENT conclusion was reached without ever querying the remote and is corrected here)",
+  "verdict": {
+    "axis_1_original_ryeong": "BLOCKED — EXACT DEPENDENCY MISSING",
+    "axis_2_current_production_agent": "BLOCKED — ADAPTER CONTRACT MISMATCH",
+    "combined": "PARTIALLY READY"
+  },
+  "reference": {
+    "remote": "https://github.com/HJP-limited/ryeong.git",
+    "branch": "llm-integration-work",
+    "head": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+    "clone_clean": true,
+    "commits_ahead_of_7008304b": 1,
+    "historical_shas_all_match": true
+  },
+  "headline": {
+    "scenarios": 130,
+    "turns": 377,
+    "kinds": 21,
+    "seed": 42,
+    "cards": 1000,
+    "known_gap": 0,
+    "generate_only": 6,
+    "server_started": false,
+    "chat_smoke": "NOT_RUN",
+    "dry_run_scenarios_scored": 0,
+    "generation_smoke": "NOT_RUN",
+    "adapter_implemented": false,
+    "adapter_self_tests_run": 0,
+    "official_gate_in_upstream": null,
+    "evaluator_returns_0_on_failure": true
+  },
+  "integrity": {
+    "protected_evidence": "778 -> 778, changed 0",
+    "source": "217 -> 217, changed 0",
+    "upstream_clone_modified": 0,
+    "pycache_created": 0,
+    "ryeong_checkout_touched": false,
+    "run_3_invocation": "1 -> 1",
+    "apk_changed": false,
+    "jvm_xml_changed": false,
+    "system_pip_installs": 0,
+    "models_downloaded": 0,
+    "processes_killed": 0
+  },
+  "artifacts": [
+    {
+      "file": "ADAPTER_SELF_TEST_RESULT.json",
+      "sha256": "608c8ef33364b41d248a777e7c1498be291cb3194f49a6dabae09b07bd20ce7a",
+      "size_bytes": 1937
+    },
+    {
+      "file": "ADAPTER_TRANSLATION_MATRIX.md",
+      "sha256": "bb80eabe762da04b4ce99decd30dfbcce0d48c48a29edb5bf73025f34d09b3b1",
+      "size_bytes": 7861
+    },
+    {
+      "file": "DATASET_INTEGRITY.json",
+      "sha256": "c49aea10af35b98121e946184e88ce99aee328b1099c109b26d250a8cf3b9444",
+      "size_bytes": 1725
+    },
+    {
+      "file": "DEPENDENCY_GRAPH.md",
+      "sha256": "069839471d4a10409df94bc997004c8bb729ed2113ad8bb9f35cd0a11bca638e",
+      "size_bytes": 2442
+    },
+    {
+      "file": "DEPENDENCY_INVENTORY.json",
+      "sha256": "4dc2bab9ecc1c286ab0b819ad9ed2b088b08e147eba9cd7961113df8081912b8",
+      "size_bytes": 4117
+    },
+    {
+      "file": "ENDPOINT_CONTRACT.json",
+      "sha256": "5b9a610c9d272ea1ea7861c13e6bd4e517536e6de612c78d64dd452df0c2e3f2",
+      "size_bytes": 5438
+    },
+    {
+      "file": "ENDPOINT_CONTRACT.md",
+      "sha256": "5972d0b2be83a18a910a1b89839c053a3edca9917d47cc5008706c4f25aa4569",
+      "size_bytes": 2558
+    },
+    {
+      "file": "ENVIRONMENT_READINESS.json",
+      "sha256": "379d238ef6a1acbf1a408f753896736fae28416b35389e66d1c4ad915687eecb",
+      "size_bytes": 3942
+    },
+    {
+      "file": "EVALUATOR_CONTRACT.json",
+      "sha256": "9bee9c0334d45c2ad8cf7e1d134a5cafb985e687556c5c752cea5f1ee707091f",
+      "size_bytes": 1973
+    },
+    {
+      "file": "FINAL_REPORT.md",
+      "sha256": "261943ce9028bef10f340e2a69cebaf7c1a63ad3c187249facf0cae7d18e01e1",
+      "size_bytes": 15193
+    },
+    {
+      "file": "METRIC_DEFINITIONS.md",
+      "sha256": "fb112eb8bf33b87658e8a94eaf8bc32485b1f8a89bdae4b05d0dc73d7b863bce",
+      "size_bytes": 4500
+    },
+    {
+      "file": "MODEL_RESOURCE_REQUIREMENTS.md",
+      "sha256": "ae8d6155da3ba7eb7f0ef98faa91c92bb42e7771a9b66dfc86787f7a27e5aefa",
+      "size_bytes": 2190
+    },
+    {
+      "file": "OFFICIAL_FREEZE_PLAN.md",
+      "sha256": "fb6b8ba415b30a37b75cf7506d4b87f17ca3e0ee58f79e158cef3fe249e1647f",
+      "size_bytes": 3194
+    },
+    {
+      "file": "PREFLIGHT.md",
+      "sha256": "c0e67599216de65dc24b2fb4ce8b756d65639734a90e5d217a550764df62477e",
+      "size_bytes": 1472
+    },
+    {
+      "file": "PRODUCTION_COMPATIBILITY_MATRIX.md",
+      "sha256": "cdba61d805e140ed111ca5a6519ea0e3da3d57386bf6bc774a0b5afd1e396af8",
+      "size_bytes": 4912
+    },
+    {
+      "file": "READINESS_VERDICT.json",
+      "sha256": "61c12d81862b8462a9b8b6ed13242113bd334b3f353deb340a3b4319741936ca",
+      "size_bytes": 2379
+    },
+    {
+      "file": "REFERENCE_COMMIT.json",
+      "sha256": "2f77c2734090bebbdca86118d75ec1e2f8e03bf36e4be104adef422f41abb887",
+      "size_bytes": 2204
+    },
+    {
+      "file": "SCENARIO_INVENTORY.json",
+      "sha256": "93b85a3c6ffb1114de01f344156f4647dec56abf359a55bddad45532a0ae1b7d",
+      "size_bytes": 1874
+    },
+    {
+      "file": "UPSTREAM_MANIFEST.json",
+      "sha256": "5157e06dc0319091252de1a4fa1b8824fbd7cf8c3421c90ad9d90913c95a1476",
+      "size_bytes": 27658
+    },
+    {
+      "file": "buildscript_sha256_after.txt",
+      "sha256": "52687bf7b377bba9a3feffa33f8e6bac3189fa445df3ecabb4ac3c00b31408e7",
+      "size_bytes": 1233
+    },
+    {
+      "file": "chat_smoke_requests.json",
+      "sha256": "2696016e4bc636cad43b3c5c6b327d1d30c05066107453490ce26f17a9b79e81",
+      "size_bytes": 763
+    },
+    {
+      "file": "chat_smoke_responses.json",
+      "sha256": "2696016e4bc636cad43b3c5c6b327d1d30c05066107453490ce26f17a9b79e81",
+      "size_bytes": 763
+    },
+    {
+      "file": "current_repo_status_before.txt",
+      "sha256": "6700bdd231cc88770beefe8971cb31e37a672d2c6a50dbc620e89b4fd22777a5",
+      "size_bytes": 4683
+    },
+    {
+      "file": "dry_run_command.txt",
+      "sha256": "7b751e4b13cd9ff918d6340031fa556f5ab50ac522e1f5edc797190fdd714537",
+      "size_bytes": 284
+    },
+    {
+      "file": "dry_run_exit_code.txt",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "size_bytes": 1
+    },
+    {
+      "file": "dry_run_parsed_result.json",
+      "sha256": "2f3ee6cbcd489ab1f3d0264c0ea4465ae9d673eff49fc99fac7c67332408a238",
+      "size_bytes": 954
+    },
+    {
+      "file": "dry_run_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "file": "dry_run_stdout.log",
+      "sha256": "b58aede0b3edb09094650b71f54dd4be81546e1e00710128ae3bfb0a27216dda",
+      "size_bytes": 156
+    },
+    {
+      "file": "generation_smoke_result.json",
+      "sha256": "693a058c8dafd17c5af63d617ee0221fa072eacce663c34edc2c9b81e36ae8d9",
+      "size_bytes": 1368
+    },
+    {
+      "file": "help_command.txt",
+      "sha256": "d8c3e9c67d0318032807ea4bab2aa622117f1edcc89685604c390301817ad6fa",
+      "size_bytes": 245
+    },
+    {
+      "file": "help_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "file": "help_stdout.log",
+      "sha256": "d7154d9669c1a15c968fe5c4f3aa770aa5f388ae55f7120812625963b31e9d01",
+      "size_bytes": 747
+    },
+    {
+      "file": "official_run_command.txt",
+      "sha256": "ff67abfad6a3e28e8aa0267eee07d4243560fa0fe8c96991036ceb1973b99ecf",
+      "size_bytes": 1951
+    },
+    {
+      "file": "protected_comparison.json",
+      "sha256": "ce7511ece4927313fd802c4e7fc3f3db9d340ddb9158de8a5da2575046b26ecb",
+      "size_bytes": 1759
+    },
+    {
+      "file": "protected_sha256_after.txt",
+      "sha256": "89764aa6dd5060cae9cece7f73a50355ccdae69bf946373109e673bb7f323bf0",
+      "size_bytes": 127612
+    },
+    {
+      "file": "protected_sha256_before.txt",
+      "sha256": "89764aa6dd5060cae9cece7f73a50355ccdae69bf946373109e673bb7f323bf0",
+      "size_bytes": 127612
+    },
+    {
+      "file": "reference_dir_path.txt",
+      "sha256": "229db2c64ad533cccbdd2480ebe59f83d81af69696d952e4503a0f53347e394b",
+      "size_bytes": 173
+    },
+    {
+      "file": "reference_fetch.log",
+      "sha256": "628bef4f3886fe3b826ec9600256c583111b5d36c6e4ffb6a36eed05c73b6c46",
+      "size_bytes": 964
+    },
+    {
+      "file": "reference_fetch_command.txt",
+      "sha256": "641a545be58664e58392e8b6e75fe89ca4028f3cc0c9b971468b80672090e0a1",
+      "size_bytes": 432
+    },
+    {
+      "file": "server_command.txt",
+      "sha256": "61bf63b22f6c59468db1678c145029bc95ca89f498201f09bdef343f1484296b",
+      "size_bytes": 399
+    },
+    {
+      "file": "server_exit_code.txt",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "size_bytes": 1
+    },
+    {
+      "file": "server_status.json",
+      "sha256": "d9fe1213175e501ae27f8183d2c43b4682f207d2a9e18dd2c3fc1a8a0ca03eef",
+      "size_bytes": 1627
+    },
+    {
+      "file": "server_stderr.log",
+      "sha256": "a2556fa0ea5261505d27ae8c56f5a0d1a7718ac6687502ac94351183c3965a6c",
+      "size_bytes": 398
+    },
+    {
+      "file": "server_stdout.log",
+      "sha256": "567193ff86e41b00d123e5f8aa058267c44b4ca35c578e7f7364291b423c5a98",
+      "size_bytes": 100
+    },
+    {
+      "file": "source_sha256_after.txt",
+      "sha256": "c32bf06a3403c48cadb5c0d43494462b09acaff8d2ceed5060e4aa70260a85db",
+      "size_bytes": 29561
+    },
+    {
+      "file": "upstream_eval_diff_from_7008304b.patch",
+      "sha256": "1a40773df69970984fa28a39893f33e0c2cbf45ca38d050c8f313db2adf8aa31",
+      "size_bytes": 7788
+    }
+  ],
+  "artifact_count": 46,
+  "does_not_mean": [
+    "that the original Ryeong evaluation was reproduced",
+    "that any multiturn metric was measured",
+    "that the current Android agent was evaluated",
+    "that the 40/40 in multiturn-final-20260801.json reflects current code",
+    "production readiness"
+  ]
+}

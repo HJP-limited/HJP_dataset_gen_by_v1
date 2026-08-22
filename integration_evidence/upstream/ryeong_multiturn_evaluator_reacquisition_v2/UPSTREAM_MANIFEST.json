@@ -1,0 +1,745 @@
+{
+  "reference_head": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+  "branch": "llm-integration-work",
+  "generated_before_any_execution": true,
+  "required_files": [
+    {
+      "path": "scripts/hybrid_server.py",
+      "size_bytes": 77425,
+      "sha256": "5fc3872ddadcc89849c28f68117bd23e1b6bad0353c0980a78ea5c3a66a424f0",
+      "present": true
+    },
+    {
+      "path": "scripts/eval_multiturn.py",
+      "size_bytes": 38660,
+      "sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "historical_sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "matches_historical": true,
+      "present": true
+    },
+    {
+      "path": "scripts/eval_search.py",
+      "size_bytes": 66061,
+      "sha256": "af6003fa478af80381b020112d78ba472162d5526ebc7344a4cc8520e7b6f48d",
+      "present": true
+    },
+    {
+      "path": "eval/rag_eval_dataset.jsonl",
+      "size_bytes": 1964,
+      "sha256": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+      "historical_sha256": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+      "matches_historical": true,
+      "present": true
+    },
+    {
+      "path": "data/cards_eval1000.json",
+      "size_bytes": 405413,
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "historical_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "matches_historical": true,
+      "present": true
+    },
+    {
+      "path": "data/cards_test50.json",
+      "size_bytes": 24257,
+      "sha256": "29067863ec5eab6164024745e9108e6c192572d5c35f2d7f2788c31bdafdb711",
+      "present": true
+    },
+    {
+      "path": "data/cards_clean_small.json",
+      "size_bytes": 17149,
+      "sha256": "57edbe448bdeae797bdab153518b391a2fcca00d7488635f8f14b2d356942616",
+      "present": true
+    }
+  ],
+  "all_required_present": true,
+  "tracked_file_count": 136,
+  "all_tracked_files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 580,
+      "sha256": "f30b1ff9630911ae2e3aa45f6b999ae235a403b65eacce9dc1bee13dc9b7a1a0"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 36270,
+      "sha256": "4c858af313b16f929922e24ba760e726d7fa18da6998db2f175ab4c477a920ef"
+    },
+    {
+      "path": "EMBEDDING_MIGRATION_NOTES.md",
+      "size_bytes": 3466,
+      "sha256": "3d2fc4c9150211575d16add98d9384d9a046f4edb24d8344de02200843c65303"
+    },
+    {
+      "path": "MODEL_SETUP_STATUS.md",
+      "size_bytes": 11737,
+      "sha256": "0a1873171280ed61bf43777d8d4f4f568a9ca2e7956ee4d1fcb8a9e0d45c38d0"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 7633,
+      "sha256": "d2640ca64c6d35c3909d06dc626ac25786b5a253d8eef0fc391aa29db44fb3ad"
+    },
+    {
+      "path": "REAL_DEVICE_TEST.md",
+      "size_bytes": 4906,
+      "sha256": "7c71e61cf85dbc8cb46f3faababa01af9f096b23bd83b63c79fbd05f4b51ab55"
+    },
+    {
+      "path": "app/.gitignore",
+      "size_bytes": 6,
+      "sha256": "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "size_bytes": 2807,
+      "sha256": "101a8ec14a778ab23fa19f2122035e20fec6d83378da7787a83ce239cec219ce"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/hjp/ExampleInstrumentedTest.kt",
+      "size_bytes": 657,
+      "sha256": "eee138cd48899292b25d3b25b5c0782fd4a1f8ba7e16d3a910c4a609f363603a"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "size_bytes": 1675,
+      "sha256": "dd64a5d1eab838db697d8198eb11413fb12593caada84f4d8c2416344d603125"
+    },
+    {
+      "path": "app/src/main/assets/cards/cards_embeddings.bin",
+      "size_bytes": 3072000,
+      "sha256": "c498b35d17cd9549adb66427133346047d65325cb5d34c86b8599a8f233fef4f"
+    },
+    {
+      "path": "app/src/main/assets/cards/cards_embeddings_ids.json",
+      "size_bytes": 9880,
+      "sha256": "0798ba07a6c6019663a1e9f065b39cd4de876c638cb65bf505a9d25469fcbfb1"
+    },
+    {
+      "path": "app/src/main/assets/cards/cards_seed.json",
+      "size_bytes": 405413,
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24"
+    },
+    {
+      "path": "app/src/main/assets/gemma/PUT_FUNCTIONGEMMA_270M_HERE.txt",
+      "size_bytes": 491,
+      "sha256": "259f5b3c7faa47a69a8184610954fa705c44a7ce3b7a1fd1675cc7eeffc69d6f"
+    },
+    {
+      "path": "app/src/main/assets/models/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/src/main/assets/tokenizer/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/MainActivity.kt",
+      "size_bytes": 74957,
+      "sha256": "99bc4c2cc6ed5bdf5af1bfdaf878503e0b204db5b045bbb801cb35b1ec2d9ab6"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/AgentSession.kt",
+      "size_bytes": 11168,
+      "sha256": "f19a7abb49cf02cea03a81555941463ab5cb2dcc848b01b57509e2a4908b3cc3"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/ConversationMemory.kt",
+      "size_bytes": 2804,
+      "sha256": "097406b2dc2be5454a644d3df080e38e707311a2929049d8ea16e0f6ba37c386"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/ConversationMemoryReducer.kt",
+      "size_bytes": 8251,
+      "sha256": "5c16c9d75d131530e6342bdbf380a11fa6c5b1d9d42807a93bacde3cd3392a3f"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/ConversationalFollowup.kt",
+      "size_bytes": 6916,
+      "sha256": "e114da089124ac8d4a2fbaded3386b20c41be3caa7977a80631ebe4152707c41"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/LiteRtLmChatEngine.kt",
+      "size_bytes": 9768,
+      "sha256": "207409195fd995dbfd09ffac6953c3d42a7fcb67c366177c0d7b8a9bffaddcf0"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/tools/AgentTool.kt",
+      "size_bytes": 1634,
+      "sha256": "b87c11f75d6c2ad62b264b11788450b3a466ee4588fb3d522a77e1512c8a4307"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/tools/CreateCalendarEventTool.kt",
+      "size_bytes": 5849,
+      "sha256": "da4b28bafb4e4573a1e888bd4e9c15f3525891af223063472191e0d920a0c843"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/tools/OpenComposeTool.kt",
+      "size_bytes": 3876,
+      "sha256": "ee7dd4cec65e6d509282cddfc9d84506d3c8cbfad038471829a7fa68a2b2c49d"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/tools/SearchBusinessCardsTool.kt",
+      "size_bytes": 3885,
+      "sha256": "3e1295efd6fd3b3458c7b399c12d27e6953985fa135b13256db5cbbf292a63db"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/agent/tools/ToolRegistry.kt",
+      "size_bytes": 2025,
+      "sha256": "2c7a1b29bc4fd0e241cd278be646b72eceae7a28aa0c4abf79311ba7775e387f"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/data/BusinessCardDao.java",
+      "size_bytes": 3170,
+      "sha256": "d81d27ee1d6c026e328b23496c467071221cf1723fb2ef39d72e8fc86a2086b9"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/data/BusinessCardEntity.java",
+      "size_bytes": 4294,
+      "sha256": "83caa444ae8099f41754c9525f94a47b0dd70f46bc4593983138e705f8032404"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/data/BusinessCardFtsEntity.java",
+      "size_bytes": 1109,
+      "sha256": "18a48b7a50b4375bc73a9a0656002e46cf55373e552d1470506dedfd593c6672"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/data/CardEmbeddingEntity.java",
+      "size_bytes": 945,
+      "sha256": "0fca39e588e2224efd1d63426b1b480318b087e31a68902f375ce3fd2a0d8124"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/data/HjpDatabase.java",
+      "size_bytes": 1462,
+      "sha256": "35cd02bf4a5b9ca2ec68d5b683ca68d1a64830b86dea2e0cdea0b2812858da4f"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/search/CardGazetteer.kt",
+      "size_bytes": 26686,
+      "sha256": "feb096aa2585aa1674f3a72aaa7e605f4fe4ad9566f19f9332f93ba5777f69ca"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/search/CardSearchService.kt",
+      "size_bytes": 27793,
+      "sha256": "a0ffb27a777aceb5ce330d783ca99185b1c360c933d537ba90fac563ff7fdc36"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/search/KeywordSearchRanker.kt",
+      "size_bytes": 6085,
+      "sha256": "e20653dc7848ad010a015319c6893348502af49c1279a5ea29038a05f525de05"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/search/TextEmbeddingProvider.kt",
+      "size_bytes": 5432,
+      "sha256": "82c03772d1815dc5a0f6a59f158c3a012b50ea96ed99d4247e9bdae71253458e"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/ui/theme/Color.kt",
+      "size_bytes": 667,
+      "sha256": "3a59fcef424537c09e83ffb5e2dd45ed977620a45d8a3270801feb3448c0dcc0"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/ui/theme/Theme.kt",
+      "size_bytes": 1842,
+      "sha256": "eaa8199df8d0469f0c28ed0f1390140c3a7383cb12f659d301a5b3c6628d5bbb"
+    },
+    {
+      "path": "app/src/main/java/com/example/hjp/ui/theme/Type.kt",
+      "size_bytes": 984,
+      "sha256": "2fea8fe93663a2b0dca912f7874903a6c11d694fba58114e77af1a896b24b93a"
+    },
+    {
+      "path": "app/src/main/keepRules/rules.keep",
+      "size_bytes": 418,
+      "sha256": "cd9f36ade2d8604e1b7cf24eff5b171f9c0816c0aa013ba7eb55be4fe2e1dac7"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "size_bytes": 5606,
+      "sha256": "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "size_bytes": 1702,
+      "sha256": "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "size_bytes": 343,
+      "sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "size_bytes": 343,
+      "sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "size_bytes": 1404,
+      "sha256": "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+      "size_bytes": 2898,
+      "sha256": "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+      "size_bytes": 982,
+      "sha256": "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+      "size_bytes": 1772,
+      "sha256": "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+      "size_bytes": 1900,
+      "sha256": "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+      "size_bytes": 3918,
+      "sha256": "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+      "size_bytes": 2884,
+      "sha256": "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+      "size_bytes": 5914,
+      "sha256": "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+      "size_bytes": 3844,
+      "sha256": "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+      "size_bytes": 7778,
+      "sha256": "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc"
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "size_bytes": 378,
+      "sha256": "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "size_bytes": 65,
+      "sha256": "f98f32b636479398bc49794a270f8afffd31d24a12694b3163c02bd5c12d474a"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "size_bytes": 145,
+      "sha256": "c1bfefae270c8aa386eeaf91a30628661316319ecf01eeded17d63b8809ac772"
+    },
+    {
+      "path": "app/src/main/res/xml/backup_rules.xml",
+      "size_bytes": 478,
+      "sha256": "6cf1a27e6807b1d24e41d3fbe7ddc1bfe1f42226027964f6eaf477d71b43b283"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "size_bytes": 551,
+      "sha256": "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381"
+    },
+    {
+      "path": "app/src/test/java/com/example/hjp/ExampleUnitTest.kt",
+      "size_bytes": 339,
+      "sha256": "ea1560bf533def5e5e2870564682a59e107b87061f5f6fbdceb6844cf3089f7d"
+    },
+    {
+      "path": "app/src/test/java/com/example/hjp/MainActivityTest.kt",
+      "size_bytes": 19172,
+      "sha256": "350fc494340d4da8b24d8fbac6f791179b3e96f0da488aafd16d850fe28d6c28"
+    },
+    {
+      "path": "app/src/test/java/com/example/hjp/agent/AgentSessionTest.kt",
+      "size_bytes": 14665,
+      "sha256": "1913539b91fec83737c08d21fadb4b01fee9169a8f25f8674815c5a221e9b4d7"
+    },
+    {
+      "path": "app/src/test/java/com/example/hjp/search/CardGazetteerTest.kt",
+      "size_bytes": 20740,
+      "sha256": "5c040b30e18681fe66993755a5c83e10dc708f1b189c61194bf41de08f97279d"
+    },
+    {
+      "path": "app/src/test/java/com/example/hjp/search/KeywordSearchRankerTest.kt",
+      "size_bytes": 3640,
+      "sha256": "310018c12c467265e296c00ff8104d3675e04ea5ed11f2d375321352de14e6d6"
+    },
+    {
+      "path": "build.gradle.kts",
+      "size_bytes": 218,
+      "sha256": "be7dbfa1841b18b020f744e203b995d3dac5709c2a6b8e310fbcfaed0364919a"
+    },
+    {
+      "path": "data/cards_5000.json",
+      "size_bytes": 1493130,
+      "sha256": "87429a5f6af7cccb33484f7fed0f3e65416533039087f0127eca1be9beaaf6ee"
+    },
+    {
+      "path": "data/cards_clean_large.json",
+      "size_bytes": 1813795,
+      "sha256": "a326ed3c8239792c73ca3feb7c27314b39f2b76fd96af84b4120e2f53db96860"
+    },
+    {
+      "path": "data/cards_clean_small.json",
+      "size_bytes": 17149,
+      "sha256": "57edbe448bdeae797bdab153518b391a2fcca00d7488635f8f14b2d356942616"
+    },
+    {
+      "path": "data/cards_eval1000.json",
+      "size_bytes": 405413,
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "historical_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "matches_historical": true
+    },
+    {
+      "path": "data/cards_eval1000_ids.json",
+      "size_bytes": 9880,
+      "sha256": "0798ba07a6c6019663a1e9f065b39cd4de876c638cb65bf505a9d25469fcbfb1"
+    },
+    {
+      "path": "data/cards_eval1000_vectors.bin",
+      "size_bytes": 3072000,
+      "sha256": "c498b35d17cd9549adb66427133346047d65325cb5d34c86b8599a8f233fef4f"
+    },
+    {
+      "path": "data/cards_test.json",
+      "size_bytes": 28925,
+      "sha256": "80260b574230f3f79134ddda3338f3ea7e6c1ef89e83440fbd804b397839f875"
+    },
+    {
+      "path": "data/cards_test50.json",
+      "size_bytes": 24257,
+      "sha256": "29067863ec5eab6164024745e9108e6c192572d5c35f2d7f2788c31bdafdb711"
+    },
+    {
+      "path": "docs/SESSION_NOTES_2026-07-24_gemma4-hybrid-search.md",
+      "size_bytes": 21328,
+      "sha256": "90d3ac6db37de1dd1842cfae09bbed7c39cf80de3a1fbf0059579760eccbc717"
+    },
+    {
+      "path": "docs/SESSION_NOTES_2026-08-01_search-abstention-field-filters.md",
+      "size_bytes": 10679,
+      "sha256": "495bbd37d89e9c66af40e58efbf4e5c76e5649395ef8d26dec853d416c6ea485"
+    },
+    {
+      "path": "eval/rag_eval_dataset.jsonl",
+      "size_bytes": 1964,
+      "sha256": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+      "historical_sha256": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+      "matches_historical": true
+    },
+    {
+      "path": "gradle.properties",
+      "size_bytes": 1120,
+      "sha256": "cf774135f23cd1e6c054168ce772e24140800347f95b29819744c96f97e4ef26"
+    },
+    {
+      "path": "gradle/gradle-daemon-jvm.properties",
+      "size_bytes": 1138,
+      "sha256": "231649d2f8e8dc24310f18c921e3ae33fd2715b7f48a7ddcaf27a85003e0729a"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "size_bytes": 1749,
+      "sha256": "b3222711c93bdb321c00efe6d6b6414ae07b01e39c26f676b7fb0964b4ee2fb3"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "size_bytes": 45457,
+      "sha256": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "size_bytes": 282,
+      "sha256": "48476eb342e9497054a27b60741d69222698d2b18d7d746d15601010ece4f94f"
+    },
+    {
+      "path": "gradlew",
+      "size_bytes": 8728,
+      "sha256": "3238afb2aed5cb16eb7d6718077e7138059108f007b54179e9cc157c5a6e0e89"
+    },
+    {
+      "path": "gradlew.bat",
+      "size_bytes": 2843,
+      "sha256": "94102713eb8fb22d032397924c0f38ab2da783ba60d07054339f1190a0c4e2cd"
+    },
+    {
+      "path": "imported/sojung_room_data/BusinessCard.kt",
+      "size_bytes": 793,
+      "sha256": "19ce88506ceeab9c435e8f1753b3d78e8eae2b8e33ebae40f17d15ce09ca4df2"
+    },
+    {
+      "path": "imported/sojung_room_data/BusinessCardDao.kt",
+      "size_bytes": 585,
+      "sha256": "7241f4718f764d46c79144518202d8b99f333b7bf70bc961ae5a52f7b8dd3730"
+    },
+    {
+      "path": "imported/sojung_room_data/BusinessCardEntity.kt",
+      "size_bytes": 1289,
+      "sha256": "8b24307ab906afe089905670b47ca12cf99ff088a1a8abaa1e819d307935a2ed"
+    },
+    {
+      "path": "imported/sojung_room_data/HjpDatabase.kt",
+      "size_bytes": 789,
+      "sha256": "3d0e93e110982de11a94582d492089679aaa4519e4d46681fac4043c60f033fb"
+    },
+    {
+      "path": "imported/sojung_room_data/RoomBusinessCardStore.kt",
+      "size_bytes": 4826,
+      "sha256": "9b6215db1c61bdd766e52e21df0ab0d056dd5df761b38edd2a47dff48de942c5"
+    },
+    {
+      "path": "scripts/build_cards_json.py",
+      "size_bytes": 2838,
+      "sha256": "4d12490eebf6c96a1a96bcdfda03a79f68d5d7f9d2a260fb5754c8fbf3057990"
+    },
+    {
+      "path": "scripts/build_clean_datasets.py",
+      "size_bytes": 12801,
+      "sha256": "00dff59e7f0569507a186b3ed59b0cafe9ebcf67933f8b34ed6cda286dd17e49"
+    },
+    {
+      "path": "scripts/build_eval_dataset.py",
+      "size_bytes": 36038,
+      "sha256": "b29d46eb4bdedf1a9754b5d75bf396698ffbad73efbff0a52e6c6103b58dc162"
+    },
+    {
+      "path": "scripts/build_test_dataset.py",
+      "size_bytes": 19887,
+      "sha256": "232f44f1262dcb9b8de3177cfdb6b66ce1228aad66c56af2d3be8aa40da23003"
+    },
+    {
+      "path": "scripts/eval_multiturn.py",
+      "size_bytes": 38660,
+      "sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "historical_sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "matches_historical": true
+    },
+    {
+      "path": "scripts/eval_search.py",
+      "size_bytes": 66061,
+      "sha256": "af6003fa478af80381b020112d78ba472162d5526ebc7344a4cc8520e7b6f48d"
+    },
+    {
+      "path": "scripts/generate_test50.py",
+      "size_bytes": 11060,
+      "sha256": "1d727f684b90c74b05291e6983807231e3261d327eccda705dd50e74a74fc2c2"
+    },
+    {
+      "path": "scripts/hybrid_server.py",
+      "size_bytes": 77425,
+      "sha256": "5fc3872ddadcc89849c28f68117bd23e1b6bad0353c0980a78ea5c3a66a424f0"
+    },
+    {
+      "path": "scripts/install_real_device_debug.ps1",
+      "size_bytes": 3831,
+      "sha256": "a6937c30fddc48faa12071839557a69bc56db54716cdb9da6c4383332bb034d3"
+    },
+    {
+      "path": "scripts/precompute_embeddings.py",
+      "size_bytes": 3754,
+      "sha256": "a6335129a3c9bb522006ce6fa3307e60b6ec3b60bfc0d5e8c4fc69c8c52b83d3"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "size_bytes": 614,
+      "sha256": "fe2dece9ff8d215ece92c1f8de82d86f12eeb656cf8655082db191cd39111709"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/AgentSessionState.java",
+      "size_bytes": 1845,
+      "sha256": "f01fb7c80f5aa5b865d884c80138c1c09d70532543204a46c653c69294923bc8"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/BusinessCard.java",
+      "size_bytes": 2929,
+      "sha256": "70dcb4d52043fead3cbb6bbb5bc04a8514d1d927a8c6aa13f31cbfef574a1f2c"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/BusinessCardRepository.java",
+      "size_bytes": 391,
+      "sha256": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/CardEmbedding.java",
+      "size_bytes": 644,
+      "sha256": "1e0c72a901a2927dc0b14207e2d56857d7c869b85f327421d82001f9ba6b3dc7"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/CosineSimilarity.java",
+      "size_bytes": 732,
+      "sha256": "03b015f336e687cbeaa54154430373827ecdeb4a52913f50ee11693b02901750"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/EmbeddingEngine.java",
+      "size_bytes": 446,
+      "sha256": "d9eea97f7b2100054843e94d9637b4584dbf9aafa9c8e5067efd2f2599a1471d"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/EmbeddingUpdater.java",
+      "size_bytes": 1271,
+      "sha256": "409b5124cee7f4e5c0d2d6847985558820686f40504ad3028d652c09c44d4d61"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/FloatVectorCodec.java",
+      "size_bytes": 635,
+      "sha256": "9f52a476232c825d3ba1d7c977697bf69f476280bbf6300e5a6f1302b951f5d7"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/HuggingFaceTokenizer.java",
+      "size_bytes": 1318,
+      "sha256": "d35fbd4d5f5b4b5bace803b2605888eef3c90e46d79900f57c8b446664c8a1b4"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/InMemoryBusinessCardRepository.java",
+      "size_bytes": 1074,
+      "sha256": "5fb2110626e82d296057e548fa0a474baa84afb6e2d6206e61b2a9de4be992bb"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/InMemoryKeywordCandidateSource.java",
+      "size_bytes": 2279,
+      "sha256": "34e9b456ffcb849d70c936b8ec8ac2e429c06dccc60614286b2078ee0b89c067"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/KeywordCandidateSource.java",
+      "size_bytes": 162,
+      "sha256": "992d954b05669248e81897e7f88a79529ab17d6006e6c2eaf0ebc1f75d272451"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/KeywordRetriever.java",
+      "size_bytes": 160,
+      "sha256": "ff490615752fcd6ae55ecbc6aa6ad69e77cb19a87a956b676134d66d2b629cc4"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/LightweightTokenizer.java",
+      "size_bytes": 1383,
+      "sha256": "355aedb10cf7ce139a47db59eb4de8d5c0a5e858f893d8558d57db21c03c144f"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/LikeFallbackKeywordRetriever.java",
+      "size_bytes": 1809,
+      "sha256": "364af1f5bf8b8b97956096d2d5b9bfbd27138d5c1ce2aa82dcb4bb41129f24a2"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/LocalEmbeddingEngine.java",
+      "size_bytes": 3182,
+      "sha256": "c200f941b7540af98a2f7589ce55d3fcd3a9bdaf51f381c5486e9522efa851e7"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/NoOpRerankerEngine.java",
+      "size_bytes": 709,
+      "sha256": "9f0212eb354ead5844171bd89d671bbc620421bd56398b56474f1e93597799e8"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/OnDeviceEmbeddingEngine.java",
+      "size_bytes": 2406,
+      "sha256": "53680ba921bf58bc3cf0c60a4f3819112bd05597f7a1caeba5345cd5260993ec"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/QueryAnalysis.java",
+      "size_bytes": 818,
+      "sha256": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/QueryAnalyzer.java",
+      "size_bytes": 1207,
+      "sha256": "3636f224135a0a82b52bb0195c999c4ffe101fec5d0cd52a9b55c3e7ae9eb8e3"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/RagContextBuilder.java",
+      "size_bytes": 1484,
+      "sha256": "52df1eb51f69ee5c4cec039f097c3ec1442f99f37a25cabc23eea6f270aaf48f"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/ReciprocalRankFusion.java",
+      "size_bytes": 1899,
+      "sha256": "c7ef622267fda9c94c64db5c1cf02809e116b4df90a0284232e289d9779452f2"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/RerankerEngine.java",
+      "size_bytes": 228,
+      "sha256": "a06dbb1dbe7c303cc04a793fb9da65ee062a64c5f83f8974380fbbe7d77590a7"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/RetrievalMode.java",
+      "size_bytes": 96,
+      "sha256": "ee83c2f0fd52fe5a1194aef5e37514cdd641589f8a174cf56b90b3acaef47287"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/RetrievalResponse.java",
+      "size_bytes": 2031,
+      "sha256": "f69c699ff1eea2f51cff71a53ad88d7fddbc5d42a548e994da14887bc19d5668"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/RetrievalService.java",
+      "size_bytes": 157,
+      "sha256": "4474947e827705a1be3b50104beacaf01a856ca615069825405ea72231c7ee34"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/RoomFtsKeywordRetriever.java",
+      "size_bytes": 587,
+      "sha256": "4c33842ce5c4f6d2656c77fb5381edef065a9ce3810e6cf821614ebc9f417da9"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/ScoreBreakdown.java",
+      "size_bytes": 766,
+      "sha256": "8a8a34ef5aa131a2d7ae65b8ba85434b982499b5f20ff02aef6b314c0a01023d"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SearchExample.java",
+      "size_bytes": 3849,
+      "sha256": "b740148235e08b87e756df7a920aded01b5f557dc5bb4268acafb9955c2e5966"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SearchLookupService.java",
+      "size_bytes": 4680,
+      "sha256": "6b5b8b804ef064dc63942ce623264513d869c7551ee440a17e0d4e6a95d65fd1"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SearchMode.java",
+      "size_bytes": 97,
+      "sha256": "036fc33fd7fc471736ab6ac4ae6c1b02d561cedc4eff869c1c71e7a048adfaeb"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SearchResult.java",
+      "size_bytes": 1531,
+      "sha256": "50b88d9d574a950b0cf240dfa7224d877b26a3e676dad7b8e795a3d119a8a984"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SemanticRetriever.java",
+      "size_bytes": 1307,
+      "sha256": "97c175beea1bedbef4bb42afab955d386251409b4e68fc93d2e3abd3d6f20e58"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SortOption.java",
+      "size_bytes": 107,
+      "sha256": "101bcc0cd5eef970cad81e094ddf59f4d23768fa8f7e88975a0c068b628924f7"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/SqliteFts5KeywordRetriever.java",
+      "size_bytes": 489,
+      "sha256": "01ae3b72ac69dcbf7377414fd287ef73da3ed2040b3885ce047d42a1aeb16ca4"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/TextTokenizer.java",
+      "size_bytes": 576,
+      "sha256": "838020c92b7922541b43b652664c933df49b0faa6937136791974541d39fb7f7"
+    },
+    {
+      "path": "src/main/java/com/hjp/searchlookup/eval/RagEvaluator.java",
+      "size_bytes": 3344,
+      "sha256": "dc7b28f123b834b6f4c2391ee419664fa2cf725b5a73be30663c053f36667740"
+    }
+  ]
+}

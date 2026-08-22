@@ -1,0 +1,31 @@
+{
+  "schema_version": "ryeong-production-search-eval/v3",
+  "run_id": "ryeong_production_search_run_3",
+  "what_this_measures": "the current production SearchLookupService on the frozen ryeong dataset, with ground truth built by the reference's own build_eval_queries",
+  "is_the_reference_evaluators_own_result": false,
+  "top_k": 20,
+  "dataset_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+  "query_set_sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+  "gate_sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+  "cards": 1000,
+  "queries_total": 203,
+  "queries_scored": 183,
+  "abstention_queries": 20,
+  "excluded_queries": 0,
+  "exclusion_mechanism": "none — this runner has no way to exclude a query",
+  "semantic_axis_executed": false,
+  "keyword_fallback_ratio": 1.000000,
+  "semantic_note": "with no embedding model present every query is answered by the keyword axis. No figure here is semantic retrieval performance, and the concept categories describe keyword search attempting questions built to need meaning.",
+  "overall": {"top1_count": 162, "denominator": 183, "P@1": 0.885246, "P@5": 0.222951, "R@5": 0.826251, "MRR": 0.897817, "nDCG@5": 0.875479},
+  "by_category": {
+    "회사명": {"n": 40, "top1_count": 40, "recall5_complete_count": 40, "P@1": 1.000000, "P@5": 0.210000, "R@5": 1.000000, "MRR": 1.000000, "nDCG@5": 1.000000},
+    "이름": {"n": 40, "top1_count": 40, "recall5_complete_count": 40, "P@1": 1.000000, "P@5": 0.200000, "R@5": 1.000000, "MRR": 1.000000, "nDCG@5": 1.000000},
+    "전화(하이픈X)": {"n": 30, "top1_count": 30, "recall5_complete_count": 30, "P@1": 1.000000, "P@5": 0.213333, "R@5": 1.000000, "MRR": 1.000000, "nDCG@5": 1.000000},
+    "지역+직함(문장)": {"n": 40, "top1_count": 40, "recall5_complete_count": 40, "P@1": 1.000000, "P@5": 0.210000, "R@5": 1.000000, "MRR": 1.000000, "nDCG@5": 1.000000},
+    "개념형(easy)": {"n": 14, "top1_count": 7, "recall5_complete_count": 0, "P@1": 0.500000, "P@5": 0.442857, "R@5": 0.058160, "MRR": 0.577381, "nDCG@5": 0.452797},
+    "개념형(hard)": {"n": 19, "top1_count": 5, "recall5_complete_count": 0, "P@1": 0.263158, "P@5": 0.178947, "R@5": 0.020506, "MRR": 0.327216, "nDCG@5": 0.203865}
+  },
+  "abstention": {"total": 20, "passed": 20, "failed": 0, "accuracy": 1.000000, "failures": []},
+  "safety": {"stale_id_resolved": 0, "unstable_rankings": 0, "unstable_queries": []},
+  "latency_ms": {"p50": 1, "p95": 2, "max": 50}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-08-18T13:25:26.535Z" hostname="hanhaebyeol-ui-MacBookPro.local" time="0.068">
+  <properties/>
+  <testcase name="losingTheOverallFloorFailsEvenWhenEveryCategoryFloorHolds" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.01"/>
+  <testcase name="twentyOfTwentyPassesTheAbstentionRequirement" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="theRunnerIsNotSomethingAnOrdinaryTestRunWouldTrigger" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="numbersBooleansAndArraysStayThemselvesInTheReport" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.002"/>
+  <testcase name="oneUnstableRankingFailsTheGate" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="nothingIsExcludedFromTheFrozenInput" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.025"/>
+  <testcase name="theCardParserKeepsTheFieldsTheConstraintsDependOn" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.0"/>
+  <testcase name="oneHardNegativeThatAnswersFailsTheGate" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="anIdentifierCategoryFallingShortFailsTheGate" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="aResultFileIsNeverReplaced" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="aRunThatDiesHalfwayLeavesNoOfficialResult" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="oneStaleIdResolvingFailsTheGate" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="theRankingDenominatorIsOneHundredAndEightyThree" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.005"/>
+  <testcase name="theFrozenInputHoldsTwoHundredAndThreeQueriesOverOneThousandCards" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.005"/>
+  <testcase name="theAbstentionDenominatorIsTwenty" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.004"/>
+  <testcase name="anOutputDirectoryThatAlreadyExistsIsRefused" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="theFrozenRunDirectoriesAreRefusedAsOutput" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="regionAndTitleAtThirtyEightOfFortyFailsTheGate" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.001"/>
+  <testcase name="theRunIdentifiesItselfAsRunThree" classname="com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

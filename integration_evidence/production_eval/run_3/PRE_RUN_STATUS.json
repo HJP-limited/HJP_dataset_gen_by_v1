@@ -1,0 +1,10 @@
+{
+  "run_id": "ryeong_production_search_run_3",
+  "status": "FROZEN_NOT_RUN",
+  "evaluation_executed": false,
+  "result_files_present": false,
+  "frozen_at_local": "2026-08-18 KST",
+  "next_action": "run :search-core:runRyeongSearchEvalV3 — a separate, explicit act",
+  "freeze_manifest": "PRE_RUN_FREEZE_MANIFEST.json",
+  "freeze_manifest_sha256": "3ddd7d635829c53f47a83a690cea08ac55ffd110d68898bd42aa2a9e10628247"
+}

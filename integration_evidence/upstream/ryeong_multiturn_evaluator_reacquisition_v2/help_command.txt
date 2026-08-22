@@ -1,0 +1,2 @@
+cd "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi"
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/eval_multiturn.py --help

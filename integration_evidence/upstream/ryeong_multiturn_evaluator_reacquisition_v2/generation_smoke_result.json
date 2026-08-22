@@ -1,0 +1,38 @@
+{
+  "status": "NOT_RUN",
+  "reason": "the task permits a generation smoke only when ALL preconditions hold; none of the first three do",
+  "preconditions": [
+    {
+      "condition": "the actually required model is present",
+      "met": false,
+      "detail": "models/embeddinggemma-300m (SentenceTransformer checkpoint, ~1.2GB) is absent"
+    },
+    {
+      "condition": "the model server responds",
+      "met": false,
+      "detail": "litert-lm serve on 127.0.0.1:9379 is not running and no binary for it exists in the branch"
+    },
+    {
+      "condition": "the hybrid server responds",
+      "met": false,
+      "detail": "it exits 1 at import"
+    },
+    {
+      "condition": "synthetic evaluation confirmed",
+      "met": true,
+      "detail": "cards_eval1000.json is synthetic evaluation data; no real contact would be touched"
+    },
+    {
+      "condition": "no external side effect",
+      "met": true,
+      "detail": "the upstream contract has no compose/calendar/update surface at all"
+    },
+    {
+      "condition": "evaluator and server SHA recorded",
+      "met": true,
+      "detail": "see UPSTREAM_MANIFEST.json"
+    }
+  ],
+  "command_that_would_be_used": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/eval_multiturn.py --generate --sample 1 --repeat 1 --verbose",
+  "note": "this would be a DIAGNOSTIC READINESS RUN, never an official evaluation"
+}

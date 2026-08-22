@@ -1,0 +1,7 @@
+NOT_RUN
+
+RUN_D1 was never started. Section 15 of the task requires RUN_K1 to be a
+VALID BASELINE first; RUN_K1 returned INVALID RUN (unexpected action tools = 1).
+
+No instrumentation command was formed, no APK was installed, no model was pushed,
+and the device was not modified in any way.

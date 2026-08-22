@@ -1,0 +1,148 @@
+{
+  "production_search_source": {
+    "search-core/src/main/java/com/hjp/searchlookup/SearchLookupService.java": {
+      "sha256": "47f8d3f63ec53736054ebca7faa2c33a14ce629f1b58df457454615e1afa076f",
+      "bytes": 8089
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintPlan.java": {
+      "sha256": "08dc3cc90577fc46f912c1445460c1b2bc13af6772afead2335f8b41f9588293",
+      "bytes": 4145
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldVocabulary.java": {
+      "sha256": "e020da3e4dfb3ae6486850180df8e99207a4dd730cb185d5d0015931bcc89e1e",
+      "bytes": 7071
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintResolver.java": {
+      "sha256": "07dccba33fb85a0cc96a20c4fe574e4501a58808a421236f9e58af513c912068",
+      "bytes": 8225
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintMatcher.java": {
+      "sha256": "a32dbdc968a8fdefd0d19132492e6060650f355c9b8b0891f6ea8feafaa9706c",
+      "bytes": 5075
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/QueryAnalyzer.java": {
+      "sha256": "06e5cef78235063abbc3658d58ee9431eed98e2598bfff7da289d1dd6584d023",
+      "bytes": 2788
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/QueryAnalysis.java": {
+      "sha256": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+      "bytes": 818
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/LikeFallbackKeywordRetriever.java": {
+      "sha256": "7dff812cd16425b09e85163fe0b9f6f597897988cb6eb39ccbedfc58a507ed17",
+      "bytes": 3135
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/SemanticRetriever.java": {
+      "sha256": "5e81b8b5fdfa78ba0b5c0f2c0a3cc61791436482157d62acc5cc5fb0b6eba393",
+      "bytes": 1675
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/ReciprocalRankFusion.java": {
+      "sha256": "d585ca7ca1129a80fb54df529c6896dc6f8bc797581bce8497ef02052e626d90",
+      "bytes": 2123
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/BusinessCard.java": {
+      "sha256": "d7b7f7e39c1026c26d5660e1bc540d34f254e6e16764634e8b8dbe041115b74f",
+      "bytes": 3112
+    },
+    "search-core/src/main/java/com/hjp/searchlookup/BusinessCardRepository.java": {
+      "sha256": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79",
+      "bytes": 391
+    }
+  },
+  "production_search_source_count": 12,
+  "why_source_sha_not_just_git_head": "the search sources are untracked in this working tree, so the commit alone does not reproduce them. HEAD identifies the branch point; these hashes identify what will actually be measured.",
+  "evaluator_source": {
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java": {
+      "sha256": "9fda1e716fc6bacdbd51ce2bc6070c8b8c1bbc0cb1bbf5877103c1ce800be02a",
+      "bytes": 34095,
+      "role": "the runner — input loading, measurement, output policy, main()",
+      "control_bytes": 0
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Gate.java": {
+      "sha256": "3c0348c96ab6c1c947cbbe84737ea0020420f46458ffdf3c105243fc4ca4006e",
+      "bytes": 6244,
+      "role": "the gate — reads the frozen thresholds and judges an outcome",
+      "control_bytes": 0
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/EvalJson.java": {
+      "sha256": "308bb4da4d8626d73105b4209070e4ea59226c38556558db649cb74e7836de21",
+      "bytes": 9112,
+      "role": "recursive-descent JSON, replacing the regex reader whose depth bug cost run_1",
+      "control_bytes": 0
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java": {
+      "sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "bytes": 21004,
+      "role": "the self-test",
+      "control_bytes": 0
+    }
+  },
+  "gate": {
+    "integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json": {
+      "sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+      "bytes": 3379
+    },
+    "integration_evidence/production_eval/run_3/gate/GATE_RATIONALE.md": {
+      "sha256": "1c2c4a11b1a9601a7c6d2576b3b6e629619f5b7cefd3491f209d87ffe5b57cd4",
+      "bytes": 6108
+    }
+  },
+  "input": {
+    "integration_evidence/production_eval/run_3/input/cards_eval1000.json": {
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "bytes": 405413
+    },
+    "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json": {
+      "sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "bytes": 52441
+    }
+  },
+  "build": {
+    "search-core/build.gradle.kts": {
+      "sha256": "4e20d0de1a81e96abbc6584c893a81d3e75dfc18a0b1c6c308b85a3897b59e48",
+      "change": "registers :search-core:runRyeongSearchEvalV3 (JavaExec). Not wired into test, check or build."
+    }
+  },
+  "toolchain": {
+    "java": "openjdk 21.0.11 (Homebrew) at /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+    "gradle": "9.4.1",
+    "kotlin_dsl": "2.3.0",
+    "java_release_target": 11
+  },
+  "frozen_prior_evidence": {
+    "search-core/src/test/java/com/hjp/searchlookup/SearchFieldConstraintCharacterizationTest.java": "1da12bf6ea2c7e39417561360133ff95858003f7fd7f7c6a3ecfa99f5af5f858",
+    "search-core/src/test/java/com/hjp/searchlookup/RyeongDatasetProductionAdapterTest.java": "78cdbb15862ee74d3d4a6f629c571d14238dbd158fdb9d2aa57c7c64a2d85529",
+    "integration_evidence/characterization/search_field_constraints_v1/red/MANIFEST.json": "1cb8ed6b4b1baa1641b70210c2b475bcb3975373974a3b68e6d1198b956a6a51",
+    "integration_evidence/characterization/search_field_constraints_v1/green/MANIFEST.json": "1d6a4e80bb31e0bc54e8bf875460ae34d2deb607f5e6d62dc30463e798b5a0e1"
+  },
+  "not_reused_from_run_2": {
+    "file": "search-core/src/test/java/com/hjp/searchlookup/RyeongDatasetProductionAdapterTest.java",
+    "read_for": "audit reference only",
+    "defects_deliberately_absent_from_v3": [
+      "exact-string exclusion of the seed hard negative",
+      "REFERENCE_FLAGGED_MISLABEL",
+      "excludedMislabelled",
+      "queries_excluded_reference_flagged_mislabel",
+      "a hard-coded run label reading \"production adapter run_1\"",
+      "an abstention denominator of 19",
+      "writing into an existing run directory",
+      "Files.write with TRUNCATE_EXISTING semantics over an existing result"
+    ],
+    "verification_method": "grep -a over search-core/src/test/java/com/hjp/searchlookup/eval/ — the -a matters: this shell runs with LANG=C.UTF-8 and BSD grep silently skips a file it decides is binary, so a plain grep produced a vacuous all-clear the first time.",
+    "hits": 0,
+    "positive_controls": [
+      "FORBIDDEN_PATH_SEGMENTS",
+      "getCanonicalFile",
+      "StandardOpenOption.CREATE_NEW",
+      "ATOMIC_MOVE"
+    ]
+  },
+  "defect_found_and_fixed_before_freeze": {
+    "file": "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java",
+    "what": "a stray NUL byte stood where a separator was intended, in the duplicate-query check",
+    "consequence": "the file was classified as binary, so grep and diff skipped it silently — which is how the first verification pass produced a false all-clear",
+    "fix": "the duplicate check is now keyed on the (category, query) pair itself, so no separator character is needed at all",
+    "verified": "0 control bytes in every evaluator source; compile and self-test re-run green afterwards",
+    "found_before_the_freeze": true
+  }
+}

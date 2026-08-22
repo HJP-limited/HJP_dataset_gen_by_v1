@@ -1,0 +1,42 @@
+{
+  "status": "BLOCKED",
+  "reason": "the reference repository named in the task does not exist on this machine",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searched": "see reference_file_inventory.json for the exact searches and their negative results",
+  "not_substituted": "no local file was treated as a stand-in for the original evaluator",
+  "dataset_files_found_in_reference": 0,
+  "locally_present_multiturn_material": [
+    {
+      "path": "tools/ryeong_search_benchmark/multiturn-final-20260801.json",
+      "sha256": "1d1b1dca6e4df1f0851360fb08e2233023e397c2bcce1a6e3c41880624f2573d",
+      "size_bytes": 1218,
+      "role": "a RESULT SUMMARY of a past multiturn evaluation - not a dataset, not an evaluator",
+      "is_a_dataset": false,
+      "is_an_evaluator": false
+    },
+    {
+      "path": "tools/agent_eval/run_desktop_gemma_multiturn.py",
+      "sha256": "a300e7dfb3a7578b8695c678856b839b566ce5e610bcc7fc72d26aafc14fbd95",
+      "size_bytes": 24672,
+      "role": "a desktop Gemma multiturn driver belonging to this repository, not to the reference",
+      "is_a_dataset": false,
+      "is_an_evaluator": true
+    },
+    {
+      "path": "tools/agent_eval/run_desktop_gemma_multiturn_v3.py",
+      "sha256": "212afd62a57a5b9105d6829cf6c46c9d1d0bfba9a76e2b6740def2b633321adf",
+      "size_bytes": 31773,
+      "role": "same, v3",
+      "is_a_dataset": false,
+      "is_an_evaluator": true
+    }
+  ],
+  "result_summary_declares_its_own_sources": [
+    "search-core/src/test/java/com/hjp/searchlookup/ContactMultiTurnSessionTest.java",
+    "agent-core/src/test/kotlin/com/hjp/agent/core/ContactTurnReferenceResolverTest.kt",
+    "tool-contact/src/test/kotlin/com/hjp/tool/contact/ContactPluginsTest.kt"
+  ],
+  "what_that_means": "the numbers in multiturn-final-20260801.json were produced by Kotlin/Java JUnit tests in THIS repository, not by any Python evaluator",
+  "warning": "none of the above is the reference repository's original evaluator or dataset; they are listed only so the next task knows what exists locally"
+}

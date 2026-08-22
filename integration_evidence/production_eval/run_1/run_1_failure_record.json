@@ -1,0 +1,19 @@
+{
+ "run": "run_1",
+ "verdict": "FAILED against its own declared hard requirement",
+ "preserved_unchanged": true,
+ "failure": {
+  "assertion": "every abstain query must return nothing",
+  "expected": 20,
+  "actual": 19,
+  "log": "adapter_run.log"
+ },
+ "no_metrics_file": "the runner asserted before writing its report, so run_1 produced no numbers. That is itself a runner defect and is fixed in v2 by writing the report first.",
+ "analysis": {
+  "failing_query": "세종특별자치시 디자이너",
+  "the_reference_flags_this_label_itself": "scripts/eval_search.py's own audit_queries() printed during query construction: \"! 기권 라벨 의심 1건 (질의 토큰이 카드에 실제 존재): '세종특별자치시 디자이너' -> 토큰 '디자이너' 이 44장에 존재\". The label says 'no correct answer' while 디자이너 appears on 44 cards, so a keyword match legitimately finds them.",
+  "why_the_reference_still_scores_it_as_abstain": "the reference's improved hybrid path applies extract_field_filters()/apply_field_filters() and then should_abstain(). Those are a field hard-filter and an abstain gate. This repository's search has neither, so a location+title query whose location matches nobody still returns the title matches.",
+  "is_this_a_safety_defect": "no. 44 results is an ambiguous outcome, and the agent's contract turns ambiguity into a clarification with no side effect - it is not a wrong recipient. It is a precision gap.",
+  "decision": "the gate is not weakened. run_2 excludes the one query the reference's own audit flags as mislabelled, counts it publicly, and keeps the requirement at 100% of the remaining 19. The precision gap (no field filter, no abstain gate) is recorded as not ported, with its reason."
+ }
+}

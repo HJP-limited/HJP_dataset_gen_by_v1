@@ -1,0 +1,211 @@
+{
+  "question": "was the memory structure from HJP-limited/sojung@feature/runtime-multiturn-summary ported correctly?",
+  "verdict": "PORTED AND SUPERSEDED — every concept has a home, one is implemented differently on purpose, nothing was silently dropped",
+  "branch": {
+    "remote": "https://github.com/HJP-limited/sojung.git",
+    "ref": "feature/runtime-multiturn-summary",
+    "head": "019d65dd700fab3258f3da6e53be55b0a2c24214",
+    "date": "2026-08-13T19:54:38+09:00",
+    "subject": "Merge pull request #3 from HJP-limited/agent/structured-multiturn-memory",
+    "tracked_files": 179,
+    "clone_clean": true,
+    "memory_files": [
+      "agent-contract/.../AgentModel.kt (ConversationMemory, ConversationMemoryItem)",
+      "agent-core/.../AgentSession.kt (store, manager, ConversationMemoryReducer)"
+    ],
+    "schema_version": 1
+  },
+  "ours": {
+    "head": "993a5f5613235c2192f6c34b06841319813aefeb",
+    "branch": "android-app",
+    "memory_files": [
+      "agent-contract/.../ConversationMemory.kt",
+      "agent-core/.../AgentSession.kt",
+      "agent-core/.../ModelContextSelector.kt"
+    ],
+    "schema_version": 2
+  },
+  "field_mapping": [
+    {
+      "branch": "schemaVersion = 1",
+      "ours": "schemaVersion = 2",
+      "status": "SUPERSEDED"
+    },
+    {
+      "branch": "topic",
+      "ours": "topic",
+      "status": "IDENTICAL"
+    },
+    {
+      "branch": "confirmedFacts",
+      "ours": "confirmedFacts",
+      "status": "IDENTICAL"
+    },
+    {
+      "branch": "preferences",
+      "ours": "preferences",
+      "status": "IDENTICAL"
+    },
+    {
+      "branch": "constraints",
+      "ours": "constraints",
+      "status": "IDENTICAL"
+    },
+    {
+      "branch": "pendingActions + resolvedActions (two lists of ConversationMemoryItem)",
+      "ours": "actions: List<TrackedAction> with openActions / actionMemory / action(turnId) derived",
+      "status": "RESHAPED — one typed list with a status instead of two untyped ones; the open/closed split survives as a derived view"
+    },
+    {
+      "branch": "historyDigest: String (stored, accumulating)",
+      "ours": "not stored; ModelContextSelector.renderDigest() derives it per request from transcript turns not already used by relevant_history or recent_conversation",
+      "status": "REIMPLEMENTED — see digest_difference"
+    },
+    {
+      "branch": "modelView() strips pendingActions/resolvedActions",
+      "ours": "renderSessionState() filters actions to open + last CLOSED_ACTION_LIMIT closed, and always excludes the turn being executed",
+      "status": "RESHAPED — the branch hid all action bookkeeping from the model; ours shows verified open/closed state but never the live turn"
+    },
+    {
+      "branch": "(absent)",
+      "ours": "corrections",
+      "status": "ADDED HERE"
+    },
+    {
+      "branch": "(absent)",
+      "ours": "selectedContact: ContactReference (cardId + provenance + selection + confirmedAt, no PII)",
+      "status": "ADDED HERE"
+    },
+    {
+      "branch": "(absent)",
+      "ours": "candidateContacts",
+      "status": "ADDED HERE"
+    },
+    {
+      "branch": "(absent)",
+      "ours": "contactMentions / activeMentions",
+      "status": "ADDED HERE"
+    }
+  ],
+  "reducer_parity": [
+    {
+      "item": "MAX_TOPIC_CHARS",
+      "branch": 240,
+      "ours": 240,
+      "status": "IDENTICAL"
+    },
+    {
+      "item": "MAX_ITEM_CHARS",
+      "branch": 300,
+      "ours": 300,
+      "status": "IDENTICAL"
+    },
+    {
+      "item": "MAX_ITEMS_PER_BUCKET",
+      "branch": 8,
+      "ours": 8,
+      "status": "IDENTICAL"
+    },
+    {
+      "item": "preferenceMarkers",
+      "branch": [
+        "선호",
+        "좋아",
+        "싫어",
+        "말투",
+        "스타일",
+        "앞으로"
+      ],
+      "ours": [
+        "선호",
+        "좋아",
+        "싫어",
+        "말투",
+        "스타일",
+        "앞으로"
+      ],
+      "status": "IDENTICAL"
+    },
+    {
+      "item": "constraintMarkers",
+      "branch": [
+        "하지 마",
+        "하지마",
+        "말아",
+        "반드시",
+        "꼭",
+        "전에 확인",
+        "동의 없이"
+      ],
+      "ours": [
+        "하지 마",
+        "하지마",
+        "말아",
+        "반드시",
+        "꼭",
+        "전에 확인",
+        "동의 없이"
+      ],
+      "status": "IDENTICAL"
+    },
+    {
+      "item": "MAX_SUMMARY_MESSAGE_CHARS",
+      "branch": 500,
+      "ours": "DIGEST_MESSAGE_CHARS = 160",
+      "status": "DIFFERENT VALUE — ours truncates each digest line harder because the digest is rebuilt per request rather than accumulated"
+    }
+  ],
+  "digest_difference": {
+    "branch": "eviction-driven. recentMessages is a fixed window; when it overflows the evicted messages are appended to ConversationMemory.historyDigest via mergeHistoryDigest(), each message truncated at 500 chars, the whole string tail-trimmed to maxHistoryDigestChars. The digest is state and grows lossily.",
+    "ours": "selection-driven. The full transcript is kept; every request picks recent turns, then relevant turns, then renders everything left over as the digest (DIGEST_MESSAGE_CHARS = 160 per line, tail-trimmed to budget.maxDigestChars). Nothing is stored, so nothing accumulates.",
+    "consequence_1": "ours cannot show the same turn twice — relevant_history, recent_conversation and history_digest are disjoint by construction (a property CLAUDE.md states as a requirement)",
+    "consequence_2": "ours has no eviction, so a turn that scrolled out of the window can still be selected back into relevant_history later; the branch could not recover an evicted message except as digest text",
+    "consequence_3": "the branch's digest is part of memory state and would be persisted with it; ours is a rendering concern only",
+    "is_this_a_porting_defect": false,
+    "why": "the section still exists and is still fed; only the production mechanism changed, and the change removes the duplication the branch's design allowed"
+  },
+  "not_ported_and_why": [
+    {
+      "item": "ConversationMemory.historyDigest as a stored field",
+      "reason": "replaced by per-request derivation; keeping the field would give two sources of truth for the same section"
+    },
+    {
+      "item": "recentMessages eviction + maxRecentMessages window",
+      "reason": "ours keeps the transcript and selects per request; CLAUDE.md explicitly forbids trimming the on-screen transcript for model-context reasons"
+    },
+    {
+      "item": "modelView()",
+      "reason": "the same intent is enforced at render time in renderSessionState(), which additionally excludes the in-flight turn"
+    }
+  ],
+  "branch_modules_absent_here": [
+    "agent-routing",
+    "desktop-agent-runner",
+    "llm-litert-common",
+    "tool-external-actions",
+    "buildSrc"
+  ],
+  "note_on_those_modules": "none of them holds memory state; agent-routing is gateway/parsing, the others are runner/packaging. Their absence does not affect memory parity.",
+  "verification": {
+    "full_jvm": {
+      "suites": 90,
+      "tests": 670,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "memory_suites_green": [
+      "AgentSessionManagerTest",
+      "ModelContextSelectorTest",
+      "SessionStateFactRenderingTest",
+      "ModelContextMemoryProjectionCharacterizationTest",
+      "StructuredMemoryCharacterizationTest",
+      "AgentMultiturnScenarioTest",
+      "MultiturnCaseRunnerTest",
+      "SessionFocusVsTurnTargetTest",
+      "ContextBudgetMeasurementTest",
+      "ContextStressTest"
+    ]
+  },
+  "files_changed_by_this_check": 0
+}

@@ -1,0 +1,113 @@
+Reusing configuration cache.
+> Task :tool-datetime:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :llm-litert:preBuild UP-TO-DATE
+> Task :tool-contract:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :agent-contract:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :tool-android-intents:preBuild UP-TO-DATE
+> Task :tool-contact:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :agent-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :llm-litert:preDebugBuild UP-TO-DATE
+> Task :tool-android-intents:preDebugBuild UP-TO-DATE
+> Task :search-core:processResources NO-SOURCE
+> Task :tool-contract:processResources NO-SOURCE
+> Task :agent-core:processResources NO-SOURCE
+> Task :tool-datetime:processResources NO-SOURCE
+> Task :tool-contact:processResources NO-SOURCE
+> Task :agent-contract:processResources NO-SOURCE
+> Task :llm-litert:processDebugNavigationResources
+> Task :tool-android-intents:processDebugNavigationResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:generateDebugResources
+> Task :llm-litert:writeDebugAarMetadata
+> Task :tool-android-intents:writeDebugAarMetadata
+> Task :tool-android-intents:javaPreCompileDebug
+> Task :llm-litert:javaPreCompileDebug
+> Task :llm-litert:generateDebugResources
+> Task :app:extractDeepLinksDebug
+> Task :llm-litert:extractDeepLinksDebug
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :tool-android-intents:generateDebugResources
+> Task :app:generateDebugBuildConfig
+> Task :tool-android-intents:mapDebugSourceSetPaths
+> Task :tool-android-intents:extractDeepLinksDebug
+> Task :llm-litert:mapDebugSourceSetPaths
+> Task :app:javaPreCompileDebugUnitTest
+> Task :tool-android-intents:packageDebugResources
+> Task :llm-litert:packageDebugResources
+> Task :tool-android-intents:processDebugManifest
+> Task :llm-litert:processDebugManifest
+> Task :llm-litert:compileDebugLibraryResources
+> Task :app:javaPreCompileDebug
+> Task :tool-android-intents:compileDebugLibraryResources
+> Task :app:processDebugNavigationResources
+> Task :llm-litert:parseDebugLocalResources
+> Task :tool-android-intents:parseDebugLocalResources
+> Task :app:checkDebugAarMetadata
+> Task :app:compileDebugNavigationResources
+> Task :app:packageDebugResources
+> Task :tool-android-intents:generateDebugRFile
+> Task :llm-litert:generateDebugRFile
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :search-core:compileJava
+> Task :search-core:classes
+> Task :search-core:jar
+> Task :app:mergeDebugResources
+> Task :tool-contract:compileKotlin
+> Task :tool-contract:compileJava NO-SOURCE
+> Task :tool-contract:classes UP-TO-DATE
+> Task :tool-contract:jar
+> Task :app:processDebugResources
+> Task :tool-datetime:compileKotlin
+> Task :tool-datetime:compileJava NO-SOURCE
+> Task :tool-datetime:classes UP-TO-DATE
+> Task :tool-datetime:jar
+> Task :tool-android-intents:compileDebugKotlin
+> Task :tool-android-intents:compileDebugJavaWithJavac NO-SOURCE
+> Task :tool-android-intents:processDebugJavaRes
+> Task :tool-android-intents:bundleLibCompileToJarDebug
+> Task :tool-android-intents:bundleLibRuntimeToJarDebug
+> Task :tool-contact:compileKotlin
+> Task :tool-contact:compileJava NO-SOURCE
+> Task :tool-contact:classes UP-TO-DATE
+> Task :tool-contact:jar
+> Task :agent-contract:compileKotlin
+> Task :agent-contract:compileJava NO-SOURCE
+> Task :agent-contract:classes UP-TO-DATE
+> Task :agent-contract:jar
+> Task :llm-litert:compileDebugKotlin
+> Task :llm-litert:compileDebugJavaWithJavac NO-SOURCE
+> Task :llm-litert:processDebugJavaRes
+> Task :llm-litert:bundleLibCompileToJarDebug
+> Task :llm-litert:bundleLibRuntimeToJarDebug
+> Task :agent-core:compileKotlin
+> Task :agent-core:compileJava NO-SOURCE
+> Task :agent-core:classes UP-TO-DATE
+> Task :agent-core:jar
+> Task :app:kspDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspDebugUnitTestKotlin
+
+> Task :app:compileDebugUnitTestKotlin
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/app/src/test/java/com/example/hjp/eval/ryeong/RyeongOfficialCompatibilityRunTest.kt:191:30 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/app/src/test/java/com/example/hjp/eval/ryeong/RyeongOfficialCompatibilityRunTest.kt:191:78 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+> Task :app:testDebugUnitTest FAILED
+
+RyeongOfficialCompatibilityRunTest > official jvm keyword baseline FAILED
+    java.lang.IllegalStateException at RyeongOfficialCompatibilityRunTest.kt:94
+70 actionable tasks: 70 executed
+Configuration cache entry reused.

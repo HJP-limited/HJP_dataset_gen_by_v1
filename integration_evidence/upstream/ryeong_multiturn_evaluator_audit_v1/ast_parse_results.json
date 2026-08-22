@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "reason": "AST parsing was not applicable: there is no reference Python source to parse",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searched": "see reference_file_inventory.json for the exact searches and their negative results",
+  "not_substituted": "no local file was treated as a stand-in for the original evaluator",
+  "files_parsed": 0,
+  "parse_failures": 0,
+  "note": "local repository Python files were deliberately NOT parsed as a substitute for the reference evaluator"
+}

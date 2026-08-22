@@ -1,0 +1,110 @@
+{
+  "upstream": {
+    "remote": "https://github.com/HJP-limited/ryeong.git",
+    "branch": "llm-integration-work",
+    "previous_frozen_tip": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+    "new_tip": "9f359c70b6a6851802c95e30ea731a36d56ed809",
+    "commits_ahead": 6,
+    "files_changed": 24,
+    "insertions": 10147,
+    "deletions": 143
+  },
+  "changed_inputs": {
+    "eval_multiturn.py": {
+      "old": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "new": "8d69896d4baf475c840049cb73eb7125480c9e0ffc057384fa677ced35332a95",
+      "changed": true
+    },
+    "cards_eval1000.json": {
+      "old": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "new": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "changed": false
+    },
+    "rag_eval_dataset.jsonl": {
+      "changed": false
+    },
+    "new_dependency": {
+      "path": "scripts/card_fingerprint.py",
+      "sha256": "ba58c83c9ecaa4fb02355fd92e7d569f79daaac8ef43e2b5c74230369b27fae4"
+    },
+    "new_data": {
+      "path": "data/cards_embeddings_fingerprint.json",
+      "sha256": "979a38be4c547f92ed7f5182922a56ec490844cb53ff7654d5a09f56fa459b10"
+    }
+  },
+  "inventory": {
+    "v1": {
+      "scenarios": 130,
+      "turns": 377,
+      "kinds": 21,
+      "depth_1": 3,
+      "routing_scorable": 328,
+      "routing_excluded": 49,
+      "gold_turns": 335,
+      "slot_turns": 288,
+      "export_sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+      "bytes": 284097
+    },
+    "v2": {
+      "scenarios": 139,
+      "turns": 386,
+      "kinds": 22,
+      "depth_1": 12,
+      "routing_scorable": 328,
+      "routing_excluded": 58,
+      "gold_turns": 339,
+      "slot_turns": 288,
+      "export_sha256": "4c169c192314feaafa7a7356d4ba5a56fbfcc34ca7f3d1e0cad0b7e0c16f6664",
+      "bytes": 294103
+    },
+    "delta": {
+      "scenarios": 9,
+      "turns": 9,
+      "kinds": 1,
+      "routing_scorable": 0,
+      "routing_excluded": 9,
+      "note": "every added turn falls in already-NOT_SCORABLE count routes; the search/followup denominator is unchanged at 328"
+    }
+  },
+  "utterance_rewrite": {
+    "scenarios_with_identical_questions_at_same_index": 28,
+    "of": 130,
+    "mechanism": "fixed strings replaced by pick(rng, ASK_COMPANY/ELLIPTIC[...]) pools"
+  },
+  "metric_changes": {
+    "removed": [
+      "r5_ok"
+    ],
+    "added": [
+      "hit5_ok",
+      "hit5_n",
+      "r5_sum (graded recall)",
+      "mrr_sum (MRR)"
+    ],
+    "cli_added": [
+      "--seed"
+    ],
+    "self_audit": "ceiling() prints each metric's ceiling next to it"
+  },
+  "new_benchmark": {
+    "path": "benchmark_final50_v3/",
+    "scenarios": 50,
+    "user_turns": 244,
+    "evaluated_turns": 50,
+    "categories": 5,
+    "own_evaluator": "eval_benchmark_final50_v3.py (F1 / exact match)",
+    "upstream_instruction": "do not merge with the dynamic suite into one overall score"
+  },
+  "export_determinism": {
+    "processes": 4,
+    "identical": true,
+    "pythonhashseed": "0"
+  },
+  "sealed_v1_untouched": {
+    "scenarios_v1_sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+    "matches_frozen": true,
+    "official_v1_result_modified": false,
+    "official_v1_rerun": false
+  },
+  "production_changed": 0
+}

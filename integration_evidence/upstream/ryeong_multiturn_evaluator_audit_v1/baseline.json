@@ -1,0 +1,31 @@
+{
+  "task": "ryeong_multiturn_evaluator_audit_v1",
+  "scope": "read-only audit of the reference multiturn evaluator and dataset contract",
+  "started_local": "2026-08-19T00:56:52+0900",
+  "timezone": "KST (Asia/Seoul, UTC+09:00)",
+  "current_repo": {
+    "path": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung",
+    "head": "993a5f5613235c2192f6c34b06841319813aefeb",
+    "branch": "android-app",
+    "remote": "https://github.com/HJP-limited/sojung.git",
+    "dirty_entries_uall": 9916,
+    "note": "the working tree was already dirty before this task; nothing in it was modified here"
+  },
+  "governing_instructions": [
+    "CLAUDE.md (project)",
+    "the task specification's sections 2, 3 and 5"
+  ],
+  "stated_reference_state": {
+    "jvm": "85 suites / 608 tests / 0 failures / 0 errors / 0 skipped",
+    "debug_apk_sha256": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+    "search_run_3": "frozen gate PASS, invocation count 1",
+    "actual_embeddinggemma_semantic_evaluation": "NOT RUN",
+    "ryeong_eval_multiturn_py": "NOT RUN",
+    "production_kotlin_multiturn_adapter": "does not exist"
+  },
+  "protected_files_before": 741,
+  "reference_files_before": 9,
+  "source_kt_java_files_before": 217,
+  "apk_sha256_before": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+  "run_3_invocation_count_before": 1
+}

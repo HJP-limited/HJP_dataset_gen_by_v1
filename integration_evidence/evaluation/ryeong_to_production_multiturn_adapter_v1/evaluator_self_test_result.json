@@ -1,0 +1,61 @@
+{
+  "loader": {
+    "suite": "RyeongScenarioLoaderTest",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "slot bearing turns match the upstream count",
+      "an unasserted route stays null instead of collapsing to a value",
+      "slots distinguish an undeclared focus from a declared null focus",
+      "must alternatives are preserved as alternative groups",
+      "provenance pins the upstream inputs",
+      "gold bearing turns match the upstream count",
+      "every question is non-blank",
+      "conversation depth matches the declared distribution",
+      "turn depths run one to n within every scenario",
+      "scenario indices are unique and dense",
+      "loading twice yields identical content",
+      "the frozen manifest carries exactly the declared inventory",
+      "the raw manifest is valid UTF-8 JSON with a trailing newline",
+      "a scalar type mismatch is rejected rather than coerced"
+    ]
+  },
+  "mutation": {
+    "suite": "RyeongEvaluatorMutationTest",
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "wrong id inserted into top five is detected",
+      "folding an excluded turn into the denominator is refused",
+      "turn reordering is detected",
+      "injecting the expected value as the observed value is detected",
+      "a scalar type mismatch in the manifest is refused",
+      "create_calendar_event on a search turn is detected",
+      "a missing session reset shows up as leakage",
+      "a partial result is refused",
+      "a side effect firing twice is detected",
+      "wrong focus id is detected",
+      "an unmapped route is excluded rather than failed",
+      "focus leakage between scenarios is detected",
+      "a clean run passes the gate",
+      "missing focus is detected",
+      "failures with a zero exit code are refused",
+      "stale focus is detected",
+      "scoring generation without a model run is refused",
+      "update_business_card on a search turn is detected",
+      "memory leakage between scenarios is detected",
+      "an input SHA mismatch is refused",
+      "an evaluator exception is refused",
+      "open_compose on a search turn is detected separately from a route failure",
+      "gold outside top five is detected",
+      "wrong route is detected"
+    ]
+  },
+  "green": true,
+  "fixtures": "synthetic; no name, company or card id from cards_eval1000.json appears in them",
+  "frozen_130_executed": false
+}

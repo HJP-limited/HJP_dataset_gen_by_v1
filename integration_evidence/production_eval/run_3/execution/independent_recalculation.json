@@ -1,0 +1,288 @@
+{
+  "method": "recomputed from production_search_eval_v3_results.json and the frozen query set, without re-running the evaluator and without trusting gate_verdict.json",
+  "identity_183_plus_20": {
+    "ranking": 183,
+    "abstention": 20,
+    "sum": 203,
+    "equals_total": true
+  },
+  "category_n_sum": {
+    "per_category": {
+      "회사명": 40,
+      "이름": 40,
+      "전화(하이픈X)": 30,
+      "지역+직함(문장)": 40,
+      "개념형(easy)": 14,
+      "개념형(hard)": 19
+    },
+    "sum": 183,
+    "equals_queries_scored": true,
+    "matches_frozen_input_ranking_counts": true,
+    "frozen_input_ranking_counts": {
+      "회사명": 40,
+      "이름": 40,
+      "전화(하이픈X)": 30,
+      "지역+직함(문장)": 40,
+      "개념형(easy)": 14,
+      "개념형(hard)": 19
+    }
+  },
+  "overall_top1": {
+    "reported": 162,
+    "recomputed_from_categories": 162,
+    "matches": true,
+    "denominator_reported": 183,
+    "denominator_expected": 183,
+    "denominator_matches": true,
+    "P@1_reported": 0.885246,
+    "P@1_recomputed": 0.885246,
+    "P@1_matches": true
+  },
+  "category_top1_vs_rate": {
+    "회사명": {
+      "n": 40,
+      "top1_count": 40,
+      "P@1_reported": 1.0,
+      "P@1_recomputed": 1.0,
+      "consistent": true
+    },
+    "이름": {
+      "n": 40,
+      "top1_count": 40,
+      "P@1_reported": 1.0,
+      "P@1_recomputed": 1.0,
+      "consistent": true
+    },
+    "전화(하이픈X)": {
+      "n": 30,
+      "top1_count": 30,
+      "P@1_reported": 1.0,
+      "P@1_recomputed": 1.0,
+      "consistent": true
+    },
+    "지역+직함(문장)": {
+      "n": 40,
+      "top1_count": 40,
+      "P@1_reported": 1.0,
+      "P@1_recomputed": 1.0,
+      "consistent": true
+    },
+    "개념형(easy)": {
+      "n": 14,
+      "top1_count": 7,
+      "P@1_reported": 0.5,
+      "P@1_recomputed": 0.5,
+      "consistent": true
+    },
+    "개념형(hard)": {
+      "n": 19,
+      "top1_count": 5,
+      "P@1_reported": 0.263158,
+      "P@1_recomputed": 0.263158,
+      "consistent": true
+    }
+  },
+  "gate_relevant_counts": {
+    "company_top1": 40,
+    "name_top1": 40,
+    "phone_top1": 30,
+    "region_title_top1": 40,
+    "region_title_recall5_complete": 40
+  },
+  "abstention": {
+    "total": 20,
+    "passed": 20,
+    "failed": 0,
+    "passed_plus_failed": 20,
+    "equals_20": true,
+    "matches_frozen_input_count": true,
+    "frozen_input_hard_negatives": [
+      "우주비행사 찾아줘",
+      "남극기지 근무자",
+      "왕실전속조련사",
+      "심해잠수정조종사",
+      "등대지기 연락처",
+      "서커스 단장",
+      "포경선 선장",
+      "화산 탐사대원",
+      "고래 조련사",
+      "열기구 조종사",
+      "010-0000-0000",
+      "02-0000-0000",
+      "nonexistent@nowhere.invalid",
+      "zzzz@zzzz.zzz",
+      "주식회사없는회사이름테스트",
+      "존재하지않는사람이름99",
+      "울릉도 근무자",
+      "백령도에 있는 사람",
+      "독도에 있는 사람 찾아줘",
+      "세종특별자치시 디자이너"
+    ],
+    "accuracy_reported": 1.0,
+    "accuracy_recomputed": 1.0,
+    "accuracy_matches": true,
+    "failure_list_length": 0,
+    "failure_list_consistent_with_failed_count": true
+  },
+  "exclusions": {
+    "reported": 0,
+    "expected": 0,
+    "matches": true,
+    "runner_has_no_exclusion_mechanism": true
+  },
+  "safety": {
+    "stale_id_resolved": 0,
+    "unstable_rankings": 0,
+    "unstable_query_list_length": 0,
+    "unstable_list_consistent": true
+  },
+  "semantic": {
+    "semantic_axis_executed": false,
+    "keyword_fallback_ratio": 1.0,
+    "ratio_is_one": true,
+    "consistent": true
+  },
+  "latency_ms": {
+    "p50": 1,
+    "p95": 2,
+    "max": 50
+  },
+  "not_independently_verifiable": [
+    {
+      "item": "whether each of the 20 hard negatives individually returned an empty list",
+      "why": "the runner records only failures; with failed=0 there is no per-query record to check, and confirming it would mean re-running the evaluation"
+    },
+    {
+      "item": "the returned card ids for each hard negative",
+      "why": "same — no per-query output exists"
+    },
+    {
+      "item": "which ranking queries missed, and their top-5",
+      "why": "the report is aggregated per category; there is no per-query ranking output"
+    },
+    {
+      "item": "the relevant ids versus the actual top-5 for any single query",
+      "why": "same"
+    },
+    {
+      "item": "latency figures",
+      "why": "wall-clock, not reproducible from the artifact"
+    }
+  ],
+  "note_on_scope": "the runner was not modified to add per-query detail. Everything above is recomputed from the artifact and the frozen input.",
+  "independent_gate_application": {
+    "checks": [
+      {
+        "name": "cards",
+        "requirement": "== 1000",
+        "expected": 1000,
+        "actual": 1000,
+        "passed": true
+      },
+      {
+        "name": "queries_total",
+        "requirement": "== 203",
+        "expected": 203,
+        "actual": 203,
+        "passed": true
+      },
+      {
+        "name": "queries_scored",
+        "requirement": "== 183",
+        "expected": 183,
+        "actual": 183,
+        "passed": true
+      },
+      {
+        "name": "abstention_queries",
+        "requirement": "== 20",
+        "expected": 20,
+        "actual": 20,
+        "passed": true
+      },
+      {
+        "name": "excluded_queries",
+        "requirement": "== 0",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "abstention_passed",
+        "requirement": "== 20",
+        "expected": 20,
+        "actual": 20,
+        "passed": true
+      },
+      {
+        "name": "abstention_failed",
+        "requirement": "== 0",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "stale_id_resolved",
+        "requirement": "== 0",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "unstable_rankings",
+        "requirement": "== 0",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "overall_top1",
+        "requirement": ">= 154",
+        "expected": 154,
+        "actual": 162,
+        "passed": true
+      },
+      {
+        "name": "category_top1[회사명]",
+        "requirement": ">= 40",
+        "expected": 40,
+        "actual": 40,
+        "passed": true
+      },
+      {
+        "name": "category_top1[이름]",
+        "requirement": ">= 40",
+        "expected": 40,
+        "actual": 40,
+        "passed": true
+      },
+      {
+        "name": "category_top1[전화(하이픈X)]",
+        "requirement": ">= 30",
+        "expected": 30,
+        "actual": 30,
+        "passed": true
+      },
+      {
+        "name": "category_top1[지역+직함(문장)]",
+        "requirement": ">= 39",
+        "expected": 39,
+        "actual": 40,
+        "passed": true
+      },
+      {
+        "name": "category_recall5_complete[지역+직함(문장)]",
+        "requirement": ">= 40",
+        "expected": 40,
+        "actual": 40,
+        "passed": true
+      }
+    ],
+    "failed_count": 0,
+    "failed": [],
+    "independent_verdict": "PASS",
+    "agrees_with_runner_verdict": true,
+    "runner_verdict": true,
+    "runner_failed_check_count": 0
+  }
+}

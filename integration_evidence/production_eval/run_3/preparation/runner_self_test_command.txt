@@ -1,0 +1,4 @@
+JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \
+./gradlew --offline :search-core:test \
+  --tests 'com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3RunnerSelfTest' \
+  --rerun-tasks

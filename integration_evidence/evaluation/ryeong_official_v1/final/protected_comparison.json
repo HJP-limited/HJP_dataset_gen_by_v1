@@ -1,0 +1,33 @@
+{
+  "protected_evidence": {
+    "before": 863,
+    "after": 863,
+    "changed": [],
+    "removed": [],
+    "added": [],
+    "changed_count": 0,
+    "removed_count": 0,
+    "added_count": 0
+  },
+  "source": {
+    "before": 227,
+    "after": 227,
+    "changed": [],
+    "removed": [],
+    "added": [],
+    "changed_count": 0,
+    "removed_count": 0,
+    "added_count": 0
+  },
+  "frozen_scenarios_unchanged": true,
+  "frozen_cards_unchanged": true,
+  "upstream_clone_clean": true,
+  "apk_sha256": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+  "apk_unchanged": true,
+  "run_1_2_3_reexecuted": false,
+  "device_modified": false,
+  "forbidden_git_ops": 0,
+  "modified_after_seeing_results": "none — the result files were written by the run itself and have not been edited",
+  "production_src_main_changed": [],
+  "verdict": "PROTECTED SCOPES UNCHANGED"
+}

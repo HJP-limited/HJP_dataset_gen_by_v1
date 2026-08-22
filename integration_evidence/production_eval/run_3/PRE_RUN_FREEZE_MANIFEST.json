@@ -1,0 +1,219 @@
+{
+  "schema_version": "ryeong-production-search-eval-freeze/v3",
+  "run_id": "ryeong_production_search_run_3",
+  "created_at_local": "2026-08-18 KST",
+  "frozen_before_any_run_3_result": true,
+  "evaluation_executed": false,
+  "result_sha256": null,
+  "result_sha256_note": "there is no result yet. No future hash is recorded here, and none may be added retroactively — a result is pinned by its own file once it exists.",
+  "git": {
+    "head": "993a5f5613235c2192f6c34b06841319813aefeb",
+    "branch": "android-app",
+    "working_tree_dirty": true,
+    "tracked_modified_count": 25,
+    "status_short_entry_count": 91,
+    "why_head_is_not_enough": "the search sources and this evaluator are untracked in this working tree. The commit identifies the branch point; only the source hashes below identify what will actually run."
+  },
+  "reference": {
+    "repository": "https://github.com/HJP-limited/ryeong.git",
+    "branch": "llm-integration-work",
+    "commit": "7008304b2c14136cba333840368dae35e925a885",
+    "role": "origin of the dataset and of the ground truth; its own evaluator was never successfully run here"
+  },
+  "dataset": {
+    "integration_evidence/production_eval/run_3/input/cards_eval1000.json": {
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "bytes": 405413
+    },
+    "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json": {
+      "sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "bytes": 52441
+    }
+  },
+  "dataset_origin": {
+    "cards": "integration_evidence/production_eval/run_1/cards_eval1000.json",
+    "queries": "integration_evidence/production_eval/run_1/ryeong_queries_extracted.json",
+    "byte_identical_to_origin": true,
+    "origin_modified": false
+  },
+  "case_counts": {
+    "cards": 1000,
+    "queries_total": 203,
+    "ranking_queries": 183,
+    "abstention_queries": 20,
+    "queries_excluded": 0,
+    "identity": "183 + 20 = 203"
+  },
+  "category_counts": {
+    "개념형(easy)": 14,
+    "개념형(hard)": 19,
+    "기권(정답없음)": 20,
+    "이름": 40,
+    "전화(하이픈X)": 30,
+    "지역+직함(문장)": 40,
+    "회사명": 40
+  },
+  "metric_definitions": {
+    "ranking": {
+      "denominator": 183,
+      "note": "the 183 ranking queries. Not 203, which folds the hard negatives into a ranking average; not 143, which the earlier final report reached by dropping 지역+직함(문장) from its own sum.",
+      "P@1": "1 when the top-ranked card id is in the relevant set, else 0; averaged over 183",
+      "P@5": "relevant ids among the top 5, divided by 5; averaged over 183",
+      "R@5": "relevant ids among the top 5, divided by |relevant|; averaged over 183",
+      "MRR": "reciprocal rank of the first relevant id over the whole ranked list, 0 when none appears; averaged over 183",
+      "nDCG@5": "binary-gain DCG over the top 5 divided by the ideal DCG for min(5, |relevant|)",
+      "top1_count": "the same fact as P@1 stated as a whole number, which is what the gate compares",
+      "recall5_complete_count": "queries whose top 5 contained every relevant id",
+      "per_category": "the same figures grouped by the reference's query category",
+      "top_k": 20
+    },
+    "abstention": {
+      "denominator": 20,
+      "total": "every query whose relevant set is empty",
+      "passed": "returned an empty result list",
+      "failed": "returned anything at all",
+      "accuracy": "passed / 20",
+      "failure_detail": "per failing query: the returned card ids, and for each card its location, address, title and company",
+      "exclusions_permitted": 0,
+      "note": "the runner has no mechanism to exclude a query. run_2 excluded one by name after it failed run_1."
+    },
+    "safety_and_operations": {
+      "stale_id_resolved": "lookups by ids no card carries that still return a card",
+      "unstable_rankings": "queries whose repeated identical lookup returned a different order",
+      "latency_ms": "wall-clock milliseconds per query inside the JVM, p50/p95/max — reported, not gated",
+      "keyword_fallback_ratio": "share of queries whose RetrievalResponse fell back to KEYWORD_ONLY",
+      "semantic_axis_executed": "whether any query actually ran the semantic axis"
+    },
+    "semantic_status": {
+      "embedding_engine": "LocalEmbeddingEngine — isModelBacked() is false",
+      "embeddinggemma_present": false,
+      "expected_semantic_axis_executed": false,
+      "expected_keyword_fallback_ratio": 1.0,
+      "concept_categories": "개념형(easy) and 개념형(hard) will describe keyword search attempting questions built to need meaning; they are a keyword-only diagnostic and are not gated",
+      "prohibition": "no deterministic test vector is used in place of a model, and no figure from this run may be described as semantic retrieval performance"
+    }
+  },
+  "gate": {
+    "file": "integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json",
+    "sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+    "rationale": "integration_evidence/production_eval/run_3/gate/GATE_RATIONALE.md",
+    "rationale_sha256": "1c2c4a11b1a9601a7c6d2576b3b6e629619f5b7cefd3491f209d87ffe5b57cd4",
+    "hard_checks_are_whole_counts": true,
+    "authored_from": "run_2's frozen raw per-category values, converted back to counts; no run_3 result was consulted"
+  },
+  "runner": {
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java": {
+      "sha256": "9fda1e716fc6bacdbd51ce2bc6070c8b8c1bbc0cb1bbf5877103c1ce800be02a",
+      "role": "the runner — input loading, measurement, output policy, main()"
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Gate.java": {
+      "sha256": "3c0348c96ab6c1c947cbbe84737ea0020420f46458ffdf3c105243fc4ca4006e",
+      "role": "the gate — reads the frozen thresholds and judges an outcome"
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/EvalJson.java": {
+      "sha256": "308bb4da4d8626d73105b4209070e4ea59226c38556558db649cb74e7836de21",
+      "role": "recursive-descent JSON, replacing the regex reader whose depth bug cost run_1"
+    },
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java": {
+      "sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "role": "the self-test"
+    }
+  },
+  "runner_entry_point": "com.hjp.searchlookup.eval.RyeongProductionSearchEvalV3Runner#main",
+  "runner_self_test": {
+    "file": "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java",
+    "sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "production_source": {
+    "search-core/src/main/java/com/hjp/searchlookup/SearchLookupService.java": "47f8d3f63ec53736054ebca7faa2c33a14ce629f1b58df457454615e1afa076f",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintPlan.java": "08dc3cc90577fc46f912c1445460c1b2bc13af6772afead2335f8b41f9588293",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldVocabulary.java": "e020da3e4dfb3ae6486850180df8e99207a4dd730cb185d5d0015931bcc89e1e",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintResolver.java": "07dccba33fb85a0cc96a20c4fe574e4501a58808a421236f9e58af513c912068",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintMatcher.java": "a32dbdc968a8fdefd0d19132492e6060650f355c9b8b0891f6ea8feafaa9706c",
+    "search-core/src/main/java/com/hjp/searchlookup/QueryAnalyzer.java": "06e5cef78235063abbc3658d58ee9431eed98e2598bfff7da289d1dd6584d023",
+    "search-core/src/main/java/com/hjp/searchlookup/QueryAnalysis.java": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+    "search-core/src/main/java/com/hjp/searchlookup/LikeFallbackKeywordRetriever.java": "7dff812cd16425b09e85163fe0b9f6f597897988cb6eb39ccbedfc58a507ed17",
+    "search-core/src/main/java/com/hjp/searchlookup/SemanticRetriever.java": "5e81b8b5fdfa78ba0b5c0f2c0a3cc61791436482157d62acc5cc5fb0b6eba393",
+    "search-core/src/main/java/com/hjp/searchlookup/ReciprocalRankFusion.java": "d585ca7ca1129a80fb54df529c6896dc6f8bc797581bce8497ef02052e626d90",
+    "search-core/src/main/java/com/hjp/searchlookup/BusinessCard.java": "d7b7f7e39c1026c26d5660e1bc540d34f254e6e16764634e8b8dbe041115b74f",
+    "search-core/src/main/java/com/hjp/searchlookup/BusinessCardRepository.java": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79"
+  },
+  "production_source_count": 12,
+  "build_file": {
+    "search-core/build.gradle.kts": "4e20d0de1a81e96abbc6584c893a81d3e75dfc18a0b1c6c308b85a3897b59e48"
+  },
+  "toolchain": {
+    "java": "openjdk 21.0.11 (Homebrew) at /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+    "gradle": "9.4.1",
+    "kotlin_dsl": "2.3.0",
+    "java_release_target": 11
+  },
+  "execution": {
+    "command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\\n./gradlew --offline :search-core:runRyeongSearchEvalV3 --rerun-tasks",
+    "task": ":search-core:runRyeongSearchEvalV3",
+    "wired_into_test_or_check": false,
+    "arguments": {
+      "--input": "../integration_evidence/production_eval/run_3/input",
+      "--gate": "../integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json",
+      "--output": "../integration_evidence/production_eval/run_3/result"
+    },
+    "working_directory": "search-core (the Gradle module directory)",
+    "expected_output_path": "integration_evidence/production_eval/run_3/result",
+    "expected_output_files": [
+      "production_search_eval_v3_results.json",
+      "gate_verdict.json",
+      "RUN_STATUS.json"
+    ],
+    "exit_code_meaning": "0 when every gate check passed, 1 when any failed; the results are written either way"
+  },
+  "output_creation_policy": {
+    "refuses_existing_output_path": true,
+    "refuses_protected_paths": [
+      "production_eval/run_1",
+      "production_eval/run_2",
+      "integration_evidence/final",
+      "evaluator_archive",
+      "evaluator_isolation",
+      "search_field_constraints_v1/red",
+      "search_field_constraints_v1/green"
+    ],
+    "path_check": "canonicalised first, so a symlink, a .. segment or an absolute path all resolve before the refusal is decided",
+    "file_creation": "StandardOpenOption.CREATE_NEW — an existing file is an error, never a truncation",
+    "partial_run_policy": "everything is written into <output>.partial and moved into place only when the run completes; a run that dies leaves no official result",
+    "a_failing_gate_is_still_published": "the numbers are written and the verdict records the failure; a failing run is not promoted to a pass and not deleted"
+  },
+  "protected_paths": [
+    "integration_evidence/production_eval/run_1/**",
+    "integration_evidence/production_eval/run_2/**",
+    "integration_evidence/final/**",
+    "integration_evidence/evaluator_archive/**",
+    "integration_evidence/evaluator_isolation/**",
+    "integration_evidence/characterization/search_field_constraints_v1/red/**",
+    "integration_evidence/characterization/search_field_constraints_v1/green/**",
+    "search-core/src/test/java/com/hjp/searchlookup/RyeongDatasetProductionAdapterTest.java",
+    "search-core/src/test/java/com/hjp/searchlookup/SearchFieldConstraintCharacterizationTest.java"
+  ],
+  "semantic_model": {
+    "embeddinggemma_present": false,
+    "engine_the_runner_constructs": "com.hjp.searchlookup.LocalEmbeddingEngine",
+    "is_model_backed": false,
+    "expected_semantic_axis_executed": false,
+    "expected_keyword_fallback_ratio": 1.0,
+    "consequence": "the concept categories will be a keyword-only diagnostic. No figure this run produces may be described as semantic retrieval performance, and no deterministic test vector stands in for the model."
+  },
+  "what_this_run_will_and_will_not_be": {
+    "will_be": "a production-path diagnostic on the reference's cards and ground truth, judged against a gate fixed beforehand",
+    "will_not_be": [
+      "the reference evaluator's published numbers",
+      "semantic retrieval performance",
+      "a full JVM suite result",
+      "Android production verification",
+      "v4 freeze readiness",
+      "production readiness"
+    ]
+  }
+}

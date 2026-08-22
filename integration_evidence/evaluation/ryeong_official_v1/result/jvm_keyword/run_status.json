@@ -1,0 +1,14 @@
+{
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_JVM_KEYWORD_BASELINE",
+  "invocations": 1,
+  "started_epoch_millis": 1787369257245,
+  "elapsed_millis": 467,
+  "completed": true,
+  "partial": false,
+  "validity": "INVALID RUN",
+  "gate_exit_code_if_thresholds_applied": 1,
+  "scored_failures": 329,
+  "actual_model_executed": false,
+  "semantic_axis_executed": false,
+  "generation_metrics": "NOT_RUN"
+}

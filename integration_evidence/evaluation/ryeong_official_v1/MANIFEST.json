@@ -1,0 +1,275 @@
+{
+  "task": "ryeong_official_v1",
+  "verdict": {
+    "RUN_K1": "INVALID RUN",
+    "RUN_D1": "NOT RUN"
+  },
+  "axis": "search / focus / follow-up compatibility only — NOT a whole-agent tool score",
+  "run_k1": {
+    "id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_JVM_KEYWORD_BASELINE",
+    "invocations": 1,
+    "validity_failure": "unexpected action tools 1",
+    "scenarios": 130,
+    "turns": 377,
+    "scored": 328,
+    "excluded": 49,
+    "not_run": 0,
+    "routing": "0/328",
+    "r5": "0/0 (denominator 0 — no search ran)",
+    "search_contacts_calls": 0,
+    "leakage": 0,
+    "elapsed_ms": 467,
+    "actual_model_executed": false,
+    "semantic_axis_executed": false,
+    "independent_recalculation_matches": true
+  },
+  "run_d1": {
+    "id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_DEVICE_ACTUAL_MODEL_BASELINE",
+    "invocations": 0,
+    "blocker": "task section 15 — RUN_D1 requires RUN_K1 to be a VALID BASELINE",
+    "device_available": true,
+    "device_serial": "R5CY54CP83R",
+    "device_modified": false
+  },
+  "jvm_verification": {
+    "suites": 89,
+    "tests": 660,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "integrity": {
+    "protected_evidence": "863 -> 863, changed 0",
+    "production_src_main_changed": 0,
+    "frozen_scenarios_unchanged": true,
+    "frozen_cards_unchanged": true,
+    "apk_unchanged": true,
+    "upstream_clone_clean": true,
+    "run_1_2_3_reexecuted": false,
+    "forbidden_git_ops": 0,
+    "results_edited_after_the_run": false,
+    "same_version_rerun": false
+  },
+  "artifacts": [
+    {
+      "file": "execution/device_actual_model/command.txt",
+      "sha256": "eac4223af4be155b7c58ffb52eb7794042df9c9f456981dcca96497a2dbb1d77",
+      "size_bytes": 290
+    },
+    {
+      "file": "execution/device_actual_model/stderr.log",
+      "sha256": "eac4223af4be155b7c58ffb52eb7794042df9c9f456981dcca96497a2dbb1d77",
+      "size_bytes": 290
+    },
+    {
+      "file": "execution/device_actual_model/stdout.log",
+      "sha256": "eac4223af4be155b7c58ffb52eb7794042df9c9f456981dcca96497a2dbb1d77",
+      "size_bytes": 290
+    },
+    {
+      "file": "execution/jvm_keyword/command.txt",
+      "sha256": "06a8f731012cbaf87dee5bdd704651e7e82984bd3fd6460a67345a49bdcbbaad",
+      "size_bytes": 387
+    },
+    {
+      "file": "execution/jvm_keyword/exit_code.txt",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "size_bytes": 1
+    },
+    {
+      "file": "execution/jvm_keyword/stderr.log",
+      "sha256": "d962085b4b9a0e285ebce5745dea74f6d650399ec5cd2402e0cee7de0a943776",
+      "size_bytes": 500
+    },
+    {
+      "file": "execution/jvm_keyword/stdout.log",
+      "sha256": "96205c31f03b85677d4126b2def1a5b5a3ae6285df10aa17ba202121ac133d4c",
+      "size_bytes": 5272
+    },
+    {
+      "file": "final/CROSS_RUN_COMPARISON.md",
+      "sha256": "b50d03394621c2c3fcc0c4868dd20f52bd5936b7b9d85255c84aa6fc88fa78bf",
+      "size_bytes": 1175
+    },
+    {
+      "file": "final/FINAL_EVALUATION_REPORT.md",
+      "sha256": "44d81b7d1cee6b828c790432ecb1d5711d8b5642dd6ae56b9d65d331ee3bae5e",
+      "size_bytes": 14203
+    },
+    {
+      "file": "final/protected_comparison.json",
+      "sha256": "65d2fb0af1bff088e9fec7c029991a535af4cc0b1ccf6f9caf197edfd6d5bebf",
+      "size_bytes": 874
+    },
+    {
+      "file": "final/protected_sha256_after.txt",
+      "sha256": "3db08570229b43ad98d41610a7d12b9ce558c9a8e284d5d1f16af15f5e7c613a",
+      "size_bytes": 141501
+    },
+    {
+      "file": "final/protected_sha256_before.txt",
+      "sha256": "3db08570229b43ad98d41610a7d12b9ce558c9a8e284d5d1f16af15f5e7c613a",
+      "size_bytes": 141501
+    },
+    {
+      "file": "final/source_sha256_after.txt",
+      "sha256": "2be9037b73e04e8ef9c2a5206c8777bba74636eac21e7ca907dcdad9ffda0a4f",
+      "size_bytes": 30935
+    },
+    {
+      "file": "freeze/device_actual_model/PRE_RUN_FREEZE_MANIFEST.json",
+      "sha256": "00d4c94d47b7e81dd81d1c244d3a506b2f582c59c3f6729ef9e5bc9aeef391d7",
+      "size_bytes": 823
+    },
+    {
+      "file": "freeze/device_actual_model/PRE_RUN_STATUS.json",
+      "sha256": "02b9c78809584aaa1ea6518063cf15de4b8893457df8b238724103cd1cfcf58a",
+      "size_bytes": 628
+    },
+    {
+      "file": "freeze/jvm_keyword/PRE_RUN_FREEZE_MANIFEST.json",
+      "sha256": "04e6dc2a17d0341e95800ec490b531532e0e648a02b57844318c44e139562314",
+      "size_bytes": 4795
+    },
+    {
+      "file": "freeze/jvm_keyword/PRE_RUN_STATUS.json",
+      "sha256": "eb502400f06146d2c948577749fc61b00a7f57e863f26f072622e5b4f8315245",
+      "size_bytes": 268
+    },
+    {
+      "file": "preparation/APK_MANIFEST.json",
+      "sha256": "7e37f95a3ca03a12cb94cf23ba0db7f83e5b49ee16226d2d3b747212e58c2d83",
+      "size_bytes": 364
+    },
+    {
+      "file": "preparation/DEVICE_CANARY_RESULT.json",
+      "sha256": "3576f3673293da0150cc25b515a37b10f06d54fc68c57cb4bc06a81748b010f9",
+      "size_bytes": 327
+    },
+    {
+      "file": "preparation/DEVICE_PREFLIGHT.json",
+      "sha256": "9b5cc320d469a404c56d1cc0226c08a2247482431c83d69dccb2e4482d73a052",
+      "size_bytes": 1204
+    },
+    {
+      "file": "preparation/INSTRUMENTATION_MANIFEST.json",
+      "sha256": "53d502bae93dfa577bd79d44ea60c39071672927ccdc4de20f23b094bab28d09",
+      "size_bytes": 592
+    },
+    {
+      "file": "preparation/JVM_VERIFICATION.json",
+      "sha256": "ccd0b4ffc05d128a24d59ff4ae18b97d18a30002bf5c0e44ee7a869ec24b4480",
+      "size_bytes": 1237
+    },
+    {
+      "file": "preparation/METRIC_DENOMINATORS.json",
+      "sha256": "a25af16fb44da82f5ff6283c1bd4490cd2096ab5948a32b18d199cd1324fa971",
+      "size_bytes": 1021
+    },
+    {
+      "file": "preparation/MODEL_PREFLIGHT.json",
+      "sha256": "06f49d2f88184f5c7d3f91a7a55c9e1a7c9c59ee54c72dd9ed8b8c4ef1a847f4",
+      "size_bytes": 1675
+    },
+    {
+      "file": "preparation/OBSERVABILITY_REPORT.md",
+      "sha256": "9f65617270515d590b9d0d24a0090697bbc9260dc6b6851e31550a31de1c6a68",
+      "size_bytes": 3407
+    },
+    {
+      "file": "preparation/PREFLIGHT.md",
+      "sha256": "37708e4395cfbc09aa15c417cee5c212fb4cb55817dfc3eba0024a76334fa4d1",
+      "size_bytes": 941
+    },
+    {
+      "file": "preparation/ROUTE_COVERAGE.json",
+      "sha256": "2068711044ed5644198c422e73bf4a9ab0872d3ee5399b759aab68c70943b6c2",
+      "size_bytes": 2046
+    },
+    {
+      "file": "preparation/current_repo_status_before.txt",
+      "sha256": "0437f3ad94be450ad6d6c886e431cd33d632ffafdfbc22a215f37d62f6ecd100",
+      "size_bytes": 4381
+    },
+    {
+      "file": "preparation/jvm_started.marker",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "file": "preparation/jvm_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "file": "preparation/jvm_stdout.log",
+      "sha256": "a2b3ae6b982699fdb71d0187f2516d59766c3b7ee67f8341c1ffbc56dccbe4a3",
+      "size_bytes": 9050
+    },
+    {
+      "file": "preparation/prior_evidence_verification.json",
+      "sha256": "f354efe615803e89593ac3bf0d61b7691f44b7712833d8c1ecfcff661fbff0f0",
+      "size_bytes": 1833
+    },
+    {
+      "file": "preparation/protected_sha256_before.txt",
+      "sha256": "3db08570229b43ad98d41610a7d12b9ce558c9a8e284d5d1f16af15f5e7c613a",
+      "size_bytes": 141501
+    },
+    {
+      "file": "preparation/source_sha256_before.txt",
+      "sha256": "2be9037b73e04e8ef9c2a5206c8777bba74636eac21e7ca907dcdad9ffda0a4f",
+      "size_bytes": 30935
+    },
+    {
+      "file": "result/device_actual_model/gate_verdict.json",
+      "sha256": "8178acc530596ea68a74ac863d5c490c07739d099af5f095343256f6968bdc17",
+      "size_bytes": 494
+    },
+    {
+      "file": "result/device_actual_model/independent_recalculation.json",
+      "sha256": "8178acc530596ea68a74ac863d5c490c07739d099af5f095343256f6968bdc17",
+      "size_bytes": 494
+    },
+    {
+      "file": "result/device_actual_model/result.json",
+      "sha256": "8178acc530596ea68a74ac863d5c490c07739d099af5f095343256f6968bdc17",
+      "size_bytes": 494
+    },
+    {
+      "file": "result/device_actual_model/run_status.json",
+      "sha256": "8178acc530596ea68a74ac863d5c490c07739d099af5f095343256f6968bdc17",
+      "size_bytes": 494
+    },
+    {
+      "file": "result/jvm_keyword/gate_verdict.json",
+      "sha256": "86a6ace17fe3f86915ff2267aff8fcc482db0fd097ca29bd68002a448456e9f5",
+      "size_bytes": 560
+    },
+    {
+      "file": "result/jvm_keyword/independent_recalculation.json",
+      "sha256": "89733e1de50af2abaa2667ab7f0051849d253cedf6df8e486e99126e376629ed",
+      "size_bytes": 1208
+    },
+    {
+      "file": "result/jvm_keyword/result.json",
+      "sha256": "850841942c8cf0f3968bc707615b8d8a979c99f17d9f324b397c40f65b3e43fa",
+      "size_bytes": 156019
+    },
+    {
+      "file": "result/jvm_keyword/run_status.json",
+      "sha256": "6174bf74ce820e7b20e49ff6591f69762a874c66838b375673ee03ae094e897d",
+      "size_bytes": 405
+    }
+  ],
+  "artifact_count": 42,
+  "does_not_mean": [
+    "that the agent's multiturn performance is zero — this measures a phrasing-contract mismatch",
+    "that a valid baseline was obtained",
+    "actual Gemma or EmbeddingGemma performance",
+    "physical ARM64 performance or stability",
+    "that R@5 is 0 (it is unmeasurable, denominator 0)",
+    "whole-agent tool performance",
+    "production readiness"
+  ]
+}

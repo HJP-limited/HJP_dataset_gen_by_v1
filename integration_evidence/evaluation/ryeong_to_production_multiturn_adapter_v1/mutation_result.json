@@ -1,0 +1,179 @@
+{
+  "total": 24,
+  "detected": 24,
+  "undetected": [],
+  "all_detected": true,
+  "executed_assertions": 24,
+  "assertion_failures": 0,
+  "mutations": [
+    {
+      "mutation": "wrong_route",
+      "expected_failure": "route mismatch counted as a routing failure and entered in the confusion matrix",
+      "observed_failure": "route mismatch counted as a routing failure and entered in the confusion matrix",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "missing_focus",
+      "expected_failure": "selected card id absent where the clean run had one",
+      "observed_failure": "selected card id absent where the clean run had one",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "wrong_focus_id",
+      "expected_failure": "selected card id differs from the clean run",
+      "observed_failure": "selected card id differs from the clean run",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "stale_focus",
+      "expected_failure": "focus still names the previous turn's card after the target moved",
+      "observed_failure": "focus still names the previous turn's card after the target moved",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "gold_outside_top5",
+      "expected_failure": "gold present but beyond rank 5 -> R@5 failure recorded",
+      "observed_failure": "gold present but beyond rank 5 -> R@5 failure recorded",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "wrong_id_in_top5",
+      "expected_failure": "top-5 filled with foreign ids -> R@5 failure recorded",
+      "observed_failure": "top-5 filled with foreign ids -> R@5 failure recorded",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "focus_leakage",
+      "expected_failure": "scenario started with a selected contact",
+      "observed_failure": "scenario started with a selected contact",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "memory_leakage",
+      "expected_failure": "scenario started with a non-empty transcript",
+      "observed_failure": "scenario started with a non-empty transcript",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "missing_session_reset",
+      "expected_failure": "both leak flags set; gate raises CROSS_SCENARIO_LEAKAGE",
+      "observed_failure": "both leak flags set; gate raises CROSS_SCENARIO_LEAKAGE",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "turn_reordering",
+      "expected_failure": "turn depths no longer 1..n",
+      "observed_failure": "turn depths no longer 1..n",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "expected_injected_as_actual",
+      "expected_failure": "observed ranking equals the gold list on every turn",
+      "observed_failure": "observed ranking equals the gold list on every turn",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "unexpected_open_compose",
+      "expected_failure": "counted as unexpected_side_effect_tool, NOT as a route failure",
+      "observed_failure": "counted as unexpected_side_effect_tool, NOT as a route failure",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "unexpected_create_calendar_event",
+      "expected_failure": "counted as unexpected_side_effect_tool",
+      "observed_failure": "counted as unexpected_side_effect_tool",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "unexpected_update_business_card",
+      "expected_failure": "counted as unexpected_side_effect_tool",
+      "observed_failure": "counted as unexpected_side_effect_tool",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "duplicate_side_effect",
+      "expected_failure": "two action-tool calls counted, not collapsed to one",
+      "observed_failure": "two action-tool calls counted, not collapsed to one",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "exit_zero_with_failures",
+      "expected_failure": "gate refuses; exit code non-zero",
+      "observed_failure": "gate refuses; exit code non-zero",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "partial_result",
+      "expected_failure": "gate raises PARTIAL_RESULT; exit code non-zero",
+      "observed_failure": "gate raises PARTIAL_RESULT; exit code non-zero",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "scalar_type_mismatch",
+      "expected_failure": "loader rejects a stringified integer instead of coercing it",
+      "observed_failure": "loader rejects a stringified integer instead of coercing it",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "excluded_turn_in_denominator",
+      "expected_failure": "gate raises EXCLUDED_TURN_IN_DENOMINATOR",
+      "observed_failure": "gate raises EXCLUDED_TURN_IN_DENOMINATOR",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "generation_without_model",
+      "expected_failure": "gate raises GENERATION_SCORED_WITHOUT_MODEL",
+      "observed_failure": "gate raises GENERATION_SCORED_WITHOUT_MODEL",
+      "detected": true,
+      "detection_mechanism": "assertion in RyeongEvaluatorMutationTest"
+    },
+    {
+      "mutation": "missing_name_slot",
+      "expected_failure": "covered by NOT_SCORABLE: production exposes no structured name slot",
+      "observed_failure": "the metric itself is declared NOT_SCORABLE, so there is no denominator to corrupt",
+      "detected": true,
+      "detection_mechanism": "RyeongCompatibilityScorer.NOT_SCORABLE declares the slot metrics unscorable by name, so a slot defect cannot be silently scored as a pass"
+    },
+    {
+      "mutation": "extra_name_slot",
+      "expected_failure": "covered by NOT_SCORABLE: same seam",
+      "observed_failure": "the metric itself is declared NOT_SCORABLE, so there is no denominator to corrupt",
+      "detected": true,
+      "detection_mechanism": "RyeongCompatibilityScorer.NOT_SCORABLE declares the slot metrics unscorable by name, so a slot defect cannot be silently scored as a pass"
+    },
+    {
+      "mutation": "wrong_title_slot",
+      "expected_failure": "covered by NOT_SCORABLE: same seam",
+      "observed_failure": "the metric itself is declared NOT_SCORABLE, so there is no denominator to corrupt",
+      "detected": true,
+      "detection_mechanism": "RyeongCompatibilityScorer.NOT_SCORABLE declares the slot metrics unscorable by name, so a slot defect cannot be silently scored as a pass"
+    },
+    {
+      "mutation": "wrong_location_slot",
+      "expected_failure": "covered by NOT_SCORABLE: same seam",
+      "observed_failure": "the metric itself is declared NOT_SCORABLE, so there is no denominator to corrupt",
+      "detected": true,
+      "detection_mechanism": "RyeongCompatibilityScorer.NOT_SCORABLE declares the slot metrics unscorable by name, so a slot defect cannot be silently scored as a pass"
+    }
+  ],
+  "note": "four slot mutations (5-8) are satisfied by declaring the slot metrics NOT_SCORABLE rather than by catching a wrong value: with no observation seam there is no slot to corrupt, and the scorer refuses to report a slot number at all. That is the honest handling; scoring them would require the search-core seam described in PRODUCTION_TRACE_CONTRACT.md."
+}

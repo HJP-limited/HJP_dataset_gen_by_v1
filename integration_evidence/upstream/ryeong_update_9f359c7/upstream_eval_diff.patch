@@ -1,0 +1,1092 @@
+diff --git a/data/cards_embeddings_fingerprint.json b/data/cards_embeddings_fingerprint.json
+new file mode 100644
+index 0000000..8f6ece3
+--- /dev/null
++++ b/data/cards_embeddings_fingerprint.json
+@@ -0,0 +1,17 @@
++{
++  "cards_file": "cards_eval1000.json",
++  "count": 1000,
++  "embedding_input_sha256": "e86d8a6e25ef66a735253a15754961d277f48a8731ab89a8044d6870a06aed96",
++  "answer_sha256": "760e980afda23a30a83b333861fb0b0eab74b704208a0bf75ab674259dd47e05",
++  "fields": [
++    "name",
++    "nameEn",
++    "company",
++    "title",
++    "department",
++    "industry",
++    "location",
++    "memo",
++    "tags"
++  ]
++}
+\ No newline at end of file
+diff --git a/scripts/card_fingerprint.py b/scripts/card_fingerprint.py
+new file mode 100644
+index 0000000..6f4fc57
+--- /dev/null
++++ b/scripts/card_fingerprint.py
+@@ -0,0 +1,101 @@
++"""카드 데이터 지문(fingerprint) — 임베딩이 카드와 어긋난 걸 잡는다.
++
++**이게 막으려는 사고**: 카드를 다시 만들고 `precompute_embeddings.py` 를 안 돌리면
++벡터가 옛날 내용으로 남아 시맨틱 검색이 **조용히** 망가진다. 카드 id 는 그대로라
++'ids 순서 일치' 같은 검사로는 안 잡히고, 지표가 조금 나빠질 뿐이라 눈치채기 어렵다
++(실제로 놓친 적 있다).
++
++그래서 임베딩을 만들 때 **그때 쓴 카드 내용의 SHA-256 을 같이 적어 두고**, 평가할 때
++지금 카드로 다시 계산해 비교한다. 다르면 벡터가 낡은 것이다.
++
++지문 대상 필드는 **임베딩 입력 필드와 같아야 한다**(`EMBEDDING_FIELDS`). 전화번호처럼
++임베딩에 안 들어가는 값이 바뀐 걸로 "벡터가 낡았다"고 하면 거짓 경보가 된다.
++
++`HJP-limited/ymj` 의 `eval_benchmark_final50_v3.py` 에서 가져온 방식이다. 다만 거기서는
++정답값(phone/email/address 포함)이 바뀌었는지 보려는 것이라 필드 집합이 다르다.
++두 목적이 다르므로 함수를 나눠 둔다.
++"""
++
++from __future__ import annotations
++
++import hashlib
++import json
++from pathlib import Path
++
++# precompute_embeddings.py 의 FIELDS 와 반드시 같아야 한다.
++EMBEDDING_FIELDS = [
++    "name", "nameEn", "company", "title", "department",
++    "industry", "location", "memo", "tags",
++]
++
++# 답변으로 나가는 값들. 벤치마크 정답이 아직 유효한지 볼 때 쓴다.
++ANSWER_FIELDS = [
++    "id", "name", "company", "title", "department",
++    "location", "phone", "email", "address",
++]
++
++STAMP_NAME = "cards_embeddings_fingerprint.json"
++
++
++def fingerprint(cards, fields) -> str:
++    """카드 목록을 id 순으로 정렬해 지정 필드만 canonical JSON 으로 직렬화한 SHA-256."""
++    rows = [{f: c.get(f, "") for f in fields} for c in sorted(cards, key=lambda c: str(c.get("id")))]
++    raw = json.dumps(rows, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
++    return hashlib.sha256(raw).hexdigest()
++
++
++def embedding_fingerprint(cards) -> str:
++    return fingerprint(cards, EMBEDDING_FIELDS)
++
++
++def answer_fingerprint(cards) -> str:
++    return fingerprint(cards, ANSWER_FIELDS)
++
++
++def write_stamp(path: Path, cards, cards_file: str) -> str:
++    """임베딩을 만든 직후 호출한다. 그때 쓴 카드의 지문을 남긴다."""
++    fp = embedding_fingerprint(cards)
++    path.write_text(json.dumps({
++        "cards_file": cards_file,
++        "count": len(cards),
++        "embedding_input_sha256": fp,
++        "answer_sha256": answer_fingerprint(cards),
++        "fields": EMBEDDING_FIELDS,
++    }, ensure_ascii=False, indent=2), encoding="utf-8")
++    return fp
++
++
++def check_stamp(path: Path, cards):
++    """(상태, 메시지) 를 돌려준다. 상태: 'ok' | 'stale' | 'missing'.
++
++    **여기서 예외를 던지지 않는다** — 지문이 없다고 평가를 아예 못 돌리게 하면,
++    지문을 붙이기 전에 만든 기존 임베딩으로는 아무것도 못 재게 된다. 대신 부르는 쪽에서
++    눈에 띄게 찍는다.
++    """
++    now = embedding_fingerprint(cards)
++    if not path.exists():
++        return "missing", (
++            f"임베딩 지문 파일이 없다({path.name}). 벡터가 지금 카드와 맞는지 확인할 수 없다.\n"
++            f"    python scripts/precompute_embeddings.py --copy-to-assets  로 다시 만들면 생긴다."
++        )
++    try:
++        saved = json.loads(path.read_text(encoding="utf-8")).get("embedding_input_sha256")
++    except (OSError, ValueError) as e:
++        return "missing", f"임베딩 지문 파일을 읽지 못했다({path.name}): {e}"
++    if saved == now:
++        return "ok", ""
++    return "stale", (
++        "임베딩이 지금 카드 데이터와 다르다 — 시맨틱 검색이 옛날 내용으로 돌고 있다.\n"
++        f"    임베딩 생성 당시: {saved}\n"
++        f"    지금 카드       : {now}\n"
++        "    python scripts/precompute_embeddings.py --copy-to-assets  를 돌린 뒤 다시 측정할 것."
++    )
++
++
++def banner(status: str, message: str) -> str:
++    """경고를 출력 중간에 묻히지 않게 감싼다."""
++    if status == "ok":
++        return ""
++    label = "임베딩 불일치" if status == "stale" else "임베딩 지문 없음"
++    line = "!" * 78
++    return f"\n{line}\n  [{label}] {message}\n{line}\n"
+diff --git a/scripts/eval_multiturn.py b/scripts/eval_multiturn.py
+index 68a88f2..e05a42e 100644
+--- a/scripts/eval_multiturn.py
++++ b/scripts/eval_multiturn.py
+@@ -1,4 +1,4 @@
+-"""멀티턴 평가 — 라우팅 / JGA(슬롯) / 턴별 R@5 / 체크리스트 통과율 / pass^k.
++"""멀티턴 평가 — 라우팅 / JGA(슬롯) / 턴별 Hit@5·R@5·MRR / 체크리스트 통과율 / pass^k.
+ 
+ 왜 이 지표들인가
+ ----------------
+@@ -8,7 +8,7 @@
+ 반대로 실제로 겪은 실패는 전부 '어느 경로로 갔나'였다
+ (판교 디자이너가 완화 경로로 새서 오답, 개념형이 카운트 형식으로 새서 가짜 총계).
+ 
+-그래서 **주 지표는 라우팅 + JGA + 턴별 R@5**(1~3층)이고, 답변 텍스트 채점은
++그래서 **주 지표는 라우팅 + JGA + 턴별 Hit@5**(1~3층)이고, 답변 텍스트 채점은
+ **LLM이 실제로 생성한 턴에만** 매기는 보조 지표(4~5층)다. 전체를 뭉쳐 하나의
+ 통과율로 내면 고정 문자열 턴이 숫자를 채워서 어려운 턴의 성능을 가린다.
+ 
+@@ -32,7 +32,13 @@
+ - **JGA (Joint Goal Accuracy)** — 그 턴의 **모든** 슬롯이 정답과 정확히 일치한 턴의 비율.
+   슬롯은 focus 인물 + 필드 조건(이름/직함/지역). 대화상태추적의 표준 지표를 우리 슬롯에 적용.
+ - **슬롯 F1** — JGA는 하나만 틀려도 0이라 부분 점수를 같이 본다.
+-- **턴별 R@5** — 정답 카드가 상위 5개 후보에 있는가.
++- **턴별 Hit@5** — 정답 카드가 상위 5개 안에 **하나라도** 있는가. 정답이 1장인 턴
++  (전체의 76.4%)에서는 recall 과 같은 값이다.
++- **턴별 R@5** — 상한을 1.0 으로 맞춘 형태(분모 min(정답수,5)). `eval_search.py` 와 같은 공식.
++  날것의 Recall@5(분모=정답수)는 안 쓴다 — 이 시나리오 집합에서 **완벽한 검색기의 상한이
++  0.924** 이고, 유형별로는 '조사 변형 카운트' 0.096 · '없는 조합->복구' 0.206 처럼 크게
++  눌려서 잘해도 낮게 나온다(측정값). 상한이 왜곡된 지표로 유형을 비교하면 안 된다.
++- **턴별 MRR** — 첫 정답의 역순위. 정답 수에 좌우되지 않는다.
+ - **체크리스트 통과율** — 답변에 필수 문자열이 있고 금지 문자열이 없는가(LLM 턴만).
+ - **pass^k** — 같은 시나리오를 k번 돌려 k번 다 통과한 비율.
+ 
+@@ -42,6 +48,10 @@
+ """
+ from __future__ import annotations
+ 
++import sys as _sys
++from pathlib import Path as _P
++_sys.path.insert(0, str(_P(__file__).resolve().parent))
++import card_fingerprint as _cfp
+ import argparse
+ import json
+ import random
+@@ -110,6 +120,54 @@ def turn(q, route=None, slots=None, gold=None, must=None, must_not=None, no_card
+             "must": must or [], "must_not": must_not or [], "no_cards": no_cards}
+ 
+ 
++# ---------------------------------------------------------------------------
++# 발화 표현 풀 — 같은 뜻을 여러 말투로 둔다.
++#
++# **왜 필요한가(측정)**: 유형당 표현이 1개면 분모만 크고 덮는 범위는 좁다. 실측으로
++# 386턴이 '틀' 93종뿐이었고 상위 10개 틀이 전체의 69%였다. 그 상태에서 외부 고정셋
++# (Final50 v3, 50시나리오)이 우리가 못 잡던 버그 5개를 찾아냈다 — 같은 의도를 10가지로
++# 말해 보니 0/10 으로 전멸한 유형이 있었다("처음에 물어본 사람" 계열).
++#
++# 표현만 바꾸고 **기대 route·슬롯·정답은 그대로**여야 한다. 뜻이 달라지는 변형은 넣지 않는다.
++# 한 발화에 속성 명사를 두 개 넣지 않는다 — 여러 칸 요청으로 잡혀 다른 경로를 탄다.
++# rng 로 고르므로 seed 가 같으면 재현된다.
++ASK_COMPANY = [
++    "{n}씨 회사가 어디야?", "{n}씨 어디 다녀?", "{n}씨 직장이 어디지?",
++    "{n}씨 회사 알려줘", "{n}씨 소속이 어디야?", "{n}씨 어느 회사 다녀?",
++]
++ASK_DEPARTMENT_NAMED = [
++    "{n}씨 부서는?", "{n}씨 어느 부서야?", "{n}씨 부서 알려줘", "{n}씨 소속 부서가 뭐야?",
++]
++ASK_ONLY_NAME = ["{n}씨는?", "{n}씨도?", "{n}씨는 어때?", "그럼 {n}씨는?"]
++
++# 주어를 생략한 후속. 속성 명사로 시작해야 focus 가 앞에 붙는다(resolveSearchQuery).
++ELLIPTIC = {
++    "address": ["주소는?", "주소 알려줘", "주소가 어떻게 돼?", "주소는 뭐야?"],
++    "title": ["직급은?", "직함이 뭐야?", "직급 알려줘", "직책은?"],
++    "department": ["부서는?", "부서 알려줘", "어느 부서야?", "부서가 뭐야?"],
++    "email": ["이메일은?", "이메일 알려줘", "메일 주소는?", "이메일이 뭐야?"],
++    "phone": ["전화번호는?", "연락처 알려줘", "전화번호 뭐야?", "번호는?"],
++}
++
++PLURAL_FOLLOWUP = [
++    "그 사람들 회사 알려줘", "그분들 회사는?", "그 사람들 어디 다녀?",
++    "그 사람들 소속 알려줘",
++]
++RECALL_COMPANY = [
++    "아까 말한 회사 뭐였지", "방금 말한 회사가 뭐였더라", "앞서 말한 회사 뭐였어",
++    "아까 찾은 회사 뭐였지",
++]
++SEARCH_LOC_TITLE = [
++    "{loc}에 있는 {t} 찾아줘", "{loc} {t} 알려줘", "{loc}에서 일하는 {t} 찾아줘",
++    "{loc}에 {t} 있어?",
++]
++
++
++def pick(rng, pool, **kw):
++    """표현 풀에서 하나 고른다. seed 가 같으면 같은 것이 나온다."""
++    return rng.choice(pool).format(**kw)
++
++
+ def build_scenarios(cards, rng):
+     """
+     시나리오를 카드 데이터에서 생성한다.
+@@ -152,12 +210,14 @@ def build_scenarios(cards, rng):
+     for c in pool[:25]:
+         gold, slots = [c["id"]], person_slots(c)
+         add("이름+생략형후속", [
+-            turn(f"{c['name']}씨 회사가 어디야?", "search", slots, gold,
++            turn(pick(rng, ASK_COMPANY, n=c["name"]), "search", slots, gold,
+                  must=[company_variants(c["company"])], must_not=REJECTIONS),
+-            turn("주소는?", "search", slots, gold,
++            turn(pick(rng, ELLIPTIC["address"]), "search", slots, gold,
+                  must=[address_variants(c["address"])], must_not=REJECTIONS),
+-            turn("직급은?", "search", slots, gold, must=[[c["title"]]], must_not=REJECTIONS),
+-            turn("부서는?", "search", slots, gold, must=[[c["department"]]], must_not=REJECTIONS),
++            turn(pick(rng, ELLIPTIC["title"]), "search", slots, gold,
++                 must=[[c["title"]]], must_not=REJECTIONS),
++            turn(pick(rng, ELLIPTIC["department"]), "search", slots, gold,
++                 must=[[c["department"]]], must_not=REJECTIONS),
+         ])
+ 
+     # (2) 6턴 장문 — 최근 창(메시지 8개 = 4턴)을 넘겨 historyDigest 로 접히는 구간
+@@ -165,24 +225,28 @@ def build_scenarios(cards, rng):
+         gold, slots = [c["id"]], person_slots(c)
+         tail = re.sub(r"\D", "", c.get("phone") or "")[-4:]
+         add("6턴 장문", [
+-            turn(f"{c['name']}씨 회사가 어디야?", "search", slots, gold,
++            turn(pick(rng, ASK_COMPANY, n=c["name"]), "search", slots, gold,
+                  must=[company_variants(c["company"])], must_not=REJECTIONS),
+-            turn("주소는?", "search", slots, gold,
++            turn(pick(rng, ELLIPTIC["address"]), "search", slots, gold,
+                  must=[address_variants(c["address"])], must_not=REJECTIONS),
+-            turn("직급은?", "search", slots, gold, must=[[c["title"]]], must_not=REJECTIONS),
+-            turn("부서는?", "search", slots, gold, must=[[c["department"]]], must_not=REJECTIONS),
+-            turn("이메일은?", "search", slots, gold, must=[[c["email"]]], must_not=REJECTIONS),
+-            turn("전화번호는?", "search", slots, gold, must=[[c["phone"], tail]], must_not=REJECTIONS),
++            turn(pick(rng, ELLIPTIC["title"]), "search", slots, gold,
++                 must=[[c["title"]]], must_not=REJECTIONS),
++            turn(pick(rng, ELLIPTIC["department"]), "search", slots, gold,
++                 must=[[c["department"]]], must_not=REJECTIONS),
++            turn(pick(rng, ELLIPTIC["email"]), "search", slots, gold,
++                 must=[[c["email"]]], must_not=REJECTIONS),
++            turn(pick(rng, ELLIPTIC["phone"]), "search", slots, gold,
++                 must=[[c["phone"], tail]], must_not=REJECTIONS),
+         ])
+ 
+     # (3) 주제 전환 — 다른 사람으로 갔다가 처음 사람으로 돌아온다(focus 가 따라와야 한다)
+     for a, b in zip(pool[35:43], pool[43:51]):
+         add("주제 전환", [
+-            turn(f"{a['name']}씨 회사가 어디야?", "search", person_slots(a), [a["id"]],
++            turn(pick(rng, ASK_COMPANY, n=a["name"]), "search", person_slots(a), [a["id"]],
+                  must=[company_variants(a["company"])], must_not=REJECTIONS),
+-            turn(f"{b['name']}씨는?", "search", person_slots(b), [b["id"]],
++            turn(pick(rng, ASK_ONLY_NAME, n=b["name"]), "search", person_slots(b), [b["id"]],
+                  must=[company_variants(b["company"])], must_not=REJECTIONS),
+-            turn(f"{a['name']}씨 부서는?", "search", person_slots(a), [a["id"]],
++            turn(pick(rng, ASK_DEPARTMENT_NAMED, n=a["name"]), "search", person_slots(a), [a["id"]],
+                  must=[[a["department"]]], must_not=REJECTIONS),
+         ])
+ 
+@@ -198,10 +262,10 @@ def build_scenarios(cards, rng):
+     for (loc, title), ids in viable[:15]:
+         want = [by_id_all[i]["name"] for i in ids] + [f"총 {len(ids)}명"]
+         add("지역+직함->후속", [
+-            turn(f"{loc}에 있는 {title} 찾아줘", "search",
++            turn(pick(rng, SEARCH_LOC_TITLE, loc=loc, t=title), "search",
+                  {"names": [], "titles": [title], "locations": [loc]}, ids,
+                  must=[want], must_not=REJECTIONS),
+-            turn("그 사람들 회사 알려줘", "followup", None, ids, must_not=REJECTIONS),
++            turn(pick(rng, PLURAL_FOLLOWUP), "followup", None, ids, must_not=REJECTIONS),
+         ])
+ 
+     # (5) 카운트 -> 좁히기 (결정적 경로에서 검색 경로로 넘어가는 전환)
+@@ -254,7 +318,12 @@ def build_scenarios(cards, rng):
+         loc_cards = [c for c in cards if loc in (c.get("address") or "")]
+         if not loc_cards:
+             continue
+-        present = {(c.get("title") or "").strip() for c in loc_cards}
++        # **토큰 단위로** 비교해야 한다. 완전 직함끼리만 비교했더니
++        # "대구에 있는 디자이너"를 '없는 조합'으로 분류했는데, 실제로는 대구에
++        # '시니어 디자이너'가 있어서 시스템이 맞고 시나리오가 틀렸다(held-out seed 7 에서
++        # 발견 — seed 42 에서는 이 조합이 안 뽑혀 평가 결함이 드러나지 않았다).
++        # 검색이 직함을 토큰으로 매칭하므로 정답 판정도 같은 기준이어야 한다.
++        present = {t for c in loc_cards for t in norm_tokens(c.get("title"))}
+         for t in sorted(all_titles - present):
+             if len(t) >= 2 and title_counts.get(t, 0) >= 10:
+                 empty_pairs.append((loc, t, [c["id"] for c in loc_cards]))
+@@ -284,7 +353,7 @@ def build_scenarios(cards, rng):
+         add("문맥참조", [
+             turn(f"{c['name']}씨 회사가 어디야?", "search", person_slots(c), [c["id"]],
+                  must=[company_variants(c["company"])], must_not=REJECTIONS),
+-            turn("아까 말한 회사 뭐였지", "context_answer"),
++            turn(pick(rng, RECALL_COMPANY), "context_answer"),
+         ])
+ 
+     # (11) 사실 정정 — 같은 key 를 덮어써야 한다(옛 값이 남으면 안 된다)
+@@ -307,10 +376,33 @@ def build_scenarios(cards, rng):
+         ])
+ 
+     # (13) 단발로만 확인되는 것 — 대화에 넣으면 의미가 흐려지므로 1턴으로 둔다
+-    add("전체 카운트", [turn("전체 몇 장이야?", "total_count", must=[[f"{len(cards)}명"]])])
++    #
++    # 전체 개수는 **표현 변형이 핵심**이다. 실기기에서 "내가 가진 명함 개수 몇개야?",
++    # "명함 몇 개 있어?" 가 전부 검색으로 빠져 "총 5명"이라 답했다(실제 1000).
++    # "전체/총" 신호가 있어야만 통과시키던 게 원인이라, 자연스러운 표현들을 다 넣어 둔다.
++    for phrasing in ("전체 몇 장이야?", "내가 가진 명함 개수 몇개야?", "명함 몇 개 있어?",
++                     "내 명함 몇 장이야?", "저장된 명함 개수는?", "명함 몇 장 가지고 있어?"):
++        add("전체 카운트", [turn(phrasing, "total_count", must=[[f"{len(cards)}명"]])])
+     add("자기참조", [turn("너는 누구야?", "self_reference", must=[["어시스턴트"]])])
+     add("기권(전화)", [turn("010-0000-0000", "abstain", must=[REJECTIONS])])
+ 
++    # (13-b) 조사 변형 카운트 — 계사 관형형("~인 사람")을 쓰는 자연스러운 표현.
++    #        실기기에서 "주소가 대전인 사람 몇 명이야?" 가 총 5명이라 답했다(실제 51).
++    #        '대전인' 의 '인' 을 못 떼서 조건이 안 잡히고 검색으로 폴백한 것이다.
++    for loc in ("대전", "부산"):
++        ids = [c["id"] for c in cards if loc in (c.get("address") or "")]
++        if ids:
++            add("조사 변형 카운트", [
++                turn(f"주소가 {loc}인 사람 몇 명이야?", "filtered_count", None, ids,
++                     must=[[f"총 {len(ids)}명"]]),
++            ])
++    for title in korean_titles[:2]:
++        ids = [c["id"] for c in cards if title in norm_tokens(c.get("title"))]
++        add("조사 변형 카운트", [
++            turn(f"직급이 {title}인 사람 몇 명이야?", "filtered_count", None, ids,
++                 must=[[f"총 {len(ids)}명"]]),
++        ])
++
+     # (14) 본인 사실 vs 명함 인물 구분 — 예전에는 "그 사람 회사 어디야" 가
+     #      contextAnswer 로 새서 **본인** 회사를 답했다(알려진 간극이었다).
+     #      CONTEXT_REFERENCES 에서 대명사를 빼면서 해결됐고, 회귀 방지로 남긴다.
+@@ -390,15 +482,30 @@ def build_scenarios(cards, rng):
+ 
+ # --- 실행 -------------------------------------------------------------------
+ 
+-def ask(question, history, focus, prev_ids, memory, dry_run):
++def ask(question, history, focus, prev_ids, memory, dry_run, attempts=3):
++    """
++    한 턴을 서버에 묻는다. **타임아웃이면 다시 시도한다.**
++
++    실측: 386턴 생성 모드에서 220건까지 중앙 8초로 정상이다가 한 건이 697초 걸려
++    클라이언트 타임아웃에 걸렸고, 그 예외가 그대로 올라가면서 **1시간짜리 실행이
++    통째로** 버려졌다(원인은 같은 디스크의 OneDrive 동기화로 추정 — 앞서 44분 지연도
++    같은 패턴이었다). 단발 지연 때문에 전체를 잃지 않도록 재시도한다.
++    """
+     payload = json.dumps({
+         "question": question, "history": history, "focus": focus,
+         "prev_card_ids": prev_ids, "conversation_memory": memory,
+         "dry_run": dry_run,
+     }, ensure_ascii=False).encode()
+-    req = urllib.request.Request(ENDPOINT, data=payload,
+-                                 headers={"Content-Type": "application/json"})
+-    return json.loads(urllib.request.urlopen(req, timeout=600).read().decode())
++    last = None
++    for i in range(attempts):
++        req = urllib.request.Request(ENDPOINT, data=payload,
++                                     headers={"Content-Type": "application/json"})
++        try:
++            return json.loads(urllib.request.urlopen(req, timeout=600).read().decode())
++        except Exception as e:  # noqa: BLE001
++            last = e
++            print(f"  [재시도 {i + 1}/{attempts}] {type(e).__name__}: {question[:30]}", flush=True)
++    raise last
+ 
+ 
+ def slot_sets(expected, actual_filters, actual_focus):
+@@ -447,7 +554,14 @@ def run_pass(scenarios, dry_run, stats, failures, gap_failures):
+         route_all_ok = True
+         checks_all_ok = True
+         for depth, t in enumerate(sc["turns"], start=1):
+-            res = ask(t["q"], history, focus, prev_ids, memory, dry_run)
++            try:
++                res = ask(t["q"], history, focus, prev_ids, memory, dry_run)
++            except Exception as e:  # noqa: BLE001
++                # 재시도까지 실패하면 그 시나리오만 중단하고 계속 간다 —
++                # 전체 실행을 잃는 것보다 낫다. 집계에는 실패로 남는다.
++                target_failures.append((kind, depth, t["q"], f"요청 실패: {type(e).__name__}"))
++                stats["request_error"] = stats.get("request_error", 0) + 1
++                break
+             answer = res.get("answer") or ""
+             route = res.get("route")
+ 
+@@ -476,14 +590,37 @@ def run_pass(scenarios, dry_run, stats, failures, gap_failures):
+                 st["fn"] += len(exp - act)
+ 
+             if t["gold"]:
+-                st["r5_n"] += 1
+-                st["kind"][kind]["r5_n"] += 1
+-                if any(g in (res.get("card_ids") or [])[:5] for g in t["gold"]):
+-                    st["r5_ok"] += 1
+-                    st["kind"][kind]["r5_ok"] += 1
++                gold = set(t["gold"])
++                top5 = (res.get("card_ids") or [])[:5]
++                found = gold & set(top5)
++
++                # Hit@5 — 정답이 **하나라도** top-5 에 있으면 성공.
++                # 예전 이름이 'R@5' 였는데 계산은 이것이었다(HJP-limited/ymj 에서 지적).
++                # 정답이 1장인 턴(76.4%)은 recall 과 같은 값이지만, 정답이 여럿인 턴에서는
++                # 훨씬 후하다 — 정답 104장짜리 턴은 사실상 자동 통과다.
++                st["hit5_n"] += 1
++                st["kind"][kind]["hit5_n"] += 1
++                if found:
++                    st["hit5_ok"] += 1
++                    st["kind"][kind]["hit5_ok"] += 1
+                 else:
+                     target_failures.append((kind, depth, t["q"], "정답 카드가 top-5 에 없음"))
+ 
++                # R@5 — 분모를 min(정답수, 5) 로 잘라 **상한을 1.0 으로** 맞춘 형태.
++                # eval_search.py 의 R@5 와 같은 공식이라 두 스크립트를 나란히 볼 수 있다.
++                # 날것의 Recall@5(분모=정답수)는 쓰지 않는다: 이 시나리오 집합에서 완벽한
++                # 검색기의 상한이 0.924 이고, '조사 변형 카운트' 0.096 · '없는 조합->복구'
++                # 0.206 처럼 유형별로 크게 눌려서 잘해도 낮게 나온다(측정값).
++                st["r5_sum"] += len(found) / min(len(gold), 5)
++                st["r5_n"] += 1
++                st["kind"][kind]["r5_sum"] += len(found) / min(len(gold), 5)
++                st["kind"][kind]["r5_n"] += 1
++
++                # MRR — 첫 정답의 역순위. 정답 수에 좌우되지 않아 상한 문제가 없다.
++                rr = next((1.0 / (i + 1) for i, cid in enumerate(top5) if cid in gold), 0.0)
++                st["mrr_sum"] += rr
++                st["kind"][kind]["mrr_sum"] += rr
++
+             # 체크리스트는 생성 모드에서만, 그리고 **LLM 이 실제로 답을 만든 턴에만** 매긴다.
+             if not dry_run and t["must"]:
+                 generated = route in GENERATING_ROUTES and not res.get("abstained")
+@@ -584,11 +721,13 @@ def stratified_sample(scenarios, n, rng):
+ def new_stats():
+     return {
+         "route_ok": 0, "route_n": 0, "jga_ok": 0, "jga_n": 0,
+-        "tp": 0, "fp": 0, "fn": 0, "r5_ok": 0, "r5_n": 0,
++        "tp": 0, "fp": 0, "fn": 0,
++        "hit5_ok": 0, "hit5_n": 0, "r5_sum": 0.0, "r5_n": 0, "mrr_sum": 0.0,
+         "chk_llm_ok": 0, "chk_llm_n": 0, "nocard_ok": 0, "nocard_n": 0, "chk_det_ok": 0, "chk_det_n": 0,
+         "gen_ms": [],
+         "kind": defaultdict(lambda: {"route_ok": 0, "route_n": 0, "jga_ok": 0, "jga_n": 0,
+-                                     "r5_ok": 0, "r5_n": 0, "chk_ok": 0, "chk_n": 0}),
++                                     "hit5_ok": 0, "hit5_n": 0, "r5_sum": 0.0, "r5_n": 0,
++                                     "mrr_sum": 0.0, "chk_ok": 0, "chk_n": 0}),
+         "depth": defaultdict(lambda: {"ok": 0, "n": 0}),
+         "confusion": Counter(),
+     }
+@@ -602,6 +741,10 @@ def main():
+                     help="시나리오를 N개만 (유형별 층화 추출). 21종을 다 담으려면 25 이상")
+     ap.add_argument("--repeat", type=int, default=1, help="k회 반복해 pass^k 를 낸다")
+     ap.add_argument("--verbose", action="store_true", help="실패 건을 전부 출력")
++    ap.add_argument("--seed", type=int, default=SEED,
++                    help="시나리오 생성 seed. 기본 42 는 개발하면서 계속 보던 셋이라, "
++                         "다른 값을 주면 **한 번도 안 본 시나리오**로 검증할 수 있다"
++                         "(held-out). 코드를 시험에 맞춰 짠 게 아닌지 확인하는 용도")
+     ap.add_argument("--latency", action="store_true",
+                     help="생성 시간을 함께 출력한다. **실기기 지연이 아니라** LLM 서버를 "
+                          "띄운 데스크톱 성능이므로 성능 지표로 인용하지 말 것. "
+@@ -609,9 +752,15 @@ def main():
+     args = ap.parse_args()
+ 
+     cards = json.loads(CARDS_PATH.read_text(encoding="utf-8"))
+-    scenarios = build_scenarios(cards, random.Random(SEED))
++    # 벡터가 지금 카드와 맞는지 먼저 본다. 안 맞으면 시맨틱이 옛날 내용으로
++    # 돌아 지표가 조용히 틀어진다(id 는 그대로라 다른 검사로는 안 잡힌다).
++    _st, _msg = _cfp.check_stamp(CARDS_PATH.parent / _cfp.STAMP_NAME, cards)
++    if _st != "ok":
++        print(_cfp.banner(_st, _msg), flush=True)
++
++    scenarios = build_scenarios(cards, random.Random(args.seed))
+     if args.sample and args.sample < len(scenarios):
+-        scenarios = stratified_sample(scenarios, args.sample, random.Random(SEED))
++        scenarios = stratified_sample(scenarios, args.sample, random.Random(args.seed))
+ 
+     dry_run = not args.generate
+     try:
+@@ -636,30 +785,61 @@ def main():
+         always_pass = s if always_pass is None else (always_pass & s)
+     elapsed = time.time() - t0
+ 
++    if stats.get("request_error"):
++        print(f"\n[주의] 요청 실패 {stats['request_error']}건 — 서버 지연/중단으로 그만큼"
++              " 시나리오가 덜 채점됐다. 지표를 그대로 인용하지 말 것.")
++
+     def pct(a, b):
+         return f"{a / b:.3f}" if b else "  -  "
+ 
++    # --- 지표를 정직하게 읽히도록 표시를 붙인다 -------------------------------
++    # 자체 감사에서 나온 것들이다. 팀원 지표(Slot Accuracy)를 "JGA 가 1.000 이면 중복"
++    # 이라고 걸렀는데, 같은 잣대를 대면 **우리 지표도 절반이 걸린다**. 숫자를 지우는
++    # 대신 한계를 같이 찍는다 — 지우면 회귀했을 때 진단할 근거가 사라진다.
++    def ceiling(v, n):
++        """천장에 붙은 지표는 '좋다'가 아니라 '안 나빠졌다'만 말한다."""
++        return "   <- 천장, 회귀 탐지용" if n and v >= n else ""
++
++    def power(n, need=30):
++        """표본이 작으면 1건이 몇 %p 인지 같이 보여준다."""
++        return f"   [표본 {n} — 1건이 {100 / n:.0f}%p]" if n and n < need else ""
++
+     print("\n[1~3층 — 생성 불필요]")
+-    print(f"  라우팅 정확도   {pct(stats['route_ok'], stats['route_n'])}  ({stats['route_ok']}/{stats['route_n']})")
+-    print(f"  JGA            {pct(stats['jga_ok'], stats['jga_n'])}  ({stats['jga_ok']}/{stats['jga_n']})")
++    print(f"  라우팅 정확도   {pct(stats['route_ok'], stats['route_n'])}  ({stats['route_ok']}/{stats['route_n']})"
++          f"{ceiling(stats['route_ok'], stats['route_n'])}")
++    print(f"  JGA            {pct(stats['jga_ok'], stats['jga_n'])}  ({stats['jga_ok']}/{stats['jga_n']})"
++          f"{ceiling(stats['jga_ok'], stats['jga_n'])}")
+     prec = stats["tp"] / (stats["tp"] + stats["fp"]) if stats["tp"] + stats["fp"] else 0.0
+     rec = stats["tp"] / (stats["tp"] + stats["fn"]) if stats["tp"] + stats["fn"] else 0.0
+     f1 = 2 * prec * rec / (prec + rec) if prec + rec else 0.0
+-    print(f"  슬롯 P/R/F1     {prec:.3f} / {rec:.3f} / {f1:.3f}")
+-    print(f"  턴별 R@5       {pct(stats['r5_ok'], stats['r5_n'])}  ({stats['r5_ok']}/{stats['r5_n']})")
++    # 슬롯 P/R/F1 은 JGA 가 1 아래로 내려갔을 때 **어디가** 틀렸는지 분해하는 용도다.
++    # JGA 가 만점이면 이 셋도 필연적으로 만점이라 같은 사실의 네 번째 보고가 된다 —
++    # 팀원의 Slot Accuracy 를 거른 것과 같은 이유이므로 우리 것도 그때만 찍는다.
++    if stats["jga_ok"] < stats["jga_n"]:
++        print(f"  슬롯 P/R/F1     {prec:.3f} / {rec:.3f} / {f1:.3f}   (JGA 실패분 분해)")
++    print(f"  턴별 Hit@5     {pct(stats['hit5_ok'], stats['hit5_n'])}  ({stats['hit5_ok']}/{stats['hit5_n']})"
++          f"   <- 아래 셋은 같은 사실을 셋으로 본다. 헤드라인은 하나만 쓸 것")
++    n5 = stats["r5_n"] or 1
++    print(f"  턴별 R@5       {stats['r5_sum'] / n5:.3f}  (분모 min(정답수,5) — eval_search.py 와 같은 공식)")
++    print(f"  턴별 MRR       {stats['mrr_sum'] / n5:.3f}")
+ 
+     if args.generate:
+         print("\n[4~5층 — 생성 필요]")
+         print(f"  체크리스트(LLM 턴)   {pct(stats['chk_llm_ok'], stats['chk_llm_n'])}"
+               f"  ({stats['chk_llm_ok']}/{stats['chk_llm_n']})   <- 주 지표")
+-        print(f"  체크리스트(결정적 턴) {pct(stats['chk_det_ok'], stats['chk_det_n'])}"
+-              f"  ({stats['chk_det_ok']}/{stats['chk_det_n']})   * 고정 문자열이라 라우팅만 맞으면 통과")
++        # 체크리스트(결정적 턴)은 **동어반복**이라 헤드라인에서 뺐다 — 답변이 고정 문자열
++        # 이므로 라우팅만 맞으면 반드시 통과한다. 즉 라우팅 정확도를 다시 세는 것이다.
++        # 실패했을 때만 찍는다(그때는 라우팅이 이미 실패로 잡혔다는 뜻이라 교차 확인용).
++        if stats["chk_det_ok"] < stats["chk_det_n"]:
++            print(f"  체크리스트(결정적 턴) {pct(stats['chk_det_ok'], stats['chk_det_n'])}"
++                  f"  ({stats['chk_det_ok']}/{stats['chk_det_n']})   * 라우팅 실패의 반영")
+         if stats["nocard_n"]:
+             print(f"  무관 요청 카드 억제      {pct(stats['nocard_ok'], stats['nocard_n'])}"
+-                  f"  ({stats['nocard_ok']}/{stats['nocard_n']})")
++                  f"  ({stats['nocard_ok']}/{stats['nocard_n']}){power(stats['nocard_n'])}")
+         if args.repeat > 1:
+             print(f"  pass^{args.repeat}              {pct(len(always_pass), len(scenarios))}"
+-                  f"  ({len(always_pass)}/{len(scenarios)} 시나리오가 {args.repeat}번 모두 통과)")
++                  f"  ({len(always_pass)}/{len(scenarios)} 시나리오가 {args.repeat}번 모두 통과)"
++                  f"{power(len(scenarios))}")
+         # 생성 시간은 기본 출력에서 뺀다. --latency 로만 본다.
+         #
+         # 이 값은 hybrid_server 가 9379 포트(litert-lm serve)로 HTTP 왕복하는 시간이라
+@@ -684,14 +864,14 @@ def main():
+                   f"{q(0.5):.1f} / {sum(g)/len(g)/1000:.1f} / {q(0.95):.1f} / {g[-1]/1000:.1f}초")
+ 
+     print("\n[유형별]  (n = 채점된 턴 수)")
+-    header = f"  {'유형':<18} {'라우팅':>13} {'JGA':>13} {'R@5':>13}"
++    header = f"  {'유형':<18} {'라우팅':>13} {'JGA':>13} {'Hit@5':>13}"
+     if args.generate:
+         header += f" {'체크리스트':>13}"
+     print(header)
+     for kind, s in sorted(stats["kind"].items()):
+         line = (f"  {kind:<18} {pct(s['route_ok'], s['route_n']):>7} n={s['route_n']:<4}"
+                 f" {pct(s['jga_ok'], s['jga_n']):>7} n={s['jga_n']:<4}"
+-                f" {pct(s['r5_ok'], s['r5_n']):>7} n={s['r5_n']:<4}")
++                f" {pct(s['hit5_ok'], s['hit5_n']):>7} n={s['hit5_n']:<4}")
+         if args.generate:
+             line += f" {pct(s['chk_ok'], s['chk_n']):>7} n={s['chk_n']:<4}"
+         print(line)
+diff --git a/scripts/eval_search.py b/scripts/eval_search.py
+index 9e15310..af17621 100644
+--- a/scripts/eval_search.py
++++ b/scripts/eval_search.py
+@@ -5,6 +5,10 @@
+ # - 정답(ground truth)은 합성 데이터의 필드 값에서 자동 생성
+ #
+ # 사용법: python scripts/eval_search.py
++import sys as _sys
++from pathlib import Path as _P
++_sys.path.insert(0, str(_P(__file__).resolve().parent))
++import card_fingerprint as _cfp
+ import json
+ import math
+ import os
+@@ -66,6 +70,10 @@ PARTICLES = [
+     # 이름 12개가 '인' 으로 끝나지만(성다인 등) 떼도 다른 이름과 충돌하지 않고,
+     # analyze 가 원본 토큰도 함께 남기므로 잃는 게 없다.
+     "인",
++    # 계사의 종결형 "-(이)야". "손서윤씨가 아니라 남다은씨야" 처럼 **대상을 정정하는**
++    # 말투에서 새 이름에 붙는데, 안 떼면 '남다은씨야' 가 이름으로 안 잡혀 정정이 통째로
++    # 무시된다(실측: Final50 v3 explicit_target_correction 6/10 실패, focus 가 옛 대상에 머묾).
++    "이야", "야",
+     "은", "는", "이", "가", "을", "를", "에", "의", "와", "과", "도", "만", "랑", "로",
+     # 존칭 — KeywordSearchRanker.kt와 동기화(드리프트 방지). "강서연씨" 매칭 실패 버그 수정.
+     "씨", "님",
+@@ -105,7 +113,18 @@ def analyze(raw_query: str):
+     for t in normalized.split():
+         if len(t) < 2 or t in STOPWORDS:
+             continue
+-        for v in (t, strip_particle(t)):
++        # 문장 끝 구두점이 붙어 있으면 조사도 못 떼고 가제티어 조회도 빗나간다
++        # ("남다은씨야." -> 이름 추출 0건). normalize 는 이메일 때문에 '.'을 남기므로
++        # **끝에 붙은 것만** 떼어 본다(이메일·전화는 구두점으로 끝나지 않는다).
++        forms = [t]
++        base = t.rstrip("._-")
++        if base and base != t:
++            forms.append(base)
++        for f in list(forms):
++            sp = strip_particle(f)
++            if sp and sp not in forms:
++                forms.append(sp)
++        for v in forms:
+             digits = "".join(c for c in v if c.isdigit())
+             variants = [v, digits] if len(digits) >= 3 and digits != v else [v]
+             for x in variants:
+@@ -483,9 +502,22 @@ def should_abstain(query, keyword_scored, vector_scores, gazetteer=None) -> bool
+         return not keyword_scored
+ 
+     if gazetteer is not None:
++        # 질의가 **데이터에 실재하는 사람**을 이미 지목했는지 먼저 본다.
++        # 지역 오탐을 막는 근거다: 분석기가 조사 붙은 형태를 그대로 남기는 탓에
++        # "이메일도"·"회사도" 가 '도(道)로 끝나는 3자 이상' 조건에 걸려 없는 지역으로
++        # 판정됐다(실측: "두미영 회사와 이메일도 알려줘" -> 기권. "이메일"만 쓰면 정상).
++        # 토큰 모양만으로는 "울릉도"와 구분이 안 된다 — 둘 다 같은 규칙에 걸린다.
++        # 그래서 '이미 실재하는 사람을 지목했으면 곁가지 토큰의 지명 오탐으로 전체를
++        # 기권시키지 않는다'로 가른다. 없는 지역만 물은 질의("울릉도 근무자")는 지목된
++        # 사람이 없으므로 그대로 기권한다.
++        named_real_person = any(
++            gazetteer.looks_like_person_name(t) and gazetteer.name_exists(gazetteer.person_name_stem(t))
++            for t in tokens
++        )
+         for tok in tokens:
+             if gazetteer.looks_like_region(tok) and not gazetteer.region_exists(tok):
+-                return True
++                if not named_real_person:
++                    return True
+             if gazetteer.looks_like_person_name(tok):
+                 stem = gazetteer.person_name_stem(tok)
+                 if gazetteer.name_exists(stem):
+@@ -1102,6 +1134,12 @@ def evaluate_no_result(name, rankings, queries, score_lists=None):
+ def main():
+     rng = random.Random(42)
+     cards = json.loads(CARDS_PATH.read_text(encoding="utf-8"))
++    # 벡터가 지금 카드와 맞는지 먼저 본다. 안 맞으면 시맨틱이 옛날 내용으로
++    # 돌아 지표가 조용히 틀어진다(id 는 그대로라 다른 검사로는 안 잡힌다).
++    _st, _msg = _cfp.check_stamp(CARDS_PATH.parent / _cfp.STAMP_NAME, cards)
++    if _st != "ok":
++        print(_cfp.banner(_st, _msg), flush=True)
++
+     cards_by_id = {c["id"]: c for c in cards}
+     prepared = []
+     for c in cards:
+diff --git a/scripts/hybrid_server.py b/scripts/hybrid_server.py
+index f0655e0..471c73b 100644
+--- a/scripts/hybrid_server.py
++++ b/scripts/hybrid_server.py
+@@ -117,6 +117,27 @@ SELF_REFERENCE_PATTERNS = (
+ )
+ SELF_REFERENCE_ANSWER = "저는 명함 검색을 도와드리는 온디바이스 AI 어시스턴트입니다."
+ 
++# "너 뭐 할 줄 알아?" 같은 기능 질문 — 자기참조와 같은 이유로 결정적으로 우회한다.
++# 실측(전량 채점): 검색에 태우면 컨텍스트 1등을 답으로 뱉었다("너 뭐 할 줄 알아?" -> "이현",
++# 카드 1장). '무관 요청 카드 억제' 실패 1건이 이 계열이었다.
++# 자기참조보다 **먼저** 판정해야 한다 — "너는 뭐 할 줄 알아?" 는 "너는 뭐" 에도 걸린다.
++CAPABILITY_PATTERNS = (
++    "뭐 할 줄", "뭘 할 줄", "무엇을 할 줄", "뭐할 줄", "뭘할 줄",
++    "뭐 할 수", "뭘 할 수", "무엇을 할 수", "할 수 있는 게", "할 수 있는게",
++    "어떤 기능", "기능이 뭐", "기능 뭐", "뭐 도와", "뭘 도와", "어떻게 쓰는",
++)
++# Kotlin 은 이 목록을 ToolRegistry.capabilityLabels() 로 도구에서 파생한다.
++# 여기(거울)에는 레지스트리가 없어 같은 문장을 적어 둔다. 도구를 추가하면 양쪽을 같이 고칠 것.
++CAPABILITY_TOOL_LABELS = (
++    "기기의 캘린더 앱에 일정 등록 화면을 엽니다.",
++    "메일 또는 문자(SMS) 작성 화면을 초안이 채워진 상태로 엽니다.",
++)
++CAPABILITY_ANSWER = (
++    "저는 명함 검색을 도와드리는 온디바이스 AI 어시스턴트입니다. 이런 걸 할 수 있어요:\n"
++    + "\n".join(["- 이름·회사·지역·직함으로 명함을 찾습니다."]
++                + ["- " + t for t in CAPABILITY_TOOL_LABELS])
++)
++
+ # "전체 몇 장/명" 같이 조건 없이 전체를 묻는 질문 — 결정적으로 우회한다.
+ # 검색은 항상 top-N(5명)까지만 후보를 채우므로, 이런 질문을 그냥 검색에 태우면
+ # "총 5명"이라고 답해버린다(실측: 60장인데 5명이라고 답함) — top-5를 전체로 착각하게
+@@ -484,6 +505,11 @@ CONTEXT_REFERENCES = ("아까", "방금", "앞서", "이전", "말한", "찾은"
+ EXPLICIT_SEARCH_INTENT = ("검색", "찾아줘", "찾아 줘", "조회", "최신", "새로")
+ 
+ 
++# 사람을 가리키는 지시어. 되짚기("아까 말한 회사 뭐였지")와 가르는 기준이다.
++PERSON_DEIXIS = ("그 사람", "그사람", "그 분", "그분", "이 사람", "이사람",
++                 "저 사람", "저사람", "이 분", "이분", "걔")
++
++
+ def context_answer(memory: dict, recent_pairs, question: str):
+     """
+     문맥을 가리키는 발화이고 새로 검색하라는 말이 없으면, 검색을 건너뛰고 이미 아는 것으로
+@@ -497,6 +523,12 @@ def context_answer(memory: dict, recent_pairs, question: str):
+     q = question or ""
+     if not any(m in q for m in CONTEXT_REFERENCES):
+         return None
++    # **사람을 가리키면 되짚기가 아니라 그 사람에 대한 새 질문이다.**
++    # "아까 말한 회사 뭐였지"(되짚기)와 "아까 그 사람 회사 알려줘"(새 질문)를 가른다.
++    # 대명사를 CONTEXT_REFERENCES 에서 뺐어도 "아까"가 남아 여기로 새고 있었다
++    # (실측: Final50 v3 에서 sc_03·sc_08·lr_04·er_04 가 전부 이 경로였다).
++    if any(d in q for d in PERSON_DEIXIS):
++        return None
+     if any(m in q for m in EXPLICIT_SEARCH_INTENT):
+         return None
+     normalized = q.lower()
+@@ -522,6 +554,13 @@ def context_answer(memory: dict, recent_pairs, question: str):
+     return None
+ 
+ 
++def is_capability_question(question: str) -> bool:
++    q = question.strip().lower()
++    if not q:
++        return False
++    return any(p in q for p in CAPABILITY_PATTERNS)
++
++
+ def is_self_reference_question(question: str) -> bool:
+     """AI 자신에 대한 질문("너는 누구야?")인지 — 명함 검색과 무관하므로 결정적으로 우회한다."""
+     q = (question or "").strip().lower()
+@@ -634,6 +673,120 @@ def count_by_known_condition(question: str, gazetteer):
+ NARROWING_MARKERS = ("그중", "그 중", "거기서", "그 안에서", "그것들 중")
+ 
+ 
++# ---- 담화 순서 지시("처음에 물어본 사람") ----
++# 직전 결과의 N번째를 고르는 ordinal_index 와 **다른 것**이다. 이쪽은 '대화에서 N번째로
++# 화제가 된 사람'이라, 가리키는 대상이 직전 카드 목록이 아니라 지난 발화들이다.
++#
++# 실측(HJP-limited/ymj Final50 v3 벤치마크): 이 처리가 없으면 "처음에 물어본 사람
++# 전화번호는?" 이 **새 검색**으로 빠지고 "처음/물어본/사람"이 검색어가 돼 시나리오에
++# 없는 사람을 데려온다(long_range_reactivation 0/10, discourse_coreference 0/10).
++# 최근 창(4턴) 밖으로 밀려난 인물이라 focus 치환으로도 닿지 않는다.
++DISCOURSE_VERBS = ("물어본", "물어봤", "질문한", "질문했", "언급한", "언급했",
++                   "확인한", "확인했", "말한", "말했", "등장한", "나온")
++DISCOURSE_FIRST = ("맨 처음", "처음에", "처음", "가장 먼저", "먼저")
++DISCOURSE_HINTS = DISCOURSE_VERBS + DISCOURSE_FIRST + ("대화",)
++# 이름을 앞에 붙인 뒤 남으면 검색어를 오염시키는 말들.
++DISCOURSE_STRIP = DISCOURSE_HINTS + (
++    # 시간 부사를 남기면 아래 context_answer 가 "아까"를 보고 되짚기로 오인해
++    # 직전 답변을 재생한다(실측: "아까 처음에 물어본 분 전화번호는?" -> 엉뚱한 번호).
++    "아까", "방금", "앞서",
++    "그분", "그 분", "사람", "분", "대화에서", "두 사람", "중", "맨", "가장",
++    "첫 번째로", "첫 번째", "첫번째", "번째로", "번째", "그", "했던", "던",
++)
++
++
++def discourse_subjects(history, gazetteer):
++    """지난 발화에 등장한 인물을 **말한 순서대로** 모은다(중복 제거)."""
++    subjects = []
++    for h in history or []:
++        q = (h or {}).get("q") or ""
++        try:
++            names = (ev.extract_field_filters(q, gazetteer) or {}).get("name") or []
++        except Exception:  # noqa: BLE001
++            names = []
++        for n in names:
++            if n not in subjects:
++                subjects.append(n)
++    return subjects
++
++
++# 대상 정정("A가 아니라 B야") 표지.
++CORRECTION_MARKERS = ("아니라", "말고", "정정", "아니고")
++
++
++def resolve_correction(question: str, gazetteer):
++    """
++    "손서윤씨가 아니라 남다은씨야. 그분 회사는?" 처럼 **대상을 바꾸는** 발화를
++    정정된 사람에 대한 질의로 다시 쓴다.
++
++    실측(Final50 v3 explicit_target_correction): 이게 없으면 두 이름이 **둘 다** 이름
++    조건으로 잡히고, 대명사('그분')는 resolve_query 가 **옛 focus**로 치환해 버린다
++    (resolved='… 남다은씨야. 손서윤 회사는 어디야?'). 그러면 focus 가 옛 대상에 머물러
++    **그 뒤 모든 턴이 틀린 사람을 답한다**(4턴짜리 시나리오가 통째로 무너진다).
++
++    정정 표지가 있고 아는 이름이 둘 이상일 때만 건다 — 마지막에 말한 이름이 정정된 대상이다.
++    """
++    if not any(m in question for m in CORRECTION_MARKERS):
++        return question
++    try:
++        names = (ev.extract_field_filters(question, gazetteer) or {}).get("name") or []
++    except Exception:  # noqa: BLE001
++        return question
++    if len(names) < 2:
++        return question
++    # 질의에 나타난 **위치** 순으로 본다(추출 순서가 아니라).
++    ordered = sorted(names, key=lambda n: question.find(n))
++    target = ordered[-1]
++    # 정정 뒤의 실제 요청만 남긴다. 마지막 문장이 그 요청이다.
++    tail = question
++    for sep in (".", "!", "?"):
++        parts = [p for p in tail.split(sep) if p.strip()]
++        if len(parts) > 1:
++            tail = parts[-1]
++    # 옛 이름과 대명사를 지운다 — 남으면 다시 이름 조건으로 잡히거나 focus 로 치환된다.
++    for n in ordered[:-1]:
++        tail = tail.replace(n + "씨", " ").replace(n, " ")
++    for p in PRONOUNS:
++        tail = tail.replace(p, " ")
++    tail = re.sub(r"\s+", " ", tail).strip()
++    return f"{target} {tail}".strip()
++
++
++def resolve_discourse_reference(question: str, history, prev_card_ids, gazetteer):
++    """담화 순서로 사람을 가리키면 그 이름을 넣어 질의를 다시 쓴다. 아니면 원문 그대로."""
++    if not history:
++        return question
++    # 이름이 이미 있으면 지시가 아니다.
++    try:
++        if ((ev.extract_field_filters(question, gazetteer) or {}).get("name") or []):
++            return question
++    except Exception:  # noqa: BLE001
++        pass
++
++    idx = None
++    if any(h in question for h in DISCOURSE_HINTS):
++        idx = 0 if any(f in question for f in DISCOURSE_FIRST) else ordinal_index(question)
++    elif ordinal_index(question) is not None and len([c for c in (prev_card_ids or []) if c in CARDS_BY_ID]) < 2:
++        # "첫 번째 사람" 처럼 담화 단서가 없는 순서 지시. 직전 결과가 0~1장이면 거기서
++        # 고를 게 없으므로 대화 순서를 가리키는 말로 읽는다(narrow_by_answer 4단계와 같은 원리).
++        idx = ordinal_index(question)
++    if idx is None:
++        return question
++
++    subjects = discourse_subjects(history, gazetteer)
++    if not subjects:
++        return question
++    name = subjects[-1] if idx < 0 else (subjects[idx] if idx < len(subjects) else None)
++    if not name:
++        return question
++
++    rest = question
++    for w in sorted(DISCOURSE_STRIP, key=len, reverse=True):
++        rest = rest.replace(w, " ")
++    rest = re.sub(r"\s+", " ", rest).strip()
++    return f"{name} {rest}".strip()
++
++
+ def apply_narrowing(question: str, previous_terms):
+     """
+     점진적 좁히기 — 앞 턴의 조건을 이어받는다. Kotlin applyNarrowing 과 같은 규칙.
+@@ -675,6 +828,123 @@ def attribute_of(question: str):
+     return next((n for n in ATTRIBUTE_NOUNS if n in (question or "")), None)
+ 
+ 
++# 속성 명사 -> 카드 필드. 물어본 칸이 실제로 비어 있으면 LLM 을 부르지 않는다.
++# ('이름'은 비는 일이 없어 뺀다.)
++ATTRIBUTE_FIELD = {
++    # 복합어를 **먼저** 등록한다. "메일 주소는?" 은 이메일 하나를 묻는 말이지
++    # 이메일과 주소를 함께 묻는 말이 아니다(실측: 두 칸으로 읽혀 주소까지 답했다).
++    "이메일 주소": "email", "메일 주소": "email", "이메일주소": "email", "메일주소": "email",
++    "회사 주소": "address", "회사주소": "address",
++    "전화번호": "phone", "전화": "phone", "번호": "phone", "연락처": "phone",
++    "핸드폰": "phone", "휴대폰": "phone",
++    "메일": "email", "이메일": "email",
++    "직급": "title", "직함": "title", "직책": "title",
++    "회사": "company", "소속": "company",
++    "주소": "address", "위치": "address", "지역": "location",
++    "부서": "department",
++}
++
++
++# 지시 관형사 뒤의 속성 명사는 **요청이 아니라 가리키는 말**이다.
++# "그 회사 주소는?" 은 주소 하나만 묻는 것이지 회사를 함께 묻는 게 아니다
++# (실측: 이 구분이 없으면 우리 시나리오 '대명사 체인' 7턴이 통째로 오탐된다).
++_DEMONSTRATIVES = ("그", "이", "저")
++
++
++def _requested_pos(question: str, noun: str) -> int:
++    """질의에서 그 명사가 **요청으로** 쓰인 첫 위치. 없으면 -1."""
++    start = 0
++    while True:
++        pos = question.find(noun, start)
++        if pos < 0:
++            return -1
++        before = question[:pos].rstrip()
++        if not before.endswith(_DEMONSTRATIVES):
++            return pos
++        start = pos + 1
++
++
++def requested_fields(question: str):
++    """질의가 물은 속성들을 **말한 순서대로**, 필드 기준으로 중복 없이 돌려준다.
++
++    '전화번호'가 '전화'·'번호'를 품는 식으로 명사가 겹치므로 필드로 중복을 없앤다.
++    """
++    found = []
++    taken = []  # 이미 어떤 명사가 차지한 글자 구간
++    # **긴 명사부터** 본다 — "이메일" 안의 "메일", "메일 주소" 안의 "주소"가 먼저 잡히면
++    # 라벨이 잘리거나 한 요청이 두 칸으로 쪼개진다.
++    for noun in sorted(ATTRIBUTE_FIELD, key=len, reverse=True):
++        field = ATTRIBUTE_FIELD[noun]
++        if any(f == field for _, f, _ in found):
++            continue
++        pos = _requested_pos(question, noun)
++        if pos < 0:
++            continue
++        # 앞서 잡힌 명사 안에 들어 있으면 같은 말을 두 번 세는 것이다.
++        if any(a <= pos < b for a, b in taken):
++            continue
++        taken.append((pos, pos + len(noun)))
++        found.append((pos, field, noun))
++    found.sort()
++    return [(f, n) for _, f, n in found]
++
++
++def field_list_answer(question: str, card_ids):
++    """
++    한 사람에게 **여러 칸**을 물으면 코드가 직접 조합해 답한다.
++
++    실측(Final50 v3): "회사와 이메일도 알려줘" 에 2B 모델이 이메일만 답했다(4건).
++    값은 컨텍스트에 다 있는데 모델이 하나를 빠뜨리는 것이라 **검색·문맥 문제가 아니다.**
++    프롬프트로 고치는 건 4전 4패라 시도하지 않는다 — 어느 칸을 물었는지도, 그 값이
++    무엇인지도 코드가 이미 안다.
++
++    두 칸 이상일 때만 건다. 한 칸짜리는 그대로 LLM 이 문장으로 답하게 둔다(자연스러움 유지).
++    후보가 정확히 1장일 때만 건다 — 여러 명이면 '누구의 칸'인지 안 정해진다.
++    """
++    if len(card_ids) != 1:
++        return None
++    fields = requested_fields(question)
++    if len(fields) < 2:
++        return None
++    card = CARDS_BY_ID.get(card_ids[0]) or {}
++    parts = []
++    for field, noun in fields:
++        value = str(card.get(field) or "").strip()
++        parts.append(f"{noun}: {value}" if value else f"{noun}: 정보 없음")
++    return ", ".join(parts)
++
++
++def empty_field_answer(question: str, card_ids):
++    """
++    대상이 하나로 정해졌는데 물어본 칸이 비어 있으면 결정적으로 '없다'고 답한다.
++
++    실측(Final50 v3 unanswerable): 빈 칸을 그냥 물으면 2B 모델이 **옆 칸 값으로 대체**했다 —
++    회사를 물었는데 "국내영업팀입니다"(부서), "제주특별자치도 제주시"(주소), 직급을 물었는데
++    "생산관리팀입니다"(부서). 컨텍스트에 그 칸만 없을 뿐 다른 값이 다 들어 있으니
++    모델이 가장 그럴듯한 걸 골라 채운다. 값이 없다는 건 **코드가 이미 아는 사실**이라
++    모델에 맡길 이유가 없다(프롬프트 규칙 추가는 4전 4패다).
++
++    후보가 정확히 1장일 때만 건다 — 여러 명이면 '그중 누구의 칸'인지 정해지지 않는다
++    (narrow_by_answer 4단계와 같은 원리).
++    """
++    if len(card_ids) != 1:
++        return None
++    attr = attribute_of(question)
++    field = ATTRIBUTE_FIELD.get(attr) if attr else None
++    if not field:
++        return None
++    card = CARDS_BY_ID.get(card_ids[0]) or {}
++    if str(card.get(field) or "").strip():
++        return None
++    return f"{attr} 정보가 없습니다."
++
++
++# 속성 명사 앞에 흔히 붙는 군말. 이걸 떼고도 속성으로 시작하면 생략형 후속이다.
++# ("어느 부서야?", "그럼 주소는?") 지시 관형사(그/이/저)는 넣지 않는다 —
++# 그건 PRONOUNS 가 이미 담당한다.
++ELLIPSIS_LEAD_FILLERS = ("어느", "어떤", "그럼", "그러면", "근데", "그리고", "혹시", "이제", "또")
++
++
+ def resolve_query(question: str, focus):
+     if not focus:
+         return question, False
+@@ -686,7 +956,18 @@ def resolve_query(question: str, focus):
+     # 엉뚱한 검색이 됐다(답변 '조건에 해당하는 명함을 찾지 못했습니다', focus 도 딴 사람으로 튐).
+     # '4자리' 같은 자릿수 표현과 '4312' 같은 검색값을 가르려면 자릿수 길이를 봐야 한다.
+     has_new_value = bool(re.search(r"\d{3,}", question))
+-    is_ellip = (not has_new_value) and any(trimmed.startswith(n) for n in ATTRIBUTE_NOUNS)
++    # 속성 명사 **앞에 붙는 군말**을 떼고 본다. startswith 만 보면 "부서는?"은 되는데
++    # "어느 부서야?"는 새 검색으로 빠져 focus 가 엉뚱한 사람으로 튄다 — 그 한 턴이
++    # 오염시키면 **뒤 턴이 연쇄로 무너진다**(실측: 표현을 다양화하자 실패 2건 -> 32건,
++    # 그중 대부분이 이 한 가지 말투에서 시작된 연쇄였다).
++    stripped = trimmed
++    for w in ELLIPSIS_LEAD_FILLERS:
++        if stripped.startswith(w):
++            stripped = stripped[len(w):].lstrip()
++            break
++    is_ellip = (not has_new_value) and any(
++        t.startswith(n) for t in (trimmed, stripped) for n in ATTRIBUTE_NOUNS
++    )
+     if not has_pron and not is_ellip:
+         return question, False
+     q = question
+@@ -1005,6 +1286,13 @@ def run_turn(question, history, focus, prev_card_ids=None, conversation_memory=N
+         None,
+     )
+     question = apply_narrowing(question, prev_terms)
++    # '처음에 물어본 사람' 처럼 대화 순서로 사람을 가리키면 그 이름으로 다시 쓴다.
++    # **ordinal_index 블록보다 먼저** 해야 한다 — 뒤에 두면 '첫 번째 사람'이 직전 카드
++    # 목록의 1번을 고르는 쪽으로 새서 대화 순서를 못 본다.
++    question = resolve_discourse_reference(question, history, prev_card_ids, GAZETTEER)
++    # 대상 정정은 대명사 치환(resolve_query)보다 **먼저** 푼다 — 뒤에 두면 '그분'이
++    # 이미 옛 focus 로 바뀐 뒤라 정정이 무시된다.
++    question = resolve_correction(question, GAZETTEER)
+ 
+     turn_id = uuid.uuid4().hex
+     now_ms = int(time.time() * 1000)
+@@ -1015,6 +1303,11 @@ def run_turn(question, history, focus, prev_card_ids=None, conversation_memory=N
+     # 명함 검색과 무관한 자기참조 질문("너는 누구야?")은 결정적으로 우회한다.
+     # 실측: 프롬프트 규칙에만 맡기면 "너"를 명함 속 인물로 오인해서 관계없는 사람
+     # 이름을 그대로 답했다(예: "너는 누구야?" -> "유유진").
++    # 기능 질문은 자기참조보다 먼저 본다("너는 뭐 할 줄 알아?" 가 양쪽에 걸린다).
++    if is_capability_question(question):
++        return _deterministic_reply(question, focus, memory, turn_id, now_ms, history, CAPABILITY_ANSWER,
++                                    route="capability")
++
+     if is_self_reference_question(question):
+         return _deterministic_reply(question, focus, memory, turn_id, now_ms, history, SELF_REFERENCE_ANSWER,
+                                     route="self_reference")
+@@ -1056,7 +1349,10 @@ def run_turn(question, history, focus, prev_card_ids=None, conversation_memory=N
+         top_ids = selected_ids[:TOP_N]
+         t = time.time()
+         try:
+-            answer = call_gemma(build_prompt(memory, recent_pairs, question, rag_context(top_ids), turn_id, followup=True))
++            answer = (field_list_answer(question, top_ids)
++                      or empty_field_answer(question, top_ids)
++                      or call_gemma(build_prompt(memory, recent_pairs, question,
++                                                 rag_context(top_ids), turn_id, followup=True)))
+             err = None
+         except Exception as e:  # noqa: BLE001
+             answer, err = "", f"{type(e).__name__}: {e}"
+@@ -1194,8 +1490,11 @@ def run_turn(question, history, focus, prev_card_ids=None, conversation_memory=N
+         answer, err = NO_MATCH_PHRASE, None
+     else:
+         try:
+-            answer = call_gemma(build_prompt(
+-                memory, recent_pairs, question, rag_context(top_ids, total_matches), turn_id))
++            answer = (field_list_answer(question, top_ids)
++                      or empty_field_answer(question, top_ids)
++                      or call_gemma(build_prompt(
++                          memory, recent_pairs, question,
++                          rag_context(top_ids, total_matches), turn_id)))
+             err = None
+         except Exception as e:  # noqa: BLE001
+             answer, err = "", f"{type(e).__name__}: {e}"
+diff --git a/scripts/precompute_embeddings.py b/scripts/precompute_embeddings.py
+index 6e6614d..cb99b04 100644
+--- a/scripts/precompute_embeddings.py
++++ b/scripts/precompute_embeddings.py
+@@ -9,6 +9,10 @@
+ #
+ # 데이터를 다시 만들었으면(build_eval_dataset.py) 반드시 임베딩도 다시 만들 것 —
+ # ids 순서와 카드 순서가 어긋나면 검색 결과가 통째로 뒤섞인다.
++import sys
++from pathlib import Path as _P
++sys.path.insert(0, str(_P(__file__).resolve().parent))
++import card_fingerprint
+ import argparse
+ import json
+ import struct
+@@ -66,6 +70,12 @@ def main() -> None:
+         for vec in vectors:
+             f.write(struct.pack(f"<{len(vec)}f", *vec.tolist()))
+ 
++    # 벡터를 만든 '그때의 카드 내용'을 지문으로 남긴다. 이게 없으면 나중에 카드만 바꾸고
++    # 임베딩을 안 돌렸을 때 아무도 눈치채지 못한다(id 는 그대로라 무결성 검사도 통과한다).
++    stamp_path = ids_path.parent / card_fingerprint.STAMP_NAME
++    fp = card_fingerprint.write_stamp(stamp_path, cards, cards_path.name)
++    print(f"wrote fingerprint {fp[:16]}... -> {stamp_path}")
++
+     print(f"wrote {len(ids)} ids -> {ids_path}")
+     print(f"wrote {vectors_path} ({vectors_path.stat().st_size / 1024 / 1024:.1f} MB, dim={vectors.shape[1]})")
+ 
+@@ -75,6 +85,7 @@ def main() -> None:
+         shutil.copy(cards_path, ASSETS_DIR / "cards_seed.json")
+         shutil.copy(ids_path, ASSETS_DIR / "cards_embeddings_ids.json")
+         shutil.copy(vectors_path, ASSETS_DIR / "cards_embeddings.bin")
++        shutil.copy(stamp_path, ASSETS_DIR / card_fingerprint.STAMP_NAME)
+         print(f"copied to assets -> {ASSETS_DIR}")
+ 
+ 

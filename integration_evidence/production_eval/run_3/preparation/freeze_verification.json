@@ -1,0 +1,197 @@
+{
+  "verified_after_freeze": true,
+  "freeze_manifest": "integration_evidence/production_eval/run_3/PRE_RUN_FREEZE_MANIFEST.json",
+  "freeze_manifest_sha256": "3ddd7d635829c53f47a83a690cea08ac55ffd110d68898bd42aa2a9e10628247",
+  "pre_run_status_sha256": "fa72a32b7ed02ba7fe900167caf3e405e3599d0a19b3c031448b735965a64878",
+  "files_rehashed": 22,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "by_group": {
+    "build_file": {
+      "files": 1,
+      "mismatches": 0
+    },
+    "gate": {
+      "files": 2,
+      "mismatches": 0
+    },
+    "input": {
+      "files": 2,
+      "mismatches": 0
+    },
+    "production_source": {
+      "files": 12,
+      "mismatches": 0
+    },
+    "runner": {
+      "files": 4,
+      "mismatches": 0
+    },
+    "runner_self_test": {
+      "files": 1,
+      "mismatches": 0
+    }
+  },
+  "checks": [
+    {
+      "group": "runner",
+      "path": "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java",
+      "manifest_sha256": "9fda1e716fc6bacdbd51ce2bc6070c8b8c1bbc0cb1bbf5877103c1ce800be02a",
+      "rehashed_sha256": "9fda1e716fc6bacdbd51ce2bc6070c8b8c1bbc0cb1bbf5877103c1ce800be02a",
+      "matches": true
+    },
+    {
+      "group": "runner",
+      "path": "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Gate.java",
+      "manifest_sha256": "3c0348c96ab6c1c947cbbe84737ea0020420f46458ffdf3c105243fc4ca4006e",
+      "rehashed_sha256": "3c0348c96ab6c1c947cbbe84737ea0020420f46458ffdf3c105243fc4ca4006e",
+      "matches": true
+    },
+    {
+      "group": "runner",
+      "path": "search-core/src/test/java/com/hjp/searchlookup/eval/EvalJson.java",
+      "manifest_sha256": "308bb4da4d8626d73105b4209070e4ea59226c38556558db649cb74e7836de21",
+      "rehashed_sha256": "308bb4da4d8626d73105b4209070e4ea59226c38556558db649cb74e7836de21",
+      "matches": true
+    },
+    {
+      "group": "runner",
+      "path": "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java",
+      "manifest_sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "rehashed_sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "matches": true
+    },
+    {
+      "group": "runner_self_test",
+      "path": "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java",
+      "manifest_sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "rehashed_sha256": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b",
+      "matches": true
+    },
+    {
+      "group": "gate",
+      "path": "integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json",
+      "manifest_sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+      "rehashed_sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+      "matches": true
+    },
+    {
+      "group": "gate",
+      "path": "integration_evidence/production_eval/run_3/gate/GATE_RATIONALE.md",
+      "manifest_sha256": "1c2c4a11b1a9601a7c6d2576b3b6e629619f5b7cefd3491f209d87ffe5b57cd4",
+      "rehashed_sha256": "1c2c4a11b1a9601a7c6d2576b3b6e629619f5b7cefd3491f209d87ffe5b57cd4",
+      "matches": true
+    },
+    {
+      "group": "input",
+      "path": "integration_evidence/production_eval/run_3/input/cards_eval1000.json",
+      "manifest_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "rehashed_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "matches": true
+    },
+    {
+      "group": "input",
+      "path": "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json",
+      "manifest_sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "rehashed_sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SearchLookupService.java",
+      "manifest_sha256": "47f8d3f63ec53736054ebca7faa2c33a14ce629f1b58df457454615e1afa076f",
+      "rehashed_sha256": "47f8d3f63ec53736054ebca7faa2c33a14ce629f1b58df457454615e1afa076f",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintPlan.java",
+      "manifest_sha256": "08dc3cc90577fc46f912c1445460c1b2bc13af6772afead2335f8b41f9588293",
+      "rehashed_sha256": "08dc3cc90577fc46f912c1445460c1b2bc13af6772afead2335f8b41f9588293",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SearchFieldVocabulary.java",
+      "manifest_sha256": "e020da3e4dfb3ae6486850180df8e99207a4dd730cb185d5d0015931bcc89e1e",
+      "rehashed_sha256": "e020da3e4dfb3ae6486850180df8e99207a4dd730cb185d5d0015931bcc89e1e",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintResolver.java",
+      "manifest_sha256": "07dccba33fb85a0cc96a20c4fe574e4501a58808a421236f9e58af513c912068",
+      "rehashed_sha256": "07dccba33fb85a0cc96a20c4fe574e4501a58808a421236f9e58af513c912068",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintMatcher.java",
+      "manifest_sha256": "a32dbdc968a8fdefd0d19132492e6060650f355c9b8b0891f6ea8feafaa9706c",
+      "rehashed_sha256": "a32dbdc968a8fdefd0d19132492e6060650f355c9b8b0891f6ea8feafaa9706c",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/QueryAnalyzer.java",
+      "manifest_sha256": "06e5cef78235063abbc3658d58ee9431eed98e2598bfff7da289d1dd6584d023",
+      "rehashed_sha256": "06e5cef78235063abbc3658d58ee9431eed98e2598bfff7da289d1dd6584d023",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/QueryAnalysis.java",
+      "manifest_sha256": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+      "rehashed_sha256": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/LikeFallbackKeywordRetriever.java",
+      "manifest_sha256": "7dff812cd16425b09e85163fe0b9f6f597897988cb6eb39ccbedfc58a507ed17",
+      "rehashed_sha256": "7dff812cd16425b09e85163fe0b9f6f597897988cb6eb39ccbedfc58a507ed17",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SemanticRetriever.java",
+      "manifest_sha256": "5e81b8b5fdfa78ba0b5c0f2c0a3cc61791436482157d62acc5cc5fb0b6eba393",
+      "rehashed_sha256": "5e81b8b5fdfa78ba0b5c0f2c0a3cc61791436482157d62acc5cc5fb0b6eba393",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/ReciprocalRankFusion.java",
+      "manifest_sha256": "d585ca7ca1129a80fb54df529c6896dc6f8bc797581bce8497ef02052e626d90",
+      "rehashed_sha256": "d585ca7ca1129a80fb54df529c6896dc6f8bc797581bce8497ef02052e626d90",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/BusinessCard.java",
+      "manifest_sha256": "d7b7f7e39c1026c26d5660e1bc540d34f254e6e16764634e8b8dbe041115b74f",
+      "rehashed_sha256": "d7b7f7e39c1026c26d5660e1bc540d34f254e6e16764634e8b8dbe041115b74f",
+      "matches": true
+    },
+    {
+      "group": "production_source",
+      "path": "search-core/src/main/java/com/hjp/searchlookup/BusinessCardRepository.java",
+      "manifest_sha256": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79",
+      "rehashed_sha256": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79",
+      "matches": true
+    },
+    {
+      "group": "build_file",
+      "path": "search-core/build.gradle.kts",
+      "manifest_sha256": "4e20d0de1a81e96abbc6584c893a81d3e75dfc18a0b1c6c308b85a3897b59e48",
+      "rehashed_sha256": "4e20d0de1a81e96abbc6584c893a81d3e75dfc18a0b1c6c308b85a3897b59e48",
+      "matches": true
+    }
+  ],
+  "result_directory_exists": false,
+  "result_files_present": 0,
+  "partial_directory_exists": false,
+  "evaluation_executed": false,
+  "status": "FROZEN_NOT_RUN",
+  "instruction_if_a_defect_is_found_later": "do not edit run_3. Preserve it and create the next evaluator version."
+}

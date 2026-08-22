@@ -1,0 +1,43 @@
+{
+  "frozen_before_execution": true,
+  "total_turns": 377,
+  "total_scenarios": 130,
+  "routing": {
+    "scorable": 328,
+    "excluded": 49,
+    "not_run": 0,
+    "sum_check": true
+  },
+  "r5": {
+    "scorable_turns_with_gold": 335,
+    "excluded": 42,
+    "note": "a turn is R@5-scorable only when it declares gold AND production actually ran a search; the second condition is observed at run time, so this is the upper bound"
+  },
+  "jga": {
+    "scorable": 0,
+    "declared_turns_with_slots": 288,
+    "status": "NOT_SCORABLE"
+  },
+  "slot_prf1": {
+    "scorable": 0,
+    "status": "NOT_SCORABLE"
+  },
+  "generation": {
+    "turns_with_must": 308,
+    "no_card_turns": 10,
+    "generate_only_turns": 18,
+    "status_jvm": "NOT_RUN",
+    "reason_jvm": "ACTUAL_MODEL_NOT_EXECUTED"
+  },
+  "per_route_denominator": {
+    "search": 300,
+    "followup": 28,
+    "<unasserted>": 13,
+    "empty_result": 9,
+    "context_answer": 9,
+    "filtered_count": 8,
+    "abstain": 8,
+    "total_count": 1,
+    "self_reference": 1
+  }
+}

@@ -1,0 +1,4 @@
+JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \
+./gradlew --offline :search-core:runRyeongSearchEvalV3 --rerun-tasks \
+  > integration_evidence/production_eval/run_3/execution/stdout.log \
+  2> integration_evidence/production_eval/run_3/execution/stderr.log

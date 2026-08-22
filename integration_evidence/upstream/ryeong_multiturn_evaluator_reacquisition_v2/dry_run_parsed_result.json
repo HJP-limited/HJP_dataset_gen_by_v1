@@ -1,0 +1,19 @@
+{
+  "status": "NOT_RUN_TO_COMPLETION",
+  "attempted": true,
+  "command": "cd <reference> && PYTHONDONTWRITEBYTECODE=1 python3 scripts/eval_multiturn.py",
+  "exit_code": 1,
+  "stdout": "[err] 서버에 연결하지 못했습니다(<urlopen error [Errno 61] Connection refused>).\n      python scripts/hybrid_server.py 를 먼저 띄우세요.",
+  "stderr_bytes": 0,
+  "where_it_stopped": "the warmup call ask('워밍업', [], None, [], None, True) at eval_multiturn.py:619, before any scenario ran",
+  "what_this_proves": [
+    "the evaluator itself is fully functional up to the HTTP boundary",
+    "it loaded cards_eval1000.json and built its scenarios without error",
+    "it has a clean failure path and returns 1 on connection failure"
+  ],
+  "what_this_does_not_prove": "nothing about routing, JGA, R@5 or any metric - zero scenarios were scored",
+  "metrics": null,
+  "scenarios_scored": 0,
+  "turns_scored": 0,
+  "pycache_created_in_upstream": 0
+}

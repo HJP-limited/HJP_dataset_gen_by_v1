@@ -1,0 +1,20 @@
+{
+  "run_id": "ryeong_production_search_run_3",
+  "command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\\n./gradlew --offline :search-core:runRyeongSearchEvalV3 --rerun-tasks \\\n  > integration_evidence/production_eval/run_3/execution/stdout.log \\\n  2> integration_evidence/production_eval/run_3/execution/stderr.log",
+  "task": ":search-core:runRyeongSearchEvalV3",
+  "invocation_count_before": 0,
+  "invocation_count_after": 1,
+  "invocations_this_task": 1,
+  "start_local": "2026-08-18T22:34:19+0900",
+  "end_local": "2026-08-18T22:34:21+0900",
+  "elapsed_seconds": 2,
+  "process_exit_code": 0,
+  "exit_code_meaning": "0 — every frozen gate check passed",
+  "reached_the_evaluation_body": true,
+  "failure_stage": null,
+  "stdout_log": "integration_evidence/production_eval/run_3/execution/stdout.log",
+  "stderr_log": "integration_evidence/production_eval/run_3/execution/stderr.log",
+  "stderr_bytes": 0,
+  "rerun_prohibited": true,
+  "rerun_performed": false
+}

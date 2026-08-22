@@ -1,0 +1,67 @@
+{
+  "sources": {
+    "cards_origin": "integration_evidence/production_eval/run_1/cards_eval1000.json",
+    "queries_origin": "integration_evidence/production_eval/run_1/ryeong_queries_extracted.json",
+    "identified_from": "run_1/freeze_manifest.json (dataset.copied_to, queries.extract_sha256) — the filenames were read, not guessed",
+    "reference_commit": "7008304b2c14136cba333840368dae35e925a885",
+    "reference_branch": "llm-integration-work"
+  },
+  "byte_exact_copies": [
+    {
+      "path": "integration_evidence/production_eval/run_3/input/cards_eval1000.json",
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "origin_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "identical": true,
+      "bytes": 405413
+    },
+    {
+      "path": "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json",
+      "sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "origin_sha256": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5",
+      "identical": true,
+      "bytes": 52441
+    }
+  ],
+  "origin_modified": false,
+  "cards": 1000,
+  "unique_card_ids": 1000,
+  "queries_total": 203,
+  "ranking_queries": 183,
+  "abstention_queries": 20,
+  "queries_excluded": 0,
+  "category_counts": {
+    "개념형(easy)": 14,
+    "개념형(hard)": 19,
+    "기권(정답없음)": 20,
+    "이름": 40,
+    "전화(하이픈X)": 30,
+    "지역+직함(문장)": 40,
+    "회사명": 40
+  },
+  "category_counts_match_run_1_manifest": true,
+  "duplicate_query_texts": [],
+  "queries_missing_category": 0,
+  "relevant_ids_not_in_dataset": 0,
+  "distinct_relevant_ids": 898,
+  "every_ranking_query_has_at_least_one_relevant": true,
+  "every_abstention_query_has_zero_relevant": true,
+  "abstention_category": "기권(정답없음)",
+  "abstention_queries_all_in_that_category": true,
+  "card_fields": [
+    "address",
+    "company",
+    "department",
+    "email",
+    "id",
+    "industry",
+    "location",
+    "memo",
+    "name",
+    "nameEn",
+    "phone",
+    "tags",
+    "title"
+  ],
+  "tags_field_type_in_dataset": "string (comma separated) — the runner splits it into the card model's list",
+  "identity_check": "183 + 20 = 203"
+}

@@ -1,0 +1,75 @@
+{
+  "fixture": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung/app/src/main/assets/cards/business_cards.json",
+  "cards": 2,
+  "queries": 8,
+  "fts": "FTS4 unicode61 prefix={2,3,4}",
+  "initial_query_ms": 0.196375,
+  "previous_in_memory_like": {
+    "cases": 8,
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "p50_ms": 0.0355,
+    "p95_ms": 0.060959,
+    "mean_ms": 0.043526125,
+    "python_peak_memory_mb": 0.005837440490722656,
+    "by_type": {
+      "company": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "exact_name": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "field": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "phone": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      }
+    }
+  },
+  "latest_tiered_fts": {
+    "cases": 8,
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "p50_ms": 0.051167,
+    "p95_ms": 0.159375,
+    "mean_ms": 0.074239625,
+    "python_peak_memory_mb": 0.005469322204589844,
+    "by_type": {
+      "company": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "exact_name": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "field": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "phone": {
+        "count": 2,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      }
+    }
+  },
+  "semantic": {
+    "status": "NOT_RUN",
+    "reason": "requires compatible sentencepiece.model and ARM64 AI Edge RAG runtime"
+  }
+}

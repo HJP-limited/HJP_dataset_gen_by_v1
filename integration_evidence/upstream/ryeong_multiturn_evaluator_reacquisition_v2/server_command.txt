@@ -1,0 +1,4 @@
+# upstream's own documented command (scripts/hybrid_server.py line 5):
+#   (먼저 litert-lm serve 가 9379에 떠 있어야 함) python scripts/hybrid_server.py
+cd "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi"
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/hybrid_server.py

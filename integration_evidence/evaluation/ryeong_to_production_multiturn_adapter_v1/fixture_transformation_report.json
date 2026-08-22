@@ -1,0 +1,45 @@
+{
+  "source": "tools/ryeong_multiturn_v4/reference/cards_eval1000.json",
+  "source_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+  "card_count": 1000,
+  "duplicate_ids": 0,
+  "id_transformations": 0,
+  "source_fields": [
+    "address",
+    "company",
+    "department",
+    "email",
+    "id",
+    "industry",
+    "location",
+    "memo",
+    "name",
+    "nameEn",
+    "phone",
+    "tags",
+    "title"
+  ],
+  "field_level_checksums_before_mapping": {
+    "id": "1818c427507a97ef25019527b7c996d47f2568c8477ef7b802d6fae03ea5468f",
+    "name": "8202b10632a3bf090ed6b4d8700155b54b48c7e1edbc3510fe34a65b1cb3fce8",
+    "company": "213bf16b70d13ece0942b8d92f0f8a3a1509151411bd157f838a7c5ca5e66aed",
+    "title": "3ebeb129dcdb716044341bdf3c69bf87589df3d689cf777e1c747172a3f4d72b",
+    "department": "b6283dcad4f58f236369497f8f18aa2f0ed85627aa67ca4f79e9b0450d641896",
+    "location": "fa08df8dfc51f4437e2f67bd5f205c431d319ce0b13d7c4a0d649fbbf2f3dfaf",
+    "phone": "72ab76bb0e755717e51e0761cf771e194adc55a0799738323de22f0a35e2b1e3",
+    "email": "df6ddc7bba6f6d7f365ecdcd30f4d9495718ce91b790d87db987e0b1345ec988",
+    "address": "14e3fc7bbb7f42f44d104c9d64467e3c3e67aedd173349773c1ef656c581d48b"
+  },
+  "target_type": "com.hjp.tool.contact.BusinessCardRecord",
+  "mapping": "one-to-one on id/name/company/title/department/location/phone/email/address; nameEn, industry, memo and tags are carried where present",
+  "loading_order_effect": "not exercised in this readiness run — the official run must load in manifest order and record whether order changes any ranking",
+  "semantic_availability": {
+    "embedding_model_present": false,
+    "engine": "google/embeddinggemma-300m (keyword-fallback:LocalEmbeddingEngine)",
+    "diagnostic_status": "MODEL_ENGINE_MISSING",
+    "retrieval_mode": "KEYWORD_ONLY",
+    "recorded_as_metadata": true,
+    "warning": "a keyword-only run must never be reported as semantic retrieval"
+  },
+  "note": "the 1000-card fixture was NOT loaded in this readiness run; the canary used 4 synthetic cards. Loading the full fixture is part of the official run."
+}

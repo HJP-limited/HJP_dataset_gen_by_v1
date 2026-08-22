@@ -1,0 +1,48 @@
+{
+  "cards_eval1000.json": {
+    "path": "data/cards_eval1000.json",
+    "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+    "parsed": true,
+    "card_count": 1000,
+    "duplicate_ids": {},
+    "duplicate_id_count": 0,
+    "fields_present": {
+      "address": 1000,
+      "company": 1000,
+      "department": 1000,
+      "email": 1000,
+      "id": 1000,
+      "industry": 1000,
+      "location": 1000,
+      "memo": 1000,
+      "name": 1000,
+      "nameEn": 1000,
+      "phone": 1000,
+      "tags": 1000,
+      "title": 1000
+    },
+    "fields_missing_on_some_cards": {},
+    "id_field_present_on_all": true
+  },
+  "cards_eval1000_vectors.bin": {
+    "path": "data/cards_eval1000_vectors.bin",
+    "size_bytes": 3072000,
+    "sha256": "c498b35d17cd9549adb66427133346047d65325cb5d34c86b8599a8f233fef4f",
+    "implied_shape": "1000 cards x 768 float32 = 768 dims",
+    "note": "precomputed document vectors shipped in the repo; the QUERY still needs the EmbeddingGemma checkpoint at run time"
+  },
+  "rag_eval_dataset.jsonl": {
+    "path": "eval/rag_eval_dataset.jsonl",
+    "sha256": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+    "parsed": true,
+    "record_count": 20,
+    "keys": [
+      "id",
+      "query",
+      "relevantCardIds",
+      "type"
+    ],
+    "used_by": "NOT eval_multiturn.py - eval_multiturn builds its scenarios dynamically from cards_eval1000.json with Random(42). This 20-record file belongs to the RAG/search evaluation path, not the multiturn path."
+  },
+  "separation_warning": "the 20 rag_eval_dataset.jsonl records and the 130 dynamically built multiturn scenarios are different inputs for different evaluators; they must never be conflated"
+}

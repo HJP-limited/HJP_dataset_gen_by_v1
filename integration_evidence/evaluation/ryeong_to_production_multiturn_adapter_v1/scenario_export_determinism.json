@@ -1,0 +1,13 @@
+{
+  "method": "the exporter was run in 4 independent OS processes and the outputs compared byte for byte",
+  "runs": 4,
+  "identical": true,
+  "sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+  "bytes": 284097,
+  "first_attempt_failed": true,
+  "root_cause": "upstream builds some `must` alternative lists out of sets (address_variants, company_variants); CPython randomises string hashing per process, so set iteration order — and therefore the order of the alternatives — differed between runs",
+  "fix": "the exporter pins PYTHONHASHSEED=0 by re-executing itself once before importing anything",
+  "why_this_is_safe": "upstream scores these with check_answer(), which uses any() over the alternatives, so their order carries no meaning; only the failure message names alts[0]",
+  "upstream_modified": false,
+  "pycache_written_into_upstream": 0
+}

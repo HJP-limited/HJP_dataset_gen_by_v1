@@ -1,0 +1,15 @@
+=== attempt 1: git ls-remote --heads (specific branch) ===
+$ git ls-remote --heads https://github.com/HJP-limited/ryeong.git refs/heads/llm-integration-work
+1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc	refs/heads/llm-integration-work
+exit=0
+
+=== attempt 2: git ls-remote --heads (all branches) ===
+ae3f8edebb9c4632302e499a3c336bed23506b75	refs/heads/4/29
+1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc	refs/heads/llm-integration-work
+e3dd67f6782dae50e8908190ab6debc0f9992056	refs/heads/main
+cb5be3f1b3265959548223b5f4d48bb4e9d61254	refs/heads/search_check
+exit=0
+
+=== clone into isolated dir: /private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi ===
+Cloning into '/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi'...
+clone exit=0

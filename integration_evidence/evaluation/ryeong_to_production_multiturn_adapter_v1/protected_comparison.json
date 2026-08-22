@@ -1,0 +1,69 @@
+{
+  "verdict": "CHANGED",
+  "protected_evidence": {
+    "scope": "integration_evidence (excluding this task's dir)",
+    "before": 825,
+    "after": 825,
+    "changed": [],
+    "removed": [],
+    "added": [],
+    "added_are_expected_new_evaluation_files": false,
+    "changed_count": 0,
+    "removed_count": 0,
+    "added_count": 0
+  },
+  "production_and_test_source": {
+    "scope": "production and test source",
+    "before": 217,
+    "after": 225,
+    "changed": [
+      "app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt"
+    ],
+    "removed": [],
+    "added": [
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongAdapterCanaryTest.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityRunner.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityScorer.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongEvaluatorMutationTest.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongRunGate.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarioLoaderTest.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarios.kt",
+      "app/src/test/java/com/example/hjp/eval/ryeong/RyeongTranslation.kt"
+    ],
+    "added_are_expected_new_evaluation_files": true,
+    "changed_count": 1,
+    "removed_count": 0,
+    "added_count": 8
+  },
+  "production_src_main_changed": [],
+  "test_src_test_changed": [
+    "app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt"
+  ],
+  "new_test_sources": [
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongAdapterCanaryTest.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityRunner.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityScorer.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongEvaluatorMutationTest.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongRunGate.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarioLoaderTest.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarios.kt",
+    "app/src/test/java/com/example/hjp/eval/ryeong/RyeongTranslation.kt"
+  ],
+  "upstream_clone": {
+    "path": "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi",
+    "git_status_lines": 0,
+    "clean": true,
+    "eval_multiturn_sha": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+    "cards_sha": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+    "modified": 0,
+    "pycache": 0
+  },
+  "ryeong_checkout_untouched": true,
+  "run_3_invocations_this_task": 1,
+  "official_ryeong_compatibility_result_dirs_created": 0,
+  "frozen_130_official_run_invocations": 0,
+  "apk_sha256": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+  "apk_expected": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+  "forbidden_git_ops": 0,
+  "apk_unchanged": true
+}

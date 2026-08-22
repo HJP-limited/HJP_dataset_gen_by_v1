@@ -1,0 +1,32 @@
+# ── 공식 멀티턴 평가 exact command (이번 작업에서는 실행하지 않았다) ──
+#
+# 전제 3가지가 모두 충족돼야 한다:
+#   1) models/embeddinggemma-300m  (SentenceTransformer 체크포인트 ~1.2GB) 배치
+#   2) 격리 venv에 sentence-transformers 설치
+#   3) --generate 를 쓸 경우에만: litert-lm serve 가 127.0.0.1:9379 에서 gemma4e2b 로 응답
+#
+# 0. 격리 환경 (시스템 python 오염 금지)
+python3 -m venv <ISOLATED>/venv
+<ISOLATED>/venv/bin/pip install --upgrade pip
+<ISOLATED>/venv/bin/pip install numpy sentence-transformers
+<ISOLATED>/venv/bin/pip freeze > <EVIDENCE>/pip_freeze.txt      # 버전을 여기서 고정 기록
+
+# 1. 서버 (터미널 A) — upstream 원본 명령, 수정 없음
+cd "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi"
+PYTHONDONTWRITEBYTECODE=1 <ISOLATED>/venv/bin/python scripts/hybrid_server.py \
+  > <EVIDENCE>/server_stdout.log 2> <EVIDENCE>/server_stderr.log &
+echo $! > <EVIDENCE>/server.pid          # 직접 띄운 PID만 나중에 종료한다
+
+# 2. 공식 dry-run (터미널 B) — 정확히 1회. wrapper가 stdout을 보존·파싱한다.
+cd "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi"
+PYTHONDONTWRITEBYTECODE=1 <ISOLATED>/venv/bin/python scripts/eval_multiturn.py \
+  | tee <EVIDENCE>/official_dry_run_stdout.log
+#   ↑ exit code 는 실패가 있어도 0 이다. PASS 판정에 쓰지 마라.
+
+# 3. (선택) 생성 모드 — 전제 3)까지 충족될 때만
+PYTHONDONTWRITEBYTECODE=1 <ISOLATED>/venv/bin/python scripts/eval_multiturn.py \
+  --generate --repeat 1 --verbose \
+  | tee <EVIDENCE>/official_generate_stdout.log
+
+# 4. 종료 — 기록한 PID만
+kill $(cat <EVIDENCE>/server.pid)

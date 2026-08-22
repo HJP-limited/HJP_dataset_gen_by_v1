@@ -1,0 +1,49 @@
+{
+  "axis_1_original_ryeong_reproducibility": {
+    "verdict": "BLOCKED — EXACT DEPENDENCY MISSING",
+    "what_is_confirmed_working": [
+      "the remote branch exists and was cloned (1caec3a2)",
+      "eval_multiturn.py is byte-identical to the historical SHA and needs no third-party package",
+      "--help exits 0",
+      "all 9 upstream scripts AST-parse",
+      "cards_eval1000.json parses: 1000 cards, 0 duplicate ids, no missing fields",
+      "the evaluator deterministically builds 130 scenarios / 377 turns with SEED=42",
+      "the evaluator reaches the HTTP boundary and fails cleanly with exit 1"
+    ],
+    "blockers": [
+      "python dependency: sentence_transformers (and transformers) missing",
+      "model artifact: models/embeddinggemma-300m SentenceTransformer checkpoint (~1.2GB) absent and gitignored",
+      "server binary: litert-lm serve on 9379 absent (only needed for --generate)"
+    ],
+    "scenarios_scored": 0
+  },
+  "axis_2_current_production_agent_evaluability": {
+    "verdict": "BLOCKED — ADAPTER CONTRACT MISMATCH",
+    "reason": "hybrid_server.py is a Python re-implementation of the app pipeline, not the Kotlin production path; and the /chat contract has no representation for tools, typed outcomes, side effects, tool traces or session reset",
+    "what_upstream_could_evaluate": [
+      "routing (partially)",
+      "field-filter slots",
+      "focus retention",
+      "turn-level R@5",
+      "answer checklists"
+    ],
+    "what_upstream_cannot_evaluate": [
+      "open_compose / create_calendar_event / update_business_card",
+      "typed TurnOutcomeType",
+      "ordered tool trace and arguments",
+      "side-effect admission and the once-per-turn guard",
+      "new-conversation reference discarding (TurnLease)",
+      "contact provenance and stale-ID blocking",
+      "search -> get -> terminal action workflows"
+    ],
+    "adapter_implemented": false
+  },
+  "combined": "PARTIALLY READY — the original evaluator was reacquired and statically verified end to end, but neither axis can execute an evaluation today",
+  "explicitly_not_claimed": [
+    "that the original Ryeong evaluation was reproduced",
+    "that any multiturn metric was measured",
+    "that the current Android agent was evaluated",
+    "that the 40/40 in multiturn-final-20260801.json means anything about current code",
+    "production readiness"
+  ]
+}

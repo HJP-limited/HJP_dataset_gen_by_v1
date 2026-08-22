@@ -1,0 +1,104 @@
+{
+  "run_name": "RYEONG SEARCH MULTITURN COMPATIBILITY",
+  "status": "FREEZE CANDIDATE — not yet executed",
+  "upstream": {
+    "remote": "https://github.com/HJP-limited/ryeong.git",
+    "branch": "llm-integration-work",
+    "commit": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc"
+  },
+  "seed": 42,
+  "scenario_inventory": {
+    "scenarios": 130,
+    "turns": 377,
+    "kinds": 21,
+    "known_gap": 0,
+    "generate_only": 6,
+    "depth_1": 3,
+    "depth_2": 62,
+    "depth_3_5": 55,
+    "depth_6_10": 10,
+    "depth_11_plus": 0
+  },
+  "artifacts": {
+    "upstream_evaluator": {
+      "path": "tools/ryeong_multiturn_v4/reference/eval_multiturn.py",
+      "sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031"
+    },
+    "upstream_cards": {
+      "path": "tools/ryeong_multiturn_v4/reference/cards_eval1000.json",
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24"
+    },
+    "exporter": {
+      "path": "tools/ryeong_multiturn_v4/export_scenarios.py",
+      "sha256": "b8f453bf03af56ff2562668395c9599c2d7c74ce5d4b0c4a144b6cdfdb16d49f"
+    },
+    "exported_scenarios": {
+      "path": "tools/ryeong_multiturn_v4/generated/ryeong_multiturn_scenarios_v1.json",
+      "sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42"
+    },
+    "exported_scenarios_test_resource": {
+      "path": "app/src/test/resources/ryeong/scenarios_v1.json",
+      "sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42"
+    },
+    "loader": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarios.kt",
+      "sha256": "58a629d146182df2241d9b83ab1c8dce185c83a685bd4bbc88696d7671256f4f"
+    },
+    "translation": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongTranslation.kt",
+      "sha256": "8d8a5b43685351dcb2c7f1dc9e2ae340356d4ecde4c06a23ba01b0f72591ca1d"
+    },
+    "adapter_runner": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityRunner.kt",
+      "sha256": "7c1aadbadd3ad71262c6746bedfddfa250a4305d994754e80e912d2d1136aa39"
+    },
+    "scorer": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityScorer.kt",
+      "sha256": "7e0c9fb8537cb96798dca0540146fce9f3f2ffff3e916ee973c68e05f34f1def"
+    },
+    "gate_schema": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongRunGate.kt",
+      "sha256": "d44d43e12fd114aaf12640b6f70d64ec48b76f241832bbc7852a267c89f60489"
+    },
+    "harness_seam": {
+      "path": "app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt",
+      "sha256": "d83eaa80c778bb063dbb27aabb1978c2e2d36f7bb57608cc2695bd09e4565e45"
+    },
+    "self_test_loader": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarioLoaderTest.kt",
+      "sha256": "2da40ce487fd356c0f26eb49c6ae49e8371514ca99446a8a684dc959d6bb050f"
+    },
+    "self_test_mutation": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongEvaluatorMutationTest.kt",
+      "sha256": "fa3d9ae775f794051a47b4a11ee813bfefcc797bd6a34890a82efaeee983191a"
+    },
+    "canary": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongAdapterCanaryTest.kt",
+      "sha256": "4734c19d6817398c7861ebc2cb9b4d272b7a7df981e15ab9549f0d5f6a96ed27"
+    }
+  },
+  "production_source_sha_map": "source_sha256_after.txt (217 files)",
+  "jvm_verification_evidence": {
+    "file": "jvm_xml_summary.json",
+    "sha256": "2c7024aa76068d28ebaba697a5aa8e5e71116889540c5165e9c78d8716096b9b",
+    "suites": 88,
+    "tests": 659,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fixture_transformation": {
+    "file": "fixture_transformation_report.json",
+    "sha256": "c4dd58f2f5260f9e924a4fc6cd8db736135e2b5b7b04b50a909a46c9260d8b17"
+  },
+  "exact_command": "official_run_command.txt",
+  "gate_definition": {
+    "schema": "RyeongRunGate (GateFailure enum, 9 refusal conditions)",
+    "performance_threshold": "NOT YET REGISTERED — must be pre-registered before the run, never after seeing results"
+  },
+  "not_yet_frozen": [
+    "model artifact SHA (no model is used in this axis)",
+    "the official RyeongOfficialCompatibilityRunTest, which does not exist yet",
+    "performance thresholds"
+  ]
+}

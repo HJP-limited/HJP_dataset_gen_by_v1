@@ -1,0 +1,82 @@
+{
+ "correction": "the earlier inventory read a stale commit",
+ "what_happened": "the local remote-tracking ref origin/agent/structured-multiturn-memory pointed at 5f2c988b (2026-08-04). The remote branch had moved to d18897ae (2026-08-13). The one commit in between, 'Improve multiturn context routing', is precisely the memory commit — so the inventory's central claim, that the reference carried the same defects, was drawn from a superseded tree.",
+ "branch_the_user_named": {
+  "name": "feature/runtime-multiturn-summary",
+  "commit": "019d65dd700fab3258f3da6e53be55b0a2c24214",
+  "subject": "Merge pull request #3 from HJP-limited/agent/structured-multiturn-memory",
+  "tree_identical_to_structured_memory_tip": true,
+  "verdict": "valid - it is the merge of agent/structured-multiturn-memory and its tree is identical"
+ },
+ "structured_memory_tip": {
+  "commit": "d18897aee8893dbe54402f908510972562cca6fe",
+  "subject": "Improve multiturn context routing",
+  "date": "Thu Aug 13 19:50:40 2026 +0900"
+ },
+ "stale_commit_used_earlier": {
+  "commit": "5f2c988b928a4dc4af7ea5b4cb19eefc1e1c76c8",
+  "subject": "Add structured multiturn memory",
+  "date": "Tue Aug 4 20:18:43 2026 +0900",
+  "is_ancestor_of_tip": true
+ },
+ "files_that_differ": [
+  {
+   "path": "agent-contract/src/main/kotlin/com/hjp/agent/contract/AgentModel.kt",
+   "stale_5f2c988b": {
+    "sha256": "a45f240d291bab84cbbe6aa28498bb92af07c744c5fb6dd001f8674b23ebadad",
+    "bytes": 2756
+   },
+   "tip_d18897ae": {
+    "sha256": "64cbcff161decc664d6db3abf7d02df6421af2ccb6692ef89710e38c81b3c2d1",
+    "bytes": 2997
+   },
+   "identical": false
+  },
+  {
+   "path": "agent-core/src/main/kotlin/com/hjp/agent/core/AgentSession.kt",
+   "stale_5f2c988b": {
+    "sha256": "b608e77ee992847b7a92f34dc16f2863d3a1bf84019a7dc4c6bee532af1274e5",
+    "bytes": 9873
+   },
+   "tip_d18897ae": {
+    "sha256": "7b84ee66213bb85c41cf1e349f4f86567c98412cee2d865682b2e4648e4da313",
+    "bytes": 12466
+   },
+   "identical": false
+  },
+  {
+   "path": "docs/MULTITURN_MEMORY_TEST_RESULTS.md",
+   "stale_5f2c988b": {
+    "sha256": null,
+    "bytes": null
+   },
+   "tip_d18897ae": {
+    "sha256": "ec3fdd3b5d11097167e71846c201622f2dd5d9d4ad50871bdecf9fd0b9003c62",
+    "bytes": 5139
+   },
+   "identical": false
+  }
+ ],
+ "contracts_actually_present_at_tip": {
+  "general_conversation_excluded": "beginTurn returns previous unless isActionLike(normalized)",
+  "keyed_facts": "ConversationMemoryItem.key; upsert replaces on matching key",
+  "fact_keys": [
+   "user.name",
+   "user.company",
+   "user.title"
+  ],
+  "preference_keys": [
+   "response.tone",
+   "response.length"
+  ],
+  "constraint_key": "action.confirmation",
+  "pending_ttl": "MAX_PENDING_AGE_MILLIS = 30 * 60 * 1_000L, filtered in beginTurn, inclusive boundary",
+  "model_context_excludes_actions": "ConversationMemory.modelView() blanks pendingActions and resolvedActions"
+ },
+ "how_the_reference_differs_from_what_was_implemented_here": [
+  "reference decides isActionLike from a keyword list; here it is the router's DialogueAct plus ReportedSpeechIntent, so a quoted or negated request is excluded - the keyword list would treat \"제가 '메일 보내줘'라고 했었나요?\" as a request",
+  "reference key is String = \"\"; here String? = null",
+  "reference stores the extracted value (\"비전글로벌\"); here the whole statement is stored under the key",
+  "reference blanks actions via modelView(); here the renderer never emits them"
+ ]
+}

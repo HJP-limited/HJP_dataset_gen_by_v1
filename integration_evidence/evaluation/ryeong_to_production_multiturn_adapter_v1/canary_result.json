@@ -1,0 +1,57 @@
+{
+  "suite": {
+    "suite": "RyeongAdapterCanaryTest",
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "no scenario starts with state from the previous one",
+      "unmapped routes are excluded rather than scored",
+      "search-only turns fire no action tools",
+      "structured scoring produces denominators for every reported rate",
+      "search rankings come back from the production backend",
+      "focus is observed from the session, not from the gold list",
+      "every canary scenario produced an observation for every turn",
+      "scenario order does not change a scenario's own result",
+      "the production path really ran",
+      "the routing denominator is exactly the scorable turns",
+      "running the same scenarios twice gives the same observations",
+      "retrieval mode is recorded and keyword-only is not reported as semantic",
+      "the run gate is exercised and reports an exit code"
+    ]
+  },
+  "green": true,
+  "scenarios": 8,
+  "cards": 4,
+  "cards_are_synthetic": true,
+  "production_path": {
+    "kernel": "real AgentKernel",
+    "router": "real DeterministicTurnRouter",
+    "session": "real InMemoryAgentSessionStore + real ConversationMemory",
+    "search": "real RyeongContactSearchBackend over the real SearchLookupService",
+    "tools": "real DefaultToolRegistry with the 6 production plugins",
+    "side_effect_backends": "recording fakes (no external side effect)"
+  },
+  "retrieval_mode": "KEYWORD_ONLY",
+  "semantic_available": false,
+  "what_it_proves": [
+    "the frozen JSON shape loads into TurnSpec-equivalent observations",
+    "a scenario reaches the production kernel and executes production tools",
+    "the production backend's ranking is observed unmodified",
+    "session state is isolated between scenarios (0 leakage)",
+    "unmapped routes are excluded rather than scored",
+    "the gate produces an exit code"
+  ],
+  "what_it_does_not_prove": [
+    "any Ryeong metric value",
+    "routing quality",
+    "that the frozen 130 will score well"
+  ],
+  "is_not_an_official_score": true,
+  "finding": {
+    "title": "Ryeong's own phrasing largely does not route to search in production",
+    "detail": "'제갈민씨 찾아줘' routes to DialogueAct.OTHER and executes no tool, while '제갈민씨 명함 찾아줘' routes to CONTACT_SEARCH and returns a ranking. Ryeong's questions are mostly of the first shape ('{name}씨 회사가 어디야?'), so the official run should be expected to exclude or fail many routing turns. This is a contract gap between the two systems, not an adapter defect, and the canary deliberately uses production-compatible phrasing so that a plumbing check does not double as a routing score.",
+    "must_not_be_used_as": "a reason to tune production or to rewrite the frozen scenarios"
+  }
+}

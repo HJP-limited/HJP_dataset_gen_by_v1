@@ -1,0 +1,6 @@
+NOT RUN
+
+reason: the reference evaluator (eval_multiturn.py or any equivalent) does not exist
+on this machine, so no --help command could be formed or executed.
+
+No substitute script was run in its place.

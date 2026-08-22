@@ -1,0 +1,72 @@
+{
+  "frozen_before_execution": true,
+  "total_turns": 377,
+  "routes": [
+    {
+      "route": "search",
+      "turns": 300,
+      "classification": "DERIVED_FROM_PRODUCTION_TRACE",
+      "exclusion_reason": ""
+    },
+    {
+      "route": "followup",
+      "turns": 28,
+      "classification": "DERIVED_FROM_PRODUCTION_TRACE",
+      "exclusion_reason": ""
+    },
+    {
+      "route": "<unasserted>",
+      "turns": 13,
+      "classification": "NOT_APPLICABLE",
+      "exclusion_reason": "the scenario asserts no route for this turn"
+    },
+    {
+      "route": "empty_result",
+      "turns": 9,
+      "classification": "NOT_SCORABLE",
+      "exclusion_reason": "upstream encodes result-count in the route; production keeps the act (CONTACT_SEARCH) and expresses emptiness in the outcome — different axes"
+    },
+    {
+      "route": "context_answer",
+      "turns": 9,
+      "classification": "NOT_SCORABLE",
+      "exclusion_reason": "spans ANSWER_FROM_HISTORY and QUOTED_RECALL (one-to-many)"
+    },
+    {
+      "route": "filtered_count",
+      "turns": 8,
+      "classification": "NOT_SCORABLE",
+      "exclusion_reason": "production has no aggregate-count route"
+    },
+    {
+      "route": "abstain",
+      "turns": 8,
+      "classification": "NOT_SCORABLE",
+      "exclusion_reason": "one upstream route spans production's CLARIFICATION_REQUIRED and UNSUPPORTED (one-to-many)"
+    },
+    {
+      "route": "total_count",
+      "turns": 1,
+      "classification": "NOT_SCORABLE",
+      "exclusion_reason": "production has no aggregate-count route"
+    },
+    {
+      "route": "self_reference",
+      "turns": 1,
+      "classification": "NOT_SCORABLE",
+      "exclusion_reason": "production has no equivalent route"
+    }
+  ],
+  "routing_scorable_turns": 328,
+  "routing_excluded_turns": 49,
+  "exclusion_reason_counts": {
+    "filtered_count": 8,
+    "empty_result": 9,
+    "abstain": 8,
+    "context_answer": 9,
+    "<unasserted>": 13,
+    "total_count": 1,
+    "self_reference": 1
+  },
+  "check_scorable_plus_excluded_equals_total": true
+}

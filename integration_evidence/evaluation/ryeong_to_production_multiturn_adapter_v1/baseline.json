@@ -1,0 +1,28 @@
+{
+  "task": "ryeong_to_production_multiturn_adapter_v1",
+  "started_local": "2026-08-22T11:17:25+0900",
+  "timezone": "KST",
+  "git_head": "993a5f5613235c2192f6c34b06841319813aefeb",
+  "branch": "android-app",
+  "tracked_changes_before": 25,
+  "untracked_before": 9914,
+  "protected_files_before": 825,
+  "source_kt_java_before": 217,
+  "prior_jvm_baseline": {
+    "suites": 85,
+    "tests": 608,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "upstream": {
+    "commit": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+    "branch": "llm-integration-work",
+    "clone_clean": true,
+    "required_shas_match": true
+  },
+  "prior_evidence_manifest_verified": {
+    "artifacts": 46,
+    "mismatches": 0
+  }
+}

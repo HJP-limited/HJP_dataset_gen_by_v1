@@ -1,0 +1,8 @@
+# isolated location (session scratchpad, outside the project tree and outside ../ryeong)
+REFERENCE_DIR="/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi"
+
+GIT_TERMINAL_PROMPT=0 git clone \
+  --single-branch \
+  --branch llm-integration-work \
+  https://github.com/HJP-limited/ryeong.git \
+  "$REFERENCE_DIR"

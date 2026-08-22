@@ -1,0 +1,47 @@
+{
+  "serial": "emulator-5554",
+  "product": "sdk_gphone64_arm64",
+  "abi": "arm64-v8a",
+  "ro_kernel_qemu": "1",
+  "avd_name": "HJP_API_36_1",
+  "environment": "AVD",
+  "instrumentation": {
+    "total": 5,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 1,
+    "skipped_test": "EmbeddingGemmaArm64InstrumentedTest.modelBackedSearchGetAndComposeDraftE2e",
+    "skip_reason": "physical-device guard rejected emulator"
+  },
+  "verified": [
+    "MIGRATION_2_3 preserves cards and embeddings and builds FTS",
+    "Room FTS4 field, honorific, phone and stable-ID search",
+    "update/delete FTS reindex",
+    "KEYWORD_ONLY fallback search -> get_contact -> validated mock open_compose"
+  ],
+  "keyword_fts": {
+    "queries": 11,
+    "repeat_queries": 100,
+    "successes": 100,
+    "first_query_ms": 14.057042,
+    "p50_ms": 2.33425,
+    "p95_ms": 4.164917,
+    "process_total_pss_mb": 111.833984375
+  },
+  "fallback": {
+    "mode": "KEYWORD_ONLY",
+    "used": true,
+    "reason": "UNSUPPORTED_EMULATOR_NATIVE_SME2",
+    "app_crashes": 0,
+    "app_sigill": 0
+  },
+  "internal_assets": {
+    "model_path": "files/models/embeddinggemma-300m.tflite",
+    "model_size": 179131736,
+    "model_sha256": "37115ef7bff76cd37dd86abe503ff511b1032bf85fc624a85c49c84899e92bc5",
+    "tokenizer_path": "files/models/sentencepiece.model",
+    "tokenizer_size": 4683319,
+    "tokenizer_sha256": "d6daa52d93d7aad10e8388bd526c4e501d914b47177398d1d9621f1fe48438c7"
+  },
+  "semantic": {"status": "NOT_RUN", "reason": "AVD is explicitly excluded"}
+}

@@ -1,0 +1,10 @@
+{
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_JVM_KEYWORD_BASELINE",
+  "invocations_before": 0,
+  "result_files_present": 0,
+  "ready": true,
+  "blockers": [],
+  "actual_model_executed": false,
+  "semantic_axis_executed": false,
+  "generation_metrics": "NOT_RUN"
+}

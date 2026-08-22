@@ -1,0 +1,15 @@
+{
+  "status": "NOT_BUILT",
+  "reason": "RUN_D1 never started",
+  "existing_androidTest_sources": [
+    "AgentScreenInstrumentedTest.kt",
+    "AgentSessionLifecycleMatrixTest.kt",
+    "EmbeddingGemmaArm64InstrumentedTest.kt",
+    "HjpDatabaseMigrationInstrumentedTest.kt",
+    "RegexPortabilityInstrumentedTest.kt",
+    "RyeongRoomSearchInstrumentedTest.kt",
+    "SessionLifecycleInstrumentedTest.kt"
+  ],
+  "ryeong_device_runner_written": false,
+  "note": "a device runner for the frozen 130 was not written because the RUN_D1 precondition failed before that work would have been justified"
+}

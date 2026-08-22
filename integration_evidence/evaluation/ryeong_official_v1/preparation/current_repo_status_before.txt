@@ -1,0 +1,107 @@
+=== recorded at ===
+2026-08-22T12:21:16+0900 (KST)
+=== pwd ===
+/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung
+=== HEAD ===
+993a5f5613235c2192f6c34b06841319813aefeb
+=== branch ===
+android-app
+=== git status --short ===
+ M .gitignore
+ M CLAUDE.md
+ M README.md
+ M app/build.gradle.kts
+ D app/src/androidTest/java/com/example/hjp/ExampleInstrumentedTest.kt
+ M app/src/main/AndroidManifest.xml
+ M app/src/main/java/com/example/hjp/MainActivity.kt
+ D app/src/main/java/com/example/hjp/agent/tools/AgentTool.kt
+ D app/src/main/java/com/example/hjp/agent/tools/CreateCalendarEventTool.kt
+ D app/src/main/java/com/example/hjp/agent/tools/GetCurrentDateTimeTool.kt
+ D app/src/main/java/com/example/hjp/agent/tools/OpenComposeTool.kt
+ D app/src/main/java/com/example/hjp/agent/tools/ToolRegistry.kt
+ D app/src/main/java/com/example/hjp/agent/tools/UpdateBusinessCardTool.kt
+ D app/src/main/java/com/example/hjp/data/BusinessCard.kt
+ D app/src/main/java/com/example/hjp/data/SharedPreferencesBusinessCardStore.kt
+ M app/src/main/java/com/example/hjp/ui/theme/Color.kt
+ M app/src/main/java/com/example/hjp/ui/theme/Theme.kt
+ M app/src/main/java/com/example/hjp/ui/theme/Type.kt
+ M app/src/main/res/xml/backup_rules.xml
+ M app/src/main/res/xml/data_extraction_rules.xml
+ M build.gradle.kts
+ M gradle.properties
+ M gradle/libs.versions.toml
+ M gradlew
+ M settings.gradle.kts
+?? ANDROID_APP_BRANCH_TOOL_ANALYSIS.md
+?? CURRENT_AGENT_ANALYSIS.md
+?? CURRENT_AGENT_IMPLEMENTATION.md
+?? LITERT_LM_GENERATIVE_TOOL_USE_RESEARCH.md
+?? PROJECT_ANALYSIS.md
+?? agent-contract/
+?? agent-core/
+?? app/src/androidTest/java/com/example/hjp/AgentScreenInstrumentedTest.kt
+?? app/src/androidTest/java/com/example/hjp/AgentSessionLifecycleMatrixTest.kt
+?? app/src/androidTest/java/com/example/hjp/EmbeddingGemmaArm64InstrumentedTest.kt
+?? app/src/androidTest/java/com/example/hjp/HjpDatabaseMigrationInstrumentedTest.kt
+?? app/src/androidTest/java/com/example/hjp/RegexPortabilityInstrumentedTest.kt
+?? app/src/androidTest/java/com/example/hjp/RyeongRoomSearchInstrumentedTest.kt
+?? app/src/androidTest/java/com/example/hjp/SessionLifecycleInstrumentedTest.kt
+?? app/src/main/assets/
+?? app/src/main/java/com/example/hjp/AgentViewModel.kt
+?? app/src/main/java/com/example/hjp/AppContainer.kt
+?? app/src/main/java/com/example/hjp/HjpApplication.kt
+?? app/src/main/java/com/example/hjp/LocalToolRoutingModelGateway.kt
+?? app/src/main/java/com/example/hjp/data/AssetBusinessCardRepository.kt
+?? app/src/main/java/com/example/hjp/data/BusinessCardDao.kt
+?? app/src/main/java/com/example/hjp/data/BusinessCardEntity.kt
+?? app/src/main/java/com/example/hjp/data/BusinessCardFtsEntity.kt
+?? app/src/main/java/com/example/hjp/data/CardEmbeddingEntity.kt
+?? app/src/main/java/com/example/hjp/data/HjpDatabase.kt
+?? app/src/main/java/com/example/hjp/data/RoomBusinessCardRepository.kt
+?? app/src/main/java/com/example/hjp/search/
+?? app/src/modelAssets/
+?? app/src/test/java/com/example/hjp/AgentMultiturnScenarioTest.kt
+?? app/src/test/java/com/example/hjp/ContactSearchPromptParserTest.kt
+?? app/src/test/java/com/example/hjp/KernelComparisonTest.kt
+?? app/src/test/java/com/example/hjp/LocalToolRoutingModelGatewayTest.kt
+?? app/src/test/java/com/example/hjp/MultiturnCaseRunnerTest.kt
+?? app/src/test/java/com/example/hjp/MultiturnCases.kt
+?? app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt
+?? app/src/test/java/com/example/hjp/RecipientClarificationTest.kt
+?? app/src/test/java/com/example/hjp/SessionFocusVsTurnTargetTest.kt
+?? app/src/test/java/com/example/hjp/TieredFtsQueryTest.kt
+?? app/src/test/java/com/example/hjp/eval/
+?? app/src/test/java/com/example/hjp/integration/
+?? app/src/test/java/com/example/hjp/v4/
+?? app/src/test/resources/
+?? audit_delivery_20260818/
+?? crash_full_log.txt
+?? cycle10_bundle/
+?? cycle10_delivery/
+?? cycle7_bundle/
+?? cycle8_bundle/
+?? cycle8_delivery/
+?? cycle9_bundle/
+?? cycle9_delivery/
+?? docs/
+?? integration_evidence/
+?? jvm_evidence_cycle7/
+?? llm-litert/
+?? models/
+?? repo_snapshot_cycle10/
+?? repo_snapshot_cycle7/
+?? repo_snapshot_cycle8/
+?? repo_snapshot_cycle9/
+?? scripts/
+?? search-core/
+?? tool-android-intents/
+?? tool-contact/
+?? tool-contract/
+?? tool-datetime/
+?? tools/
+=== counts ===
+tracked: 25  untracked: 10044
+=== AGENTS.md ===
+ls: AGENTS.md: No such file or directory
+=== CLAUDE.md ===
+CLAUDE.md 6548B

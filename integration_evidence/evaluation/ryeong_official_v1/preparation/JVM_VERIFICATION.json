@@ -1,0 +1,46 @@
+{
+  "command": "JAVA_HOME=<jdk21> ./gradlew --offline test --rerun-tasks --continue",
+  "start": "2026-08-22T12:25:38+0900",
+  "end": "2026-08-22T12:25:52+0900",
+  "exit_code": 0,
+  "git_head": "993a5f5613235c2192f6c34b06841319813aefeb",
+  "suites": 89,
+  "tests": 660,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "skipped_tests": [
+    "com.example.hjp.eval.ryeong.RyeongOfficialCompatibilityRunTest.official jvm keyword baseline"
+  ],
+  "stale_xml": 0,
+  "duplicate_testcases": 0,
+  "per_module_suites": {
+    "agent-contract": 5,
+    "agent-core": 25,
+    "app": 47,
+    "search-core": 7,
+    "tool-android-intents": 2,
+    "tool-contact": 2,
+    "tool-datetime": 1
+  },
+  "per_module_tests": {
+    "agent-contract": 27,
+    "agent-core": 208,
+    "app": 318,
+    "search-core": 81,
+    "tool-android-intents": 15,
+    "tool-contact": 9,
+    "tool-datetime": 2
+  },
+  "previous_baseline": {
+    "suites": 88,
+    "tests": 659,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "delta_suites": 1,
+  "delta_tests": 1,
+  "green": true,
+  "skipped_explanation": "the official run test is opt-in (RYEONG_OFFICIAL_RUN); in the ordinary aggregate it reports as skipped so that an official run is never executed by accident"
+}

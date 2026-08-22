@@ -1,0 +1,24 @@
+{
+  "run_id": "ryeong_production_search_run_3",
+  "gate_sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+  "gate_frozen_before_the_run": true,
+  "passed": true,
+  "failed_check_count": 0,
+  "checks": [
+    {"name": "cards", "requirement": "== 1000", "expected": 1000, "actual": 1000, "passed": true},
+    {"name": "queries_total", "requirement": "== 203", "expected": 203, "actual": 203, "passed": true},
+    {"name": "queries_scored", "requirement": "== 183", "expected": 183, "actual": 183, "passed": true},
+    {"name": "abstention_queries", "requirement": "== 20", "expected": 20, "actual": 20, "passed": true},
+    {"name": "excluded_queries", "requirement": "== 0", "expected": 0, "actual": 0, "passed": true},
+    {"name": "abstention_passed", "requirement": "== 20", "expected": 20, "actual": 20, "passed": true},
+    {"name": "abstention_failed", "requirement": "== 0", "expected": 0, "actual": 0, "passed": true},
+    {"name": "stale_id_resolved", "requirement": "== 0", "expected": 0, "actual": 0, "passed": true},
+    {"name": "unstable_rankings", "requirement": "== 0", "expected": 0, "actual": 0, "passed": true},
+    {"name": "overall_top1", "requirement": ">= 154", "expected": 154, "actual": 162, "passed": true},
+    {"name": "category_top1[회사명]", "requirement": ">= 40", "expected": 40, "actual": 40, "passed": true},
+    {"name": "category_top1[이름]", "requirement": ">= 40", "expected": 40, "actual": 40, "passed": true},
+    {"name": "category_top1[전화(하이픈X)]", "requirement": ">= 30", "expected": 30, "actual": 30, "passed": true},
+    {"name": "category_top1[지역+직함(문장)]", "requirement": ">= 39", "expected": 39, "actual": 40, "passed": true},
+    {"name": "category_recall5_complete[지역+직함(문장)]", "requirement": ">= 40", "expected": 40, "actual": 40, "passed": true}
+  ]
+}

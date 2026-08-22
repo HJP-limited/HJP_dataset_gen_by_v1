@@ -1,0 +1,13 @@
+9fcf7d2ac7f963cce8b2306c251d598777dd15d9cf9fb64e04b29f9d7fc419e1  ./agent-contract/build.gradle.kts
+012991826caf264dc517d52958e7f65e5dc4409c713419aedefbb350b80a2293  ./agent-core/build.gradle.kts
+849828cf9e392ade6b7c16e1da43598c1f8c779c19ddae81c0ff1aebe966c89f  ./app/build.gradle.kts
+3a86a28bd1e1b029624175c6eab836f4559f63dfdecd88780eb1fb769017b742  ./build.gradle.kts
+e3b5a0634a92454e257e955bb14e7287e99dc1c4273f4bfdb87bc8b23a7053b2  ./gradle.properties
+b313e2f35bd7f258d9ed31e94993bfaff8862e96efa7fcf7eec0971b2719d08b  ./gradle/libs.versions.toml
+6b6c73347127f64db5fdabb29bd25c43f21009c71674caff298550e63659e8bd  ./llm-litert/build.gradle.kts
+4e20d0de1a81e96abbc6584c893a81d3e75dfc18a0b1c6c308b85a3897b59e48  ./search-core/build.gradle.kts
+455c1e95844b3c24b223cf217731d0f1bf768b7465f6f71722b9d664310b590b  ./settings.gradle.kts
+7996aaec160c1b15a2ba53cc5628df00faa11caa830f1b920056efbd72d89ff1  ./tool-android-intents/build.gradle.kts
+96bcff56dde201d232e87c2a4f32164e1bf9f839efbe241dab474d393935cdc2  ./tool-contact/build.gradle.kts
+6681e39982ff28df6fbe6616c5ebd3b3b9b955db2200efba9e06e56547703823  ./tool-contract/build.gradle.kts
+dc2aa0a204a34ca9ebfe7db3c091ada503262cd2047f91f54cbf008dccb28f23  ./tool-datetime/build.gradle.kts

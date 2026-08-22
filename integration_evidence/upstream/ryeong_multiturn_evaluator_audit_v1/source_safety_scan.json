@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "reason": "no reference source exists to scan",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searched": "see reference_file_inventory.json for the exact searches and their negative results",
+  "not_substituted": "no local file was treated as a stand-in for the original evaluator",
+  "files_scanned": 0,
+  "null_byte_findings": 0,
+  "control_byte_findings": 0,
+  "encoding_findings": 0,
+  "bytecode_written_to_reference": "none - PYTHONDONTWRITEBYTECODE=1 was used and no reference path was executed"
+}

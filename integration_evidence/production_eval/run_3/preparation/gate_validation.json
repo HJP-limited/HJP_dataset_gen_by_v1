@@ -1,0 +1,159 @@
+{
+  "gate_file": "integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json",
+  "gate_sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+  "rationale_file": "integration_evidence/production_eval/run_3/gate/GATE_RATIONALE.md",
+  "rationale_sha256": "1c2c4a11b1a9601a7c6d2576b3b6e629619f5b7cefd3491f209d87ffe5b57cd4",
+  "frozen_before_any_run_3_result": true,
+  "run_3_result_exists": false,
+  "derivation_from_run_2_raw": {
+    "per_category": {
+      "회사명": {
+        "n": 40,
+        "P@1": 1.0,
+        "top1_count": 40
+      },
+      "이름": {
+        "n": 40,
+        "P@1": 1.0,
+        "top1_count": 40
+      },
+      "전화(하이픈X)": {
+        "n": 30,
+        "P@1": 1.0,
+        "top1_count": 30
+      },
+      "지역+직함(문장)": {
+        "n": 40,
+        "P@1": 0.975,
+        "top1_count": 39
+      },
+      "개념형(easy)": {
+        "n": 14,
+        "P@1": 0.3571,
+        "top1_count": 5
+      },
+      "개념형(hard)": {
+        "n": 19,
+        "P@1": 0.0,
+        "top1_count": 0
+      }
+    },
+    "overall_top1_numerator": 154,
+    "denominator": 183,
+    "recomputed_overall_P@1": 0.84153,
+    "run_2_reported_overall_P@1": 0.8415,
+    "reproduces": true
+  },
+  "gate_contents": {
+    "schema_version": "ryeong-production-search-eval-gate/v3",
+    "run_id": "ryeong_production_search_run_3",
+    "frozen_before_the_run": true,
+    "frozen_at_local": "2026-08-18 KST",
+    "authored_from": "run_2's raw per-category results, converted back to whole counts. No run_3 result existed when this file was written, and none may be consulted to change it.",
+    "exact_counts": {
+      "cards": 1000,
+      "queries_total": 203,
+      "queries_scored": 183,
+      "abstention_queries": 20,
+      "excluded_queries": 0,
+      "abstention_passed": 20,
+      "abstention_failed": 0,
+      "stale_id_resolved": 0,
+      "unstable_rankings": 0
+    },
+    "minimum_counts": {
+      "overall_top1": 154,
+      "category_top1": {
+        "회사명": 40,
+        "이름": 40,
+        "전화(하이픈X)": 30,
+        "지역+직함(문장)": 39
+      },
+      "category_recall5_complete": {
+        "지역+직함(문장)": 40
+      }
+    },
+    "denominators": {
+      "ranking": 183,
+      "abstention": 20,
+      "total": 203,
+      "note": "183 + 20 = 203. The ranking denominator is 183 — not 203, which would fold the hard negatives into a ranking average, and not 143, which is the figure the earlier final report reached by dropping the 지역+직함(문장) category from its own sum."
+    },
+    "reported_not_gated": {
+      "metrics": [
+        "P@5",
+        "MRR",
+        "nDCG@5",
+        "latency_ms.p50",
+        "latency_ms.p95",
+        "latency_ms.max",
+        "keyword_fallback_ratio",
+        "semantic_axis_executed"
+      ],
+      "categories": [
+        "개념형(easy)",
+        "개념형(hard)"
+      ],
+      "why_metrics": "run_2 preserved MRR and nDCG@5 only rounded to four decimals, so any threshold taken from them would be a threshold on rounding rather than on retrieval. They are recorded every run and compared by hand.",
+      "why_categories": "the concept categories are measured with no embedding model. Their numbers describe keyword search attempting questions built to need meaning, so freezing them as a bar would freeze the absence of the model."
+    },
+    "run_2_derivation": {
+      "source": "integration_evidence/production_eval/run_2/production_adapter_results.frozen.json",
+      "source_sha256": "95c113ccece3478a1206ffc40f8701f9919e0c9bfb6ef8fdb4309b7d489dafeb",
+      "method": "per-category rate × n, rounded to the nearest whole card",
+      "per_category_top1": {
+        "회사명": "1.0000 × 40 = 40",
+        "이름": "1.0000 × 40 = 40",
+        "전화(하이픈X)": "1.0000 × 30 = 30",
+        "지역+직함(문장)": "0.9750 × 40 = 39",
+        "개념형(easy)": "0.3571 × 14 = 5",
+        "개념형(hard)": "0.0000 × 19 = 0"
+      },
+      "overall_top1_sum": "40 + 40 + 30 + 39 + 5 + 0 = 154",
+      "cross_check": "154 / 183 = 0.841530, which reproduces run_2's reported overall P@1 of 0.8415",
+      "status_of_the_source": "run_2 is INVALID AS PASS for its abstention claim and DIAGNOSTIC ONLY for its ranking figures. Its ranking numbers are used here only as a non-regression floor, which is a use its own defect does not touch: the excluded query had an empty relevant set and contributed to no ranking numerator or denominator."
+    },
+    "abstention_contract": {
+      "population": 20,
+      "exclusions_permitted": 0,
+      "requirement": "all twenty hard negatives return an empty result",
+      "note": "run_1 failed this at 19/20 and run_2 removed the failing query from the requirement. The population here is the whole twenty and the runner has no mechanism for removing one."
+    }
+  },
+  "hard_gate_kind": "whole counts only — no rounded rate is used as a threshold",
+  "not_gated": {
+    "metrics": [
+      "P@5",
+      "MRR",
+      "nDCG@5",
+      "latency",
+      "keyword_fallback_ratio"
+    ],
+    "categories": [
+      "개념형(easy)",
+      "개념형(hard)"
+    ],
+    "reason": "run_2 preserved MRR/nDCG only to four decimals, and the concept categories measure keyword search standing in for an absent model"
+  },
+  "gate_exercised_by_self_test": {
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "mutations_proven_to_fail": [
+      "one hard negative answering",
+      "one stale id resolving",
+      "one unstable ranking",
+      "회사명 39/40",
+      "이름 39/40",
+      "전화(하이픈X) 29/30",
+      "지역+직함(문장) 38/40",
+      "overall 153/183"
+    ],
+    "boundary_proven_to_pass": [
+      "지역+직함(문장) exactly 39/40",
+      "abstention exactly 20/20"
+    ]
+  },
+  "no_result_was_consulted": "no run_3 result exists; the thresholds come from run_2's frozen raw values and from the input counts"
+}

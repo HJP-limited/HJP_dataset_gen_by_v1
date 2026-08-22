@@ -1,0 +1,292 @@
+package com.hjp.agent.core
+
+import com.hjp.agent.contract.AgentModelGateway
+import com.hjp.agent.contract.AgentModelSession
+import com.hjp.agent.contract.ConversationMemory
+import com.hjp.agent.contract.ConversationMemoryItem
+import com.hjp.agent.contract.MemoryConfidence
+import com.hjp.agent.contract.ModelConversationMessage
+import com.hjp.agent.contract.ModelConversationRole
+import com.hjp.agent.contract.ModelSessionConfig
+import com.hjp.agent.contract.SamplingProfile
+import com.hjp.tool.contract.SessionStateKey
+import com.hjp.tool.contract.SessionStateUpdate
+import com.hjp.tool.contract.StoredSessionState
+import com.hjp.tool.contract.ToolCatalogSnapshot
+import java.util.UUID
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+
+data class AgentSession(
+    val sessionId: String,
+    val createdAtEpochMillis: Long,
+    var catalogRevision: String? = null,
+    var conversationMemory: ConversationMemory = ConversationMemory(),
+    val capabilityState: MutableMap<SessionStateKey, StoredSessionState> = mutableMapOf(),
+    val recentMessages: MutableList<ModelConversationMessage> = mutableListOf(),
+)
+
+interface AgentSessionStore {
+    suspend fun getOrCreate(): AgentSession
+    suspend fun update(transform: (AgentSession) -> Unit)
+    suspend fun clear()
+}
+
+class InMemoryAgentSessionStore(
+    private val clockMillis: () -> Long = System::currentTimeMillis,
+) : AgentSessionStore {
+    private val mutex = Mutex()
+    private var session: AgentSession? = null
+
+    override suspend fun getOrCreate(): AgentSession = mutex.withLock {
+        session ?: AgentSession(UUID.randomUUID().toString(), clockMillis()).also { session = it }
+    }
+
+    override suspend fun update(transform: (AgentSession) -> Unit) {
+        mutex.withLock { transform(session ?: AgentSession(UUID.randomUUID().toString(), clockMillis()).also { session = it }) }
+    }
+
+    override suspend fun clear() {
+        mutex.withLock { session = null }
+    }
+}
+
+class AgentSessionManager(
+    private val store: AgentSessionStore,
+    private val modelGateway: AgentModelGateway,
+    private val systemInstruction: String,
+    private val localeTag: String,
+    private val samplingProfile: SamplingProfile = SamplingProfile(),
+    private val clockMillis: () -> Long = System::currentTimeMillis,
+) : AutoCloseable {
+    private val modelMutex = Mutex()
+    private var modelSession: AgentModelSession? = null
+
+    suspend fun getOrCreate(): AgentSession = store.getOrCreate()
+
+    suspend fun requireModelSession(snapshot: ToolCatalogSnapshot): AgentModelSession = modelMutex.withLock {
+        val current = modelSession
+        if (current != null && current.catalogRevision == snapshot.revision) return@withLock current
+        current?.close()
+        modelGateway.openSession(ModelSessionConfig(systemInstruction, snapshot, localeTag, samplingProfile))
+            .also { opened ->
+                modelSession = opened
+                store.update { it.catalogRevision = snapshot.revision }
+            }
+    }
+
+    suspend fun apply(updates: List<SessionStateUpdate>) {
+        if (updates.isEmpty()) return
+        store.update { session ->
+            updates.forEach { update ->
+                val value = update.value
+                if (value == null) session.capabilityState.remove(update.key)
+                else session.capabilityState[update.key] = StoredSessionState(
+                    update.schemaVersion, value, update.expiresAtEpochMillis)
+            }
+        }
+    }
+
+    suspend fun beginTurn(turnId: String, userText: String) {
+        if (userText.isBlank()) return
+        store.update { session ->
+            session.conversationMemory = ConversationMemoryReducer.beginTurn(
+                previous = session.conversationMemory,
+                turnId = turnId,
+                timestamp = clockMillis(),
+                userText = userText,
+            )
+        }
+    }
+
+    suspend fun recordTurn(
+        turnId: String,
+        userText: String,
+        assistantText: String,
+        executedTools: List<String>,
+        maxRecentMessages: Int,
+        maxHistoryDigestChars: Int,
+    ) {
+        if (userText.isBlank() || assistantText.isBlank()) return
+        store.update { session ->
+            val now = clockMillis()
+            session.conversationMemory = ConversationMemoryReducer.reduceCompletedTurn(
+                previous = session.conversationMemory,
+                turnId = turnId,
+                timestamp = now,
+                userText = userText,
+                executedTools = executedTools,
+            )
+            if (maxRecentMessages > 0) {
+                session.recentMessages += ModelConversationMessage(ModelConversationRole.USER, userText)
+                session.recentMessages += ModelConversationMessage(ModelConversationRole.ASSISTANT, assistantText)
+            } else {
+                session.recentMessages.clear()
+            }
+            val overflow = session.recentMessages.size - maxRecentMessages
+            if (overflow > 0) {
+                val evicted = List(overflow) { session.recentMessages.removeAt(0) }
+                session.conversationMemory = session.conversationMemory.copy(historyDigest = mergeHistoryDigest(
+                    previous = session.conversationMemory.historyDigest,
+                    evicted = evicted,
+                    maxChars = maxHistoryDigestChars,
+                ))
+            }
+        }
+    }
+
+    suspend fun reset() {
+        modelMutex.withLock {
+            modelSession?.close()
+            modelSession = null
+            store.clear()
+        }
+    }
+
+    override fun close() {
+        modelSession?.close()
+        modelSession = null
+        modelGateway.close()
+    }
+
+    private fun mergeHistoryDigest(
+        previous: String,
+        evicted: List<ModelConversationMessage>,
+        maxChars: Int,
+    ): String {
+        if (maxChars <= 0 || evicted.isEmpty()) return ""
+        val addition = evicted.joinToString("\n") { message ->
+            val role = when (message.role) {
+                ModelConversationRole.USER -> "User"
+                ModelConversationRole.ASSISTANT -> "Assistant"
+            }
+            "$role: ${message.text.normalizeForSummary().take(MAX_SUMMARY_MESSAGE_CHARS)}"
+        }
+        val merged = listOf(previous, addition)
+            .filter(String::isNotBlank)
+            .joinToString("\n")
+        return if (merged.length <= maxChars) merged
+        else merged.takeLast(maxChars).substringAfter('\n', missingDelimiterValue = merged.takeLast(maxChars))
+    }
+
+    private fun String.normalizeForSummary(): String =
+        replace(Regex("\\s+"), " ").trim()
+
+    private companion object {
+        const val MAX_SUMMARY_MESSAGE_CHARS = 500
+    }
+}
+
+internal object ConversationMemoryReducer {
+    private const val MAX_TOPIC_CHARS = 240
+    private const val MAX_ITEM_CHARS = 300
+    private const val MAX_ITEMS_PER_BUCKET = 8
+
+    private val preferenceMarkers = listOf("선호", "좋아", "싫어", "말투", "스타일", "앞으로")
+    private val constraintMarkers = listOf("하지 마", "하지마", "말아", "반드시", "꼭", "전에 확인", "동의 없이")
+    fun reduceCompletedTurn(
+        previous: ConversationMemory,
+        turnId: String,
+        timestamp: Long,
+        userText: String,
+        executedTools: List<String>,
+    ): ConversationMemory {
+        val normalized = userText.normalizeMemoryText()
+        if (normalized.isEmpty()) return previous
+        val preferences = previous.preferences.merge(extractPreferences(normalized, turnId, timestamp))
+        val constraints = previous.constraints.merge(extractConstraints(normalized, turnId, timestamp))
+        val facts = previous.confirmedFacts.merge(extractFacts(normalized, turnId, timestamp))
+        val action = previous.pendingActions.firstOrNull { it.sourceTurnId == turnId }
+        val completed = action ?: normalized.takeIf { isActionLike(it) }?.let {
+            ConversationMemoryItem(it, turnId, timestamp, key = "action:$turnId")
+        }
+        val resolved = if (completed != null) previous.resolvedActions.upsert(completed.copy(updatedAtEpochMillis = timestamp))
+        else previous.resolvedActions
+        val toolActions = executedTools.distinct().map { tool ->
+            ConversationMemoryItem(
+                "도구 실행 완료: $tool", turnId, timestamp, MemoryConfidence.TOOL_VERIFIED,
+            )
+        }
+        return previous.copy(
+            topic = if (isActionLike(normalized)) normalized.take(MAX_TOPIC_CHARS) else previous.topic,
+            confirmedFacts = facts,
+            preferences = preferences,
+            constraints = constraints,
+            pendingActions = previous.pendingActions.filterNot { it.sourceTurnId == turnId },
+            resolvedActions = (resolved + toolActions).deduplicatedTail(),
+        )
+    }
+
+    fun beginTurn(
+        previous: ConversationMemory,
+        turnId: String,
+        timestamp: Long,
+        userText: String,
+    ): ConversationMemory {
+        val normalized = userText.normalizeMemoryText()
+        if (normalized.isEmpty()) return previous
+        if (!isActionLike(normalized)) return previous
+        val pending = ConversationMemoryItem(
+            normalized.take(MAX_ITEM_CHARS), turnId, timestamp, key = "action:$turnId",
+        )
+        val activePending = previous.pendingActions.filter {
+            timestamp - it.updatedAtEpochMillis <= MAX_PENDING_AGE_MILLIS
+        }
+        return previous.copy(
+            topic = normalized.take(MAX_TOPIC_CHARS),
+            pendingActions = activePending.upsert(pending),
+        )
+    }
+
+    private fun List<ConversationMemoryItem>.upsert(item: ConversationMemoryItem) =
+        (filterNot { (item.key.isNotBlank() && it.key == item.key) || it.content == item.content } + item)
+            .deduplicatedTail()
+
+    private fun List<ConversationMemoryItem>.merge(items: List<ConversationMemoryItem>): List<ConversationMemoryItem> =
+        items.fold(this) { current, item -> current.upsert(item) }
+
+    private fun List<ConversationMemoryItem>.deduplicatedTail() =
+        distinctBy { it.content }.takeLast(MAX_ITEMS_PER_BUCKET)
+
+    private fun String.normalizeMemoryText() = replace(Regex("\\s+"), " ").trim()
+
+    private fun extractPreferences(text: String, turnId: String, timestamp: Long): List<ConversationMemoryItem> = buildList {
+        if (text.contains("정중") || text.contains("존댓말")) add(item("response.tone", "정중한 말투", text, turnId, timestamp))
+        if (text.contains("짧게") || text.contains("간단하게") || text.contains("간단히")) {
+            add(item("response.length", "짧고 간결한 답변", text, turnId, timestamp))
+        }
+        if (text.contains("반말")) add(item("response.tone", "반말", text, turnId, timestamp))
+    }
+
+    private fun extractConstraints(text: String, turnId: String, timestamp: Long): List<ConversationMemoryItem> = buildList {
+        if (constraintMarkers.any(text::contains)) {
+            add(item("action.confirmation", text.take(MAX_ITEM_CHARS), text, turnId, timestamp))
+        }
+    }
+
+    private fun extractFacts(text: String, turnId: String, timestamp: Long): List<ConversationMemoryItem> = buildList {
+        val patterns = listOf(
+            "user.name" to Regex("내 이름은\\s*(.+?)(?:이야|야|입니다|이라고|라고|\\.)?$"),
+            "user.company" to Regex("내 회사는\\s*(.+?)(?:이야|야|입니다|라고|\\.)?$"),
+            "user.title" to Regex("내 직책은\\s*(.+?)(?:이야|야|입니다|라고|\\.)?$"),
+        )
+        patterns.forEach { (key, pattern) ->
+            pattern.find(text)?.groupValues?.getOrNull(1)?.trim()?.takeIf(String::isNotBlank)?.let { value ->
+                add(item(key, value, text, turnId, timestamp))
+            }
+        }
+    }
+
+    private fun item(key: String, value: String, source: String, turnId: String, timestamp: Long) =
+        ConversationMemoryItem(value.take(MAX_ITEM_CHARS), turnId, timestamp, key = key)
+
+    private fun isActionLike(text: String): Boolean =
+        actionMarkers.any(text::contains)
+
+    private val actionMarkers = listOf(
+        "찾아", "검색", "조회", "보여", "알려", "작성", "보내", "전송", "수정", "등록",
+        "일정", "명함", "연락처", "메일", "이메일", "문자", "sms", "캘린더",
+    )
+
+    private const val MAX_PENDING_AGE_MILLIS = 30 * 60 * 1_000L
+}

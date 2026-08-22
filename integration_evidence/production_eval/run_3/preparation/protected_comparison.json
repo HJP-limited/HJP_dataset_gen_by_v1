@@ -1,0 +1,55 @@
+{
+  "protected_file_count_before": 59,
+  "protected_file_count_after": 59,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "run_1_changed_count": 0,
+  "run_2_changed_count": 0,
+  "final_evidence_changed_count": 0,
+  "red_evidence_changed_count": 0,
+  "green_evidence_changed_count": 0,
+  "evaluator_archive_changed_count": 0,
+  "evaluator_isolation_changed_count": 0,
+  "ryeong_adapter_changed": false,
+  "characterization_test_changed": false,
+  "dataset_files_changed": 0,
+  "gate_files_changed": 0,
+  "production_search_source_changed": 0,
+  "intended_new_files": {
+    "run_3_tree": [
+      "integration_evidence/production_eval/run_3/PRE_RUN_FREEZE_MANIFEST.json",
+      "integration_evidence/production_eval/run_3/PRE_RUN_STATUS.json",
+      "integration_evidence/production_eval/run_3/input/cards_eval1000.json",
+      "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json",
+      "integration_evidence/production_eval/run_3/gate/GATE_RATIONALE.md",
+      "integration_evidence/production_eval/run_3/gate/ryeong_search_gate_v3.json",
+      "integration_evidence/production_eval/run_3/preparation/baseline.json",
+      "integration_evidence/production_eval/run_3/preparation/compile.log",
+      "integration_evidence/production_eval/run_3/preparation/compile_command.txt",
+      "integration_evidence/production_eval/run_3/preparation/freeze_verification.json",
+      "integration_evidence/production_eval/run_3/preparation/gate_validation.json",
+      "integration_evidence/production_eval/run_3/preparation/input_validation.json",
+      "integration_evidence/production_eval/run_3/preparation/metric_definition.json",
+      "integration_evidence/production_eval/run_3/preparation/protected_sha256_after.txt",
+      "integration_evidence/production_eval/run_3/preparation/protected_sha256_before.txt",
+      "integration_evidence/production_eval/run_3/preparation/runner_self_test.log",
+      "integration_evidence/production_eval/run_3/preparation/runner_self_test_command.txt",
+      "integration_evidence/production_eval/run_3/preparation/runner_self_test_result.xml",
+      "integration_evidence/production_eval/run_3/preparation/source_inventory.json"
+    ],
+    "run_3_file_count": 19,
+    "evaluator_source": [
+      "search-core/src/test/java/com/hjp/searchlookup/eval/EvalJson.java",
+      "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Gate.java",
+      "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java",
+      "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java"
+    ],
+    "build_file_modified": [
+      "search-core/build.gradle.kts"
+    ],
+    "note": "the build file gained one JavaExec registration; it is untracked in this working tree, so the tracked diff is unchanged."
+  },
+  "result_files_created": 0,
+  "evaluations_executed": 0
+}

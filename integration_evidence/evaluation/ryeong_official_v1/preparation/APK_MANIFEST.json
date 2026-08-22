@@ -1,0 +1,10 @@
+{
+  "status": "NOT_BUILT",
+  "reason": "RUN_D1 never started, so no new APK was needed and none was built",
+  "existing_debug_apk_preserved": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "sha256": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+    "unchanged_from_prior_evidence": true
+  },
+  "androidTest_apk": "NOT_BUILT"
+}

@@ -1,0 +1,27 @@
+Reusing configuration cache.
+> Task :search-core:processTestResources NO-SOURCE
+> Task :search-core:processResources NO-SOURCE
+> Task :search-core:compileJava UP-TO-DATE
+> Task :search-core:classes UP-TO-DATE
+> Task :search-core:compileTestJava
+> Task :search-core:testClasses
+
+> Task :search-core:test FAILED
+
+RyeongDatasetProductionAdapterTest > runsTheReferenceDatasetThroughTheProductionSearchPath FAILED
+    java.lang.AssertionError at RyeongDatasetProductionAdapterTest.java:259
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':search-core:test'.
+> There were failing tests. See the report at: file:///Users/byeol/Desktop/by/4-1/%ED%9C%B4%EB%A8%BC%20%EC%BA%A1%EC%8A%A4%ED%86%A4/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_FunctionGemma_0723/sojung/search-core/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 1s
+3 actionable tasks: 2 executed, 1 up-to-date
+Configuration cache entry reused.

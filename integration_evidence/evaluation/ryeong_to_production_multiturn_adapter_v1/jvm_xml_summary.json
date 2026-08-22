@@ -1,0 +1,64 @@
+{
+  "command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\\n./gradlew --offline test --rerun-tasks --continue",
+  "start_local": "2026-08-22T12:04:32+0900",
+  "end_local": "2026-08-22T12:04:48+0900",
+  "git_head": "993a5f5613235c2192f6c34b06841319813aefeb",
+  "exit_code": 0,
+  "actionable_tasks": "87 executed / 87",
+  "stderr_bytes": 0,
+  "xml_files": 88,
+  "stale_xml": 0,
+  "stale_paths": [],
+  "suites": 88,
+  "tests": 659,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duplicate_testcases": 0,
+  "per_module_suites": {
+    "agent-contract": 5,
+    "agent-core": 25,
+    "app": 46,
+    "search-core": 7,
+    "tool-android-intents": 2,
+    "tool-contact": 2,
+    "tool-datetime": 1
+  },
+  "per_module_tests": {
+    "agent-contract": 27,
+    "agent-core": 208,
+    "app": 317,
+    "search-core": 81,
+    "tool-android-intents": 15,
+    "tool-contact": 9,
+    "tool-datetime": 2
+  },
+  "previous_baseline": {
+    "suites": 85,
+    "tests": 608,
+    "per_module_suites": {
+      "app": 43,
+      "agent-core": 25,
+      "search-core": 7,
+      "agent-contract": 5,
+      "tool-android-intents": 2,
+      "tool-contact": 2,
+      "tool-datetime": 1
+    },
+    "per_module_tests": {
+      "app": 266,
+      "agent-core": 208,
+      "search-core": 81,
+      "agent-contract": 27,
+      "tool-android-intents": 15,
+      "tool-contact": 9,
+      "tool-datetime": 2
+    }
+  },
+  "delta_suites": 3,
+  "delta_tests": 51,
+  "new_suites": [
+    "app"
+  ],
+  "green": true
+}

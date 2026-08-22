@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED",
+  "reason": "the reference repository named in the task does not exist on this machine",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searched": "see reference_file_inventory.json for the exact searches and their negative results",
+  "not_substituted": "no local file was treated as a stand-in for the original evaluator",
+  "reference_python_imports_analysed": 0,
+  "requirements_files_found": 0,
+  "reason_none_analysed": "there is no reference Python source on this machine to import-scan",
+  "environment_probe": {
+    "python3": "/usr/bin/python3, Python 3.9.6 (system)",
+    "note": "recorded only to describe the environment; nothing was installed and no dependency was resolved"
+  },
+  "classification": "every dependency is UNKNOWN because the source that would declare them is absent"
+}

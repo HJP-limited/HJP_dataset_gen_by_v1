@@ -1,0 +1,60 @@
+{
+  "scenarios": 130,
+  "turns": 377,
+  "scored": 328,
+  "excluded": 49,
+  "not_run": 0,
+  "sum_check": true,
+  "routing": {
+    "numerator": 0,
+    "denominator": 328
+  },
+  "r5": {
+    "numerator": 0,
+    "denominator": 0
+  },
+  "jga": null,
+  "slot_tp_fp_fn": null,
+  "leakage": 0,
+  "action_violations": 1,
+  "failure_list_length": 329,
+  "failure_count_field": 329,
+  "observed_act_distribution": {
+    "OTHER": 190,
+    "CLARIFICATION_REQUIRED": 176,
+    "QUOTED_RECALL": 9,
+    "ACTION_CALENDAR": 1,
+    "DATETIME_QUERY": 1
+  },
+  "tool_call_distribution": {
+    "get_current_datetime": 2,
+    "create_calendar_event": 1
+  },
+  "search_tool_calls": 0,
+  "turns_with_any_tool": 2,
+  "run_id_consistent": true,
+  "matches_runner": {
+    "routing": true,
+    "r5": {
+      "num": true,
+      "den": true
+    },
+    "counts": true,
+    "action_violations": true,
+    "failure_list_matches_count": true
+  },
+  "all_match": true,
+  "violation_detail": [
+    {
+      "scenario": 102,
+      "depth": 2,
+      "kind": "도구 범위 밖",
+      "tools": [
+        "get_current_datetime",
+        "create_calendar_event"
+      ],
+      "observed_act": "ACTION_CALENDAR",
+      "expected_route": null
+    }
+  ]
+}

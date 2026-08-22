@@ -1,0 +1,90 @@
+{
+  "command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\\n./gradlew --offline :app:testDebugUnitTest --tests 'com.example.hjp.eval.ryeong.*'",
+  "suites": [
+    {
+      "suite": "RyeongScenarioLoaderTest",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "slot bearing turns match the upstream count",
+        "an unasserted route stays null instead of collapsing to a value",
+        "slots distinguish an undeclared focus from a declared null focus",
+        "must alternatives are preserved as alternative groups",
+        "provenance pins the upstream inputs",
+        "gold bearing turns match the upstream count",
+        "every question is non-blank",
+        "conversation depth matches the declared distribution",
+        "turn depths run one to n within every scenario",
+        "scenario indices are unique and dense",
+        "loading twice yields identical content",
+        "the frozen manifest carries exactly the declared inventory",
+        "the raw manifest is valid UTF-8 JSON with a trailing newline",
+        "a scalar type mismatch is rejected rather than coerced"
+      ]
+    },
+    {
+      "suite": "RyeongEvaluatorMutationTest",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "wrong id inserted into top five is detected",
+        "folding an excluded turn into the denominator is refused",
+        "turn reordering is detected",
+        "injecting the expected value as the observed value is detected",
+        "a scalar type mismatch in the manifest is refused",
+        "create_calendar_event on a search turn is detected",
+        "a missing session reset shows up as leakage",
+        "a partial result is refused",
+        "a side effect firing twice is detected",
+        "wrong focus id is detected",
+        "an unmapped route is excluded rather than failed",
+        "focus leakage between scenarios is detected",
+        "a clean run passes the gate",
+        "missing focus is detected",
+        "failures with a zero exit code are refused",
+        "stale focus is detected",
+        "scoring generation without a model run is refused",
+        "update_business_card on a search turn is detected",
+        "memory leakage between scenarios is detected",
+        "an input SHA mismatch is refused",
+        "an evaluator exception is refused",
+        "open_compose on a search turn is detected separately from a route failure",
+        "gold outside top five is detected",
+        "wrong route is detected"
+      ]
+    },
+    {
+      "suite": "RyeongAdapterCanaryTest",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "no scenario starts with state from the previous one",
+        "unmapped routes are excluded rather than scored",
+        "search-only turns fire no action tools",
+        "structured scoring produces denominators for every reported rate",
+        "search rankings come back from the production backend",
+        "focus is observed from the session, not from the gold list",
+        "every canary scenario produced an observation for every turn",
+        "scenario order does not change a scenario's own result",
+        "the production path really ran",
+        "the routing denominator is exactly the scorable turns",
+        "running the same scenarios twice gives the same observations",
+        "retrieval mode is recorded and keyword-only is not reported as semantic",
+        "the run gate is exercised and reports an exit code"
+      ]
+    }
+  ],
+  "totals": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "green": true
+}

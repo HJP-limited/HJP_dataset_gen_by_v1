@@ -1,0 +1,2 @@
+[err] 서버에 연결하지 못했습니다(<urlopen error [Errno 61] Connection refused>).
+      python scripts/hybrid_server.py 를 먼저 띄우세요.

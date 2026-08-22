@@ -1,0 +1,37 @@
+{
+  "adb_devices_seen": 2,
+  "physical_devices": 1,
+  "emulators": 1,
+  "selected": {
+    "serial": "R5CY54CP83R",
+    "state": "device",
+    "authorized": true,
+    "manufacturer": "samsung",
+    "model": "SM-S937N",
+    "android_release": "16",
+    "api_level": 36,
+    "abilist": [
+      "arm64-v8a"
+    ],
+    "arm64_present": true,
+    "build_fingerprint": "samsung/psqksx/psq:16/BP4A.251205.006/S937NKSS9CZG3_OKR9CZG3:user/release-keys",
+    "ro_kernel_qemu": "0",
+    "ro_hardware": "qcom",
+    "is_emulator": false,
+    "mem_total_kb": 11380236,
+    "mem_available_kb": 3740992,
+    "data_free": "67G of 221G",
+    "battery_level": 74,
+    "battery_status": "charging",
+    "battery_temperature_c": 32.1,
+    "thermal_status": 0,
+    "app_installed": false,
+    "instrumentation_present": false
+  },
+  "rejected": {
+    "serial": "emulator-5554",
+    "reason": "emulator — excluded by the task's own rule; RUN_D1 requires a physical device"
+  },
+  "selection_was_not_a_guess": "exactly one PHYSICAL device is attached; the emulator is disqualified by rule, so no serial had to be guessed",
+  "device_was_not_modified": "no install, no push, no uninstall, no pm clear — RUN_D1 never started"
+}

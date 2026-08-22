@@ -1,0 +1,17 @@
+# --- new files (untracked), listed with SHA-256 ---
+58a629d146182df2241d9b83ab1c8dce185c83a685bd4bbc88696d7671256f4f  app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarios.kt
+8d8a5b43685351dcb2c7f1dc9e2ae340356d4ecde4c06a23ba01b0f72591ca1d  app/src/test/java/com/example/hjp/eval/ryeong/RyeongTranslation.kt
+7c1aadbadd3ad71262c6746bedfddfa250a4305d994754e80e912d2d1136aa39  app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityRunner.kt
+7e0c9fb8537cb96798dca0540146fce9f3f2ffff3e916ee973c68e05f34f1def  app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityScorer.kt
+d44d43e12fd114aaf12640b6f70d64ec48b76f241832bbc7852a267c89f60489  app/src/test/java/com/example/hjp/eval/ryeong/RyeongRunGate.kt
+2da40ce487fd356c0f26eb49c6ae49e8371514ca99446a8a684dc959d6bb050f  app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarioLoaderTest.kt
+fa3d9ae775f794051a47b4a11ee813bfefcc797bd6a34890a82efaeee983191a  app/src/test/java/com/example/hjp/eval/ryeong/RyeongEvaluatorMutationTest.kt
+4734c19d6817398c7861ebc2cb9b4d272b7a7df981e15ab9549f0d5f6a96ed27  app/src/test/java/com/example/hjp/eval/ryeong/RyeongAdapterCanaryTest.kt
+c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42  app/src/test/resources/ryeong/scenarios_v1.json
+b8f453bf03af56ff2562668395c9599c2d7c74ce5d4b0c4a144b6cdfdb16d49f  tools/ryeong_multiturn_v4/export_scenarios.py
+# note: MultiturnScenarioHarness.kt is untracked in git, so 'git diff' is empty for it.
+# Its post-change SHA-256 is recorded here; the change is additive:
+#   - new optional constructor param searchBackendFactory (defaults to the existing RecordingBackend)
+#   - new TracingContactBackend decorator that records calls/rankings/modes and forwards untouched
+#   - TurnRecord gains searchRankings and retrievalModes, both defaulted
+d83eaa80c778bb063dbb27aabb1978c2e2d36f7bb57608cc2695bd09e4565e45  app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt

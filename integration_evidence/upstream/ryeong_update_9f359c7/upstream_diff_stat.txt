@@ -1,0 +1,25 @@
+ CLAUDE.md                                          |  171 +-
+ .../assets/cards/cards_embeddings_fingerprint.json |   17 +
+ app/src/main/java/com/example/hjp/MainActivity.kt  |  607 ++-
+ .../java/com/example/hjp/agent/AgentSession.kt     |   10 +
+ .../example/hjp/agent/ConversationalFollowup.kt    |   17 +
+ .../com/example/hjp/agent/tools/ToolRegistry.kt    |   15 +
+ .../java/com/example/hjp/search/CardGazetteer.kt   |   12 +-
+ .../com/example/hjp/search/CardSearchService.kt    |    9 +
+ .../com/example/hjp/search/KeywordSearchRanker.kt  |   13 +-
+ .../test/java/com/example/hjp/MainActivityTest.kt  |  287 ++
+ .../com/example/hjp/search/CardGazetteerTest.kt    |   25 +
+ .../example/hjp/search/KeywordSearchRankerTest.kt  |   25 +
+ benchmark_final50_v3/README_final50_v3.md          |  233 +
+ ...siness_card_multiturn_benchmark_final50_v3.json | 4495 ++++++++++++++++++++
+ ...multiturn_benchmark_final50_v3_annotations.json | 2311 ++++++++++
+ benchmark_final50_v3/eval_benchmark_final50_v3.py  |  543 +++
+ data/cards_embeddings_fingerprint.json             |   17 +
+ ...4\261\353\212\245\354\247\200\355\221\234.html" |  643 +++
+ ...204\261\353\212\245\354\247\200\355\221\234.md" |  109 +
+ scripts/card_fingerprint.py                        |  101 +
+ scripts/eval_multiturn.py                          |  270 +-
+ scripts/eval_search.py                             |   42 +-
+ scripts/hybrid_server.py                           |  307 +-
+ scripts/precompute_embeddings.py                   |   11 +
+ 24 files changed, 10147 insertions(+), 143 deletions(-)

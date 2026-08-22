@@ -1,0 +1,233 @@
+{
+  "task": "ryeong_to_production_multiturn_adapter_v1",
+  "run_name": "RYEONG SEARCH MULTITURN COMPATIBILITY (preparation only)",
+  "verdict": {
+    "RYEONG SCENARIO EXPORT": "PASS",
+    "PRODUCTION ADAPTER READINESS": "PARTIALLY READY",
+    "OFFICIAL RUN READINESS": "PARTIALLY READY"
+  },
+  "headline": {
+    "scenarios": 130,
+    "turns": 377,
+    "kinds": 21,
+    "export_sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+    "export_deterministic_processes": 4,
+    "mutations_detected": "24/24",
+    "canary": "13/13 green",
+    "jvm": "88 suites / 659 tests / 0 failures / 0 errors / 0 skipped",
+    "jvm_delta": "+3 suites / +51 tests",
+    "official_run_invocations": 0,
+    "actual_model_executed": false,
+    "retrieval_mode": "KEYWORD_ONLY",
+    "generation_metrics": "NOT_RUN"
+  },
+  "integrity": {
+    "protected_evidence": "825 -> 825, changed 0",
+    "production_src_main_changed": 0,
+    "test_src_test_changed": 1,
+    "new_test_sources": 8,
+    "upstream_clone_clean": true,
+    "upstream_modified": 0,
+    "pycache": 0,
+    "run_3_invocation": "1 -> 1",
+    "apk_changed": false,
+    "official_result_dirs_created": 0,
+    "forbidden_git_ops": 0
+  },
+  "artifacts": [
+    {
+      "file": "FINAL_REPORT.md",
+      "sha256": "1cc51cb658541ad42ebcf69251f070feb01a196efb7cd17537e1e51fc6aa6226",
+      "size_bytes": 11433
+    },
+    {
+      "file": "OFFICIAL_RUN_PLAN.md",
+      "sha256": "8e265c34ab1158331b294c9a18b764657e7003eeddb13a1f471ef96fceff06e1",
+      "size_bytes": 3360
+    },
+    {
+      "file": "PREFLIGHT.md",
+      "sha256": "0d359e35d17bb72207532c53b3919c3849da96293c569abd5d791984166a2348",
+      "size_bytes": 969
+    },
+    {
+      "file": "PRE_RUN_FREEZE_MANIFEST.json",
+      "sha256": "78d58276bd333b2566d1d497b2027d169ad06d1d2c56d6da4cf46678dad9c769",
+      "size_bytes": 4232
+    },
+    {
+      "file": "PRE_RUN_STATUS.json",
+      "sha256": "88f807ff2dd1ef217a2120781d0e0e2b604c5f8759e68a503fc378cc50e973e7",
+      "size_bytes": 967
+    },
+    {
+      "file": "PRODUCTION_TRACE_CONTRACT.md",
+      "sha256": "70acb6a480a154935eedf8b1dd22b46f2c0da9dca1c0820b303f460007edccb5",
+      "size_bytes": 2677
+    },
+    {
+      "file": "READINESS_VERDICT.json",
+      "sha256": "7357cfd84ebc9db6c552f59c996fa05878dab44d8f93eb35d74c683d5e6bcf2f",
+      "size_bytes": 1797
+    },
+    {
+      "file": "TRANSLATION_CONTRACT.json",
+      "sha256": "4c7d8fb5e60e9588df4a43fa3c502cddf26823e1b8b9bb6710d054cd57feaa85",
+      "size_bytes": 4491
+    },
+    {
+      "file": "TRANSLATION_CONTRACT.md",
+      "sha256": "37e2e08fa9e140f417e183b41494d855e609ffc7f4778b65a98f3456d66e397a",
+      "size_bytes": 3274
+    },
+    {
+      "file": "adapter_implementation.patch",
+      "sha256": "1d2038798c59fe2ee4dc685428cf1ca606efbed1fb59fcad34723de5ec366497",
+      "size_bytes": 1934
+    },
+    {
+      "file": "baseline.json",
+      "sha256": "10ff9a3fa7744e5143889ebf056bbd1f868844c1f7cd87e950b462bb3287fb6b",
+      "size_bytes": 715
+    },
+    {
+      "file": "canary_command.txt",
+      "sha256": "ba618cbe17ebbf0b68d361e785361ad7ce5f0ca061c60376e1f03a1c37b2a097",
+      "size_bytes": 158
+    },
+    {
+      "file": "canary_result.json",
+      "sha256": "639c949a7f2180efad3a82d6e0887eea79a39e8e9e4426474d51f18b32ab8015",
+      "size_bytes": 2823
+    },
+    {
+      "file": "coverage_matrix.md",
+      "sha256": "7fc25232e1a2c77cb2fa1efa47617bf079251fca9cdde43518c65398c7fe41ea",
+      "size_bytes": 2721
+    },
+    {
+      "file": "current_repo_status_before.txt",
+      "sha256": "6fe12bb9a048fd4ae62d0f1a3a58bc7e7d4fa525abcdb181405dfd3e83e24714",
+      "size_bytes": 4260
+    },
+    {
+      "file": "evaluator_self_test_result.json",
+      "sha256": "fe7d74f7219ab038cc7f3d4a42978cc0c2b87fe40240d503d8a6bebbfa50254e",
+      "size_bytes": 2473
+    },
+    {
+      "file": "fixture_transformation_report.json",
+      "sha256": "c4dd58f2f5260f9e924a4fc6cd8db736135e2b5b7b04b50a909a46c9260d8b17",
+      "size_bytes": 2110
+    },
+    {
+      "file": "jvm_command.txt",
+      "sha256": "40dde1609cac19b5522e797890603f9df2594b5790f3d77c8992fffe6f071777",
+      "size_bytes": 125
+    },
+    {
+      "file": "jvm_exit_code.txt",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "size_bytes": 1
+    },
+    {
+      "file": "jvm_started.marker",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "file": "jvm_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "file": "jvm_stdout.log",
+      "sha256": "4aebf10617d876238a002f66014ee4f2aa519a1b1ebc3475f406f49781b9fe88",
+      "size_bytes": 8416
+    },
+    {
+      "file": "jvm_xml_summary.json",
+      "sha256": "2c7024aa76068d28ebaba697a5aa8e5e71116889540c5165e9c78d8716096b9b",
+      "size_bytes": 1503
+    },
+    {
+      "file": "mutation_result.json",
+      "sha256": "67f2c59f5585cb577e768b9d7e6ecee40c5e7d0ce68ae1d6dc1da4c47d74d12a",
+      "size_bytes": 8380
+    },
+    {
+      "file": "official_run_command.txt",
+      "sha256": "e96e22bf95da9c5bb3265b6182abe15a276c44ae31fd08425dc42a8e941d25f6",
+      "size_bytes": 1329
+    },
+    {
+      "file": "protected_comparison.json",
+      "sha256": "bbc6919ac74f39f432df1149972eb6a32ab7aee7395b68c66a72ef9e0c4f3fa1",
+      "size_bytes": 3017
+    },
+    {
+      "file": "protected_sha256_after.txt",
+      "sha256": "51204fbfaa5adccfff6afa6205609ee9958c79ebe54a8284730fca5a69c2dcd9",
+      "size_bytes": 135294
+    },
+    {
+      "file": "protected_sha256_before.txt",
+      "sha256": "51204fbfaa5adccfff6afa6205609ee9958c79ebe54a8284730fca5a69c2dcd9",
+      "size_bytes": 135294
+    },
+    {
+      "file": "scenario_export_command.txt",
+      "sha256": "78cf4623d7ce4de1d146970e789224ac0a9df42f0eba0803ff8a9bba5ce03491",
+      "size_bytes": 161
+    },
+    {
+      "file": "scenario_export_determinism.json",
+      "sha256": "ee6b5f7ccaac60b1c2da26b9ff55070056ac09fba5701f0cd01eb3c10282c917",
+      "size_bytes": 882
+    },
+    {
+      "file": "scenario_export_log.txt",
+      "sha256": "208de480a0c5cb8faef66184168f26d6a4a4d6873a0c21ee8b3c91c3d1a776d6",
+      "size_bytes": 566
+    },
+    {
+      "file": "scenario_inventory.json",
+      "sha256": "f98fb6aaa6df675a14d72315c66b4bdeb7c890e97fe4989cf982495ae7c2a169",
+      "size_bytes": 1891
+    },
+    {
+      "file": "source_sha256_after.txt",
+      "sha256": "dad4503b9eb04f116f2bfa0d38cdb2d91e384b3a53da2d3f8c85a519e1987d29",
+      "size_bytes": 30658
+    },
+    {
+      "file": "source_sha256_before.txt",
+      "sha256": "c32bf06a3403c48cadb5c0d43494462b09acaff8d2ceed5060e4aa70260a85db",
+      "size_bytes": 29561
+    },
+    {
+      "file": "targeted_test_command.txt",
+      "sha256": "ba618cbe17ebbf0b68d361e785361ad7ce5f0ca061c60376e1f03a1c37b2a097",
+      "size_bytes": 158
+    },
+    {
+      "file": "targeted_test_result.json",
+      "sha256": "741d266066646bcf11c092500aeecbf72b43f169b3184813d60c57038b5869b4",
+      "size_bytes": 3720
+    },
+    {
+      "file": "upstream_input_verification.json",
+      "sha256": "9f3980aabe9c6480e39fb90866aa20fed2b05df32ddd008093ae9ac1ab073bfb",
+      "size_bytes": 1858
+    }
+  ],
+  "artifact_count": 37,
+  "does_not_mean": [
+    "that the current agent's multiturn performance is good",
+    "that any Ryeong metric was measured",
+    "that the frozen 130 were executed",
+    "that actual Gemma or actual EmbeddingGemma ran",
+    "that keyword-only retrieval is semantic",
+    "production readiness"
+  ]
+}

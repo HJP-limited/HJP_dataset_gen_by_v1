@@ -1,0 +1,8 @@
+[input] eval_multiturn.py  26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031  OK
+[input] cards_eval1000.json f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24  OK
+[input] cards: 1000, duplicate ids: 0
+[export] scenarios=130 turns=377 kinds=21 known_gap=0 generate_only=6
+[export] depth 1=3 2=62 3-5=55 6-10=10 11+=0
+[gate] all exact gates passed
+[export] payload sha256 c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42 (284097 bytes)
+[export] wrote tools/ryeong_multiturn_v4/generated/ryeong_multiturn_scenarios_v1.json

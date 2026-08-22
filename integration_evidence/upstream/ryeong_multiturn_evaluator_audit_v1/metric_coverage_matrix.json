@@ -1,0 +1,130 @@
+{
+  "legend": {
+    "original_reference": "UNKNOWN - the reference evaluator is absent, so no metric could be read from code",
+    "past_result_summary": "the metric appears as a counter in multiturn-final-20260801.json (a result, not a definition)",
+    "current_kotlin": "an equivalent assertion exists in this repository's Kotlin evaluation sources"
+  },
+  "rows": [
+    {
+      "metric": "overall task success",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "overall_success_rate 1.0 (40/40)",
+      "current_kotlin": "ScenarioResult pass/fail in StrictMultiturnEvaluator"
+    },
+    {
+      "metric": "strict success",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "StrictMultiturnEvaluator - every TurnSpec field is an assertion"
+    },
+    {
+      "metric": "turn success",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "TurnObservation per turn"
+    },
+    {
+      "metric": "focus maintenance",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "29/29",
+      "current_kotlin": "TurnSpec.expectedSelectedCardId"
+    },
+    {
+      "metric": "focus switch",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "5/5",
+      "current_kotlin": "TurnSpec.expectedSelectedNotCardId / expectedSelectedCardId"
+    },
+    {
+      "metric": "pronoun and ellipsis",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "29/29",
+      "current_kotlin": "category reference_resolution"
+    },
+    {
+      "metric": "ordinal selection",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "1/1",
+      "current_kotlin": "category reference_resolution / TurnSpec.expectedCandidateIds"
+    },
+    {
+      "metric": "duplicate ambiguity",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "1/1",
+      "current_kotlin": "category ambiguity_and_grounding"
+    },
+    {
+      "metric": "zero result",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "1/1",
+      "current_kotlin": "MultiturnSpec.searchFailure + category failure_and_idempotency"
+    },
+    {
+      "metric": "unrelated context isolation",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "2/2",
+      "current_kotlin": "TurnSpec.expectNoSelectedContact"
+    },
+    {
+      "metric": "wrong-person get_contact",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "0",
+      "current_kotlin": "TurnSpec.expectedArgs + expectedSelectedNotCardId"
+    },
+    {
+      "metric": "stale-ID execution",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "0",
+      "current_kotlin": "TurnSpec.expectedArgs on card_id"
+    },
+    {
+      "metric": "tool sequence",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "TurnSpec.expectedTools - exact ordered trace"
+    },
+    {
+      "metric": "tool argument accuracy",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "TurnSpec.expectedArgs + eval/args/JsonArgumentComparator.kt"
+    },
+    {
+      "metric": "memory-answer tool suppression",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "TurnSpec.forbiddenTools with expectedTools empty"
+    },
+    {
+      "metric": "explicit fresh search executed",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "numeric_new_search 4/4",
+      "current_kotlin": "TurnSpec.expectedTools + DeterministicTurnRouter fresh-lookup routing"
+    },
+    {
+      "metric": "side-effect duplication",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "TurnSpec.expectedSideEffects + SideEffectGuard"
+    },
+    {
+      "metric": "final response consistency",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "answerMustContain / answerMustNotContain, category result_response_consistency"
+    },
+    {
+      "metric": "latency",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "three_turn_repeat_stability p50 0.220 ms / p95 2.213 ms",
+      "current_kotlin": "NOT IMPLEMENTED as a gate"
+    },
+    {
+      "metric": "session reset / new conversation",
+      "original_reference": "UNKNOWN",
+      "past_result_summary": "NOT PRESENT",
+      "current_kotlin": "TurnSpec.resetBefore + TurnLease generation"
+    }
+  ],
+  "conclusion": "no row can be filled in for the original reference evaluator; the coverage matrix cannot be completed until that repository is supplied"
+}

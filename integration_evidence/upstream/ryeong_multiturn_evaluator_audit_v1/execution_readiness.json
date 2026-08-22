@@ -1,0 +1,35 @@
+{
+  "verdict": "BLOCKED BY MISSING REFERENCE REPOSITORY",
+  "applicable_verdicts_from_the_task_taxonomy": [
+    {
+      "verdict": "RUNNABLE NOW",
+      "applies": false,
+      "why": "the evaluator and dataset do not exist"
+    },
+    {
+      "verdict": "RUNNABLE WITH ISOLATED OUTPUT PATCH OR WRAPPER",
+      "applies": false,
+      "why": "there is nothing to wrap"
+    },
+    {
+      "verdict": "BLOCKED BY DEPENDENCY/RESOURCE",
+      "applies": true,
+      "why": "the required resource is the reference repository itself, which is absent; this subsumes any dependency question"
+    },
+    {
+      "verdict": "NOT A PRODUCTION EVALUATOR",
+      "applies": "UNDETERMINED",
+      "why": "cannot be judged without reading the original; it is NOT asserted either way"
+    }
+  ],
+  "what_would_unblock": [
+    "supply the checkout at ../agent_integration_references_20260817/ryeong-llm-integration",
+    "or give the actual path and branch of the ryeong llm-integration-work checkout",
+    "or confirm that the original multiturn evaluator was never Python and that the Kotlin JUnit suites named in multiturn-final-20260801.json are the intended original"
+  ],
+  "explicitly_not_claimed": [
+    "that any local script is the original evaluator",
+    "that the past result summary constitutes a multiturn evaluation of the current code",
+    "that search ranking results can stand in for multiturn results"
+  ]
+}

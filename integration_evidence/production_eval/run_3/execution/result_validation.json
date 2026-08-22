@@ -1,0 +1,53 @@
+{
+  "official_files_expected": [
+    "production_search_eval_v3_results.json",
+    "gate_verdict.json",
+    "RUN_STATUS.json"
+  ],
+  "official_files_present": [
+    "RUN_STATUS.json",
+    "gate_verdict.json",
+    "production_search_eval_v3_results.json"
+  ],
+  "all_three_present": true,
+  "extra_files_left_behind": [],
+  "result_partial_exists": false,
+  "json_parse_ok": true,
+  "typed_values_preserved": true,
+  "type_samples": {
+    "cards": "int",
+    "queries_scored": "int",
+    "semantic_axis_executed": "bool",
+    "abstention.failures": "list",
+    "gate_verdict.passed": "bool",
+    "gate_verdict.checks": "list"
+  },
+  "run_id_in_results": "ryeong_production_search_run_3",
+  "run_id_in_verdict": "ryeong_production_search_run_3",
+  "run_id_in_status": "ryeong_production_search_run_3",
+  "run_id_all_match_expected": true,
+  "excluded_queries": 0,
+  "process_exit_code": 0,
+  "gate_verdict_passed": true,
+  "exit_code_consistent_with_verdict": true,
+  "run_status_consistent_with_verdict": true,
+  "queries_total": 203,
+  "abstention_queries": 20,
+  "invalid_run_conditions": {
+    "exit_0_but_missing_results": false,
+    "run_id_mismatch": false,
+    "gate_verdict_missing": false,
+    "json_parse_failure": false,
+    "queries_not_203": false,
+    "abstention_not_20": false,
+    "exclusions_present": false,
+    "ran_after_freeze_mismatch": false,
+    "invocation_count_over_one": false
+  },
+  "sha256": {
+    "production_search_eval_v3_results.json": "a7e15cfb6b5244121bc7b1e0c692ec53ba7556f8d732925bba3a3f9771ab2dac",
+    "gate_verdict.json": "04c031c74f715aa642d99eb44f8eb8084b871155be119fd6561c0c6da8fc6d11",
+    "RUN_STATUS.json": "ccaa6f3f6cdce3fb0300e7c2c75da48940c161ae6d87a464b16db3fde19ed6e2"
+  },
+  "valid_execution": true
+}

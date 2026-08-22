@@ -1,0 +1,62 @@
+{
+  "verdict": "ALL PROTECTED SCOPES UNCHANGED",
+  "scopes": [
+    {
+      "scope": "integration_evidence (excluding this task's own directory)",
+      "before_count": 741,
+      "after_count": 741,
+      "changed": [],
+      "removed": [],
+      "added": [],
+      "changed_count": 0,
+      "removed_count": 0,
+      "added_count": 0,
+      "verdict": "UNCHANGED"
+    },
+    {
+      "scope": "production and test source (.kt/.java across the 9 modules, build/ excluded)",
+      "before_count": 217,
+      "after_count": 217,
+      "changed": [],
+      "removed": [],
+      "added": [],
+      "changed_count": 0,
+      "removed_count": 0,
+      "added_count": 0,
+      "verdict": "UNCHANGED"
+    },
+    {
+      "scope": "the ../ryeong checkout (the only ryeong repo present; NOT the reference)",
+      "before_count": 9,
+      "after_count": 9,
+      "changed": [],
+      "removed": [],
+      "added": [],
+      "changed_count": 0,
+      "removed_count": 0,
+      "added_count": 0,
+      "verdict": "UNCHANGED"
+    }
+  ],
+  "reference_repository_modified": "N/A - the reference repository does not exist; nothing could be modified in it",
+  "ryeong_checkout_git_status_before_and_after": [
+    "?? .DS_Store",
+    "?? PROJECT_ANALYSIS.md"
+  ],
+  "pycache_created_in_any_reference_path": 0,
+  "run_3_invocation_count": {
+    "before": 1,
+    "after": 1
+  },
+  "apk_sha256": {
+    "before": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+    "after": "e4bfa60a2bee426640be9cfae38002627fb81587b16e3f2602ad8b9b676830c2",
+    "changed": false
+  },
+  "jvm_test_xml": {
+    "file_count": 85,
+    "tests_run_this_task": false
+  },
+  "forbidden_git_commands_used": 0,
+  "new_files_this_task": "only integration_evidence/upstream/ryeong_multiturn_evaluator_audit_v1/"
+}

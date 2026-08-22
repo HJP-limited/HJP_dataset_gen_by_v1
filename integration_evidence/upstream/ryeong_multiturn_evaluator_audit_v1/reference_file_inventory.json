@@ -1,0 +1,61 @@
+{
+  "verdict": "REFERENCE REPOSITORY NOT PRESENT",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_absolute": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searches_performed": [
+    {
+      "search": "test -e on the expected path",
+      "result": "ABSENT"
+    },
+    {
+      "search": "test -e on the parent container agent_integration_references_20260817",
+      "result": "ABSENT"
+    },
+    {
+      "search": "find /Users/byeol -maxdepth 6 -type d -iname '*agent_integration_reference*' / '*ryeong-llm*' / '*llm-integration*'",
+      "result": "0 matches"
+    },
+    {
+      "search": "find /Users/byeol -maxdepth 8 -iname '*agent_integration*'",
+      "result": "0 matches"
+    },
+    {
+      "search": "find /Users/byeol -maxdepth 9 -type f -iname '*multiturn*' / '*multi_turn*' (Library, .Trash, node_modules, .git, site-packages pruned)",
+      "result": "23 matches, all inside the two working copies of this project; none is a Python multiturn evaluator from a reference repo"
+    },
+    {
+      "search": "find for eval_multiturn*.py anywhere",
+      "result": "0 matches - the file eval_multiturn.py does not exist on this machine"
+    },
+    {
+      "search": "find /Users/byeol/Desktop and /Users/byeol/Downloads -maxdepth 4 for archives named *agent_integration* / *ryeong*llm* / *20260817*",
+      "result": "0 matches"
+    }
+  ],
+  "closest_repository_present": {
+    "path": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong",
+    "remote": "https://github.com/HJP-limited/ryeong.git",
+    "head": "e3dd67f6782dae50e8908190ab6debc0f9992056",
+    "branch": "main",
+    "all_refs": [
+      "refs/heads/main e3dd67f",
+      "refs/remotes/origin/4/29 ae3f8ed",
+      "refs/remotes/origin/HEAD e3dd67f",
+      "refs/remotes/origin/main e3dd67f",
+      "refs/remotes/origin/search_check cb5be3f"
+    ],
+    "llm_integration_work_branch_present": false,
+    "dirty": true,
+    "dirty_entries": [
+      "?? .DS_Store",
+      "?? PROJECT_ANALYSIS.md"
+    ],
+    "tracked_file_count": 9,
+    "python_file_count": 0,
+    "contains_multiturn_evaluator": false,
+    "why_not_the_reference": "it is HJP-limited/ryeong on main, a Java search-lookup source repo with no Python at all; the task names a different checkout (ryeong-llm-integration) on a branch that does not exist here"
+  },
+  "reference_files_audited": 0,
+  "expected_vs_actual_branch_match": false
+}

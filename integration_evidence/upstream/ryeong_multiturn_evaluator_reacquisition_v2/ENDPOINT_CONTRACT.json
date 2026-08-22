@@ -1,0 +1,185 @@
+{
+  "endpoint": "http://127.0.0.1:8100/chat",
+  "method": "POST",
+  "content_type": "application/json",
+  "client_timeout_seconds": 600,
+  "derived_from": [
+    "scripts/eval_multiturn.py ask() lines 393-401",
+    "scripts/hybrid_server.py response builders at lines 947, 984, 1073, 1172, 1296"
+  ],
+  "request_schema": {
+    "type": "object",
+    "required": [
+      "question",
+      "history",
+      "focus",
+      "prev_card_ids",
+      "conversation_memory",
+      "dry_run"
+    ],
+    "properties": {
+      "question": {
+        "type": "string",
+        "nullable": false,
+        "source": "eval_multiturn.ask()"
+      },
+      "history": {
+        "type": "array",
+        "items": {
+          "q": "string",
+          "a": "string",
+          "filter_terms": "string|null"
+        },
+        "nullable": false,
+        "note": "in dry-run the assistant slot 'a' is filled with the joined hybrid_top names because no answer is generated; filter_terms carries the previous turn's field conditions (the app's AgentSession.KEY_LAST_FILTER_TERMS plays the same role)"
+      },
+      "focus": {
+        "type": "string|null",
+        "nullable": true,
+        "note": "carried forward from the previous response's focus"
+      },
+      "prev_card_ids": {
+        "type": "array<string>",
+        "nullable": false,
+        "note": "previous response's card_ids"
+      },
+      "conversation_memory": {
+        "type": "object",
+        "nullable": true,
+        "note": "opaque to the evaluator - echoed straight back from the previous response"
+      },
+      "dry_run": {
+        "type": "boolean",
+        "nullable": false,
+        "note": "true = retrieval and routing only, no generation"
+      }
+    }
+  },
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string",
+        "read_by_evaluator": true,
+        "dry_run": "empty string",
+        "generation": "generated text"
+      },
+      "route": {
+        "type": "string",
+        "read_by_evaluator": true,
+        "observed_values": [
+          "search",
+          "followup",
+          "empty_result",
+          "abstain",
+          "blank"
+        ],
+        "note": "GENERATING_ROUTES = {search, followup, empty_result}; a turn counts as 'generated' when route is in that set AND abstained is false"
+      },
+      "field_filters": {
+        "type": "object",
+        "read_by_evaluator": true,
+        "keys_read": [
+          "name",
+          "title",
+          "location"
+        ],
+        "value_type": "array<string>",
+        "note": "this is the slot surface - JGA and slot F1 are computed from exactly these three keys"
+      },
+      "focus": {
+        "type": "string|null",
+        "read_by_evaluator": true,
+        "note": "checked only when the scenario declares a 'focus' slot; otherwise carried forward"
+      },
+      "card_ids": {
+        "type": "array<string>",
+        "read_by_evaluator": true,
+        "note": "turn-level R@5 uses card_ids[:5]"
+      },
+      "abstained": {
+        "type": "boolean",
+        "read_by_evaluator": true
+      },
+      "gen_ms": {
+        "type": "number",
+        "read_by_evaluator": true,
+        "note": "optional; collected only when truthy. Desktop LLM-server timing, explicitly NOT device latency"
+      },
+      "conversation_memory": {
+        "type": "object",
+        "read_by_evaluator": true,
+        "note": "echoed back into the next request"
+      },
+      "hybrid_top": {
+        "type": "array<string>",
+        "read_by_evaluator": true,
+        "note": "display names; used to fill the history assistant slot during dry-run"
+      },
+      "error": {
+        "type": "string|null",
+        "read_by_evaluator": false
+      },
+      "resolved_query": {
+        "type": "string",
+        "read_by_evaluator": false
+      },
+      "changed": {
+        "type": "boolean",
+        "read_by_evaluator": false
+      },
+      "keyword_top": {
+        "type": "array",
+        "read_by_evaluator": false
+      },
+      "semantic_top": {
+        "type": "array",
+        "read_by_evaluator": false
+      },
+      "kw_ms": {
+        "type": "number",
+        "read_by_evaluator": false
+      },
+      "sem_ms": {
+        "type": "number",
+        "read_by_evaluator": false
+      },
+      "identifier_routed": {
+        "type": "boolean",
+        "read_by_evaluator": false
+      },
+      "filtered_out": {
+        "type": "array",
+        "read_by_evaluator": false
+      },
+      "conversational_followup": {
+        "type": "boolean",
+        "read_by_evaluator": false
+      },
+      "history": {
+        "type": "array",
+        "read_by_evaluator": false
+      },
+      "cards": {
+        "type": "array",
+        "read_by_evaluator": false
+      }
+    },
+    "fields_the_evaluator_actually_reads": [
+      "answer",
+      "route",
+      "field_filters",
+      "focus",
+      "card_ids",
+      "abstained",
+      "gen_ms",
+      "conversation_memory",
+      "hybrid_top"
+    ]
+  },
+  "dry_run_vs_generation": {
+    "dry_run_true": "answer is empty, gen_ms 0.0, route is abstain/empty_result/search; no LLM server contacted",
+    "dry_run_false": "answer is generated via GEMMA_URL http://127.0.0.1:9379/v1/chat/completions (model gemma4e2b), gen_ms populated"
+  },
+  "error_response_shape": "the 'blank' route returns a fully populated object with route='blank' and an instruction string in answer; there is no separate error envelope observed"
+}

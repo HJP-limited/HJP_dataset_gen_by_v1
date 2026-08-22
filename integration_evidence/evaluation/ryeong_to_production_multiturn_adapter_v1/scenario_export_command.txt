@@ -1,0 +1,2 @@
+PYTHONDONTWRITEBYTECODE=1 python3 tools/ryeong_multiturn_v4/export_scenarios.py \
+  --out tools/ryeong_multiturn_v4/generated/ryeong_multiturn_scenarios_v1.json

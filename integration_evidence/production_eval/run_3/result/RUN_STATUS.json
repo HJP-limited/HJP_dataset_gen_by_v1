@@ -1,0 +1,7 @@
+{
+  "run_id": "ryeong_production_search_run_3",
+  "status": "EXECUTED",
+  "evaluation_executed": true,
+  "gate_passed": true,
+  "means": "a production-path diagnostic against a pre-registered gate. Not the reference evaluator's numbers, not semantic performance, not Android verification."
+}

@@ -1,0 +1,122 @@
+{
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_JVM_KEYWORD_BASELINE",
+  "frozen_at": "before any official result was produced",
+  "axis": "search / focus / follow-up compatibility only — NOT a whole-agent tool score",
+  "upstream_commit": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+  "seed": 42,
+  "artifacts": {
+    "scenario_json": {
+      "path": "app/src/test/resources/ryeong/scenarios_v1.json",
+      "sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+      "size": 284097
+    },
+    "cards_json": {
+      "path": "app/src/test/resources/ryeong/cards_eval1000.json",
+      "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+      "size": 405413
+    },
+    "upstream_evaluator": {
+      "path": "tools/ryeong_multiturn_v4/reference/eval_multiturn.py",
+      "sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+      "size": 38660
+    },
+    "exporter": {
+      "path": "tools/ryeong_multiturn_v4/export_scenarios.py",
+      "sha256": "b8f453bf03af56ff2562668395c9599c2d7c74ce5d4b0c4a144b6cdfdb16d49f",
+      "size": 8863
+    },
+    "loader": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongScenarios.kt",
+      "sha256": "58a629d146182df2241d9b83ab1c8dce185c83a685bd4bbc88696d7671256f4f",
+      "size": 8927
+    },
+    "cards_loader": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCards.kt",
+      "sha256": "cd31b585d513b0a8c9165a97c8489267a88995d1744e1bcfa2fba6d3fbbb0c8c",
+      "size": 3774
+    },
+    "translation": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongTranslation.kt",
+      "sha256": "8d8a5b43685351dcb2c7f1dc9e2ae340356d4ecde4c06a23ba01b0f72591ca1d",
+      "size": 7316
+    },
+    "adapter": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityRunner.kt",
+      "sha256": "7c1aadbadd3ad71262c6746bedfddfa250a4305d994754e80e912d2d1136aa39",
+      "size": 6998
+    },
+    "scorer": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongCompatibilityScorer.kt",
+      "sha256": "7e0c9fb8537cb96798dca0540146fce9f3f2ffff3e916ee973c68e05f34f1def",
+      "size": 5401
+    },
+    "gate": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongRunGate.kt",
+      "sha256": "d44d43e12fd114aaf12640b6f70d64ec48b76f241832bbc7852a267c89f60489",
+      "size": 5127
+    },
+    "official_runner": {
+      "path": "app/src/test/java/com/example/hjp/eval/ryeong/RyeongOfficialCompatibilityRunTest.kt",
+      "sha256": "2b2a852858b81ccfea326e680e1177579d6be238e9af699423ce6251bb7039c2",
+      "size": 13849
+    },
+    "harness": {
+      "path": "app/src/test/java/com/example/hjp/MultiturnScenarioHarness.kt",
+      "sha256": "d83eaa80c778bb063dbb27aabb1978c2e2d36f7bb57608cc2695bd09e4565e45",
+      "size": 19546
+    },
+    "search_backend": {
+      "path": "tool-contact/src/main/kotlin/com/hjp/tool/contact/RyeongContactSearchBackend.kt",
+      "sha256": "e5e8879c8873dea1b78aacd9a6321ad73d94382c42484f7c7cb90b167cb7139d",
+      "size": 11271
+    },
+    "search_service": {
+      "path": "search-core/src/main/java/com/hjp/searchlookup/SearchLookupService.java",
+      "sha256": "47f8d3f63ec53736054ebca7faa2c33a14ce629f1b58df457454615e1afa076f",
+      "size": 8089
+    },
+    "router": {
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/DeterministicTurnRouter.kt",
+      "sha256": "da4476dad41ddde786c08da8b57a50c563dbaf38b827df9d7d08e85ff57d6608",
+      "size": 44518
+    },
+    "kernel": {
+      "path": "agent-core/src/main/kotlin/com/hjp/agent/core/AgentKernel.kt",
+      "sha256": "93c2ce3eb7f35b43823b08ccd96efdb4c6a5a475e06e34cc8e8766f7c484773f",
+      "size": 39059
+    }
+  },
+  "production_source_map": "preparation/source_sha256_before.txt",
+  "scenario_inventory": {
+    "scenarios": 130,
+    "turns": 377,
+    "kinds": 21,
+    "known_gap": 0,
+    "generate_only": 6
+  },
+  "frozen_denominators": {
+    "routing_scorable": 328,
+    "routing_excluded": 49,
+    "not_run": 0,
+    "r5_upper_bound": 335,
+    "jga": "NOT_SCORABLE",
+    "slot_prf1": "NOT_SCORABLE",
+    "generation": "NOT_RUN (ACTUAL_MODEL_NOT_EXECUTED)"
+  },
+  "jvm_verification": {
+    "suites": 89,
+    "tests": 660,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "environment": {
+    "jdk": "OpenJDK 21.0.11 (Homebrew)",
+    "gradle": "9.4.1",
+    "kotlin": "2.3.0",
+    "offline": true
+  },
+  "command": "RYEONG_OFFICIAL_RUN=true ./gradlew --offline :app:testDebugUnitTest --tests '...RyeongOfficialCompatibilityRunTest' --rerun-tasks",
+  "performance_thresholds": "NONE — v1 is a first baseline; metrics are measurements, not PASS/FAIL criteria",
+  "validity_gate": "frozen in RyeongOfficialCompatibilityRunTest.validityChecks(); see gate_verdict.json after the run"
+}

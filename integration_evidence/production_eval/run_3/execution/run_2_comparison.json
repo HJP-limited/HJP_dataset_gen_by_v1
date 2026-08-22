@@ -1,0 +1,190 @@
+{
+  "scope_note": "run_2's ranking figures are DIAGNOSTIC ONLY and its abstention claim is INVALID AS PASS. This compares run_3 against run_2's ranking diagnostic only. It is not a comparison against a run_2 overall PASS, because there was none.",
+  "run_2_source": "integration_evidence/production_eval/run_2/production_adapter_results.frozen.json",
+  "run_2_source_sha256": "95c113ccece3478a1206ffc40f8701f9919e0c9bfb6ef8fdb4309b7d489dafeb",
+  "overall_top1": {
+    "run_2": 154,
+    "run_3": 162,
+    "denominator": 183,
+    "delta": 8,
+    "run_2_P@1": 0.8415,
+    "run_3_P@1": 0.885246
+  },
+  "by_category": [
+    {
+      "category": "회사명",
+      "n": 40,
+      "run_2_top1": 40,
+      "run_3_top1": 40,
+      "delta": 0,
+      "run_2_P@1": 1.0,
+      "run_3_P@1": 1.0,
+      "run_2_R@5": 1.0,
+      "run_3_R@5": 1.0,
+      "run_2_MRR": 1.0,
+      "run_3_MRR": 1.0,
+      "run_2_nDCG@5": 1.0,
+      "run_3_nDCG@5": 1.0,
+      "changed_by_the_field_constraint": false
+    },
+    {
+      "category": "이름",
+      "n": 40,
+      "run_2_top1": 40,
+      "run_3_top1": 40,
+      "delta": 0,
+      "run_2_P@1": 1.0,
+      "run_3_P@1": 1.0,
+      "run_2_R@5": 1.0,
+      "run_3_R@5": 1.0,
+      "run_2_MRR": 1.0,
+      "run_3_MRR": 1.0,
+      "run_2_nDCG@5": 1.0,
+      "run_3_nDCG@5": 1.0,
+      "changed_by_the_field_constraint": false
+    },
+    {
+      "category": "전화(하이픈X)",
+      "n": 30,
+      "run_2_top1": 30,
+      "run_3_top1": 30,
+      "delta": 0,
+      "run_2_P@1": 1.0,
+      "run_3_P@1": 1.0,
+      "run_2_R@5": 1.0,
+      "run_3_R@5": 1.0,
+      "run_2_MRR": 1.0,
+      "run_3_MRR": 1.0,
+      "run_2_nDCG@5": 1.0,
+      "run_3_nDCG@5": 1.0,
+      "changed_by_the_field_constraint": false
+    },
+    {
+      "category": "지역+직함(문장)",
+      "n": 40,
+      "run_2_top1": 39,
+      "run_3_top1": 40,
+      "delta": 1,
+      "run_2_P@1": 0.975,
+      "run_3_P@1": 1.0,
+      "run_2_R@5": 1.0,
+      "run_3_R@5": 1.0,
+      "run_2_MRR": 0.9875,
+      "run_3_MRR": 1.0,
+      "run_2_nDCG@5": 0.9908,
+      "run_3_nDCG@5": 1.0,
+      "changed_by_the_field_constraint": true
+    },
+    {
+      "category": "개념형(easy)",
+      "n": 14,
+      "run_2_top1": 5,
+      "run_3_top1": 7,
+      "delta": 2,
+      "run_2_P@1": 0.3571,
+      "run_3_P@1": 0.5,
+      "run_2_R@5": 0.0487,
+      "run_3_R@5": 0.05816,
+      "run_2_MRR": 0.4643,
+      "run_3_MRR": 0.577381,
+      "run_2_nDCG@5": 0.3728,
+      "run_3_nDCG@5": 0.452797,
+      "changed_by_the_field_constraint": true
+    },
+    {
+      "category": "개념형(hard)",
+      "n": 19,
+      "run_2_top1": 0,
+      "run_3_top1": 5,
+      "delta": 5,
+      "run_2_P@1": 0.0,
+      "run_3_P@1": 0.263158,
+      "run_2_R@5": 0.0118,
+      "run_3_R@5": 0.020506,
+      "run_2_MRR": 0.0891,
+      "run_3_MRR": 0.327216,
+      "run_2_nDCG@5": 0.0696,
+      "run_3_nDCG@5": 0.203865,
+      "changed_by_the_field_constraint": true
+    }
+  ],
+  "categories_changed_by_the_field_constraint": [
+    "지역+직함(문장)",
+    "개념형(easy)",
+    "개념형(hard)"
+  ],
+  "categories_unchanged": [
+    "회사명",
+    "이름",
+    "전화(하이픈X)"
+  ],
+  "region_title_recall5_complete": {
+    "run_2": 40,
+    "run_3": 40,
+    "note": "run_2 reported R@5 = 1.0000 across 40 queries, i.e. all 40 complete"
+  },
+  "overall_rates": {
+    "R@5": {
+      "run_2": 0.8246,
+      "run_3": 0.826251
+    },
+    "MRR": {
+      "run_2": 0.8617,
+      "run_3": 0.897817
+    },
+    "nDCG@5": {
+      "run_2": 0.8534,
+      "run_3": 0.875479
+    },
+    "caveat": "run_2 preserved these to four decimals only; they are reported, and were never gate thresholds"
+  },
+  "abstention": {
+    "run_1": {
+      "population": 20,
+      "passed": 19,
+      "failed": 1,
+      "verdict": "FAIL",
+      "failing_query": "세종특별자치시 디자이너"
+    },
+    "run_2": {
+      "population": 19,
+      "passed": 19,
+      "failed": 0,
+      "excluded": 1,
+      "verdict": "INVALID AS PASS — the failing query was removed from the requirement after it failed"
+    },
+    "run_3": {
+      "population": 20,
+      "passed": 20,
+      "failed": 0,
+      "excluded": 0,
+      "verdict": "the whole population, no exclusion mechanism in the runner"
+    }
+  },
+  "exclusions": {
+    "run_2": 1,
+    "run_3": 0
+  },
+  "latency_ms": {
+    "run_2": {
+      "p50": 1,
+      "p95": 1,
+      "max": 22
+    },
+    "run_3": {
+      "p50": 1,
+      "p95": 2,
+      "max": 50
+    },
+    "note": "wall clock, reported not gated; run_3 also carries the constraint resolution per query"
+  },
+  "keyword_fallback_ratio": {
+    "run_2": 1.0,
+    "run_3": 1.0
+  },
+  "semantic_axis_executed": {
+    "run_2": false,
+    "run_3": false
+  },
+  "concept_categories_caveat": "개념형(easy) and 개념형(hard) moved, but both runs had no embedding model. The change is a keyword-only diagnostic difference and says nothing about semantic retrieval."
+}

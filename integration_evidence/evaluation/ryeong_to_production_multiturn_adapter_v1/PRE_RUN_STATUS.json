@@ -1,0 +1,23 @@
+{
+  "official_run_invocations": 0,
+  "frozen_130_executed": false,
+  "actual_model_executed": false,
+  "semantic_execution": false,
+  "retrieval_mode_if_run_today": "KEYWORD_ONLY",
+  "generation_metrics": "NOT_RUN",
+  "generation_metrics_reason": "ACTUAL_MODEL_NOT_EXECUTED",
+  "ready_to_execute": false,
+  "what_remains": [
+    "add RyeongOfficialCompatibilityRunTest (loads the 1000-card fixture, runs the existing runner/scorer/gate, writes the result files atomically)",
+    "pre-register the performance gate thresholds",
+    "decide whether the official run should require an embedding model (today it would be keyword-only)"
+  ],
+  "what_is_already_done": [
+    "byte-deterministic export of the frozen 130",
+    "translation contract decided and recorded",
+    "adapter wired to the real AgentKernel, router, session and production search",
+    "24 mutations all detected",
+    "canary green on the production path",
+    "full JVM green at 88/659/0/0/0"
+  ]
+}

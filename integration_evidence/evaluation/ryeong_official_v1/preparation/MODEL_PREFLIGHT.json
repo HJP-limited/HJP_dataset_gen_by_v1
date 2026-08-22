@@ -1,0 +1,47 @@
+{
+  "gemma": {
+    "production_expected_path": "app-specific external files dir, models/hjp-agent.litertlm",
+    "source_of_truth": "app/src/main/java/com/example/hjp/AppContainer.kt:54-55",
+    "host_candidate": {
+      "path": "models/hjp-agent.litertlm",
+      "size_bytes": 284426240,
+      "note": "the legacy artifact CLAUDE.md describes; ModelDeploymentResolver identifies by size + SHA-256"
+    },
+    "host_alternative": {
+      "path": "models/gemma-4-E2B-it.litertlm",
+      "size_bytes": 2588147712,
+      "note": "the Gemma 4 E2B artifact; context budget 3,072 per CLAUDE.md"
+    },
+    "present_on_device": false,
+    "pushed": false,
+    "loaded": false,
+    "generation_executed": false,
+    "reason_not_loaded": "RUN_D1 never started (see the RUN_D1 blocker)"
+  },
+  "embeddinggemma": {
+    "assets": [
+      {
+        "path": "app/src/modelAssets/assets/models/embeddinggemma-300m.tflite",
+        "size_bytes": 179131736
+      },
+      {
+        "path": "app/src/modelAssets/assets/models/sentencepiece.model",
+        "size_bytes": 4683319
+      }
+    ],
+    "present_in_apk_from_prior_evidence": true,
+    "initialized_on_device": false,
+    "semantic_invocations": 0,
+    "reason": "RUN_D1 never started"
+  },
+  "jvm_run_embedding": {
+    "engine": "google/embeddinggemma-300m (keyword-fallback:LocalEmbeddingEngine)",
+    "model_backed": false,
+    "diagnostic_status": "MODEL_ENGINE_MISSING",
+    "retrieval_mode_would_be": "KEYWORD_ONLY",
+    "observed_retrieval_modes_in_RUN_K1": [],
+    "note": "no search ran at all in RUN_K1, so not even the keyword path was exercised"
+  },
+  "no_model_was_substituted": true,
+  "no_model_was_downloaded": true
+}

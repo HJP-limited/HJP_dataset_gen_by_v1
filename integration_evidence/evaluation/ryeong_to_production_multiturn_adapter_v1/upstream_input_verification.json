@@ -1,0 +1,46 @@
+{
+  "prior_evidence_path": "integration_evidence/upstream/ryeong_multiturn_evaluator_reacquisition_v2",
+  "artifacts_declared": 46,
+  "artifacts_verified_ok": 46,
+  "artifact_mismatches": [],
+  "all_prior_artifacts_match_manifest": true,
+  "core_contract_files_present": {
+    "REFERENCE_COMMIT.json": true,
+    "UPSTREAM_MANIFEST.json": true,
+    "EVALUATOR_CONTRACT.json": true,
+    "SCENARIO_INVENTORY.json": true,
+    "METRIC_DEFINITIONS.md": true,
+    "ENDPOINT_CONTRACT.json": true,
+    "ADAPTER_TRANSLATION_MATRIX.md": true,
+    "PRODUCTION_COMPATIBILITY_MATRIX.md": true,
+    "ENVIRONMENT_READINESS.json": true,
+    "READINESS_VERDICT.json": true,
+    "FINAL_REPORT.md": true,
+    "MANIFEST.json": true
+  },
+  "all_core_present": true,
+  "upstream_clone": {
+    "path": "/private/tmp/claude-501/-Users-byeol-Desktop-by-4-1-------------FunctionGemma-0723-sojung/13344d8f-09c6-45ca-ba54-f1b7c8d6b4f9/scratchpad/ryeong-llm-integration-work.mFEppi",
+    "head": "1caec3a23d0c1ee8f6a8d4a5e54160dbb2dc81bc",
+    "git_status_lines": 0,
+    "clean": true,
+    "required_file_shas": {
+      "scripts/eval_multiturn.py": {
+        "expected": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+        "actual": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+        "match": true
+      },
+      "eval/rag_eval_dataset.jsonl": {
+        "expected": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+        "actual": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+        "match": true
+      },
+      "data/cards_eval1000.json": {
+        "expected": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+        "actual": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+        "match": true
+      }
+    },
+    "all_upstream_shas_match": true
+  }
+}

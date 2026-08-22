@@ -1,0 +1,138 @@
+{
+  "question": "do we need ryeong's classes copied in to be identical?",
+  "answer": "no — every class exists here under a different name and module; what was genuinely missing was behaviour, and that has now been ported",
+  "class_mapping": [
+    {
+      "ryeong": "search/KeywordSearchRanker.kt · analyze/normalize/stripParticle",
+      "ours": "search-core QueryAnalyzer.java → QueryAnalysis.java",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "search/KeywordSearchRanker.kt · score",
+      "ours": "search-core KeywordRetriever / LikeFallbackKeywordRetriever",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "search/CardGazetteer.kt (cards → names/regions/titles)",
+      "ours": "search-core SearchFieldVocabulary.from(cards)",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "search/CardGazetteer.kt · extractFieldFilters / FieldFilters",
+      "ours": "search-core SearchFieldConstraintResolver / SearchFieldConstraintPlan",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "search/CardGazetteer.kt · applyFieldFilters",
+      "ours": "search-core SearchFieldConstraintMatcher",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "search/CardSearchService.kt",
+      "ours": "search-core SearchLookupService",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "search/TextEmbeddingProvider.kt / GemmaEmbeddingProvider",
+      "ours": "search-core EmbeddingEngine / OnDeviceEmbeddingEngine + app AndroidEmbeddingGemmaEngine",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "data/BusinessCardEntity·Dao·FtsEntity·CardEmbeddingEntity·HjpDatabase (Java)",
+      "ours": "app/src/main/java/com/example/hjp/data/* (Kotlin, same five)",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "agent/tools/SearchBusinessCardsTool.kt",
+      "ours": "tool-contact ContactPlugins.kt (search_contacts, get_contact)",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "agent/AgentSession.kt · ConversationMemory.kt · ConversationalFollowup.kt",
+      "ours": "agent-core / agent-contract (AgentSession, ConversationMemory, DeterministicTurnRouter)",
+      "status": "PRESENT"
+    },
+    {
+      "ryeong": "agent/tools/ToolRegistry.kt",
+      "ours": "agent-core DefaultToolRegistry",
+      "status": "PRESENT"
+    }
+  ],
+  "why_not_copy_the_files": [
+    "they are app-layer classes bound to ryeong's Room entity BusinessCardEntity, not our BusinessCard",
+    "nothing would call them — AppContainer wires RoomBusinessCardRepository → RyeongContactSearchBackend → SearchLookupService",
+    "a second parallel search stack would violate the dependency rules in CLAUDE.md",
+    "it would change no behaviour at all, which is the thing that actually differed"
+  ],
+  "behavioural_gaps_found_and_closed": [
+    {
+      "upstream_fix": "copula ending -(이)야 added to particle stripping",
+      "our_defect_reproduced": "'남다은씨야' tokenised to ['손서윤씨','아니라','남다은씨야'] — the corrected name was never extracted",
+      "our_fix": "QueryAnalyzer.KOREAN_SUFFIXES += 이야, 야 (longest-first ordering)",
+      "status": "CLOSED"
+    },
+    {
+      "upstream_fix": "trailing punctuation stripped before particle removal",
+      "our_defect_reproduced": "'남다은씨야.' tokenised to ['남다은씨야.'] — normalize keeps '.' for e-mail",
+      "our_fix": "QueryAnalyzer.trimTrailingPunctuation() on .!?,;: only",
+      "status": "CLOSED"
+    },
+    {
+      "upstream_fix": "adnominal copula -인 added",
+      "our_defect_reproduced": "'주소가 대전인 사람' → ['주소','대전인']; '직급이 상무인 사람' → ['직급','상무인']",
+      "our_fix": "KOREAN_SUFFIXES += 인",
+      "status": "CLOSED"
+    },
+    {
+      "upstream_fix": "honorific stripped separately from particles (gazetteer personNameStem)",
+      "our_defect_reproduced": "stacked suffixes: one pass left '남다은씨'; naive looping ate the name to '남다'因 은 is also a particle",
+      "our_fix": "two stages, each once: stripKoreanSuffix() then stripHonorific() over 씨/님 only",
+      "status": "CLOSED"
+    }
+  ],
+  "deliberate_differences_kept": [
+    {
+      "topic": "region false-positive abstention",
+      "upstream": "reads a 도-final token as a province on shape alone, so it needed a namedRealPerson guard",
+      "ours": "the 도 rule only fires when the query also carries a location role marker, so the false positive never reaches the abstention branch",
+      "evidence": "naming_a_real_person_survives_a_field_word_that_looks_like_a_region was ALREADY green before any change",
+      "why_not_aligned": "the abstention contract here is pinned by the sealed search run_3 (abstention 20/20); moving it to upstream's shape would put that at risk for no behavioural gain"
+    }
+  ],
+  "out_of_scope_upstream_changes": [
+    "CardSearchService.knownNamesIn() — correction targeting lives in DeterministicTurnRouter here",
+    "ToolRegistry.capabilityLabels() — our capability answer path is separate",
+    "ConversationalFollowup.pointsAtPerson() — our recall/fresh-lookup boundary is already implemented in DeterministicTurnRouter",
+    "AgentSession.KEY_SUBJECT_HISTORY — ordinal discourse reference, not part of the search/get tools"
+  ],
+  "verification": {
+    "characterization_test": "search-core/src/test/java/com/hjp/searchlookup/UpstreamParityCharacterizationTest.java",
+    "sha256": "b92e43f5a9a85ece1613a2e3837f5e1a797613b39b80782d588800a16c74d35a",
+    "red_before": "5 of 9 failing",
+    "green_after": "10 of 10 passing",
+    "search_core_suite": "91 tests, 0 failures",
+    "full_jvm": {
+      "suites": 90,
+      "tests": 670,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "previous": {
+        "suites": 89,
+        "tests": 660
+      },
+      "delta": "+1 suite / +10 tests (the new characterization test)"
+    }
+  },
+  "production_files_changed": [
+    {
+      "path": "search-core/src/main/java/com/hjp/searchlookup/QueryAnalyzer.java",
+      "sha256": "5200af2c980c0ac538f08b1e2f01fb32a3e091a5ba9e6d4badecafb15ba57072"
+    }
+  ],
+  "sealed_artifacts_untouched": {
+    "scenarios_v1_sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+    "cards_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+    "official_v1_rerun": false
+  }
+}

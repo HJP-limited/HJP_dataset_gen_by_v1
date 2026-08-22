@@ -1,0 +1,152 @@
+{
+  "document": "POST_RUN_MANIFEST",
+  "run_id": "ryeong_production_search_run_3",
+  "verdict": "PASS — RUN_3 EXECUTED, ALL FROZEN GATES PASSED",
+  "verdict_scope": "a production-path search diagnostic cleared a gate fixed before the run. It is not a Ryeong evaluation reproduction, not semantic verification, not a full JVM result, not Android verification, not v4 freeze readiness, and not agent production readiness.",
+  "start_local": "2026-08-18T22:34:19+0900",
+  "end_local": "2026-08-18T22:34:21+0900",
+  "elapsed_seconds": 2,
+  "process_exit_code": 0,
+  "invocation_count": 1,
+  "rerun_prohibited": true,
+  "rerun_performed": false,
+  "preflight": {
+    "files_checked": 26,
+    "mismatch_count": 0,
+    "missing_count": 0,
+    "verdict": "FREEZE INTACT"
+  },
+  "runner_sha256": {
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Runner.java": "9fda1e716fc6bacdbd51ce2bc6070c8b8c1bbc0cb1bbf5877103c1ce800be02a",
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3Gate.java": "3c0348c96ab6c1c947cbbe84737ea0020420f46458ffdf3c105243fc4ca4006e",
+    "search-core/src/test/java/com/hjp/searchlookup/eval/EvalJson.java": "308bb4da4d8626d73105b4209070e4ea59226c38556558db649cb74e7836de21",
+    "search-core/src/test/java/com/hjp/searchlookup/eval/RyeongProductionSearchEvalV3RunnerSelfTest.java": "b39bb22956f43eaadbdbd493af254a8811cd15f9b95f4033adc22b8abf33636b"
+  },
+  "gate_sha256": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+  "gate_sha256_recorded_in_result": "c798cf5e5d372e9dfd31c9b074b1c36b09254e4ba666ade509346ef9c9a9c2a2",
+  "gate_sha_agrees": true,
+  "input_sha256": {
+    "integration_evidence/production_eval/run_3/input/cards_eval1000.json": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+    "integration_evidence/production_eval/run_3/input/ryeong_queries_extracted.json": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5"
+  },
+  "input_sha_recorded_in_result": {
+    "cards": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+    "queries": "3a288ac85f7908773c4c6d58579a48382a0064ed85636f26ff211728cfe709d5"
+  },
+  "production_source_sha256": {
+    "search-core/src/main/java/com/hjp/searchlookup/SearchLookupService.java": "47f8d3f63ec53736054ebca7faa2c33a14ce629f1b58df457454615e1afa076f",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintPlan.java": "08dc3cc90577fc46f912c1445460c1b2bc13af6772afead2335f8b41f9588293",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldVocabulary.java": "e020da3e4dfb3ae6486850180df8e99207a4dd730cb185d5d0015931bcc89e1e",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintResolver.java": "07dccba33fb85a0cc96a20c4fe574e4501a58808a421236f9e58af513c912068",
+    "search-core/src/main/java/com/hjp/searchlookup/SearchFieldConstraintMatcher.java": "a32dbdc968a8fdefd0d19132492e6060650f355c9b8b0891f6ea8feafaa9706c",
+    "search-core/src/main/java/com/hjp/searchlookup/QueryAnalyzer.java": "06e5cef78235063abbc3658d58ee9431eed98e2598bfff7da289d1dd6584d023",
+    "search-core/src/main/java/com/hjp/searchlookup/QueryAnalysis.java": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+    "search-core/src/main/java/com/hjp/searchlookup/LikeFallbackKeywordRetriever.java": "7dff812cd16425b09e85163fe0b9f6f597897988cb6eb39ccbedfc58a507ed17",
+    "search-core/src/main/java/com/hjp/searchlookup/SemanticRetriever.java": "5e81b8b5fdfa78ba0b5c0f2c0a3cc61791436482157d62acc5cc5fb0b6eba393",
+    "search-core/src/main/java/com/hjp/searchlookup/ReciprocalRankFusion.java": "d585ca7ca1129a80fb54df529c6896dc6f8bc797581bce8497ef02052e626d90",
+    "search-core/src/main/java/com/hjp/searchlookup/BusinessCard.java": "d7b7f7e39c1026c26d5660e1bc540d34f254e6e16764634e8b8dbe041115b74f",
+    "search-core/src/main/java/com/hjp/searchlookup/BusinessCardRepository.java": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79"
+  },
+  "production_source_count": 12,
+  "official_result_files": {
+    "integration_evidence/production_eval/run_3/result/RUN_STATUS.json": {
+      "sha256": "ccaa6f3f6cdce3fb0300e7c2c75da48940c161ae6d87a464b16db3fde19ed6e2",
+      "bytes": 292
+    },
+    "integration_evidence/production_eval/run_3/result/gate_verdict.json": {
+      "sha256": "04c031c74f715aa642d99eb44f8eb8084b871155be119fd6561c0c6da8fc6d11",
+      "bytes": 1866
+    },
+    "integration_evidence/production_eval/run_3/result/production_search_eval_v3_results.json": {
+      "sha256": "a7e15cfb6b5244121bc7b1e0c692ec53ba7556f8d732925bba3a3f9771ab2dac",
+      "bytes": 2521
+    }
+  },
+  "result_file_count": 3,
+  "gate_verdict": {
+    "passed": true,
+    "failed_check_count": 0,
+    "check_count": 15
+  },
+  "independent_verdict": {
+    "verdict": "PASS",
+    "failed_count": 0,
+    "agrees_with_runner": true,
+    "method": "the frozen gate applied by hand to the results file, without reading gate_verdict.json"
+  },
+  "headline_counts": {
+    "cards": 1000,
+    "queries_total": 203,
+    "queries_scored": 183,
+    "abstention_queries": 20,
+    "excluded_queries": 0,
+    "overall_top1": 162,
+    "abstention_passed": 20,
+    "abstention_failed": 0,
+    "stale_id_resolved": 0,
+    "unstable_rankings": 0
+  },
+  "semantic_execution": {
+    "semantic_axis_executed": false,
+    "keyword_fallback_ratio": 1.0,
+    "embeddinggemma_present": false,
+    "statement": "no semantic axis ran. The concept categories are a keyword-only diagnostic and no figure here is semantic retrieval performance."
+  },
+  "protected_existing_file_changes": {
+    "changed": 0,
+    "added": 0,
+    "removed": 0,
+    "by_group": {
+      "run_1": 0,
+      "run_2": 0,
+      "final_and_errata": 0,
+      "evaluator_archive": 0,
+      "evaluator_isolation": 0,
+      "red_characterization": 0,
+      "green_characterization": 0,
+      "run_3_preparation": 0,
+      "run_3_input": 0,
+      "run_3_gate": 0,
+      "run_3_freeze_manifests": 0,
+      "production_search_source": 0,
+      "test_sources": 0,
+      "build_file": 0
+    }
+  },
+  "post_run_frozen_recheck": {
+    "files": 22,
+    "mismatch_count": 0
+  },
+  "pre_run_records_untouched": {
+    "PRE_RUN_FREEZE_MANIFEST.json": true,
+    "PRE_RUN_STATUS.json": true,
+    "note": "these prove the pre-execution state and are deliberately not updated to reflect the run"
+  },
+  "result_validation": {
+    "valid_execution": true,
+    "official_files_present": true,
+    "extra_files": [],
+    "result_partial_left_behind": false,
+    "typed_values_preserved": true,
+    "run_ids_agree": true,
+    "exit_code_consistent_with_verdict": true,
+    "run_status_consistent_with_verdict": true
+  },
+  "not_performed": [
+    "a second invocation",
+    "any change to runner, gate, dataset, production source or Gradle task",
+    "any change to the freeze manifest or PRE_RUN_STATUS",
+    "query exclusion",
+    "gate relaxation",
+    "run_4",
+    "full :search-core:test",
+    "full JVM aggregate suite",
+    "APK build",
+    "semantic model installation",
+    "multiturn evaluator",
+    "memory work",
+    "v4 freeze"
+  ],
+  "forbidden_git_commands_used": [],
+  "next_task_started": false
+}

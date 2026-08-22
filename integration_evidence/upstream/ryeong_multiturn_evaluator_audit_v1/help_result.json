@@ -1,0 +1,8 @@
+{
+  "status": "NOT RUN",
+  "reason": "the evaluator does not exist on this machine, so there is no --help entry point to invoke",
+  "command_attempted": null,
+  "exit_code": null,
+  "fake_dependency_used": false,
+  "note": "NOT SAFE TO RUN does not apply - this is absence, not risk"
+}

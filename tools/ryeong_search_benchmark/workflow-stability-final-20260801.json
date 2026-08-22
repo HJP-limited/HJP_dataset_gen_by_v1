@@ -1,0 +1,27 @@
+{
+  "environment": "JVM deterministic model fixture + production Kotlin orchestrator/validator/ToolRegistry",
+  "repeats_per_workflow": 10,
+  "email_contact_chain": {
+    "successes": 10,
+    "total": 10,
+    "sequence": ["search_contacts", "get_contact", "open_compose"],
+    "p50_ms": 1.146875,
+    "p95_ms": 7.215959
+  },
+  "sms_contact_chain": {
+    "successes": 10,
+    "total": 10,
+    "sequence": ["search_contacts", "get_contact", "open_compose"],
+    "p50_ms": 1.060417,
+    "p95_ms": 3.64425
+  },
+  "relative_calendar": {
+    "successes": 10,
+    "total": 10,
+    "sequence": ["get_current_datetime", "create_calendar_event"],
+    "p50_ms": 1.281625,
+    "p95_ms": 2.424
+  },
+  "crashes": 0,
+  "timeouts": 0
+}

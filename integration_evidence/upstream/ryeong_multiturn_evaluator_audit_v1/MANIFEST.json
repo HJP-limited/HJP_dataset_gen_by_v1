@@ -1,0 +1,227 @@
+{
+  "task": "ryeong_multiturn_evaluator_audit_v1",
+  "verdict": "BLOCKED — REFERENCE REPOSITORY NOT PRESENT",
+  "scope": "read-only audit; no evaluator run, no adapter implemented, no production change",
+  "reference": {
+    "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+    "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+    "exists": false,
+    "closest_present": {
+      "path": "../ryeong",
+      "head": "e3dd67f6782dae50e8908190ab6debc0f9992056",
+      "branch": "main",
+      "is_the_reference": false,
+      "python_files": 0,
+      "dirty_entries": 2
+    }
+  },
+  "evaluator_audited": null,
+  "dataset_files_audited": 0,
+  "case_count": "NOT DETERMINABLE",
+  "metric_rows_with_reference_side_filled": 0,
+  "help_smoke": "NOT RUN — the file does not exist",
+  "determinable_and_recorded": [
+    "the production half of the schema comparison (20 rows)",
+    "the local multiturn assets that do exist, labelled as not-the-reference",
+    "the adapter contract's production-side requirements and three concrete translation hazards"
+  ],
+  "integrity": {
+    "reference_modified": 0,
+    "production_test_source_changed": 0,
+    "protected_evidence_changed": 0,
+    "run_3_invocation": "1 -> 1",
+    "apk_changed": false,
+    "jvm_xml_changed": false,
+    "pycache_created": 0
+  },
+  "artifacts": [
+    {
+      "file": "RYEONG_MULTITURN_EVALUATOR_AUDIT.md",
+      "sha256": "795d065de03708125498463091e25fdbea83368bbcbefb6fdd130f0ea2ace9df",
+      "size_bytes": 11610
+    },
+    {
+      "file": "adapter_contract.md",
+      "sha256": "78a57a7ab2464b4563f7cf61d22509a4503380605350c348ca6d740fc990a8f6",
+      "size_bytes": 6900
+    },
+    {
+      "file": "apk_sha256_before.txt",
+      "sha256": "289cefd0156e05b8f348de85b3df212b30dcb6a02c3364193047e1889c2bfd6b",
+      "size_bytes": 108
+    },
+    {
+      "file": "ast_parse_results.json",
+      "sha256": "1ffdacafc1d93cac93d09cab0bf0943356d56a4e3e4c07dcadfa6ffaae0f6c28",
+      "size_bytes": 620
+    },
+    {
+      "file": "baseline.json",
+      "sha256": "e28e8eb51fcf797bcdf5c2017e8e9988a119ebaf439fa8fffc8ef8851a7e2b71",
+      "size_bytes": 1435
+    },
+    {
+      "file": "category_distribution.json",
+      "sha256": "f575073237e6d259fd323b532349fdcb3fb3cd5c6ab427b520d27d5446f27709",
+      "size_bytes": 2669
+    },
+    {
+      "file": "cli_and_output_contract.md",
+      "sha256": "cbf5915ea06f7b85d8dd4ffacdf28b4b47f1f5826f07c9fc3fec04a10472e4b6",
+      "size_bytes": 1646
+    },
+    {
+      "file": "current_repo_status.txt",
+      "sha256": "cdb7286cb4177bbd0ed0e0c0e6520ba66e183a23fca652490c444b4a05b9bd6b",
+      "size_bytes": 1114849
+    },
+    {
+      "file": "dataset_files.json",
+      "sha256": "ce7bf5b8b63b3308560545c92ed3ad6baa31d594c1948143a0057fc158d34ed9",
+      "size_bytes": 2152
+    },
+    {
+      "file": "dataset_integrity.json",
+      "sha256": "fbc64c0b011cc585b062b5b137a645142aaef8450271b7a9c19fc3f980fb9637",
+      "size_bytes": 572
+    },
+    {
+      "file": "dataset_schema.json",
+      "sha256": "1bb10cc764f55855893b9298350f26c24462986f6e332a2502294bc72bf841d1",
+      "size_bytes": 569
+    },
+    {
+      "file": "dataset_sha256.txt",
+      "sha256": "c4fb7580852de888d14184fd01d17efb5ae360570bf449bf3ae78004ccff12e8",
+      "size_bytes": 531
+    },
+    {
+      "file": "dataset_statistics.json",
+      "sha256": "3d1759922ff2c4711a637eb627be396b3fba705a7325cb766ffebbbe6e5e7888",
+      "size_bytes": 573
+    },
+    {
+      "file": "dependency_inventory.json",
+      "sha256": "68362f919e8f433cb4f3e81b47b333d301fadd868ebebf7f08d87d7cd48027e2",
+      "size_bytes": 930
+    },
+    {
+      "file": "evaluator_call_graph.md",
+      "sha256": "4d6ce7aee49e19b7768dc5a42b238ff095cea9ede2e8edc220cc3dafb284a778",
+      "size_bytes": 2374
+    },
+    {
+      "file": "execution_readiness.json",
+      "sha256": "a017ea9415c6dafe7ab15c4aa1e258b23e83b310b706cc57fd45a9bcd86dbda4",
+      "size_bytes": 1411
+    },
+    {
+      "file": "gate_definitions.json",
+      "sha256": "cc61667247902292f4478de17c2260581c9e1d0b76a728bf915cee460614f91d",
+      "size_bytes": 571
+    },
+    {
+      "file": "help_command.txt",
+      "sha256": "10bfce40bf71a7fcf376ee2ea311c64267bd6c89180a0c5b6280a515449a8e01",
+      "size_bytes": 205
+    },
+    {
+      "file": "help_result.json",
+      "sha256": "9e6fe09c9001ff36e93e8f0dddfea6512e23213b5e06eb87e7baaa8b13ae7eb2",
+      "size_bytes": 285
+    },
+    {
+      "file": "help_stderr.log",
+      "sha256": "86d8036da417a5253bba99c4cbd9919d7ce4236b62057df8a3a5ac1fe4cde95c",
+      "size_bytes": 61
+    },
+    {
+      "file": "help_stdout.log",
+      "sha256": "86d8036da417a5253bba99c4cbd9919d7ce4236b62057df8a3a5ac1fe4cde95c",
+      "size_bytes": 61
+    },
+    {
+      "file": "metric_coverage_matrix.json",
+      "sha256": "134ce6cc9153077509ec7df872dbad3e9ef9e143c48d21f9bfde9520f5f37d7d",
+      "size_bytes": 4725
+    },
+    {
+      "file": "metric_definitions.json",
+      "sha256": "600c404effdb5767bbbab8868737ef660f834e43ea8c3cea93b41b82fb83f805",
+      "size_bytes": 573
+    },
+    {
+      "file": "production_schema_comparison.json",
+      "sha256": "a33b3c454e38a012eaa8d46a71a2f28c97249acf4d5ab4a8e2b02313d6d14561",
+      "size_bytes": 16831
+    },
+    {
+      "file": "protected_comparison.json",
+      "sha256": "93462ee957a12752d1c1b1a88ad020fbc19e29eb05e2315428e2e5afb313e208",
+      "size_bytes": 1780
+    },
+    {
+      "file": "protected_sha256_after.txt",
+      "sha256": "2a7fcc037c2e6b85bbc9f418dac5cddbe5b232d934edb28a7fffba3eeb2f3479",
+      "size_bytes": 121855
+    },
+    {
+      "file": "protected_sha256_before.txt",
+      "sha256": "2a7fcc037c2e6b85bbc9f418dac5cddbe5b232d934edb28a7fffba3eeb2f3479",
+      "size_bytes": 121855
+    },
+    {
+      "file": "reference_file_inventory.json",
+      "sha256": "ec3eaa96b1d23158b4a4a7715bf5cb09c2992eca965007329f473198153b166b",
+      "size_bytes": 2616
+    },
+    {
+      "file": "reference_repo_status.txt",
+      "sha256": "8f48c96b76c7e78bc510461fd963b538a79495126da5c06b2d2e1491c65986fc",
+      "size_bytes": 1449
+    },
+    {
+      "file": "reference_sha256.txt",
+      "sha256": "51d8fcfa27adca38bc72638bab934672dab6f890b88d59f1e810bdcda357e343",
+      "size_bytes": 1727
+    },
+    {
+      "file": "reference_sha256_after.txt",
+      "sha256": "51d8fcfa27adca38bc72638bab934672dab6f890b88d59f1e810bdcda357e343",
+      "size_bytes": 1727
+    },
+    {
+      "file": "resource_inventory.json",
+      "sha256": "9db320f222049a728d2bf91bdc2dfd65d62007e1dcd328c1a9e6b12d512a111c",
+      "size_bytes": 987
+    },
+    {
+      "file": "source_safety_scan.json",
+      "sha256": "02a148f7b39f330040a47db1bbe078545d5b81b06b028d157142bca4ac31bd8e",
+      "size_bytes": 638
+    },
+    {
+      "file": "source_sha256_after.txt",
+      "sha256": "c32bf06a3403c48cadb5c0d43494462b09acaff8d2ceed5060e4aa70260a85db",
+      "size_bytes": 29561
+    },
+    {
+      "file": "source_sha256_before.txt",
+      "sha256": "c32bf06a3403c48cadb5c0d43494462b09acaff8d2ceed5060e4aa70260a85db",
+      "size_bytes": 29561
+    },
+    {
+      "file": "turn_length_distribution.json",
+      "sha256": "654ed9d3032a8ced43398c5e1fa35686a886831d95003463bd67eebf8e82b9b9",
+      "size_bytes": 579
+    }
+  ],
+  "artifact_count": 36,
+  "does_not_mean": [
+    "that the original evaluator is faulty — it was never read",
+    "that the local 40/40 result summary is this code's multiturn score",
+    "that search ranking numbers may be reused as multiturn numbers",
+    "actual Gemma or actual EmbeddingGemma evaluation",
+    "production readiness"
+  ]
+}

@@ -1,0 +1,439 @@
+{
+ "what": "file-level comparison of the ryeong search library against search-core",
+ "reference_commit": "7008304b2c14136cba333840368dae35e925a885",
+ "summary": {
+  "identical": 13,
+  "differ": 12,
+  "reference_only": [
+   "HuggingFaceTokenizer.java",
+   "InMemoryKeywordCandidateSource.java",
+   "KeywordCandidateSource.java",
+   "LightweightTokenizer.java",
+   "NoOpRerankerEngine.java",
+   "RerankerEngine.java",
+   "RoomFtsKeywordRetriever.java",
+   "SearchExample.java",
+   "SearchMode.java",
+   "SqliteFts5KeywordRetriever.java",
+   "TextTokenizer.java"
+  ],
+  "current_only": []
+ },
+ "finding": "search-core is already a port of this library - same package, 13 files byte-identical. Every file present on both sides is LARGER in search-core, i.e. current is the reference plus later hardening.",
+ "ported_in_this_pass": [],
+ "not_ported_and_why": [
+  {
+   "item": "QueryAnalyzer normalisation",
+   "decision": "not ported",
+   "reason": "the reference analyzer only lowercases and splits. search-core additionally strips Korean particles and honorifics (에게/한테/씨/님/을/를/…) and stop words, so \"김서준씨\" and \"김서준한테\" already resolve to the person. Porting the reference version would remove that."
+  },
+  {
+   "item": "SqliteFts5KeywordRetriever / RoomFtsKeywordRetriever",
+   "decision": "not ported",
+   "reason": "the reference retrievers perform no FTS escaping at all. The current Room path strips every non-alphanumeric character and filters FTS operators before MATCH, which is stronger than escaping - it removes the syntax rather than quoting it."
+  },
+  {
+   "item": "RerankerEngine / NoOpRerankerEngine",
+   "decision": "not ported",
+   "reason": "a seam with no implementation behind it on the reference side either; adding an unused abstraction is not hardening."
+  },
+  {
+   "item": "TextTokenizer / LightweightTokenizer / HuggingFaceTokenizer",
+   "decision": "not ported",
+   "reason": "tokenisation here is QueryAnalyzer's job and it is the stronger of the two. HuggingFaceTokenizer additionally implies a model dependency the JVM path does not have."
+  },
+  {
+   "item": "KeywordCandidateSource / InMemoryKeywordCandidateSource",
+   "decision": "not ported",
+   "reason": "search-core already injects Room candidates through the retrieve(..., indexedKeywordResults) parameter, which is the same seam by another name."
+  },
+  {
+   "item": "SearchMode enum",
+   "decision": "not ported",
+   "reason": "RetrievalMode already covers HYBRID / KEYWORD_ONLY / SEMANTIC_ONLY."
+  },
+  {
+   "item": "SearchExample",
+   "decision": "not ported",
+   "reason": "sample code, not production."
+  }
+ ],
+ "defect_found_and_fixed": {
+  "what": "an agent lookup whose query analysed to no usable terms returned the entire roster",
+  "how": "LikeFallbackKeywordRetriever had `if (tokens.isEmpty() || matches > 0)`, and the same instance served both the card-tab browse view and the agent lookup. \"명함 찾아줘\" is entirely stop words, so it analysed to zero tokens and matched every card. With a single-card store that becomes a SINGLE_RESULT selection - an actionable target from a query that matched nothing.",
+  "fix": "LikeFallbackKeywordRetriever.EmptyQueryPolicy: the card tab keeps MATCH_ALL (an empty box means show everyone), the agent path uses MATCH_NONE.",
+  "evidence": "characterization/{red,green}/search_contract.log"
+ },
+ "files": [
+  {
+   "file": "AgentSessionState.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "f01fb7c80f5aa5b865d884c80138c1c09d70532543204a46c653c69294923bc8",
+   "reference_bytes": 1845,
+   "current_sha256": "4da323fdaa63722d3c84f6e22f947fc5cb76dce51bea00395291c8f69ef8a583",
+   "current_bytes": 5340,
+   "identical": false
+  },
+  {
+   "file": "BusinessCard.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "70dcb4d52043fead3cbb6bbb5bc04a8514d1d927a8c6aa13f31cbfef574a1f2c",
+   "reference_bytes": 2929,
+   "current_sha256": "d7b7f7e39c1026c26d5660e1bc540d34f254e6e16764634e8b8dbe041115b74f",
+   "current_bytes": 3112,
+   "identical": false
+  },
+  {
+   "file": "BusinessCardRepository.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79",
+   "reference_bytes": 391,
+   "current_sha256": "5218627cb70d079b9e0f5c088479f52610d4ac1a2aca444e21be6147d3e94f79",
+   "current_bytes": 391,
+   "identical": true
+  },
+  {
+   "file": "CardEmbedding.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "1e0c72a901a2927dc0b14207e2d56857d7c869b85f327421d82001f9ba6b3dc7",
+   "reference_bytes": 644,
+   "current_sha256": "1e0c72a901a2927dc0b14207e2d56857d7c869b85f327421d82001f9ba6b3dc7",
+   "current_bytes": 644,
+   "identical": true
+  },
+  {
+   "file": "CosineSimilarity.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "03b015f336e687cbeaa54154430373827ecdeb4a52913f50ee11693b02901750",
+   "reference_bytes": 732,
+   "current_sha256": "03b015f336e687cbeaa54154430373827ecdeb4a52913f50ee11693b02901750",
+   "current_bytes": 732,
+   "identical": true
+  },
+  {
+   "file": "EmbeddingEngine.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "d9eea97f7b2100054843e94d9637b4584dbf9aafa9c8e5067efd2f2599a1471d",
+   "reference_bytes": 446,
+   "current_sha256": "d0af7ada7c598199f2ba450cb456301b8a6b2c209abf1fef9c5004c13996c06b",
+   "current_bytes": 733,
+   "identical": false
+  },
+  {
+   "file": "EmbeddingUpdater.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "409b5124cee7f4e5c0d2d6847985558820686f40504ad3028d652c09c44d4d61",
+   "reference_bytes": 1271,
+   "current_sha256": "e7f287629349697474badaf24858c36d7aa2b0d592025f8930fc69fa75d1b6b3",
+   "current_bytes": 1427,
+   "identical": false
+  },
+  {
+   "file": "FloatVectorCodec.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "9f52a476232c825d3ba1d7c977697bf69f476280bbf6300e5a6f1302b951f5d7",
+   "reference_bytes": 635,
+   "current_sha256": "9f52a476232c825d3ba1d7c977697bf69f476280bbf6300e5a6f1302b951f5d7",
+   "current_bytes": 635,
+   "identical": true
+  },
+  {
+   "file": "HuggingFaceTokenizer.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "d35fbd4d5f5b4b5bace803b2605888eef3c90e46d79900f57c8b446664c8a1b4",
+   "reference_bytes": 1318,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "InMemoryBusinessCardRepository.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "5fb2110626e82d296057e548fa0a474baa84afb6e2d6206e61b2a9de4be992bb",
+   "reference_bytes": 1074,
+   "current_sha256": "5fb2110626e82d296057e548fa0a474baa84afb6e2d6206e61b2a9de4be992bb",
+   "current_bytes": 1074,
+   "identical": true
+  },
+  {
+   "file": "InMemoryKeywordCandidateSource.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "34e9b456ffcb849d70c936b8ec8ac2e429c06dccc60614286b2078ee0b89c067",
+   "reference_bytes": 2279,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "KeywordCandidateSource.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "992d954b05669248e81897e7f88a79529ab17d6006e6c2eaf0ebc1f75d272451",
+   "reference_bytes": 162,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "KeywordRetriever.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "ff490615752fcd6ae55ecbc6aa6ad69e77cb19a87a956b676134d66d2b629cc4",
+   "reference_bytes": 160,
+   "current_sha256": "ff490615752fcd6ae55ecbc6aa6ad69e77cb19a87a956b676134d66d2b629cc4",
+   "current_bytes": 160,
+   "identical": true
+  },
+  {
+   "file": "LightweightTokenizer.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "355aedb10cf7ce139a47db59eb4de8d5c0a5e858f893d8558d57db21c03c144f",
+   "reference_bytes": 1383,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "LikeFallbackKeywordRetriever.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "364af1f5bf8b8b97956096d2d5b9bfbd27138d5c1ce2aa82dcb4bb41129f24a2",
+   "reference_bytes": 1809,
+   "current_sha256": "7dff812cd16425b09e85163fe0b9f6f597897988cb6eb39ccbedfc58a507ed17",
+   "current_bytes": 3135,
+   "identical": false
+  },
+  {
+   "file": "LocalEmbeddingEngine.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "c200f941b7540af98a2f7589ce55d3fcd3a9bdaf51f381c5486e9522efa851e7",
+   "reference_bytes": 3182,
+   "current_sha256": "c200f941b7540af98a2f7589ce55d3fcd3a9bdaf51f381c5486e9522efa851e7",
+   "current_bytes": 3182,
+   "identical": true
+  },
+  {
+   "file": "NoOpRerankerEngine.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "9f0212eb354ead5844171bd89d671bbc620421bd56398b56474f1e93597799e8",
+   "reference_bytes": 709,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "OnDeviceEmbeddingEngine.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "53680ba921bf58bc3cf0c60a4f3819112bd05597f7a1caeba5345cd5260993ec",
+   "reference_bytes": 2406,
+   "current_sha256": "a2b5d89ec5b22e73fdf166c7e574f5fb0a744d03ff7e4489705cb14796d9d0fa",
+   "current_bytes": 4659,
+   "identical": false
+  },
+  {
+   "file": "QueryAnalysis.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+   "reference_bytes": 818,
+   "current_sha256": "c34fde4d2af95d7778881e70d0015a926e6811f96f46fdaa1cfd1fda204fb39a",
+   "current_bytes": 818,
+   "identical": true
+  },
+  {
+   "file": "QueryAnalyzer.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "3636f224135a0a82b52bb0195c999c4ffe101fec5d0cd52a9b55c3e7ae9eb8e3",
+   "reference_bytes": 1207,
+   "current_sha256": "06e5cef78235063abbc3658d58ee9431eed98e2598bfff7da289d1dd6584d023",
+   "current_bytes": 2788,
+   "identical": false
+  },
+  {
+   "file": "RagContextBuilder.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "52df1eb51f69ee5c4cec039f097c3ec1442f99f37a25cabc23eea6f270aaf48f",
+   "reference_bytes": 1484,
+   "current_sha256": "52df1eb51f69ee5c4cec039f097c3ec1442f99f37a25cabc23eea6f270aaf48f",
+   "current_bytes": 1484,
+   "identical": true
+  },
+  {
+   "file": "RagEvaluator.java",
+   "in_reference": false,
+   "in_current": false,
+   "reference_sha256": null,
+   "reference_bytes": null,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "ReciprocalRankFusion.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "c7ef622267fda9c94c64db5c1cf02809e116b4df90a0284232e289d9779452f2",
+   "reference_bytes": 1899,
+   "current_sha256": "d585ca7ca1129a80fb54df529c6896dc6f8bc797581bce8497ef02052e626d90",
+   "current_bytes": 2123,
+   "identical": false
+  },
+  {
+   "file": "RerankerEngine.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "a06dbb1dbe7c303cc04a793fb9da65ee062a64c5f83f8974380fbbe7d77590a7",
+   "reference_bytes": 228,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "RetrievalMode.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "ee83c2f0fd52fe5a1194aef5e37514cdd641589f8a174cf56b90b3acaef47287",
+   "reference_bytes": 96,
+   "current_sha256": "ee83c2f0fd52fe5a1194aef5e37514cdd641589f8a174cf56b90b3acaef47287",
+   "current_bytes": 96,
+   "identical": true
+  },
+  {
+   "file": "RetrievalResponse.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "f69c699ff1eea2f51cff71a53ad88d7fddbc5d42a548e994da14887bc19d5668",
+   "reference_bytes": 2031,
+   "current_sha256": "ac44e726056427395d30619c1142b83b41c51df1b171076efe6cd51b5d1aeba3",
+   "current_bytes": 3117,
+   "identical": false
+  },
+  {
+   "file": "RetrievalService.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "4474947e827705a1be3b50104beacaf01a856ca615069825405ea72231c7ee34",
+   "reference_bytes": 157,
+   "current_sha256": "4474947e827705a1be3b50104beacaf01a856ca615069825405ea72231c7ee34",
+   "current_bytes": 157,
+   "identical": true
+  },
+  {
+   "file": "RoomFtsKeywordRetriever.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "4c33842ce5c4f6d2656c77fb5381edef065a9ce3810e6cf821614ebc9f417da9",
+   "reference_bytes": 587,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "ScoreBreakdown.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "8a8a34ef5aa131a2d7ae65b8ba85434b982499b5f20ff02aef6b314c0a01023d",
+   "reference_bytes": 766,
+   "current_sha256": "8a8a34ef5aa131a2d7ae65b8ba85434b982499b5f20ff02aef6b314c0a01023d",
+   "current_bytes": 766,
+   "identical": true
+  },
+  {
+   "file": "SearchExample.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "b740148235e08b87e756df7a920aded01b5f557dc5bb4268acafb9955c2e5966",
+   "reference_bytes": 3849,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "SearchLookupService.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "6b5b8b804ef064dc63942ce623264513d869c7551ee440a17e0d4e6a95d65fd1",
+   "reference_bytes": 4680,
+   "current_sha256": "8e362eba7aa465f8e24ec2526f83096d2d2bf5ba00b03bf6d3e43a47d68596fb",
+   "current_bytes": 6827,
+   "identical": false
+  },
+  {
+   "file": "SearchMode.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "036fc33fd7fc471736ab6ac4ae6c1b02d561cedc4eff869c1c71e7a048adfaeb",
+   "reference_bytes": 97,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "SearchResult.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "50b88d9d574a950b0cf240dfa7224d877b26a3e676dad7b8e795a3d119a8a984",
+   "reference_bytes": 1531,
+   "current_sha256": "0e9d7e1e13232f060e730d4e3546436b7446b344bb865fd37371253bdd3618bb",
+   "current_bytes": 2298,
+   "identical": false
+  },
+  {
+   "file": "SemanticRetriever.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "97c175beea1bedbef4bb42afab955d386251409b4e68fc93d2e3abd3d6f20e58",
+   "reference_bytes": 1307,
+   "current_sha256": "5e81b8b5fdfa78ba0b5c0f2c0a3cc61791436482157d62acc5cc5fb0b6eba393",
+   "current_bytes": 1675,
+   "identical": false
+  },
+  {
+   "file": "SortOption.java",
+   "in_reference": true,
+   "in_current": true,
+   "reference_sha256": "101bcc0cd5eef970cad81e094ddf59f4d23768fa8f7e88975a0c068b628924f7",
+   "reference_bytes": 107,
+   "current_sha256": "101bcc0cd5eef970cad81e094ddf59f4d23768fa8f7e88975a0c068b628924f7",
+   "current_bytes": 107,
+   "identical": true
+  },
+  {
+   "file": "SqliteFts5KeywordRetriever.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "01ae3b72ac69dcbf7377414fd287ef73da3ed2040b3885ce047d42a1aeb16ca4",
+   "reference_bytes": 489,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  },
+  {
+   "file": "TextTokenizer.java",
+   "in_reference": true,
+   "in_current": false,
+   "reference_sha256": "838020c92b7922541b43b652664c933df49b0faa6937136791974541d39fb7f7",
+   "reference_bytes": 576,
+   "current_sha256": null,
+   "current_bytes": null,
+   "identical": false
+  }
+ ]
+}

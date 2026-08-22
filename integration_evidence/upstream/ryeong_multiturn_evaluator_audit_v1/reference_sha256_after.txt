@@ -1,0 +1,9 @@
+f013eb9b4196a4f1e5359ea018451381c28b6fca71804434ad0d229e0e51ea30  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/.DS_Store
+01d1b56ba36868ae7e502546f1d8dc5fb234743a4d0d98764c2eddb1d2c5e74a  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/PROJECT_ANALYSIS.md
+f4a8473b3771c246e366467cbdda4a61457132df2aac5102799f8b7f8f2588b1  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/README.md
+1efd00c5ac789ff273525973185ad2f81dd6a9a723e18fdf6b07f383878fb0a4  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/src/main/java/com/hjp/searchlookup/BusinessCard.java
+66e8934cbc507f108d49b7a6b0648d37ae3534bf23774843889ea6da87edd132  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/src/main/java/com/hjp/searchlookup/EmbeddingEngine.java
+c200f941b7540af98a2f7589ce55d3fcd3a9bdaf51f381c5486e9522efa851e7  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/src/main/java/com/hjp/searchlookup/LocalEmbeddingEngine.java
+e548d6000260f25c5ba87760e83fd1707040e95e8e4af2c9690fceec0e9b6548  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/src/main/java/com/hjp/searchlookup/SearchExample.java
+ad4e50dbc54f69d7f35c9ba358d18d6822c5e38ab1363f3ae05afdfab5d33158  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/src/main/java/com/hjp/searchlookup/SearchLookupService.java
+837fbc5374ca6c89562d17fad09fc0f39ff0094af76436d868c6efccadf74637  /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong/src/main/java/com/hjp/searchlookup/SearchResult.java

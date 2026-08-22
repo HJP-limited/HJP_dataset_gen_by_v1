@@ -1,0 +1,13 @@
+Reusing configuration cache.
+> Task :search-core:processResources NO-SOURCE
+> Task :search-core:processTestResources NO-SOURCE
+> Task :search-core:compileJava
+> Task :search-core:classes
+> Task :search-core:compileTestJava
+> Task :search-core:testClasses
+> Task :search-core:test
+
+BUILD SUCCESSFUL in 897ms
+3 actionable tasks: 3 executed
+Configuration cache entry reused.
+SELF_TEST_EXIT_CODE=0

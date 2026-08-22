@@ -1,0 +1,10 @@
+Reusing configuration cache.
+> Task :search-core:processResources NO-SOURCE
+> Task :search-core:compileJava
+> Task :search-core:classes
+> Task :search-core:compileTestJava
+
+BUILD SUCCESSFUL in 713ms
+2 actionable tasks: 2 executed
+Configuration cache entry reused.
+COMPILE_EXIT_CODE=0

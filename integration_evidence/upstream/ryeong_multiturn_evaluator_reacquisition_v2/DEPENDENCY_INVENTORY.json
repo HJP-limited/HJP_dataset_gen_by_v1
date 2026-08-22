@@ -1,0 +1,63 @@
+{
+  "derived_from": "import statements in the upstream source; no requirements file exists in the branch",
+  "requirements_files_present": {"requirements.txt": false, "pyproject.toml": false,
+    "Pipfile": false, "setup.py": false, "environment.yml": false, "any_lock_file": false},
+  "version_pinning_available": false,
+  "python_minimum": "3 (f-strings, pathlib, urllib.request; no version is declared anywhere)",
+  "environment_probe": {"interpreter": "/usr/bin/python3", "version": "3.9.6"},
+  "eval_multiturn_py": {
+    "stdlib": ["__future__", "argparse", "collections", "json", "pathlib", "random", "re", "sys", "time", "urllib"],
+    "third_party": [], "repository_local": [],
+    "verdict": "RUNNABLE — no package needs installing; it only speaks HTTP to the server"
+  },
+  "hybrid_server_py": {
+    "stdlib": ["json", "os", "re", "sqlite3", "struct", "sys", "threading", "time",
+               "urllib.request", "uuid", "http.server", "pathlib"],
+    "third_party": [
+      {"name": "numpy", "import_line": 23, "scope": "module-level", "status": "AVAILABLE",
+       "path": "/Users/byeol/Library/Python/3.9/lib/python/site-packages/numpy/__init__.py"},
+      {"name": "sentence_transformers", "pypi_name": "sentence-transformers", "import_line": 705,
+       "scope": "module-level", "status": "MISSING", "blocking": true,
+       "note": "line 706 immediately constructs SentenceTransformer(MODEL_PATH), so this is not a lazy import"}
+    ],
+    "transitive": [
+      {"name": "torch", "status": "AVAILABLE"},
+      {"name": "transformers", "status": "MISSING", "note": "required by sentence-transformers"}
+    ],
+    "repository_local": [
+      {"name": "eval_search", "path": "scripts/eval_search.py", "import_line": 21,
+       "resolved": true, "status": "PRESENT",
+       "note": "resolved via sys.path.insert(0, Path(__file__).resolve().parent) at line 20",
+       "own_module_level_third_party": [],
+       "own_lazy_imports": [{"name": "numpy", "line": 1111}, {"name": "sentence_transformers", "line": 1126}]}
+    ],
+    "optional_imports": [],
+    "platform_specific_imports": [],
+    "native_dependencies": ["none declared; torch/transformers bring their own wheels"],
+    "java_android_litert_tflite_dependencies": [
+      {"item": "litert-lm serve", "kind": "external process, not a Python package",
+       "endpoint": "http://127.0.0.1:9379/v1/chat/completions", "model_id": "gemma4e2b",
+       "status": "ABSENT — no binary or start script in the branch", "needed_for": "--generate only"}
+    ],
+    "verdict": "BLOCKED — sentence_transformers missing, and the model checkpoint is a second, independent blocker"
+  },
+  "reproducible_install_command": {
+    "note": "package NAMES are derived from imports; VERSIONS cannot be derived because the branch pins none. Pin them at install time with pip freeze.",
+    "steps": [
+      "python3 -m venv <ISOLATED>/venv",
+      "<ISOLATED>/venv/bin/pip install --upgrade pip",
+      "<ISOLATED>/venv/bin/pip install numpy sentence-transformers",
+      "<ISOLATED>/venv/bin/pip freeze > <EVIDENCE>/pip_freeze.txt"
+    ],
+    "not_executed_in_this_task": true,
+    "why_not_executed": "installing these ~2GB of wheels still would not start the server: the 1.2GB models/embeddinggemma-300m checkpoint is absent and is a separate blocker. No system-wide install was performed and no package version was guessed."
+  },
+  "environment_variables": [
+    {"name": "HJP_TEST_CARDS", "read_at": "hybrid_server.py:702",
+     "effect": "when set (e.g. data/cards_test50.json) the server uses a small controlled card set instead of the default",
+     "required": false}
+  ],
+  "working_directory_assumption": "scripts/ resolves REPO as Path(__file__).resolve().parent.parent, so the server can be launched from anywhere; the upstream documented command runs it from the repo root",
+  "network_access_required": "none at run time once the checkpoint is local; the initial checkpoint acquisition needs network and possibly HuggingFace gate approval",
+  "filesystem_writes": "the server writes an SQLite FTS index; no evaluator output files are written at all"
+}

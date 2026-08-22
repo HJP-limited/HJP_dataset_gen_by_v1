@@ -1,0 +1,19 @@
+# ── 공식 Ryeong Search Multiturn Compatibility run (이번 작업에서 실행하지 않았다) ──
+# 실행 전: PRE_RUN_FREEZE_MANIFEST.json 의 모든 SHA 를 재확인하고 일치하지 않으면 중단한다.
+
+# 1) frozen scenario manifest 재생성이 필요 없다는 것부터 확인 (byte-identical 이어야 함)
+PYTHONDONTWRITEBYTECODE=1 python3 tools/ryeong_multiturn_v4/export_scenarios.py \
+  --out /tmp/ryeong_export_verify.json
+shasum -a 256 /tmp/ryeong_export_verify.json \
+              tools/ryeong_multiturn_v4/generated/ryeong_multiturn_scenarios_v1.json \
+              app/src/test/resources/ryeong/scenarios_v1.json
+#   세 SHA 가 모두 c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42 여야 한다.
+
+# 2) 공식 run — 130 시나리오를 실제 production kernel 로
+JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \
+./gradlew --offline :app:testDebugUnitTest \
+  --tests 'com.example.hjp.eval.ryeong.RyeongOfficialCompatibilityRunTest' \
+  -PryeongOfficialRun=true \
+  > <EVIDENCE>/official_stdout.log 2> <EVIDENCE>/official_stderr.log
+#   ↑ 이 test class 는 아직 없다. 공식 run 을 여는 시점에 추가한다 (§OFFICIAL_RUN_PLAN 참조).
+#   RyeongRunGate 가 exit code 를 결정한다: 실패가 하나라도 있으면 non-zero.

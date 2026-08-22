@@ -1,0 +1,11 @@
+usage: eval_multiturn.py [-h] [--generate] [--sample SAMPLE] [--repeat REPEAT]
+                         [--verbose] [--latency]
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --generate       실제로 답변을 생성해 체크리스트까지 채점한다(턴당 ~10초)
+  --sample SAMPLE  시나리오를 N개만 (유형별 층화 추출). 21종을 다 담으려면 25 이상
+  --repeat REPEAT  k회 반복해 pass^k 를 낸다
+  --verbose        실패 건을 전부 출력
+  --latency        생성 시간을 함께 출력한다. **실기기 지연이 아니라** LLM 서버를 띄운 데스크톱 성능이므로 성능
+                   지표로 인용하지 말 것. 같은 환경 안에서의 회귀 감지용

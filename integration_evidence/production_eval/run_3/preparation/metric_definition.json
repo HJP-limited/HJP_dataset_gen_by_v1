@@ -1,0 +1,40 @@
+{
+  "ranking": {
+    "denominator": 183,
+    "note": "the 183 ranking queries. Not 203, which folds the hard negatives into a ranking average; not 143, which the earlier final report reached by dropping 지역+직함(문장) from its own sum.",
+    "P@1": "1 when the top-ranked card id is in the relevant set, else 0; averaged over 183",
+    "P@5": "relevant ids among the top 5, divided by 5; averaged over 183",
+    "R@5": "relevant ids among the top 5, divided by |relevant|; averaged over 183",
+    "MRR": "reciprocal rank of the first relevant id over the whole ranked list, 0 when none appears; averaged over 183",
+    "nDCG@5": "binary-gain DCG over the top 5 divided by the ideal DCG for min(5, |relevant|)",
+    "top1_count": "the same fact as P@1 stated as a whole number, which is what the gate compares",
+    "recall5_complete_count": "queries whose top 5 contained every relevant id",
+    "per_category": "the same figures grouped by the reference's query category",
+    "top_k": 20
+  },
+  "abstention": {
+    "denominator": 20,
+    "total": "every query whose relevant set is empty",
+    "passed": "returned an empty result list",
+    "failed": "returned anything at all",
+    "accuracy": "passed / 20",
+    "failure_detail": "per failing query: the returned card ids, and for each card its location, address, title and company",
+    "exclusions_permitted": 0,
+    "note": "the runner has no mechanism to exclude a query. run_2 excluded one by name after it failed run_1."
+  },
+  "safety_and_operations": {
+    "stale_id_resolved": "lookups by ids no card carries that still return a card",
+    "unstable_rankings": "queries whose repeated identical lookup returned a different order",
+    "latency_ms": "wall-clock milliseconds per query inside the JVM, p50/p95/max — reported, not gated",
+    "keyword_fallback_ratio": "share of queries whose RetrievalResponse fell back to KEYWORD_ONLY",
+    "semantic_axis_executed": "whether any query actually ran the semantic axis"
+  },
+  "semantic_status": {
+    "embedding_engine": "LocalEmbeddingEngine — isModelBacked() is false",
+    "embeddinggemma_present": false,
+    "expected_semantic_axis_executed": false,
+    "expected_keyword_fallback_ratio": 1.0,
+    "concept_categories": "개념형(easy) and 개념형(hard) will describe keyword search attempting questions built to need meaning; they are a keyword-only diagnostic and are not gated",
+    "prohibition": "no deterministic test vector is used in place of a model, and no figure from this run may be described as semantic retrieval performance"
+  }
+}

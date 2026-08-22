@@ -1,252 +1,142 @@
-# korean_bizcard_full_dataset_rebuild_v2
+# HJP Agent — `Agent_0822`
 
-`korean_bizcard_full_dataset_rebuild_v2`는 한국어 명함 synthetic dataset을 다시 설계한 v2 생성기이다. 목표는 단순 이미지 생성이 아니라, 하나의 마스터 어노테이션을 기준으로 탐지, 인식, KIE까지 바로 사용할 수 있는 파생 산출물을 함께 만드는 것이다.
+Android 온디바이스 명함 AI 에이전트의 2026-08-22 스냅샷. **성능 평가를 돌릴 수 있는 상태**로 올린 브랜치다.
 
-이 버전의 핵심 특징은 다음과 같다.
+기준 문서는 `CLAUDE.md`이고, 구조·검색·평가 문서는 `docs/`에 있다.
 
-- 가로/세로 명함을 분리된 레이아웃 규칙으로 생성한다.
-- 생성 단계에서 augmentation을 하지 않아 bbox와 렌더링 텍스트의 정합성을 유지한다.
-- `master_annotations`를 1차 정답으로 두고 YOLO, COCO, PaddleOCR 스타일 산출물을 파생한다.
-- 실패 샘플 로그, 실행 요약, 검증 요약을 함께 남긴다.
-- split은 요청 개수가 아니라 실제 성공한 샘플 ID를 기준으로 만든다.
+---
 
-## 프로젝트 구조
+## 1. 이 브랜치에 있는 것
 
-```text
-korean_bizcard_full_dataset_rebuild_v2/
-├─ README.md
-├─ REBUILD_PLAN.md
-├─ configs/
-│  ├─ dataset_config.json
-│  ├─ themes.json
-│  ├─ fonts.json
-│  └─ company_domain_map.json
-├─ docs/
-│  └─ validation_report.md
-├─ src/
-│  ├─ generate_dataset_v2.py
-│  └─ qa_checks.py
-└─ output/
-   └─ <output-name>/
-      ├─ images/
-      ├─ labels_yolo/
-      ├─ coco/
-      ├─ master_annotations/
-      ├─ det/
-      ├─ rec/
-      │  └─ images/
-      ├─ kie/
-      ├─ previews/
-      ├─ splits/
-      └─ logs/
+| | |
+|---|---|
+| 에이전트 소스 | `app`, `agent-contract`, `agent-core`, `search-core`, `tool-contact`, `tool-contract`, `tool-android-intents`, `tool-datetime`, `llm-litert` |
+| main / test / androidTest 소스 | 96 / 125 / 7 개 |
+| 평가 하네스 | `app/src/test/java/com/example/hjp/eval/` (Ryeong 호환성 평가, mutation self-test, canary) |
+| 동결 평가 입력 | `app/src/test/resources/ryeong/` — 시나리오 130개, 명함 1,000장 |
+| 시나리오 exporter | `tools/ryeong_multiturn_v4` (upstream `1caec3a2`), `tools/ryeong_multiturn_v5` (upstream `9f359c7`) |
+| 검색 벤치마크 | `tools/ryeong_search_benchmark` |
+| 평가 증거·freeze manifest | `integration_evidence/evaluation`, `integration_evidence/upstream`, `integration_evidence/production_eval` |
+
+## 2. 일부러 뺀 것
+
+* **모델 파일 전부** — `.litertlm`(최대 2.5GB), `embeddinggemma-300m.tflite`(179MB), `sentencepiece.model`.
+  GitHub 파일 크기 한도를 넘고, 저장소가 무거워진다. 받는 방법은 §5에 있다.
+* `build/` 산출물, APK, 스냅샷 디렉터리, 과거 사이클 번들 — 재생성 가능하거나 이력일 뿐이다.
+
+모델 없이도 **아래 1~3번 평가는 그대로 돌아간다.** 4번만 모델이 필요하다.
+
+---
+
+## 3. 준비
+
+* JDK **21**
+* Android SDK **36.1**, build-tools 36.x
+* `local.properties`에 `sdk.dir=<Android SDK 경로>` (이 파일은 커밋되지 않는다)
+
+```bash
+git clone -b Agent_0822 https://github.com/HJP-limited/HJP_dataset_gen_by_v1.git
+cd HJP_dataset_gen_by_v1
+echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties   # macOS 예시
+export JAVA_HOME=<JDK 21 경로>
 ```
 
-## 전체 생성 로직
+---
 
-데이터 생성 흐름은 아래 순서로 진행된다.
+## 4. 돌릴 수 있는 평가
 
-1. `configs/dataset_config.json`, `themes.json`, `fonts.json`, `company_domain_map.json`을 로드한다.
-2. 시드를 `dataset_config.json`의 `seed` 값으로 고정한다.
-3. 출력 디렉터리 하위 폴더를 한 번에 만든다.
-4. 각 샘플마다 명함 규격, 방향, 테마, 폰트 프로파일, 필드 값을 무작위로 선택한다.
-5. 레이아웃 함수가 실제 텍스트를 이미지에 렌더링하고, 렌더링된 위치를 기준으로 bbox와 reading order를 기록한다.
-6. 샘플 단위 `master_annotations/*.json`과 YOLO 라벨, recognition crop, preview 이미지를 만든다.
-7. 전체 생성이 끝나면 성공한 샘플 ID만 모아 `train/val/test` split을 만든다.
-8. 누적된 마스터 어노테이션으로 COCO, PaddleOCR detection, PaddleOCR recognition, KIE JSON을 내보낸다.
-9. 마지막에 실행 요약과 검증 요약을 작성하고 `docs/validation_report.md`를 갱신한다.
+### 4.1 전체 JVM 회귀 — 모델 불필요
 
-## 핵심 구성 요소
-
-### 1. 설정 계층
-
-- `dataset_config.json`
-  - 클래스 목록, 샘플 수 기본값, 세로 명함 비율, preview 수, 필드 출현 확률, 카드 규격, 이름/회사/직책/주소 후보군을 담는다.
-- `themes.json`
-  - 배경색, 강조색, 본문색, 보조색 조합을 정의한다.
-- `fonts.json`
-  - Windows 폰트 후보와 `title/body/label` 스타일 조합을 정의한다.
-- `company_domain_map.json`
-  - 회사명과 이메일/웹사이트 도메인의 상관관계를 만든다.
-
-### 2. 데이터 생성 계층
-
-`DataFactory`가 실제 텍스트 값을 만든다.
-
-- `name`, `company`, `position`은 기본적으로 항상 생성된다.
-- `department`, `phone`, `mobile`, `fax`, `email`, `address`, `website`, `postcode`는 확률적으로 생성된다.
-- 비어 있는 필드가 너무 많아지지 않도록 `min_present_fields`를 만족할 때까지 부족한 필드를 다시 채운다.
-- 이메일은 회사 도메인 매핑을 우선 참고하고, 일부는 일반 도메인으로 섞어 현실성을 만든다.
-- 전화번호는 지역번호/휴대폰 접두어와 구분자 `-`, `.`를 랜덤 조합한다.
-
-### 3. 렌더링 계층
-
-`generate_dataset_v2.py`는 텍스트를 먼저 결정한 뒤, 실제 그린 결과를 기준으로 어노테이션을 만든다.
-
-- `make_background`
-  - 단색 배경을 만들고 일부 샘플에는 약한 그라데이션을 넣는다.
-- `RenderContext`
-  - 텍스트 렌더링, 중앙 정렬, 연락처 prefix 부착, separator 선 그리기를 담당한다.
-- `wrap_text`
-  - 최대 폭을 넘는 경우 공백 기준으로 줄바꿈하고, 긴 단어는 문자 단위로 자른다.
-- `AnnotationBuilder`
-  - 필드별 `field_id`, `bbox_xyxy`, `reading_order`, `line_ids`, `line_boxes`를 누적한다.
-
-### 4. 레이아웃 계층
-
-가로/세로 명함은 별도 레이아웃 풀을 가진다.
-
-- 가로 레이아웃
-  - `horizontal_left`
-  - `horizontal_right`
-  - `split_horizontal`
-  - `minimalist`
-- 세로 레이아웃
-  - `vertical_center`
-
-즉, 가로 명함에서 세로 전용 레이아웃이 선택되지 않도록 분리되어 있다.
-
-### 5. 산출물 파생 계층
-
-한 장의 명함에서 아래 산출물이 동시에 만들어진다.
-
-- 원본 이미지
-  - `images/bizcard_<id>.jpg`
-- YOLO detection 라벨
-  - `labels_yolo/bizcard_<id>.txt`
-- 마스터 어노테이션
-  - `master_annotations/bizcard_<id>.json`
-- recognition crop 이미지
-  - `rec/images/<field_id>.jpg`
-- KIE JSON
-  - `kie/bizcard_<id>.json`
-- preview 이미지
-  - `previews/preview_<id>.jpg`
-
-전체 샘플이 끝나면 추가로 아래 파일들이 생성된다.
-
-- COCO
-  - `coco/annotations_coco.json`
-- YOLO용 메타
-  - `classes.txt`
-  - `data.yaml`
-- PaddleOCR detection
-  - `det/train.txt`, `det/val.txt`, `det/test.txt`
-- PaddleOCR recognition
-  - `rec/train.txt`, `rec/val.txt`, `rec/test.txt`
-- split 파일
-  - `splits/train.txt`, `splits/val.txt`, `splits/test.txt`
-  - `splits/successful_ids.json`
-- 실행/검증 로그
-  - `logs/run_summary.json`
-  - `logs/validation_summary.json`
-  - `logs/failed_samples.jsonl` (실패가 있을 때 누적)
-
-## 마스터 어노테이션 스키마
-
-샘플 단위 JSON은 대략 아래 구조를 가진다.
-
-```json
-{
-  "image_id": "00000",
-  "image_path": "images/bizcard_00000.jpg",
-  "image_size": { "width": 1063, "height": 591 },
-  "card_orientation": "horizontal",
-  "card_spec_mm": { "width": 90, "height": 50 },
-  "layout_type": "horizontal_left",
-  "theme_name": "classic_white",
-  "font_profile": "modern_korean",
-  "fields": [
-    {
-      "field_id": "00000_001",
-      "field_class": "company",
-      "field_class_id": 1,
-      "rendered_text": "Tel. 02-1234-5678",
-      "canonical_text": "02-1234-5678",
-      "bbox_xyxy": [100, 120, 260, 150],
-      "bbox_size": { "width": 160, "height": 30 },
-      "reading_order": 1,
-      "line_ids": ["00000_001_l01"],
-      "line_boxes": [[100, 120, 260, 150]],
-      "block_id": "00000_001_b01",
-      "language": "ko"
-    }
-  ]
-}
+```bash
+./gradlew test --continue
 ```
 
-문서적으로 중요한 점은 다음 두 가지다.
+이 스냅샷 기준값: **90 suites / 670 tests / 0 failures / 0 errors / 1 skipped.**
+skip 1건은 §4.3의 공식 평가로, 환경변수를 주지 않으면 실행되지 않는다.
 
-- `rendered_text`
-  - 카드에 실제로 그린 문자열이다. 연락처 prefix가 포함될 수 있다.
-- `canonical_text`
-  - prefix를 제외한 정규화된 값이다. KIE나 후처리 기준 텍스트로 쓰기 좋다.
+### 4.2 Ryeong 시나리오 재수출 (결정성 확인) — 모델 불필요
 
-## split 및 검증 로직
-
-### split
-
-- 성공한 샘플 ID 목록만 대상으로 셔플한다.
-- 기본 비율은 `train 80% / val 10% / test 10%`다.
-- split 텍스트 파일에는 `images/bizcard_<id>.jpg` 상대 경로가 기록된다.
-
-### 검증
-
-`src/qa_checks.py`가 아래 항목을 점검한다.
-
-- 이미지 수와 YOLO 라벨 수가 일치하는지
-- 이미지 수와 마스터 어노테이션 수가 일치하는지
-- bbox가 음수이거나 이미지 범위를 벗어나지 않는지
-- 비어 있는 `rendered_text`가 있는지
-- 클래스, 레이아웃, 방향, 테마 분포가 어떻게 나왔는지
-
-검증 결과는 JSON과 Markdown 둘 다 남는다.
-
-## 실행 방법
-
-기본 실행 예시는 아래와 같다.
-
-```powershell
-.\venv\Scripts\python.exe .\korean_bizcard_full_dataset_rebuild_v2\src\generate_dataset_v2.py --count 200 --output-name v2_base
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 tools/ryeong_multiturn_v4/export_scenarios.py \
+  --out /tmp/scenarios_v1.json
+shasum -a 256 /tmp/scenarios_v1.json app/src/test/resources/ryeong/scenarios_v1.json
 ```
 
-자주 쓰는 인자는 다음과 같다.
+두 SHA가 같아야 한다 — `c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42`.
+exporter는 upstream `build_scenarios()`를 그대로 호출하고 `PYTHONHASHSEED=0`을 고정하므로
+어느 기기에서 돌려도 바이트가 같다. v5는 upstream 최신 tip(`9f359c7`) 기준 139/386/22를 낸다.
 
-- `--count`
-  - 생성할 샘플 수. 생략하면 `dataset_config.json`의 `default_count`를 사용한다.
-- `--output-name`
-  - `output/<output-name>` 폴더명을 결정한다.
-- `--preview-count`
-  - preview 이미지 생성 수를 덮어쓴다.
+### 4.3 Ryeong 검색 멀티턴 호환성 (공식) — 모델 불필요, keyword-only
 
-예시:
-
-```powershell
-.\venv\Scripts\python.exe .\korean_bizcard_full_dataset_rebuild_v2\src\generate_dataset_v2.py --count 20 --output-name smoke_test --preview-count 5
+```bash
+RYEONG_OFFICIAL_RUN=true \
+RYEONG_OFFICIAL_OUT=<결과를 쓸 디렉터리> \
+RYEONG_GIT_HEAD=$(git rev-parse HEAD) \
+./gradlew :app:testDebugUnitTest \
+  --tests 'com.example.hjp.eval.ryeong.RyeongOfficialCompatibilityRunTest' --rerun-tasks
 ```
 
-## 현재 코드 기준 기본 분포
+`result.json` / `gate_verdict.json` / `run_status.json` 3종을 원자적으로 쓴다.
+실행 전에 `integration_evidence/evaluation/ryeong_official_v1/freeze/jvm_keyword/PRE_RUN_FREEZE_MANIFEST.json`의
+SHA를 확인하고, 하나라도 어긋나면 돌리지 마라.
 
-`dataset_config.json` 기준 주요 값은 다음과 같다.
+> **이 축이 재는 것**: 검색 라우팅, focus 유지, 후속 질문, top-5 검색 순위, 시나리오 간 세션 격리.
+> **재지 않는 것**: compose·calendar·update, typed outcome, 도구 호출 순서. 전체 Tool agent 성능이 아니다.
 
-- 기본 생성 수: `5000`
-- 세로 명함 비율: `0.2`
-- preview 수: `30`
-- 최소 필드 수: `5`
-- 명함 규격 분포:
-  - `90 x 50mm`: `80%`
-  - `85 x 55mm`: `20%`
-- 클래스 수: `11`
-  - `name`, `company`, `position`, `department`, `phone`, `mobile`, `fax`, `email`, `address`, `website`, `postcode`
+`v1` 실행 결과는 `integration_evidence/evaluation/ryeong_official_v1/`에 봉인돼 있다.
+판정은 `INVALID RUN`이고 그 사유(검색 전용 턴에서 action tool 1회)와 원인 분석이 같은 경로에 있다.
+**결과를 본 뒤 dataset·gate·adapter를 고쳐 같은 버전으로 다시 돌리지 마라.** 고칠 일이 생기면 새 버전으로 만든다.
 
-## 운영 시 주의사항
+### 4.4 실기기 actual-model 평가 — 모델 필요
 
-- 폰트 로딩은 `fonts.json`의 Windows 경로를 기준으로 한다. 다른 OS에서 돌리려면 후보 경로를 먼저 수정해야 한다.
-- 생성 단계에서는 blur, noise, rotate 같은 augmentation을 하지 않는다.
-- preview는 앞에서부터 `preview_count`개 샘플에만 생성된다.
-- 랜덤 시드는 고정되어 있지만, `count`, `output-name`, 설정 파일 내용이 바뀌면 결과도 달라진다.
-- 실패 샘플은 전체 실행을 중단하지 않고 `failed_samples.jsonl`에 기록한 뒤 다음 샘플로 넘어간다.
+물리 ARM64 기기, `.litertlm` 배치, EmbeddingGemma asset이 모두 준비돼야 한다.
+절차와 선행 조건은 `integration_evidence/evaluation/ryeong_official_v1/final/FINAL_EVALUATION_REPORT.md` §4·§15에 있다.
+이 스냅샷 시점에서는 **아직 실행되지 않았다**(`NOT RUN`).
 
-## 관련 문서
+---
 
-- 전체 재설계 배경: [REBUILD_PLAN.md](C:/Users/m206/Desktop/byeol/korean_bizcard_full_dataset_rebuild_v2/REBUILD_PLAN.md)
-- 생성 스크립트 상세 설명: [src/README_generate_dataset_v2.md](C:/Users/m206/Desktop/byeol/korean_bizcard_full_dataset_rebuild_v2/src/README_generate_dataset_v2.md)
+## 5. 모델 받기
+
+| 역할 | 파일 | 두는 곳 |
+|---|---|---|
+| 에이전트 LLM | `hjp-agent.litertlm` | 앱 전용 외부 files 디렉터리의 `models/` |
+| 임베딩 | `embeddinggemma-300m.tflite`, `sentencepiece.model` | `app/src/modelAssets/assets/models/` (디렉터리를 직접 만든다) |
+
+파일 자체는 팀 공유 드라이브에서 받는다. 경로 계약은 `CLAUDE.md` 마지막 절과
+`app/src/main/java/com/example/hjp/AppContainer.kt`, 복구 절차는 `docs/AGENT_MODEL_RECOVERY.md`에 있다.
+**모델은 크기 + SHA-256으로 식별된다** — 이름만 바꿔서 다른 파일을 넣으면 거부된다(`ModelDeploymentResolver`).
+
+임베딩 모델이 없으면 검색은 **keyword-only**로 자동 폴백한다. 그 결과를 semantic 성능으로 보고하면 안 된다.
+
+---
+
+## 6. 수치를 다룰 때 지킬 것
+
+* **검색 평가 수치와 멀티턴 수치를 합치지 않는다.** 분모가 다르다.
+* **Ryeong 호환성 축과 Production Agent Multiturn V4를 하나의 점수로 합치지 않는다.**
+  Ryeong은 검색·focus·후속 질문의 하위 평가다. 커버리지 표는
+  `integration_evidence/evaluation/ryeong_to_production_multiturn_adapter_v1/coverage_matrix.md`에 있다.
+* **keyword fallback을 semantic 실행으로 쓰지 않는다.**
+* **actual Gemma를 돌리지 않았으면 generation 지표는 `NOT_RUN`이다.** 추정치를 만들지 않는다.
+* 성능 threshold는 결과를 본 뒤 정하지 않는다. 공식 실행 전에 사전 등록한다.
+
+## 7. 알려진 계약 차이
+
+Ryeong 시나리오의 문구 상당수가 현재 production 라우터에서 검색으로 가지 않는다.
+
+```
+"제갈민씨 찾아줘"       → DialogueAct.OTHER,    도구 0회
+"제갈민씨 명함 찾아줘"  → CONTACT_SEARCH,       순위 반환
+```
+
+`v1` 공식 실행에서 377턴 중 `search_contacts` 호출이 **0회**였던 이유가 이것이다.
+**adapter 결함이 아니라 두 계약의 차이**이며, 이 결과를 근거로 production 라우터나 동결 시나리오를
+말없이 고치면 안 된다. 상세는 `integration_evidence/evaluation/ryeong_official_v1/final/FINAL_EVALUATION_REPORT.md` §7·§21.
+
+---
+
+## 8. 데이터
+
+`app/src/test/resources/ryeong/cards_eval1000.json`(1,000장)과
+`app/src/main/assets/cards/business_cards.json`(2장)은 **전부 합성 데이터**다.
+실제 개인정보는 들어 있지 않다. 이메일은 생성된 도메인, 전화는 더미 번호다.

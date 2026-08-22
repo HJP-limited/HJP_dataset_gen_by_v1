@@ -1,0 +1,53 @@
+{
+  "axes": {
+    "RYEONG SCENARIO EXPORT": "PASS",
+    "PRODUCTION ADAPTER READINESS": "PARTIALLY READY",
+    "OFFICIAL RUN READINESS": "PARTIALLY READY"
+  },
+  "ryeong_scenario_export": {
+    "verdict": "PASS",
+    "scenarios": 130,
+    "turns": 377,
+    "kinds": 21,
+    "known_gap": 0,
+    "generate_only": 6,
+    "byte_deterministic_across_processes": 4,
+    "sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+    "all_exact_gates_passed": true
+  },
+  "production_adapter_readiness": {
+    "verdict": "PARTIALLY READY",
+    "uses_real_agent_kernel": true,
+    "uses_real_router": true,
+    "uses_real_session_memory": true,
+    "uses_real_production_search": true,
+    "trace_observed_not_reconstructed": true,
+    "expected_values_never_injected": true,
+    "mutations_detected": "24 / 24",
+    "canary": "green (13 assertions)",
+    "why_not_full": [
+      "JGA and slot P/R/F1 are NOT_SCORABLE — production exposes no structured field-filter seam",
+      "6 of 8 upstream routes are NOT_SCORABLE (one-to-many or no counterpart)",
+      "generation metrics are NOT_RUN (no actual model)",
+      "the 1000-card fixture has not been loaded yet"
+    ]
+  },
+  "official_run_readiness": {
+    "verdict": "PARTIALLY READY",
+    "official_run_invocations": 0,
+    "frozen_inputs_hashed": true,
+    "exit_code_contract_implemented": true,
+    "blocking": [
+      "RyeongOfficialCompatibilityRunTest does not exist yet",
+      "performance thresholds are not pre-registered"
+    ]
+  },
+  "explicitly_not_claimed": [
+    "that the current agent's multiturn performance is good",
+    "that any Ryeong metric was measured",
+    "that the frozen 130 were executed",
+    "that actual Gemma ran",
+    "that keyword-only retrieval is semantic",
+    "production readiness"
+  ]
+}

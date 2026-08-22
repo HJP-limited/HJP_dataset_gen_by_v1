@@ -1,0 +1,15 @@
+{
+  "status": "NOT_RUN",
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_DEVICE_ACTUAL_MODEL_BASELINE",
+  "invocations": 0,
+  "blocker": {
+    "type": "PRECONDITION_NOT_MET",
+    "rule": "section 15 — RUN_D1 proceeds only when RUN_K1 is a VALID BASELINE and the device canary passes",
+    "actual": "RUN_K1 validity verdict is INVALID RUN (unexpected action tools = 1)",
+    "consequence": "RUN_D1 was not started; no APK was built, no model was pushed, the device was not modified"
+  },
+  "actual_model_executed": false,
+  "semantic_axis_executed": false,
+  "generation_metrics": "NOT_RUN",
+  "no_fake_result_written": true
+}

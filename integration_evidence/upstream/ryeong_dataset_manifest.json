@@ -1,0 +1,65 @@
+{
+ "reference": "ryeong llm-integration-work",
+ "commit": "7008304b2c14136cba333840368dae35e925a885",
+ "recorded_before_any_evaluation_run": true,
+ "files": [
+  {
+   "path": "eval/rag_eval_dataset.jsonl",
+   "present": true,
+   "bytes": 1964,
+   "sha256": "73eaf7a7d88362e320e32e4054e291a4eda52598893eadc37bdb98da75ce4862",
+   "record_count": 20
+  },
+  {
+   "path": "scripts/eval_search.py",
+   "present": true,
+   "bytes": 65472,
+   "sha256": "47059d734b1e42e4002d65aee9abb4c5ea98219a875ff51df1bf2bfc3bc716eb"
+  },
+  {
+   "path": "scripts/eval_multiturn.py",
+   "present": true,
+   "bytes": 38660,
+   "sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031"
+  },
+  {
+   "path": "data/cards_eval1000.json",
+   "present": true,
+   "bytes": 405413,
+   "sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24",
+   "record_count": 1000
+  },
+  {
+   "path": "data/cards_test50.json",
+   "present": true,
+   "bytes": 24257,
+   "sha256": "29067863ec5eab6164024745e9108e6c192572d5c35f2d7f2788c31bdafdb711",
+   "record_count": 50
+  },
+  {
+   "path": "data/cards_clean_small.json",
+   "present": true,
+   "bytes": 17149,
+   "sha256": "57edbe448bdeae797bdab153518b391a2fcca00d7488635f8f14b2d356942616",
+   "record_count": 34
+  },
+  {
+   "path": "src/main/java/com/hjp/searchlookup/RetrievalService.java",
+   "present": true,
+   "bytes": 157,
+   "sha256": "4474947e827705a1be3b50104beacaf01a856ca615069825405ea72231c7ee34"
+  },
+  {
+   "path": "src/main/java/com/hjp/searchlookup/eval/RagEvaluator.java",
+   "present": true,
+   "bytes": 3344,
+   "sha256": "dc7b28f123b834b6f4c2391ee419664fa2cf725b5a73be30663c053f36667740"
+  },
+  {
+   "path": "app/src/main/java/com/example/hjp/agent/ConversationMemoryReducer.kt",
+   "present": true,
+   "bytes": 8251,
+   "sha256": "5c16c9d75d131530e6342bdbf380a11fa6c5b1d9d42807a93bacde3cd3392a3f"
+  }
+ ]
+}

@@ -1,0 +1,209 @@
+{
+  "fixture": "/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung/tools/ryeong_search_benchmark/fixtures/cards_test50.json",
+  "cards": 50,
+  "queries": 192,
+  "fts": "FTS4 unicode61 prefix={2,3,4}",
+  "index_build_ms": 6.156458,
+  "initial_query_ms": 0.437459,
+  "previous_in_memory_like": {
+    "cases": 192,
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "p50_ms": 0.715792,
+    "p95_ms": 0.910125,
+    "mean_ms": 0.7363817239583333,
+    "python_peak_memory_mb": 0.01248931884765625,
+    "by_type": {
+      "company": {
+        "count": 45,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "exact_name": {
+        "count": 48,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "field": {
+        "count": 49,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "phone": {
+        "count": 50,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      }
+    }
+  },
+  "latest_tiered_fts": {
+    "cases": 192,
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "p50_ms": 0.092333,
+    "p95_ms": 0.328417,
+    "mean_ms": 0.14360009375,
+    "python_peak_memory_mb": 0.02534770965576172,
+    "by_type": {
+      "company": {
+        "count": 45,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "exact_name": {
+        "count": 48,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "field": {
+        "count": 49,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "phone": {
+        "count": 50,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      }
+    }
+  },
+  "expanded_category_evaluation": {
+    "cases": 495,
+    "recall_at_1": 0.997979797979798,
+    "recall_at_5": 1.0,
+    "mrr": 0.998989898989899,
+    "p50_ms": 0.090542,
+    "p95_ms": 0.197042,
+    "mean_ms": 0.10914471717171717,
+    "python_peak_memory_mb": 0.0322723388671875,
+    "by_type": {
+      "company": {
+        "count": 45,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "department": {
+        "count": 28,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "english_name": {
+        "count": 48,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "exact_name": {
+        "count": 48,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "honorific": {
+        "count": 96,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "industry": {
+        "count": 15,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "location": {
+        "count": 15,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "memo": {
+        "count": 5,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "phone": {
+        "count": 50,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "prefix": {
+        "count": 48,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "synonym_like": {
+        "count": 10,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "tag": {
+        "count": 59,
+        "recall_at_1": 1.0,
+        "mrr": 1.0
+      },
+      "title": {
+        "count": 28,
+        "recall_at_1": 0.9642857142857143,
+        "mrr": 0.9821428571428571
+      }
+    }
+  },
+  "repeat_stability": {
+    "runs": [
+      {
+        "category": "exact_name",
+        "query": "김민준",
+        "repeats": 10,
+        "successes": 10,
+        "rank_order_variants": 1,
+        "p50_ms": 0.0672295,
+        "p95_ms": 0.114208
+      },
+      {
+        "category": "phone",
+        "query": "20007000",
+        "repeats": 10,
+        "successes": 10,
+        "rank_order_variants": 1,
+        "p50_ms": 0.059292,
+        "p95_ms": 0.091041
+      },
+      {
+        "category": "field",
+        "query": "서울특별시 강남구에 있는 AI 개발자 찾아줘",
+        "repeats": 10,
+        "successes": 10,
+        "rank_order_variants": 1,
+        "p50_ms": 0.31414549999999997,
+        "p95_ms": 0.383792
+      },
+      {
+        "category": "honorific",
+        "query": "김민준님 찾아줘",
+        "repeats": 10,
+        "successes": 10,
+        "rank_order_variants": 1,
+        "p50_ms": 0.0672505,
+        "p95_ms": 0.087625
+      },
+      {
+        "category": "synonym_like",
+        "query": "ai",
+        "repeats": 10,
+        "successes": 10,
+        "rank_order_variants": 1,
+        "p50_ms": 0.176792,
+        "p95_ms": 0.179167
+      }
+    ],
+    "crashes": 0,
+    "timeouts": 0,
+    "process_max_rss_mb": 16.796875
+  },
+  "safety": {
+    "no_result_empty": true,
+    "stale_id_executions": 0
+  },
+  "semantic": {
+    "status": "NOT_RUN",
+    "reason": "physical ARM64 AI Edge RAG runtime is required; deterministic vectors are excluded"
+  }
+}

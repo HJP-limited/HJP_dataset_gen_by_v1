@@ -1,0 +1,82 @@
+{
+  "map_scope": "run_1, run_2, final, evaluator archive, evaluator isolation, red and green characterization, run_3 excluding result/ and execution/, all search-core main and test java sources, and the build file",
+  "file_count_before": 120,
+  "file_count_after": 120,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "changed_count": 0,
+  "added_count": 0,
+  "removed_count": 0,
+  "changed_by_group": {
+    "run_1": 0,
+    "run_2": 0,
+    "final_and_errata": 0,
+    "evaluator_archive": 0,
+    "evaluator_isolation": 0,
+    "red_characterization": 0,
+    "green_characterization": 0,
+    "run_3_preparation": 0,
+    "run_3_input": 0,
+    "run_3_gate": 0,
+    "run_3_freeze_manifests": 0,
+    "production_search_source": 0,
+    "test_sources": 0,
+    "build_file": 0
+  },
+  "allowed_new_paths": [
+    "integration_evidence/production_eval/run_3/result/**",
+    "integration_evidence/production_eval/run_3/execution/**",
+    "Gradle build output"
+  ],
+  "new_files_created_by_this_task": [
+    "integration_evidence/production_eval/run_3/execution/baseline.json",
+    "integration_evidence/production_eval/run_3/execution/command.txt",
+    "integration_evidence/production_eval/run_3/execution/frozen_preflight.json",
+    "integration_evidence/production_eval/run_3/execution/independent_recalculation.json",
+    "integration_evidence/production_eval/run_3/execution/invocation.json",
+    "integration_evidence/production_eval/run_3/execution/protected_sha256_after.txt",
+    "integration_evidence/production_eval/run_3/execution/protected_sha256_before.txt",
+    "integration_evidence/production_eval/run_3/execution/result_validation.json",
+    "integration_evidence/production_eval/run_3/execution/run_2_comparison.json",
+    "integration_evidence/production_eval/run_3/execution/stderr.log",
+    "integration_evidence/production_eval/run_3/execution/stdout.log",
+    "integration_evidence/production_eval/run_3/result/RUN_STATUS.json",
+    "integration_evidence/production_eval/run_3/result/gate_verdict.json",
+    "integration_evidence/production_eval/run_3/result/production_search_eval_v3_results.json"
+  ],
+  "new_file_count": 14,
+  "post_run_frozen_recheck": {
+    "files": 22,
+    "mismatch_count": 0,
+    "mismatches": [],
+    "by_group": {
+      "build_file": {
+        "files": 1,
+        "mismatches": 0
+      },
+      "gate": {
+        "files": 2,
+        "mismatches": 0
+      },
+      "input": {
+        "files": 2,
+        "mismatches": 0
+      },
+      "production_source": {
+        "files": 12,
+        "mismatches": 0
+      },
+      "runner": {
+        "files": 4,
+        "mismatches": 0
+      },
+      "runner_self_test": {
+        "files": 1,
+        "mismatches": 0
+      }
+    }
+  },
+  "pre_run_freeze_manifest_unchanged": true,
+  "pre_run_status_unchanged": true
+}

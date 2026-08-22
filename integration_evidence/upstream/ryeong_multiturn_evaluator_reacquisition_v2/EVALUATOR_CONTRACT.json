@@ -1,0 +1,32 @@
+{
+  "file": "scripts/eval_multiturn.py",
+  "sha256": "26a522235fbbd73760229260e3cc4373ca6d66ce0a4d4ca9dbf612cd21d19031",
+  "lines": 724,
+  "entry_point": "if __name__ == '__main__': raise SystemExit(main())",
+  "import_time_side_effects": "none - stdlib only, __main__ guarded",
+  "third_party_dependencies": [],
+  "cli": {
+    "--generate": "actually generate answers and score the checklist (~10s per turn)",
+    "--sample N": "stratified sample of N scenarios; 25+ needed to cover all 21 kinds",
+    "--repeat K": "repeat K times to produce pass^K",
+    "--verbose": "print every failure instead of the first 15",
+    "--latency": "print generation time. Upstream explicitly warns this is desktop LLM-server timing, NOT device latency, and must not be cited as a performance figure"
+  },
+  "default_mode": "dry_run = not args.generate  -> dry-run is the default",
+  "seed": 42,
+  "deterministic": true,
+  "endpoint": "http://127.0.0.1:8100/chat",
+  "warmup": "ask('워밍업', [], None, [], None, True) before any scenario; on failure prints a hint and returns 1",
+  "writes_result_files": false,
+  "output": "stdout only - json.dump / open(...,'w') / write_text appear 0 times",
+  "exit_code_contract": {
+    "0": "returned whenever the run completes, REGARDLESS of how many scenarios failed",
+    "1": "returned only when the warmup connection fails",
+    "warning": "exit code 0 does NOT mean pass; a wrapper must parse the failure count and denominators independently"
+  },
+  "official_gate": "NONE - no threshold comparison exists anywhere in the file",
+  "gate_can_change_after_seeing_results": "not applicable in code, but this is exactly why the gate must be pre-registered externally",
+  "scenario_order_deterministic": true,
+  "known_gap": {"count_at_tip": 0, "handling": "accumulated into a separate stats['gap'] object, excluded from headline numbers"},
+  "generate_only": {"count_at_tip": 6, "handling": "skipped entirely in dry-run (run_pass line 440)"}
+}

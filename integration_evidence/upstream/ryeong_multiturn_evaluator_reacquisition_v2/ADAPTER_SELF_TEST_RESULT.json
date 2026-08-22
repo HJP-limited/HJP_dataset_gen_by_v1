@@ -1,0 +1,54 @@
+{
+  "status": "NOT_RUN",
+  "adapter_implemented": false,
+  "reason": "the upstream /chat contract has no surface for most of the production contract, so implementing an adapter against it now would produce an evaluation that looks complete while silently omitting the agent's entire action side",
+  "evidence": {
+    "compose_occurrences_in_upstream": 0,
+    "calendar_occurrences_in_upstream": 0,
+    "tool_call_occurrences_in_upstream": 0,
+    "outcome_occurrences_in_upstream": 0,
+    "upstream_route_enum": [
+      "search",
+      "followup",
+      "context_answer",
+      "empty_result",
+      "abstain",
+      "filtered_count",
+      "total_count",
+      "self_reference"
+    ],
+    "production_dialogue_acts_with_no_upstream_slot": [
+      "ACTION_COMPOSE",
+      "ACTION_CALENDAR",
+      "ACTION_UPDATE",
+      "DATETIME_QUERY",
+      "CORRECTION",
+      "FAILURE_QUESTION"
+    ]
+  },
+  "decision_required_before_implementing": [
+    "evaluate only the upstream subset (search/routing/focus/R@5) and always label the rest out of scope",
+    "or evaluate the full production contract using the repository's own MultiturnSpec/StrictMultiturnEvaluator, taking only scenario diversity from upstream",
+    "or run both as two separate runs whose numbers are never combined"
+  ],
+  "self_tests_that_were_planned": [
+    "2-turn focus retention",
+    "3-turn follow-up",
+    "switch to a new target",
+    "previous focus not reused after a failed new-target search",
+    "duplicate-name clarification",
+    "stale ID blocked",
+    "reference discarded after a new conversation",
+    "recall turn executes zero tools",
+    "explicit fresh lookup",
+    "search->get->compose",
+    "search->get->calendar",
+    "search->get->update",
+    "missing slot clarification",
+    "side-effect duplication prevented",
+    "tool failure",
+    "final response consistent with tool outcome"
+  ],
+  "self_tests_run": 0,
+  "production_code_changed": 0
+}

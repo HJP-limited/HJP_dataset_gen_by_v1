@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "reason": "the reference repository named in the task does not exist on this machine",
+  "expected_path": "../agent_integration_references_20260817/ryeong-llm-integration",
+  "expected_branch": "HJP-limited/ryeong: llm-integration-work",
+  "searched": "see reference_file_inventory.json for the exact searches and their negative results",
+  "not_substituted": "no local file was treated as a stand-in for the original evaluator",
+  "artifact": "dataset_statistics",
+  "values": "NOT DETERMINABLE - the original evaluator and dataset are absent"
+}

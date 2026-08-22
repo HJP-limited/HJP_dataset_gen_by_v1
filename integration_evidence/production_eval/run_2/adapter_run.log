@@ -1,0 +1,12 @@
+Reusing configuration cache.
+> Task :search-core:processTestResources NO-SOURCE
+> Task :search-core:processResources NO-SOURCE
+> Task :search-core:compileJava UP-TO-DATE
+> Task :search-core:classes UP-TO-DATE
+> Task :search-core:compileTestJava
+> Task :search-core:testClasses
+> Task :search-core:test
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 2 executed, 1 up-to-date
+Configuration cache entry reused.

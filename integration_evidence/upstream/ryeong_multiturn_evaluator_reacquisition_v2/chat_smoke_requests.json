@@ -1,0 +1,14 @@
+{
+  "status": "NOT_RUN",
+  "reason": "the upstream server never started, so there was no /chat endpoint to call",
+  "root_cause": "hybrid_server.py:705 ModuleNotFoundError: No module named 'sentence_transformers' (exit 1). Even with that installed, line 706 constructs SentenceTransformer(models/embeddinggemma-300m), which is absent.",
+  "planned_requests_from_the_task_spec": [
+    "1. warmup dry-run identical to the evaluator's own: ask('워밍업', [], None, [], None, True)",
+    "2. explicit contact search",
+    "3. two-turn request with a follow-up reference",
+    "4. follow-up with no focus established",
+    "5. request for a target that does not exist"
+  ],
+  "no_substitute_server_was_started": true,
+  "no_synthetic_response_was_fabricated": true
+}

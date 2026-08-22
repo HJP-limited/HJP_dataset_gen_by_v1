@@ -1,0 +1,44 @@
+=== recorded at ===
+2026-08-19T00:57:12+0900 (KST)
+
+=== EXPECTED reference repository (from the task specification) ===
+expected path   : ../agent_integration_references_20260817/ryeong-llm-integration
+resolved to     : /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/agent_integration_references_20260817/ryeong-llm-integration
+expected branch : HJP-limited/ryeong: llm-integration-work
+exists          : NO
+
+--- test -e on the expected path ---
+ABSENT (test -e false)
+--- parent container ---
+container ABSENT
+
+=== siblings actually present next to the working repo ===
+HJP.md
+HJP_Agent.md
+HJP_Model_Tool_Calling.md
+HJP_del.md
+HJP_ugrade.md
+app
+ryeong
+sojung
+
+=== the only ryeong checkout found on this machine ===
+path            : /Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/ryeong
+rev-parse HEAD  : e3dd67f6782dae50e8908190ab6debc0f9992056
+symbolic branch : main
+remote          :
+origin	https://github.com/HJP-limited/ryeong.git (fetch)
+origin	https://github.com/HJP-limited/ryeong.git (push)
+all refs        :
+  refs/heads/main  e3dd67f
+  refs/remotes/origin/4/29  ae3f8ed
+  refs/remotes/origin/HEAD  e3dd67f
+  refs/remotes/origin/main  e3dd67f
+  refs/remotes/origin/search_check  cb5be3f
+llm-integration-work present : NO (no ref matches 'llm' or 'integration')
+python files     : 0
+--- git status --short -uall ---
+?? .DS_Store
+?? PROJECT_ANALYSIS.md
+--- dirty file count ---
+2

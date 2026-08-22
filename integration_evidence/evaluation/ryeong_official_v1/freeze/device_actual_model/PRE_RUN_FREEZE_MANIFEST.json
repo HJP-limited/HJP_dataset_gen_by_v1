@@ -1,0 +1,18 @@
+{
+  "status": "NOT_FROZEN",
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_DEVICE_ACTUAL_MODEL_BASELINE",
+  "reason": "freezing inputs for a run that the task forbids starting would be a fabricated artifact",
+  "what_is_already_known": {
+    "device_serial": "R5CY54CP83R",
+    "build_fingerprint": "samsung/psqksx/psq:16/BP4A.251205.006/S937NKSS9CZG3_OKR9CZG3:user/release-keys",
+    "scenario_json_sha256": "c5c238884652ab7351b7384bef0ac6ba0eaa85de3428b29b2499372dfd563f42",
+    "cards_sha256": "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24"
+  },
+  "what_is_missing": [
+    "APK SHA (not built)",
+    "test APK SHA (not built)",
+    "Gemma model SHA on device (not pushed)",
+    "EmbeddingGemma on-device init contract (not exercised)",
+    "device runner args and timeout (runner not written)"
+  ]
+}

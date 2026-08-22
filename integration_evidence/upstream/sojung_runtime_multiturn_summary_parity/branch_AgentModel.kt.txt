@@ -1,0 +1,100 @@
+package com.hjp.agent.contract
+
+import com.hjp.tool.contract.ToolCatalogSnapshot
+import kotlinx.coroutines.flow.Flow
+import kotlinx.serialization.json.JsonObject
+
+data class SamplingProfile(
+    val temperature: Float = 0.2f,
+    val topK: Int = 20,
+    val topP: Double = 0.95,
+    val maxOutputTokens: Int = 1_024,
+)
+
+data class ModelSessionConfig(
+    val systemInstruction: String,
+    val toolCatalog: ToolCatalogSnapshot,
+    val localeTag: String,
+    val samplingProfile: SamplingProfile = SamplingProfile(),
+)
+
+sealed interface ModelInput {
+    data class User(
+        val text: String,
+        val safeCapabilityContext: JsonObject? = null,
+        val conversationMemory: ConversationMemory = ConversationMemory(),
+        val recentMessages: List<ModelConversationMessage> = emptyList(),
+    ) : ModelInput
+}
+
+data class ConversationMemory(
+    val schemaVersion: Int = 1,
+    val topic: String = "",
+    val confirmedFacts: List<ConversationMemoryItem> = emptyList(),
+    val preferences: List<ConversationMemoryItem> = emptyList(),
+    val constraints: List<ConversationMemoryItem> = emptyList(),
+    val pendingActions: List<ConversationMemoryItem> = emptyList(),
+    val resolvedActions: List<ConversationMemoryItem> = emptyList(),
+    val historyDigest: String = "",
+) {
+    /** Model-facing context excludes internal action lifecycle bookkeeping. */
+    fun modelView(): ConversationMemory = copy(
+        pendingActions = emptyList(),
+        resolvedActions = emptyList(),
+    )
+}
+
+data class ConversationMemoryItem(
+    val content: String,
+    val sourceTurnId: String,
+    val updatedAtEpochMillis: Long,
+    val confidence: MemoryConfidence = MemoryConfidence.EXPLICIT,
+    val key: String = "",
+)
+
+enum class MemoryConfidence { EXPLICIT, TOOL_VERIFIED }
+
+data class ModelConversationMessage(
+    val role: ModelConversationRole,
+    val text: String,
+)
+
+enum class ModelConversationRole {
+    USER,
+    ASSISTANT,
+}
+
+data class ModelToolCall(
+    val callId: String,
+    val modelToolName: String,
+    val arguments: JsonObject,
+)
+
+sealed interface ModelDecision {
+    data class ToolCalls(val calls: List<ModelToolCall>) : ModelDecision
+    data class FinalCandidate(val draftText: String) : ModelDecision
+    data class Invalid(val safeReason: String, val retryable: Boolean) : ModelDecision
+}
+
+data class ModelToolResponse(
+    val callId: String,
+    val modelToolName: String,
+    val payload: JsonObject,
+)
+
+data class FinalAnswerInput(
+    val draftText: String,
+    val safeObservations: List<ModelToolResponse> = emptyList(),
+)
+
+interface AgentModelGateway : AutoCloseable {
+    suspend fun openSession(config: ModelSessionConfig): AgentModelSession
+    override fun close() = Unit
+}
+
+interface AgentModelSession : AutoCloseable {
+    val catalogRevision: String
+    suspend fun decide(input: ModelInput): ModelDecision
+    suspend fun continueWithToolResult(result: ModelToolResponse): ModelDecision
+    fun streamFinal(input: FinalAnswerInput): Flow<String>
+}

@@ -1,0 +1,9 @@
+{
+  "run_id": "RYEONG_PRODUCTION_COMPATIBILITY_V1_JVM_KEYWORD_BASELINE",
+  "validity_verdict": "INVALID RUN",
+  "validity_failures": ["unexpected action tools 1"],
+  "gate_failures": ["UNEXPECTED_SIDE_EFFECT_TOOL","SCORED_FAILURES_PRESENT"],
+  "gate_detail": {"UNEXPECTED_SIDE_EFFECT_TOOL":"1 action tool call(s) on search-only turns","SCORED_FAILURES_PRESENT":"329 scored failure(s)"},
+  "performance_thresholds_applied": false,
+  "performance_threshold_policy": "v1 is a first baseline; metrics are reported as measurements and are not PASS/FAIL criteria"
+}

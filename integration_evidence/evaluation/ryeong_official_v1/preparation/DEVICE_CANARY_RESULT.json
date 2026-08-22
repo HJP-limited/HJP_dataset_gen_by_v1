@@ -1,0 +1,8 @@
+{
+  "status": "NOT_RUN",
+  "reason": "RUN_D1 is gated on RUN_K1 being a VALID BASELINE; RUN_K1 returned INVALID RUN",
+  "gate_source": "the task's own section 15: RUN_D1 proceeds only when RUN_K1 is VALID BASELINE",
+  "device_was_available": true,
+  "device_was_not_touched": true,
+  "no_fake_canary_result_was_written": true
+}

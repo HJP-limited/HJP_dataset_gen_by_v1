@@ -1,0 +1,106 @@
+{
+  "python": {
+    "interpreter": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "version": "3.9.6"
+  },
+  "evaluator_dependencies": {
+    "third_party": [],
+    "stdlib_only": true,
+    "modules": [
+      "argparse",
+      "collections",
+      "json",
+      "pathlib",
+      "random",
+      "re",
+      "sys",
+      "time",
+      "urllib"
+    ],
+    "verdict": "eval_multiturn.py needs NO third-party package; it only speaks HTTP to the server"
+  },
+  "server_dependencies": {
+    "module_level_third_party": [
+      {
+        "module": "numpy",
+        "status": "AVAILABLE",
+        "imported_at": "hybrid_server.py:23"
+      },
+      {
+        "module": "sentence_transformers",
+        "status": "MISSING",
+        "imported_at": "hybrid_server.py:705",
+        "blocking": true,
+        "note": "module-level, and line 706 constructs the model immediately"
+      }
+    ],
+    "transitive": [
+      {
+        "module": "torch",
+        "status": "AVAILABLE"
+      },
+      {
+        "module": "transformers",
+        "status": "MISSING",
+        "note": "required by sentence_transformers"
+      }
+    ],
+    "repository_local": [
+      {
+        "module": "eval_search",
+        "path": "scripts/eval_search.py",
+        "status": "PRESENT",
+        "note": "imported at hybrid_server.py:21 after sys.path.insert; stdlib-only at module level, numpy/sentence_transformers only inside functions"
+      }
+    ],
+    "requirements_file": "NONE - no requirements.txt, pyproject.toml, Pipfile, lock or environment.yml exists in the branch",
+    "version_pinning": "NONE - no versions are declared anywhere, so no exact reproducible pin can be derived from the repository"
+  },
+  "model_artifacts": [
+    {
+      "name": "EmbeddingGemma 300M SentenceTransformer checkpoint",
+      "expected_path": "<repo>/models/embeddinggemma-300m",
+      "referenced_by": "eval_search.py:37 MODEL_PATH, loaded at hybrid_server.py:706",
+      "present": false,
+      "blocking": true,
+      "size_hint": "~1.2GB per the banner printed at hybrid_server.py:704 and MODEL_SETUP_STATUS.md (model.safetensors 1.21GB)",
+      "gitignored": "yes - .gitignore line 20 'models/'",
+      "IMPORTANT": "this is a HuggingFace SentenceTransformer directory, NOT the 179MB embeddinggemma-300m.tflite that the Android app bundles. The two are different formats with different loaders and MUST NOT be substituted for each other."
+    },
+    {
+      "name": "precomputed document vectors",
+      "expected_path": "data/cards_eval1000_vectors.bin",
+      "present": true,
+      "blocking": false,
+      "note": "document side is shipped; only the query embedding needs the checkpoint at run time"
+    },
+    {
+      "name": "LiteRT-LM chat server",
+      "expected": "litert-lm serve listening on 127.0.0.1:9379, model id 'gemma4e2b'",
+      "present": false,
+      "blocking": "only for --generate",
+      "note": "no binary or start script for it exists in the branch; hybrid_server.py:5 says it must already be running"
+    }
+  ],
+  "ports": {
+    "server": 8100,
+    "llm": 9379,
+    "both_free_at_check_time": true,
+    "no_process_was_killed": true
+  },
+  "install_command_derived_from_imports_not_guessed": {
+    "venv": "python3 -m venv <isolated-dir>/venv && <isolated-dir>/venv/bin/pip install --upgrade pip",
+    "packages": "<isolated-dir>/venv/bin/pip install numpy sentence-transformers",
+    "caveat": "package NAMES are derived from the import statements; VERSIONS are not derivable because the branch declares none. Installing this still does not start the server - the 1.2GB checkpoint is a separate blocker."
+  },
+  "blocker_classification": {
+    "evaluator_source_missing": false,
+    "python_dependency_missing": true,
+    "native_library_missing": false,
+    "model_artifact_missing": true,
+    "server_binary_missing": true,
+    "architecture_mismatch": false,
+    "port_conflict": false,
+    "current_environment_restriction": false
+  }
+}

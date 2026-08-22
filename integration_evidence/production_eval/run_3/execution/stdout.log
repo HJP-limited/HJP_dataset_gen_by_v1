@@ -1,0 +1,21 @@
+Calculating task graph as no cached configuration is available for tasks: :search-core:runRyeongSearchEvalV3
+
+> Configure project :app
+WARNING: The option setting 'android.disallowKotlinSourceSets=false' is experimental.
+The current default is 'true'.
+
+> Task :search-core:processResources NO-SOURCE
+> Task :search-core:processTestResources NO-SOURCE
+> Task :search-core:compileJava
+> Task :search-core:classes
+> Task :search-core:compileTestJava
+> Task :search-core:testClasses
+
+> Task :search-core:runRyeongSearchEvalV3
+run_id=ryeong_production_search_run_3
+output=/Users/byeol/Desktop/by/4-1/휴먼 캡스톤/에이전트_FunctionGemma_0723/sojung/integration_evidence/production_eval/run_3/result
+gate_passed=true
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 3 executed
+Configuration cache entry stored.
