@@ -411,6 +411,11 @@ class ModelContextSelector(
                 append("current_target_note: 현재 요청의 실행 대상입니다. ")
                 append("contact-dependent action 전에 이 card_id로 get_contact를 호출하고 ")
                 append("검증된 상세정보만 사용하세요.\n")
+                if (isExplicitDetailFetch(request.currentInput)) {
+                    append("resolved_target_detail_guidance: 확정된 대상의 상세 조회입니다. ")
+                    append("get_contact(card_id=").append(target.cardId)
+                        .append(", purpose=display)를 호출하세요.\n")
+                }
             }
             memory.selectedContact?.let { contact ->
                 append("selected_contact: card_id=").append(contact.cardId)
@@ -455,6 +460,17 @@ class ModelContextSelector(
         if (values.isEmpty()) return
         append(label).append(":\n")
         values.forEach { append("- ").append(it).append('\n') }
+    }
+
+    /**
+     * A narrow model-facing hint for an explicit fresh detail request.  Field questions such as
+     * "회사가 어디야?" remain answerable from verified context and deliberately do not activate it.
+     */
+    private fun isExplicitDetailFetch(input: String): Boolean {
+        val text = input.replace(Regex("\\s+"), " ").trim().lowercase()
+        val detailNouns = listOf("상세", "연락처", "전화번호", "이메일", "메일 주소", "명함 정보", "주소")
+        val fetchVerbs = listOf("보여", "알려", "조회", "확인", "찾아")
+        return detailNouns.any(text::contains) && fetchVerbs.any(text::contains)
     }
 
     /**

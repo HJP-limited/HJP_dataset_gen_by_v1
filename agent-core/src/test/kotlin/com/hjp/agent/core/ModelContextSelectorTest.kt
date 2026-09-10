@@ -169,6 +169,43 @@ class ModelContextSelectorTest {
     }
 
     @Test
+    fun `resolved target detail request gets a narrow get contact guidance`() {
+        val target = CurrentContactTarget(
+            cardId = "C002", name = "이서연",
+            evidence = TurnContactTargetResolver.Evidence.ROUTER_GROUNDED,
+            requiresFreshRead = true, freshReadPurpose = "display",
+        )
+        val body = ModelContextSelector().select(
+            ContextRequest(emptyList(), ConversationMemory(), "두 번째 사람 상세 정보 보여줘", "t1", currentTarget = target),
+        ).sections.single { it.name == "session_state" }.body
+        assertTrue(body.contains("resolved_target_detail_guidance"))
+        assertTrue(body.contains("get_contact(card_id=C002, purpose=display)"))
+    }
+
+    @Test
+    fun `detail guidance stays off for ambiguity and context-answerable questions`() {
+        val target = CurrentContactTarget(
+            cardId = "C002", name = "이서연",
+            evidence = TurnContactTargetResolver.Evidence.ROUTER_GROUNDED,
+            requiresFreshRead = true, freshReadPurpose = "display",
+        )
+        listOf("직급이 뭐야?", "회사가 어디야?").forEach { input ->
+            val body = ModelContextSelector().select(
+                ContextRequest(emptyList(), ConversationMemory(), input, "t1", currentTarget = target),
+            ).sections.single { it.name == "session_state" }.body
+            assertTrue(input, !body.contains("resolved_target_detail_guidance"))
+        }
+        val ambiguous = ModelContextSelector().select(
+            ContextRequest(
+                emptyList(),
+                ConversationMemory(candidateContacts = listOf(ContactCandidate("C1", "박민수"), ContactCandidate("C2", "박민수"))),
+                "그 사람 상세 정보 보여줘", "t1",
+            ),
+        )
+        assertTrue(ambiguous.sections.none { it.body.contains("resolved_target_detail_guidance") })
+    }
+
+    @Test
     fun `rotation is requested only once the native conversation fills the budget`() {
         val request = ContextRequest(
             transcript = listOf(
