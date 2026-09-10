@@ -1,0 +1,29 @@
+{
+  "schema": "hjp_external_assets/v1",
+  "assets": [
+    {
+      "logical_name": "gemma_4_e2b_litertlm",
+      "filename": "gemma-4-E2B-it.litertlm",
+      "size_bytes": 2588147712,
+      "sha256": "181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c",
+      "app_relative_path": "models/gemma-4-E2B-it.litertlm",
+      "purpose": "LiteRT-LM generative model"
+    },
+    {
+      "logical_name": "embeddinggemma_300m",
+      "filename": "embeddinggemma-300m.tflite",
+      "size_bytes": 179131736,
+      "sha256": "37115ef7bff76cd37dd86abe503ff511b1032bf85fc624a85c49c84899e92bc5",
+      "app_relative_path": "models/embeddinggemma-300m.tflite",
+      "purpose": "EmbeddingGemma document/query embeddings"
+    },
+    {
+      "logical_name": "sentencepiece",
+      "filename": "sentencepiece.model",
+      "size_bytes": 4683319,
+      "sha256": "d6daa52d93d7aad10e8388bd526c4e501d914b47177398d1d9621f1fe48438c7",
+      "app_relative_path": "models/sentencepiece.model",
+      "purpose": "tokenizer asset"
+    }
+  ]
+}
