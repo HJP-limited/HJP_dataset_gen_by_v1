@@ -47,6 +47,46 @@ class RouterGeneralizationTest {
     }
 
     @Test
+    fun `explicit company department and title searches seed contact search`() {
+        listOf(
+            "(주) 다이나믹스튜디오 사람 찾아줘",
+            "개발팀 사람 검색해줘",
+            "팀장 사람 찾아줘",
+            "Lead Designer 사람 찾아줘",
+        ).forEach {
+            assertEquals(it, DialogueAct.CONTACT_SEARCH, DeterministicTurnRouter.act(context(it)))
+        }
+    }
+
+    @Test
+    fun `attribute questions and vague contact phrases do not seed search`() {
+        listOf(
+            "회사 정보 알려줘",
+            "그 사람 회사가 어디야?",
+            "그 사람 말고",
+            "일반적인 직급 체계가 어떻게 돼?",
+        ).forEach {
+            assertTrue(
+                it,
+                DeterministicTurnRouter.act(context(it)) != DialogueAct.CONTACT_SEARCH,
+            )
+        }
+    }
+
+    @Test
+    fun `attribute search preserves the original query on directory miss`() {
+        listOf(
+            "(주) 다이나믹스튜디오 사람 찾아줘",
+            "개발팀 사람 검색해줘",
+            "Lead Designer 사람 찾아줘",
+        ).forEach { text ->
+            val plan = DeterministicTurnRouter.route(context(text))
+            assertTrue(text, plan is TurnRoutePlan.Continue)
+            assertEquals(text, (plan as TurnRoutePlan.Continue).text)
+        }
+    }
+
+    @Test
     fun `contact detail follow-up targets a unique selected focus`() {
         val plan = DeterministicTurnRouter.route(context("연락처 알려줘", memory = focus()))
         assertTrue(plan is TurnRoutePlan.ContactDetail)

@@ -807,6 +807,10 @@ object DeterministicTurnRouter {
         val masked = PersonNameMask.maskNames(raw)
         return when {
         CurrentDateTimeIntent.isDirectQuery(raw) -> DialogueAct.DATETIME_QUERY
+        // Attribute/company searches have no person-name span for the directory matcher to ground
+        // (for example "(주) 다이나믹스튜디오 사람 찾아줘").  They are still explicit contact-store
+        // searches: seed the typed search obligation so a valid model search is not rejected later.
+        isExplicitAttributeSearch(raw) -> DialogueAct.CONTACT_SEARCH
         // Asking what a named person's card says is a lookup, whatever field it asks for.
         //
         // This has to be decided before the action vocabularies, because the field names and the
@@ -833,6 +837,24 @@ object DeterministicTurnRouter {
         ContactReadIntent.isCardRead(raw) -> DialogueAct.CONTACT_SEARCH
         else -> DialogueAct.OTHER
         }
+    }
+
+    /** A concrete company/role/department search, distinct from general attribute questions. */
+    private fun isExplicitAttributeSearch(raw: String): Boolean {
+        if (!ContactReadIntent.hasSearchVerb(raw)) return false
+        if (ActionVocabulary.COMPOSE.any(raw::contains) ||
+            ActionVocabulary.CALENDAR.any(raw::contains) ||
+            CardUpdateIntent.hasUpdateVerb(raw) ||
+            conversationScopeMarkers.any(raw::contains) ||
+            isHistoricalRecall(raw)
+        ) return false
+        val asksForPeople = listOf("사람", "직원", "담당자", "분").any(raw::contains)
+        val hasAttribute = listOf(
+            "회사", "주식회사", "(주)", "㈜", "소속", "직장", "부서", "팀", "직함", "직급", "직책", "직위",
+            "대표", "이사", "부장", "과장", "차장", "대리", "사원", "매니저", "디자이너", "엔지니어",
+            "designer", "manager", "engineer", "developer", "director", "lead", "head", "chief", "officer",
+        ).any(raw.lowercase()::contains)
+        return asksForPeople && hasAttribute
     }
 
     /**
@@ -928,6 +950,13 @@ object DeterministicTurnRouter {
                     isHistoricalRecall(raw) ||
                     conversationScopeMarkers.any(raw::contains)
                 ) {
+                    return TurnRoutePlan.Continue(raw)
+                }
+                // An explicit company/department/role search is already a typed CONTACT_SEARCH.
+                // Do not reinterpret its first short Hangul span as a person's name (e.g. "주식");
+                // preserve the user's attribute query for the model/search executor. Generic name
+                // searches continue through the existing name-shaped fallback below.
+                if (isExplicitAttributeSearch(raw)) {
                     return TurnRoutePlan.Continue(raw)
                 }
                 val candidate = ContactNameCandidates.candidates(raw)
