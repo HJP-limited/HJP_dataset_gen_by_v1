@@ -114,6 +114,11 @@ class MultiturnToolCallDeviceEvalInstrumentedTest {
         // by Agent decision code.
         val structuredTelemetryEnabled = args.getString("a17Telemetry")
             ?.toBooleanStrictOrNull() ?: false
+        // Retained for run provenance only. Production now always enables the validated ownership
+        // boundary; this argument no longer changes Agent decisions.
+        val requestedOwnershipFlag = args.getString("a34Ownership")
+            ?.toBooleanStrictOrNull()
+        val resolvedDetailOwnership = true
         val backendPreference = when (args.getString("a8Backend")?.lowercase()) {
             null, "cpu" -> LiteRtBackendPreference.CPU_ONLY
             "gpu" -> LiteRtBackendPreference.GPU_THEN_CPU
@@ -323,6 +328,7 @@ class MultiturnToolCallDeviceEvalInstrumentedTest {
                 contextSelector = ModelContextSelector(deployment.budget),
                 contextPreflight = { snapshot -> ContextPreflight.check(deployment, AppContainer.SYSTEM_INSTRUCTION, ContextPreflight.toolCatalogText(snapshot.contractsByModelName.values)) },
                 contactDirectory = contactDirectory, runtimeCounters = counters,
+                resolvedDetailOwnership = resolvedDetailOwnership,
             )
             return ScenarioRuntime(store, gateway, manager, kernel)
         }
@@ -368,8 +374,10 @@ class MultiturnToolCallDeviceEvalInstrumentedTest {
             put("schema", "hjp_multiturn_toolcall_device_run/v1")
             put("completed", completed)
             put("mode", mode); put("run_id", runId)
-            put("gold_source", "tools/agent_eval_multiturn_v1/data/eval_set_v1_e32.json")
-            put("gold_sha256", EVAL_SHA256); put("gold_contract", "E-3.2")
+            put("gold_source", "tools/agent_eval_multiturn_v1/data/eval_set_v1_e35.json")
+            put("gold_sha256", EVAL_SHA256); put("gold_contract", "E-3.5")
+            put("resolved_detail_ownership", resolvedDetailOwnership)
+            requestedOwnershipFlag?.let { put("requested_a34_ownership", it) }
             put("raw_schema", "hjp_multiturn_toolcall_eval_raw/v1")
             put("device_model", Build.MODEL); put("device_abi", Build.SUPPORTED_ABIS.firstOrNull().orEmpty())
             put("generative_artifact", deployment.artifactId); put("generative_sha256", deployment.verifiedSha256.orEmpty())
@@ -873,9 +881,9 @@ class MultiturnToolCallDeviceEvalInstrumentedTest {
         )
 
         const val TAG = "HjpA8DeviceEval"
-        const val EVAL_ASSET = "agent_eval/eval_set_v1_e32.json"
+        const val EVAL_ASSET = "agent_eval/eval_set_v1_e35.json"
         const val CARD_ASSET = "ryeong/cards_eval1000.json"
-        const val EVAL_SHA256 = "1eacb9f831be395fd70c1c520c4847cdadda02a4df4b142a9dce50bc1a0a92da"
+        const val EVAL_SHA256 = "d252b1342e2b914281abf44f02f017b38694a52a78042f6cd80aba96b106da6f"
         const val FROZEN_CARDS_SHA256 = "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24"
         const val EXPECTED_SCENARIOS = 400
         const val EXPECTED_TURNS = 1_918

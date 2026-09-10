@@ -109,11 +109,11 @@ val ryeongEvalAssetSources = mapOf(
     ),
     // A-8 consumes the identical 400-scenario Gold authority used by the JVM replay.  This is a
     // verified packaging copy only: the evaluator remains the source file under tools/.
-    "agent_eval/eval_set_v1_e32.json" to VerifiedAndroidTestAsset(
+    "agent_eval/eval_set_v1_e35.json" to VerifiedAndroidTestAsset(
         rootProject.layout.projectDirectory.file(
-            "tools/agent_eval_multiturn_v1/data/eval_set_v1_e32.json",
+            "tools/agent_eval_multiturn_v1/data/eval_set_v1_e35.json",
         ).asFile,
-        "1eacb9f831be395fd70c1c520c4847cdadda02a4df4b142a9dce50bc1a0a92da",
+        "d252b1342e2b914281abf44f02f017b38694a52a78042f6cd80aba96b106da6f",
     ),
 )
 
