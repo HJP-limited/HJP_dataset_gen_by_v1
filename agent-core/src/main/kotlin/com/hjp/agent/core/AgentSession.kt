@@ -211,6 +211,13 @@ suspend fun AgentSessionStore.retireActionableFocus() {
     }
 }
 
+/** Retires stale candidate results while preserving mention history for later reference. */
+suspend fun AgentSessionStore.retireCandidates() {
+    update { session ->
+        session.conversationMemory = ToolResultProjector.retireCandidates(session.conversationMemory)
+    }
+}
+
 class AgentSessionManager(
     private val store: AgentSessionStore,
     private val modelGateway: AgentModelGateway,
@@ -276,6 +283,8 @@ class AgentSessionManager(
 
     /** Retires the focus as a target while leaving the conversation's mention history intact. */
     suspend fun retireActionableFocus() = store.retireActionableFocus()
+
+    suspend fun retireCandidates() = store.retireCandidates()
 
     suspend fun persistGroundedTarget(candidate: ContactCandidate) =
         store.persistGroundedTarget(candidate)

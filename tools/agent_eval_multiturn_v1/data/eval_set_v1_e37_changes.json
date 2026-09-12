@@ -1,0 +1,21 @@
+{
+  "schema": "hjp_eval_contract_change_manifest/v1",
+  "contract": "E-3.7",
+  "input": "tools/agent_eval_multiturn_v1/data/eval_set_v1_e36.json",
+  "input_sha256": "39c34fe152c9394fbf9fec7c4de89b3f4a2561ce5e1226356ae4938e90538cbe",
+  "output": "tools/agent_eval_multiturn_v1/data/eval_set_v1_e37.json",
+  "output_sha256": "7e028767bf95cefc7438885ac572cb3db4aba94f485b41393d7f0702f07f4961",
+  "scenario_count": 400,
+  "turn_count": 1918,
+  "changed_scenario_count": 0,
+  "changed_field_count": 0,
+  "audit_findings": {
+    "runtime_independent_contract_errors": 0,
+    "runtime_conditioned_ambiguity_candidates": [
+      "DEV-0010:T5",
+      "REG-0014:T4"
+    ],
+    "runtime_conditioned_candidates_changed": false
+  },
+  "generation": "normalize_e37_policy_contract.py"
+}
