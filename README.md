@@ -25,12 +25,14 @@ Policy A permits direct unique resolution, searches unresolved names, and keeps 
 
 ## Build and integration
 
-Requirements: JDK 21 and Android SDK. Build with `./gradlew :app:assembleDebug`; run JVM tests with `./gradlew test`. `app/src/main/java/com/example/hjp/AppContainer.kt` is the composition root; host apps bind their repository, model gateway, tool registry, and Android executor through the module interfaces.
+Requirements: JDK 17 and Android SDK 36. Build with `./gradlew :app:assembleDebug`; run the core JVM tests with `./gradlew :agent-core:test`. `app/src/main/java/com/example/hjp/AppContainer.kt` is the composition root; host apps bind their repository, model gateway, tool registry, and Android executor through the module interfaces.
 
-Generative and embedding binaries are external. See `external_assets/MANIFEST.json` for relative placement and checksums. No credentials or signing material is included.
+Generative and embedding binaries are external. See `external_assets/MANIFEST.json` for relative placement and checksums. A source build can compile without bundling those files, but real inference/retrieval requires the declared artifacts. No credentials or signing material is included. The current production `AppContainer` selects the LiteRT `CPU_ONLY` backend; GPU evaluation is a separate instrumentation configuration, not the production default.
 
 ## Validation baseline
 
-Official A-15 E-3.2 full evaluation: TSR 167/400 (41.75%); Tool Selection 1,575/1,918 (82.12%); Argument Accuracy 1,470/1,565 (93.93%); Argument Field Accuracy 3,107/3,202 (97.03%); E2E Tool-call 1,470/2,174 (67.62%). A-21 is focused physical regression evidence only, not a full-400 rerun.
+The current official contract is E-3.7, SHA-256 `7e028767bf95cefc7438885ac572cb3db4aba94f485b41393d7f0702f07f4961` (400 scenarios / 1,918 turns). Its first official baseline is a reproducible re-score of the immutable A-56 physical trace: TSR 288/400 (72.00%); Tool Selection 1,589/1,918 (82.85%); Argument Accuracy 1,644/1,708 (96.25%); Argument Field Accuracy 3,418/3,482 (98.16%); E2E Tool-call 1,644/2,154 (76.32%). It is not a fresh physical run after A-63. E-3.2/A-15 and E-3.5 results are historical baselines under older contracts.
+
+Use `tools/agent_eval_multiturn_v1/README.md` for contract validation and offline re-scoring. E-3.6 is deprecated and non-reproducible as an official contract.
 
 Known limitation: model decisions remain probabilistic. Calendar/compose surfaces are open-only and do not send/save automatically.

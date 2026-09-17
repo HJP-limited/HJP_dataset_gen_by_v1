@@ -4,6 +4,7 @@
 /.idea/
 .DS_Store
 /build
+**/build/
 /captures
 .externalNativeBuild
 .cxx
@@ -12,6 +13,11 @@ local.properties
 /models/*.xnnpack_cache_*
 /app/src/main/assets/models/*.tflite
 /app/src/main/assets/models/sentencepiece.model
+/app/src/modelAssets/assets/models/*.litertlm
+/app/src/modelAssets/assets/models/*.tflite
+/app/src/modelAssets/assets/models/sentencepiece.model
+*.apk
+*.partial
 
 # Claude Code 개인 설정
 .claude/settings.local.json
