@@ -374,8 +374,8 @@ class MultiturnToolCallDeviceEvalInstrumentedTest {
             put("schema", "hjp_multiturn_toolcall_device_run/v1")
             put("completed", completed)
             put("mode", mode); put("run_id", runId)
-            put("gold_source", "tools/agent_eval_multiturn_v1/data/eval_set_v1_e35.json")
-            put("gold_sha256", EVAL_SHA256); put("gold_contract", "E-3.5")
+            put("gold_source", "tools/agent_eval_multiturn_v1/data/eval_set_v1_e37.json")
+            put("gold_sha256", EVAL_SHA256); put("gold_contract", "E-3.7")
             put("resolved_detail_ownership", resolvedDetailOwnership)
             requestedOwnershipFlag?.let { put("requested_a34_ownership", it) }
             put("raw_schema", "hjp_multiturn_toolcall_eval_raw/v1")
@@ -881,9 +881,9 @@ class MultiturnToolCallDeviceEvalInstrumentedTest {
         )
 
         const val TAG = "HjpA8DeviceEval"
-        const val EVAL_ASSET = "agent_eval/eval_set_v1_e35.json"
+        const val EVAL_ASSET = "agent_eval/eval_set_v1_e37.json"
         const val CARD_ASSET = "ryeong/cards_eval1000.json"
-        const val EVAL_SHA256 = "d252b1342e2b914281abf44f02f017b38694a52a78042f6cd80aba96b106da6f"
+        const val EVAL_SHA256 = "7e028767bf95cefc7438885ac572cb3db4aba94f485b41393d7f0702f07f4961"
         const val FROZEN_CARDS_SHA256 = "f0feaebfdf5eb26c2a161a4b8c40d1307a6f5fa9c68f00309f05b69d03e7cd24"
         const val EXPECTED_SCENARIOS = 400
         const val EXPECTED_TURNS = 1_918
